@@ -22,5 +22,86 @@
   },
   "ui": {
     "phone": "(+235) 22 51 91 66"
+  },
+  "pages": {
+    "offers": {
+      "title": "Nos offres",
+      "subtitle": "Découvrez nos services et solutions adaptés à vos besoins juridiques",
+      "services": {
+        "title": "Services",
+        "subtitle": "Prestations juridiques ponctuelles et conseil expert",
+        "item1": {
+          "title": "Conseil juridique",
+          "desc": "Accompagnement et conseil personnalisé pour tous vos besoins juridiques."
+        },
+        "item2": {
+          "title": "Rédaction de contrats",
+          "desc": "Rédaction et révision de tous types de contrats commerciaux et civils."
+        },
+        "item3": {
+          "title": "Représentation légale",
+          "desc": "Défense de vos intérêts devant les juridictions compétentes."
+        }
+      },
+      "solutions": {
+        "title": "Solutions",
+        "subtitle": "Accompagnements packagés et solutions complètes sur mesure",
+        "item1": {
+          "title": "Accompagnement création d'entreprise",
+          "desc": "Solution complète pour lancer votre activité en toute sérénité : choix de structure, rédaction de statuts, formalités administratives.",
+          "features": {
+            "f1": "Conseil sur la forme juridique",
+            "f2": "Rédaction des statuts",
+            "f3": "Accompagnement administratif"
+          }
+        },
+        "item2": {
+          "title": "Gestion juridique externalisée",
+          "desc": "Déléguez la gestion juridique de votre entreprise à nos experts : veille réglementaire, contrats, conformité.",
+          "features": {
+            "f1": "Veille juridique continue",
+            "f2": "Gestion des contrats",
+            "f3": "Conformité réglementaire"
+          }
+        }
+      }
+    },
+    "about": {
+      "subtitle": "Cabinet d'expertise juridique et de conseil en Afrique",
+      "mission": {
+        "title": "Notre mission",
+        "p1": "Lexafric est un cabinet spécialisé dans l'accompagnement juridique des entreprises et des particuliers en Afrique francophone. Nous offrons une expertise pointue dans les domaines du droit des affaires, du droit social et du conseil stratégique.",
+        "p2": "Notre approche combine rigueur juridique et compréhension fine des enjeux locaux, permettant à nos clients de naviguer sereinement dans un environnement réglementaire en constante évolution."
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "excellence": {
+          "title": "Excellence",
+          "desc": "Nous garantissons un service juridique de haute qualité, fondé sur une expertise reconnue et une veille constante."
+        },
+        "proximity": {
+          "title": "Proximité",
+          "desc": "Nous cultivons une relation de confiance avec nos clients, basée sur l'écoute, la disponibilité et la réactivité."
+        },
+        "commitment": {
+          "title": "Engagement",
+          "desc": "Nous nous engageons pleinement dans la défense des intérêts de nos clients et la réussite de leurs projets."
+        }
+      }
+    },
+    "contact": {
+      "form": {
+        "title": "Envoyez-nous un message"
+      },
+      "info": {
+        "title": "Nos coordonnées",
+        "email": "Email",
+        "phone": "Téléphone",
+        "address": "Adresse",
+        "addressLine": "N'Djamena, Tchad",
+        "addressNote": "(Adresse complète à préciser)",
+        "whatsapp": "Contacter via WhatsApp"
+      }
+    }
   }
 }

@@ -22,5 +22,86 @@
   },
   "ui": {
     "phone": "(+235) 22 51 91 66"
+  },
+  "pages": {
+    "offers": {
+      "title": "Our Offers",
+      "subtitle": "Discover our services and solutions tailored to your legal needs",
+      "services": {
+        "title": "Services",
+        "subtitle": "One-time legal services and expert advice",
+        "item1": {
+          "title": "Legal Counsel",
+          "desc": "Personalized support and advice for all your legal needs."
+        },
+        "item2": {
+          "title": "Contract Drafting",
+          "desc": "Drafting and reviewing all types of commercial and civil contracts."
+        },
+        "item3": {
+          "title": "Legal Representation",
+          "desc": "Defending your interests before competent jurisdictions."
+        }
+      },
+      "solutions": {
+        "title": "Solutions",
+        "subtitle": "Packaged support and complete tailor-made solutions",
+        "item1": {
+          "title": "Business Creation Support",
+          "desc": "Complete solution to launch your business with peace of mind: structure selection, articles of incorporation, administrative formalities.",
+          "features": {
+            "f1": "Advice on legal form",
+            "f2": "Articles of incorporation",
+            "f3": "Administrative support"
+          }
+        },
+        "item2": {
+          "title": "Outsourced Legal Management",
+          "desc": "Delegate your company's legal management to our experts: regulatory monitoring, contracts, compliance.",
+          "features": {
+            "f1": "Ongoing legal monitoring",
+            "f2": "Contract management",
+            "f3": "Regulatory compliance"
+          }
+        }
+      }
+    },
+    "about": {
+      "subtitle": "Legal expertise and consulting firm in Africa",
+      "mission": {
+        "title": "Our Mission",
+        "p1": "Lexafric is a firm specializing in legal support for businesses and individuals in French-speaking Africa. We offer expertise in corporate law, labor law, and strategic consulting.",
+        "p2": "Our approach combines legal rigor with a deep understanding of local issues, allowing our clients to navigate confidently in a constantly evolving regulatory environment."
+      },
+      "values": {
+        "title": "Our Values",
+        "excellence": {
+          "title": "Excellence",
+          "desc": "We guarantee high-quality legal services, based on recognized expertise and constant monitoring."
+        },
+        "proximity": {
+          "title": "Proximity",
+          "desc": "We cultivate a relationship of trust with our clients, based on listening, availability, and responsiveness."
+        },
+        "commitment": {
+          "title": "Commitment",
+          "desc": "We are fully committed to defending our clients' interests and the success of their projects."
+        }
+      }
+    },
+    "contact": {
+      "form": {
+        "title": "Send us a message"
+      },
+      "info": {
+        "title": "Our Contact Information",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "addressLine": "N'Djamena, Chad",
+        "addressNote": "(Full address to be specified)",
+        "whatsapp": "Contact via WhatsApp"
+      }
+    }
   }
 }
