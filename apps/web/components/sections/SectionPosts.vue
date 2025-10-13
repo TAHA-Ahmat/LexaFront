@@ -9,7 +9,7 @@
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">{{ post.title }}</h3>
             <p class="text-gray-600 mb-4">{{ post.excerpt }}</p>
-            <NuxtLink :to="`/publications/${post.slug}`" class="text-blue-600 hover:underline">
+            <NuxtLink :to="`/articles/${post.slug}`" class="text-blue-600 hover:underline">
               {{ $t('common.readMore') }}
             </NuxtLink>
           </div>
