@@ -1,0 +1,18 @@
+{
+  "common": {
+    "home": "الصفحة الرئيسية",
+    "expertises": "خبراتنا",
+    "publications": "المنشورات",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "legalNotice": "الإشعار القانوني",
+    "privacyPolicy": "سياسة الخصوصية",
+    "readMore": "اقرأ المزيد",
+    "loadMore": "تحميل المزيد",
+    "submit": "إرسال",
+    "translationPending": "الترجمة قريباً"
+  },
+  "nav": {
+    "changeLanguage": "تغيير اللغة"
+  }
+}

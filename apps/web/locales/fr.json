@@ -1,0 +1,18 @@
+{
+  "common": {
+    "home": "Accueil",
+    "expertises": "Nos expertises",
+    "publications": "Publications",
+    "about": "À propos",
+    "contact": "Contact",
+    "legalNotice": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "readMore": "Lire la suite",
+    "loadMore": "Charger plus",
+    "submit": "Envoyer",
+    "translationPending": "Traduction à venir"
+  },
+  "nav": {
+    "changeLanguage": "Changer de langue"
+  }
+}

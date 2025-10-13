@@ -1,0 +1,1 @@
+export { SUPPORTED_LOCALES, DEFAULT_LOCALE, LOCALE_INFO } from './locales'
