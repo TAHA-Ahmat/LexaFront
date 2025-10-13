@@ -1,5 +1,5 @@
 <template>
-  <div :dir="locale === 'ar' ? 'rtl' : 'ltr'">
+  <div :dir="currentDir">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,5 +7,9 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, locales } = useI18n()
+const currentDir = computed(() => {
+  const l = locales.value.find(l => l.code === locale.value)
+  return (l as any)?.dir === 'rtl' ? 'rtl' : 'ltr'
+})
 </script>
