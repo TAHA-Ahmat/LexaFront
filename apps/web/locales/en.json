@@ -110,5 +110,133 @@
     "legal": "Legal",
     "followUs": "Follow Us",
     "copyright": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to Lexafric",
+      "subtitle": "Your legal partner for innovative solutions in Africa"
+    },
+    "features": {
+      "title": "Our Expertise",
+      "item1": {
+        "title": "Corporate Law",
+        "description": "Comprehensive legal support for businesses and investors in French-speaking Africa."
+      },
+      "item2": {
+        "title": "Labor Law",
+        "description": "Advice and assistance in labor relations, contracts and social disputes."
+      },
+      "item3": {
+        "title": "Strategic Consulting",
+        "description": "Legal expertise and strategic advice to optimize your business decisions."
+      }
+    },
+    "stats": {
+      "clients": "Satisfied clients",
+      "projects": "Completed projects",
+      "experience": "Years of experience",
+      "experts": "Experts"
+    },
+    "posts": {
+      "title": "Latest Publications"
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Contact us today to discuss your project"
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "member1": {
+      "name": "Expert 1",
+      "role": "Senior Lawyer"
+    },
+    "member2": {
+      "name": "Expert 2",
+      "role": "Legal Consultant"
+    },
+    "member3": {
+      "name": "Expert 3",
+      "role": "Business Lawyer"
+    },
+    "member4": {
+      "name": "Expert 4",
+      "role": "Legal Counsel"
+    }
+  },
+  "form": {
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "success": "Message sent successfully! We will reply as soon as possible."
+  },
+  "legal": {
+    "notice": {
+      "editor": {
+        "title": "Website Publisher",
+        "content": "The lexafric.com website is published by Lexafric, a legal expertise and consulting firm, located in N'Djamena, Chad."
+      },
+      "hosting": {
+        "title": "Hosting",
+        "content": "The site is hosted by [Hosting provider name], located at [Address], reachable at [Phone]."
+      },
+      "property": {
+        "title": "Intellectual Property",
+        "content": "All content on this site (texts, images, videos) is the exclusive property of Lexafric. Any reproduction, even partial, is prohibited without prior authorization."
+      }
+    },
+    "privacy": {
+      "collection": {
+        "title": "Data Collection",
+        "content": "We only collect data that you voluntarily provide to us through our contact forms: name, email, message."
+      },
+      "usage": {
+        "title": "Data Usage",
+        "content": "Your personal data is used only to respond to your requests and is never shared with third parties without your consent."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "This site uses technical cookies necessary for its proper functioning. No advertising or tracking cookies are used."
+      }
+    }
+  },
+  "articles": {
+    "by": "By",
+    "author": "Lexafric Team",
+    "content": "Article content coming soon. This section will be enriched with relevant and updated legal content.",
+    "excerpt": "Article excerpt...",
+    "readFull": "Read the full article"
+  },
+  "seo": {
+    "home": {
+      "title": "Lexafric - Legal Firm in Africa",
+      "description": "Lexafric, your legal partner in French-speaking Africa. Expertise in corporate law, labor law and strategic consulting."
+    },
+    "offers": {
+      "title": "Our Offers - Legal Services and Solutions | Lexafric",
+      "description": "Discover our one-time legal services and comprehensive support solutions tailored to your needs in Africa."
+    },
+    "about": {
+      "title": "About Lexafric - Legal Firm in Africa",
+      "description": "Lexafric, legal expertise and consulting firm in French-speaking Africa. Discover our mission, values and team."
+    },
+    "contact": {
+      "title": "Contact - Lexafric",
+      "description": "Contact Lexafric for all your legal questions. We are at your service in N'Djamena, Chad."
+    },
+    "articles": {
+      "title": "Articles - Lexafric",
+      "description": "All our articles and legal news. Stay informed about the latest developments in African law."
+    },
+    "legal": {
+      "title": "Legal Notice - Lexafric",
+      "description": "Legal notice of the Lexafric website - Information about the publisher, hosting and intellectual property."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Lexafric",
+      "description": "Lexafric privacy policy - How we collect and use your personal data."
+    }
   }
 }

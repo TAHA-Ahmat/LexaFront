@@ -12,10 +12,12 @@
 </template>
 
 <script setup lang="ts">
-const stats = [
-  { value: '100+', label: 'Clients satisfaits' },
-  { value: '500+', label: 'Projets réalisés' },
-  { value: '15+', label: 'Années d\'expérience' },
-  { value: '20+', label: 'Experts' }
-]
+const { t } = useI18n()
+
+const stats = computed(() => [
+  { value: '100+', label: t('home.stats.clients') },
+  { value: '500+', label: t('home.stats.projects') },
+  { value: '15+', label: t('home.stats.experience') },
+  { value: '20+', label: t('home.stats.experts') }
+])
 </script>

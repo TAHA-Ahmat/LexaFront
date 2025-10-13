@@ -1,7 +1,7 @@
 <template>
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Dernières Publications</h2>
+      <h2 class="text-3xl font-bold text-center mb-12">{{ $t('home.posts.title') }}</h2>
 
       <div class="grid md:grid-cols-3 gap-8">
         <article v-for="post in recentPosts" :key="post.slug" class="bg-white rounded-lg overflow-hidden shadow">

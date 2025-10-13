@@ -10,7 +10,7 @@
         <div class="h-48 bg-gray-200"></div>
         <div class="p-6">
           <h2 class="text-xl font-bold mb-2">Article {{ i }}</h2>
-          <p class="text-gray-600 mb-4">Extrait de l'article...</p>
+          <p class="text-gray-600 mb-4">{{ $t('articles.excerpt') }}</p>
           <NuxtLink :to="`/articles/article-${i}`" class="text-blue-600 hover:underline">
             {{ $t('common.readMore') }}
           </NuxtLink>
@@ -21,9 +21,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Articles - Lexafric',
-  description: 'Tous nos articles et actualités juridiques',
-  ogTitle: 'Articles - Lexafric'
+  title: t('seo.articles.title'),
+  description: t('seo.articles.description'),
+  ogTitle: t('seo.articles.title')
 })
 </script>

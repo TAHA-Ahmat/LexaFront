@@ -6,7 +6,6 @@
         <div>
           <div class="flex items-center gap-3 mb-4">
             <img :src="logo" alt="LEX AFRIC" class="h-8 w-auto rounded-sm" />
-            <span class="text-xl font-bold">LEX AFRIC</span>
           </div>
           <p class="text-gray-400 text-sm">
             {{ $t('footer.tagline') }}

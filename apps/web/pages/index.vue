@@ -9,12 +9,14 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 // SEO
 useSeoMeta({
-  title: 'Lexafric - Accueil',
-  description: 'Site vitrine Lexafric - Expertise et solutions multilingues',
-  ogTitle: 'Lexafric - Accueil',
-  ogDescription: 'Site vitrine Lexafric - Expertise et solutions multilingues',
+  title: t('seo.home.title'),
+  description: t('seo.home.description'),
+  ogTitle: t('seo.home.title'),
+  ogDescription: t('seo.home.description'),
   ogImage: '/og-image.jpg',
   ogUrl: 'https://lexafric.com',
   twitterCard: 'summary_large_image'

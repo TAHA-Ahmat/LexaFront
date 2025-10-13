@@ -10,7 +10,6 @@
       <div class="flex-1 flex items-center">
         <NuxtLink to="/" class="flex items-center gap-3">
           <img :src="logo" alt="LEX AFRIC" class="h-8 w-auto rounded-sm" />
-          <span class="hidden sm:inline text-gray-800 dark:text-gray-100 font-semibold tracking-wide">LEX AFRIC</span>
         </NuxtLink>
       </div>
 

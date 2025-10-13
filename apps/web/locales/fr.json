@@ -110,5 +110,133 @@
     "legal": "Légal",
     "followUs": "Suivez-nous",
     "copyright": "Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenue chez Lexafric",
+      "subtitle": "Votre partenaire juridique pour des solutions innovantes en Afrique"
+    },
+    "features": {
+      "title": "Nos Expertises",
+      "item1": {
+        "title": "Droit des affaires",
+        "description": "Accompagnement juridique complet pour les entreprises et les investisseurs en Afrique francophone."
+      },
+      "item2": {
+        "title": "Droit du travail",
+        "description": "Conseil et assistance en matière de relations de travail, contrats et litiges sociaux."
+      },
+      "item3": {
+        "title": "Conseil stratégique",
+        "description": "Expertise juridique et conseil stratégique pour optimiser vos décisions d'affaires."
+      }
+    },
+    "stats": {
+      "clients": "Clients satisfaits",
+      "projects": "Projets réalisés",
+      "experience": "Années d'expérience",
+      "experts": "Experts"
+    },
+    "posts": {
+      "title": "Dernières Publications"
+    },
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "subtitle": "Contactez-nous dès aujourd'hui pour discuter de votre projet"
+    }
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "member1": {
+      "name": "Expert 1",
+      "role": "Avocat Senior"
+    },
+    "member2": {
+      "name": "Expert 2",
+      "role": "Consultant Juridique"
+    },
+    "member3": {
+      "name": "Expert 3",
+      "role": "Avocat d'Affaires"
+    },
+    "member4": {
+      "name": "Expert 4",
+      "role": "Juriste"
+    }
+  },
+  "form": {
+    "labels": {
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message"
+    },
+    "success": "Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais."
+  },
+  "legal": {
+    "notice": {
+      "editor": {
+        "title": "Éditeur du site",
+        "content": "Le site web lexafric.com est édité par Lexafric, cabinet d'expertise juridique et de conseil, situé à N'Djamena, Tchad."
+      },
+      "hosting": {
+        "title": "Hébergement",
+        "content": "Le site est hébergé par [Nom de l'hébergeur], situé à [Adresse], joignable au [Téléphone]."
+      },
+      "property": {
+        "title": "Propriété intellectuelle",
+        "content": "L'ensemble du contenu de ce site (textes, images, vidéos) est la propriété exclusive de Lexafric. Toute reproduction, même partielle, est interdite sans autorisation préalable."
+      }
+    },
+    "privacy": {
+      "collection": {
+        "title": "Collecte des données",
+        "content": "Nous collectons uniquement les données que vous nous fournissez volontairement via nos formulaires de contact : nom, email, message."
+      },
+      "usage": {
+        "title": "Utilisation des données",
+        "content": "Vos données personnelles sont utilisées uniquement pour répondre à vos demandes et ne sont jamais partagées avec des tiers sans votre consentement."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie publicitaire ou de tracking n'est utilisé."
+      }
+    }
+  },
+  "articles": {
+    "by": "Par",
+    "author": "Équipe Lexafric",
+    "content": "Contenu de l'article à venir. Cette section sera enrichie avec du contenu juridique pertinent et actualisé.",
+    "excerpt": "Extrait de l'article...",
+    "readFull": "Lire l'article complet"
+  },
+  "seo": {
+    "home": {
+      "title": "Lexafric - Cabinet juridique en Afrique",
+      "description": "Lexafric, votre partenaire juridique en Afrique francophone. Expertise en droit des affaires, droit du travail et conseil stratégique."
+    },
+    "offers": {
+      "title": "Nos offres - Services et Solutions juridiques | Lexafric",
+      "description": "Découvrez nos services juridiques ponctuels et nos solutions d'accompagnement complètes adaptées à vos besoins en Afrique."
+    },
+    "about": {
+      "title": "À propos de Lexafric - Cabinet juridique en Afrique",
+      "description": "Lexafric, cabinet d'expertise juridique et de conseil en Afrique francophone. Découvrez notre mission, nos valeurs et notre équipe."
+    },
+    "contact": {
+      "title": "Contact - Lexafric",
+      "description": "Contactez Lexafric pour toutes vos questions juridiques. Nous sommes à votre écoute à N'Djamena, Tchad."
+    },
+    "articles": {
+      "title": "Articles - Lexafric",
+      "description": "Tous nos articles et actualités juridiques. Restez informé des dernières évolutions du droit en Afrique."
+    },
+    "legal": {
+      "title": "Mentions légales - Lexafric",
+      "description": "Mentions légales du site Lexafric - Informations sur l'éditeur, l'hébergement et la propriété intellectuelle."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité - Lexafric",
+      "description": "Politique de confidentialité de Lexafric - Comment nous collectons et utilisons vos données personnelles."
+    }
   }
 }

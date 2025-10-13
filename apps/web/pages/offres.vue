@@ -60,9 +60,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Nos offres - Services et Solutions juridiques | Lexafric',
-  description: 'Découvrez nos services juridiques ponctuels et nos solutions d\'accompagnement complètes adaptées à vos besoins',
-  ogTitle: 'Nos offres - Lexafric'
+  title: t('seo.offers.title'),
+  description: t('seo.offers.description'),
+  ogTitle: t('seo.offers.title')
 })
 </script>

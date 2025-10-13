@@ -4,22 +4,25 @@
       <h1 class="text-4xl font-bold mb-8">{{ $t('common.legalNotice') }}</h1>
 
       <div class="prose max-w-none">
-        <h2>Éditeur du site</h2>
-        <p>Informations sur l'éditeur...</p>
+        <h2>{{ $t('legal.notice.editor.title') }}</h2>
+        <p>{{ $t('legal.notice.editor.content') }}</p>
 
-        <h2>Hébergement</h2>
-        <p>Informations sur l'hébergeur...</p>
+        <h2>{{ $t('legal.notice.hosting.title') }}</h2>
+        <p>{{ $t('legal.notice.hosting.content') }}</p>
 
-        <h2>Propriété intellectuelle</h2>
-        <p>Contenu légal...</p>
+        <h2>{{ $t('legal.notice.property.title') }}</h2>
+        <p>{{ $t('legal.notice.property.content') }}</p>
       </div>
     </div>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Mentions légales - Lexafric',
+  title: t('seo.legal.title'),
+  description: t('seo.legal.description'),
   robots: 'noindex, nofollow'
 })
 </script>

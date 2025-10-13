@@ -69,9 +69,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'À propos de Lexafric - Cabinet juridique en Afrique',
-  description: 'Lexafric, cabinet d\'expertise juridique et de conseil en Afrique francophone. Découvrez notre mission, nos valeurs et notre équipe.',
-  ogTitle: 'À propos - Lexafric'
+  title: t('seo.about.title'),
+  description: t('seo.about.description'),
+  ogTitle: t('seo.about.title')
 })
 </script>

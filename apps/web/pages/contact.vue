@@ -53,9 +53,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Contact - Lexafric',
-  description: 'Contactez-nous pour toute question',
-  ogTitle: 'Contact - Lexafric'
+  title: t('seo.contact.title'),
+  description: t('seo.contact.description'),
+  ogTitle: t('seo.contact.title')
 })
 </script>
