@@ -13,6 +13,14 @@
     "translationPending": "Translation coming soon"
   },
   "nav": {
-    "changeLanguage": "Change language"
+    "changeLanguage": "Change language",
+    "home": "Home",
+    "offers": "Offers",
+    "articles": "Articles",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "ui": {
+    "phone": "(+235) 22 51 91 66"
   }
 }

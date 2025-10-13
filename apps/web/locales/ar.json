@@ -13,6 +13,14 @@
     "translationPending": "الترجمة قريباً"
   },
   "nav": {
-    "changeLanguage": "تغيير اللغة"
+    "changeLanguage": "تغيير اللغة",
+    "home": "الصفحة الرئيسية",
+    "offers": "العروض",
+    "articles": "المقالات",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  },
+  "ui": {
+    "phone": "(+235) 22 51 91 66"
   }
 }

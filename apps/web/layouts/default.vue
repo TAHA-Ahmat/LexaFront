@@ -1,32 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col">
-    <header class="bg-white shadow">
-      <nav class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-          <NuxtLink to="/" class="text-2xl font-bold">Lexafric</NuxtLink>
-
-          <div class="flex items-center gap-6">
-            <NuxtLink to="/" class="hover:text-blue-600">{{ $t('common.home') }}</NuxtLink>
-            <NuxtLink to="/expertises" class="hover:text-blue-600">{{ $t('common.expertises') }}</NuxtLink>
-            <NuxtLink to="/publications" class="hover:text-blue-600">{{ $t('common.publications') }}</NuxtLink>
-            <NuxtLink to="/a-propos" class="hover:text-blue-600">{{ $t('common.about') }}</NuxtLink>
-            <NuxtLink to="/contact" class="hover:text-blue-600">{{ $t('common.contact') }}</NuxtLink>
-
-            <!-- Language selector -->
-            <div class="flex gap-2">
-              <button
-                v-for="loc in availableLocales"
-                :key="loc.code"
-                @click="setLocale(loc.code)"
-                :class="['px-2 py-1 rounded', locale === loc.code ? 'bg-blue-600 text-white' : 'bg-gray-200']"
-              >
-                {{ loc.code.toUpperCase() }}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+  <div class="min-h-screen flex flex-col bg-white dark:bg-gray-950">
+    <TopLangBar />
+    <NavBar />
 
     <main class="flex-1">
       <slot />
@@ -68,7 +43,6 @@
 </template>
 
 <script setup lang="ts">
-const { locale, locales, setLocale } = useI18n()
-
-const availableLocales = computed(() => locales.value)
+import TopLangBar from '~/components/base/TopLangBar.vue'
+import NavBar from '~/components/base/NavBar.vue'
 </script>

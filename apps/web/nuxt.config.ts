@@ -14,21 +14,21 @@ export default defineNuxtConfig({
     locales: [
       {
         code: 'fr',
-        language: 'fr-FR',
+        iso: 'fr-FR',
         name: 'Français',
         dir: 'ltr',
         file: 'fr.json'
       },
       {
         code: 'en',
-        language: 'en-US',
+        iso: 'en-US',
         name: 'English',
         dir: 'ltr',
         file: 'en.json'
       },
       {
         code: 'ar',
-        language: 'ar-AR',
+        iso: 'ar',
         name: 'العربية',
         dir: 'rtl',
         file: 'ar.json'
@@ -36,11 +36,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'fr',
     strategy: 'prefix_except_default',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root'
-    },
+    detectBrowserLanguage: false,
     lazy: true,
     langDir: 'locales'
   },
