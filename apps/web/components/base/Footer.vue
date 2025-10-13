@@ -105,12 +105,13 @@
 
       <!-- Copyright -->
       <div class="border-t border-gray-800 pt-6 text-center text-sm text-gray-400">
-        <p>&copy; {{ new Date().getFullYear() }} Lexafric. {{ $t('footer.copyright') }}</p>
+        <p>&copy; {{ currentYear }} Lexafric. {{ $t('footer.copyright') }}</p>
       </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import logo from '~/assets/images/logo.jpg'
+const logo = '/assets/images/logo.jpg'
+const currentYear = new Date().getFullYear()
 </script>

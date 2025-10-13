@@ -118,7 +118,7 @@
 </template>
 
 <script setup lang="ts">
-import logo from '~/assets/images/logo.jpg'
+const logo = '/assets/images/logo.jpg'
 const { t } = useI18n()
 const route = useRoute()
 
@@ -143,12 +143,15 @@ const closeMobile = () => {
 }
 
 const hasShadow = ref(false)
-onMounted(() => {
-  const onScroll = () => (hasShadow.value = window.scrollY > 12)
-  onScroll()
-  window.addEventListener('scroll', onScroll, { passive: true })
-  onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
-})
+
+if (process.client) {
+  onMounted(() => {
+    const onScroll = () => (hasShadow.value = window.scrollY > 12)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
+  })
+}
 </script>
 
 <style scoped>
