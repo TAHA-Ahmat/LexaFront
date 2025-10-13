@@ -103,5 +103,12 @@
         "whatsapp": "Contacter via WhatsApp"
       }
     }
+  },
+  "footer": {
+    "tagline": "Votre partenaire juridique en Afrique",
+    "quickLinks": "Liens rapides",
+    "legal": "Légal",
+    "followUs": "Suivez-nous",
+    "copyright": "Tous droits réservés."
   }
 }
