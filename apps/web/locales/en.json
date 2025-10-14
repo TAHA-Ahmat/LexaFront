@@ -15,12 +15,289 @@
   "nav": {
     "changeLanguage": "Change language",
     "home": "Home",
-    "offers": "Offers",
-    "articles": "Articles",
-    "about": "About Us",
+    "services": "Services",
+    "solutions": "Solutions",
+    "about": "About",
     "contact": "Contact"
   },
   "ui": {
     "phone": "(+235) 22 51 91 66"
+  },
+  "pages": {
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Professional solutions tailored to your needs",
+      "legal": {
+        "title": "Legal Assistance",
+        "description": "Legal advice and support to secure your activities and strategic decisions."
+      },
+      "fiscal": {
+        "title": "Tax Assistance",
+        "description": "Tax optimization and compliance with current regulations."
+      },
+      "social": {
+        "title": "Social Assistance",
+        "description": "Human resources management and social compliance for your company."
+      },
+      "recruitment": {
+        "title": "Recruitment Assistance",
+        "description": "Support in recruiting and selecting your talents."
+      },
+      "training": {
+        "title": "Training",
+        "description": "Tailored training programs to develop your team's skills."
+      },
+      "cta": {
+        "title": "Need personalized support?",
+        "subtitle": "Our team of experts is at your service",
+        "button": "Contact us"
+      }
+    },
+    "solutions": {
+      "title": "Our Solutions",
+      "subtitle": "Innovative approaches to transform your business",
+      "legal": {
+        "title": "Legal Secretariat",
+        "description": "Complete management of your legal and corporate secretariat.",
+        "feature1": "Maintaining legal registers",
+        "feature2": "Preparation of meetings"
+      },
+      "governance": {
+        "title": "Corporate Governance",
+        "description": "Implementation and optimization of your corporate governance.",
+        "feature1": "Governance consulting",
+        "feature2": "Board member training"
+      },
+      "creation": {
+        "title": "Creation & Transformation",
+        "description": "Support in creating and transforming your structure.",
+        "feature1": "Company formation",
+        "feature2": "Business restructuring"
+      },
+      "why": {
+        "title": "Why choose us?",
+        "experience": "Years of experience",
+        "partners": "Expert partners",
+        "satisfaction": "Client satisfaction",
+        "support": "Available support"
+      },
+      "cta": {
+        "title": "Ready to transform your business?",
+        "subtitle": "Let's discuss your projects together",
+        "button": "Request a quote"
+      }
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "Legal expertise and consulting firm in Africa",
+      "mission": {
+        "title": "Our mission",
+        "p1": "Lexafric is a firm specializing in legal support for businesses and individuals in French-speaking Africa. We offer sharp expertise in business law, labor law, and strategic consulting.",
+        "p2": "Our approach combines legal rigor and fine understanding of local issues, allowing our clients to navigate serenely in a constantly evolving regulatory environment."
+      },
+      "values": {
+        "title": "Our values",
+        "excellence": {
+          "title": "Excellence",
+          "description": "We guarantee high-quality legal service, based on recognized expertise and constant monitoring."
+        },
+        "proximity": {
+          "title": "Proximity",
+          "description": "We cultivate a relationship of trust with our clients, based on listening, availability, and responsiveness."
+        },
+        "commitment": {
+          "title": "Commitment",
+          "description": "We are fully committed to defending our clients' interests and the success of their projects."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Contact us",
+      "form": {
+        "title": "Send us a message"
+      },
+      "info": {
+        "title": "Our contact details",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "addressValue": "N'Djamena, Chad",
+        "whatsapp": "Contact via WhatsApp"
+      }
+    },
+    "articles": {
+      "title": "Articles",
+      "subtitle": "Our articles and legal news",
+      "article": "Article",
+      "excerpt": "Article excerpt..."
+    },
+    "legal": {
+      "title": "Legal Notice",
+      "editor": {
+        "title": "Site Publisher",
+        "content": "Information about the publisher..."
+      },
+      "hosting": {
+        "title": "Hosting",
+        "content": "Information about the hosting provider..."
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "content": "Legal content..."
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "collection": {
+        "title": "Data Collection",
+        "content": "Information about data collection..."
+      },
+      "usage": {
+        "title": "Data Usage",
+        "content": "How we use your data..."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Cookie policy..."
+      }
+    },
+    "home": {
+      "hero": {
+        "slide1": {
+          "title": "Welcome to LEXAFRIC",
+          "subtitle": "The expert who accompanies you",
+          "cta": "Our Team"
+        },
+        "slide2": {
+          "title": "LEXAFRIC offers you suitable solutions",
+          "subtitle": "Proven expertise",
+          "cta": "Contact Us"
+        }
+      },
+      "features": {
+        "title": "Our Expertise",
+        "subtitle": "Professional services tailored to your specific needs",
+        "legal": {
+          "item1": "Preliminary audit of contractual documents",
+          "item2": "Advice on documents with legal impact"
+        },
+        "fiscal": {
+          "item1": "Monthly review of tax declarations",
+          "item2": "Tax optimization advice"
+        },
+        "social": {
+          "item1": "Hiring declarations",
+          "item2": "Assistance with employment contract compliance"
+        },
+        "recruitment": {
+          "item1": "Search for qualified profiles",
+          "item2": "Outsourcing of the recruitment process"
+        },
+        "training": {
+          "item1": "Inter and intra-company training",
+          "item2": "Skills development expertise"
+        }
+      },
+      "stats": {
+        "title": "Our Key Figures",
+        "subtitle": "Recognized experience at the service of your success",
+        "experience": "Years of experience",
+        "associatesExperience": "Years of cumulative expertise",
+        "clients": "Clients supported",
+        "satisfaction": "Client satisfaction",
+        "message": "Our associates have over 25 years of combined experience with SMEs and large companies, with a constant commitment to excellence and integrity."
+      },
+      "posts": {
+        "title": "Legal News",
+        "subtitle": "Stay informed about the latest developments in business law in Africa",
+        "viewAll": "View all articles",
+        "category": {
+          "legal": "Legal",
+          "fiscal": "Tax",
+          "social": "Labor"
+        },
+        "post1": {
+          "title": "Developments in business law in Chad",
+          "excerpt": "In-depth analysis of recent legislative reforms and their impact on local and international companies operating in Chad."
+        },
+        "post2": {
+          "title": "Tax optimization for businesses in Africa",
+          "excerpt": "Discover the best tax optimization strategies compliant with local and international regulations."
+        },
+        "post3": {
+          "title": "Labor law in French-speaking Africa",
+          "excerpt": "Complete guide on employer social obligations and best practices in human resources management."
+        }
+      },
+      "cta": {
+        "title": "Ready to transform your business?",
+        "subtitle": "Let's discuss your projects and goals. Our team of experts is ready to support your success.",
+        "button1": "Contact us",
+        "button2": "Learn more",
+        "or": "Or contact us directly"
+      },
+      "values": {
+        "title": "Our Values",
+        "vision": {
+          "title": "Our Vision",
+          "content": "LexAfric is an international firm, offering top-tier legal and tax support to companies operating in the African market."
+        },
+        "mission": {
+          "title": "Our Mission",
+          "content": "To support national and sub-regional companies in their compliance with international standards, while respecting local specificities."
+        },
+        "integrity": {
+          "title": "Integrity",
+          "content": "We place ethics and transparency at the heart of our professional practice."
+        },
+        "listening": {
+          "title": "Listening",
+          "content": "We pay special attention to the specific needs of each client."
+        },
+        "pedagogy": {
+          "title": "Pedagogy",
+          "content": "We clearly explain legal and tax issues for better decision-making."
+        },
+        "interaction": {
+          "title": "Interaction",
+          "content": "We foster constant and constructive dialogue with our clients and partners."
+        }
+      },
+      "methodology": {
+        "title": "Our Methodology",
+        "subtitle": "A structured 3-step approach to ensure your success",
+        "strategy": {
+          "title": "Strategy",
+          "content": "In-depth analysis of your situation and definition of a strategy tailored to your objectives."
+        },
+        "planning": {
+          "title": "Planning",
+          "content": "Development of a detailed action plan with clear milestones and realistic deadlines."
+        },
+        "implementation": {
+          "title": "Implementation",
+          "content": "Rigorous execution of the plan with continuous monitoring and adjustments if necessary."
+        }
+      },
+      "partners": {
+        "title": "Our Partners",
+        "subtitle": "A diverse network of experts to meet all your needs",
+        "partner": "Partner",
+        "note": "Partner logos will be added later"
+      },
+      "newsletter": {
+        "title": "Stay Informed",
+        "subtitle": "Subscribe to our newsletter to receive our news and legal advice",
+        "placeholder": "Your email address",
+        "button": "Subscribe",
+        "success": "Thank you for subscribing!",
+        "blog": "View Blog"
+      },
+      "seo": {
+        "title": "Lexafric - Home",
+        "description": "Legal and tax consulting firm in Africa. Recognized expertise for over 10 years."
+      }
+    }
   }
 }
