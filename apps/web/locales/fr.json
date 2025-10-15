@@ -15,12 +15,289 @@
   "nav": {
     "changeLanguage": "Changer de langue",
     "home": "Accueil",
-    "offers": "Offres",
-    "articles": "Articles",
-    "about": "À propos de nous",
+    "services": "Services",
+    "solutions": "Solutions",
+    "about": "À propos",
     "contact": "Contact"
   },
   "ui": {
     "phone": "(+235) 22 51 91 66"
+  },
+  "pages": {
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Des solutions professionnelles adaptées à vos besoins",
+      "legal": {
+        "title": "Assistance Juridique",
+        "description": "Conseil et accompagnement juridique pour sécuriser vos activités et décisions stratégiques."
+      },
+      "fiscal": {
+        "title": "Assistance Fiscale",
+        "description": "Optimisation fiscale et conformité aux réglementations en vigueur."
+      },
+      "social": {
+        "title": "Assistance Sociale",
+        "description": "Gestion des ressources humaines et conformité sociale pour votre entreprise."
+      },
+      "recruitment": {
+        "title": "Assistance à Recrutement",
+        "description": "Accompagnement dans le recrutement et la sélection de vos talents."
+      },
+      "training": {
+        "title": "Formations",
+        "description": "Programmes de formation adaptés pour développer les compétences de vos équipes."
+      },
+      "cta": {
+        "title": "Besoin d'un accompagnement personnalisé ?",
+        "subtitle": "Notre équipe d'experts est à votre disposition",
+        "button": "Contactez-nous"
+      }
+    },
+    "solutions": {
+      "title": "Nos Solutions",
+      "subtitle": "Des approches innovantes pour transformer votre entreprise",
+      "legal": {
+        "title": "Secrétariat Juridique",
+        "description": "Gestion complète de votre secrétariat juridique et corporate.",
+        "feature1": "Tenue des registres légaux",
+        "feature2": "Préparation des assemblées"
+      },
+      "governance": {
+        "title": "Gouvernance d'Entreprise",
+        "description": "Mise en place et optimisation de votre gouvernance d'entreprise.",
+        "feature1": "Conseil en gouvernance",
+        "feature2": "Formation des administrateurs"
+      },
+      "creation": {
+        "title": "Création & Transformation",
+        "description": "Accompagnement dans la création et la transformation de votre structure.",
+        "feature1": "Création de sociétés",
+        "feature2": "Restructuration d'entreprise"
+      },
+      "why": {
+        "title": "Pourquoi nous choisir ?",
+        "experience": "Années d'expérience",
+        "partners": "Partenaires experts",
+        "satisfaction": "Satisfaction client",
+        "support": "Support disponible"
+      },
+      "cta": {
+        "title": "Prêt à transformer votre entreprise ?",
+        "subtitle": "Discutons de vos projets ensemble",
+        "button": "Demander un devis"
+      }
+    },
+    "about": {
+      "title": "À propos",
+      "subtitle": "Cabinet d'expertise juridique et de conseil en Afrique",
+      "mission": {
+        "title": "Notre mission",
+        "p1": "Lexafric est un cabinet spécialisé dans l'accompagnement juridique des entreprises et des particuliers en Afrique francophone. Nous offrons une expertise pointue dans les domaines du droit des affaires, du droit social et du conseil stratégique.",
+        "p2": "Notre approche combine rigueur juridique et compréhension fine des enjeux locaux, permettant à nos clients de naviguer sereinement dans un environnement réglementaire en constante évolution."
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "excellence": {
+          "title": "Excellence",
+          "description": "Nous garantissons un service juridique de haute qualité, fondé sur une expertise reconnue et une veille constante."
+        },
+        "proximity": {
+          "title": "Proximité",
+          "description": "Nous cultivons une relation de confiance avec nos clients, basée sur l'écoute, la disponibilité et la réactivité."
+        },
+        "commitment": {
+          "title": "Engagement",
+          "description": "Nous nous engageons pleinement dans la défense des intérêts de nos clients et la réussite de leurs projets."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Contactez-nous",
+      "form": {
+        "title": "Envoyez-nous un message"
+      },
+      "info": {
+        "title": "Nos coordonnées",
+        "email": "Email",
+        "phone": "Téléphone",
+        "address": "Adresse",
+        "addressValue": "N'Djamena, Tchad",
+        "whatsapp": "Contacter via WhatsApp"
+      }
+    },
+    "articles": {
+      "title": "Articles",
+      "subtitle": "Nos articles et actualités juridiques",
+      "article": "Article",
+      "excerpt": "Extrait de l'article..."
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "editor": {
+        "title": "Éditeur du site",
+        "content": "Informations sur l'éditeur..."
+      },
+      "hosting": {
+        "title": "Hébergement",
+        "content": "Informations sur l'hébergeur..."
+      },
+      "intellectual": {
+        "title": "Propriété intellectuelle",
+        "content": "Contenu légal..."
+      }
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "collection": {
+        "title": "Collecte des données",
+        "content": "Informations sur la collecte des données..."
+      },
+      "usage": {
+        "title": "Utilisation des données",
+        "content": "Comment nous utilisons vos données..."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Politique de cookies..."
+      }
+    },
+    "home": {
+      "hero": {
+        "slide1": {
+          "title": "Bienvenue sur LEXAFRIC",
+          "subtitle": "L'expert qui vous accompagne",
+          "cta": "Notre Équipe"
+        },
+        "slide2": {
+          "title": "LEXAFRIC vous offre des solutions idoines",
+          "subtitle": "Une expertise avérée",
+          "cta": "Nous Contacter"
+        }
+      },
+      "features": {
+        "title": "Nos Expertises",
+        "subtitle": "Des services professionnels adaptés à vos besoins spécifiques",
+        "legal": {
+          "item1": "Audit préalable de supports contractuels",
+          "item2": "Conseil sur documents à incidence juridique"
+        },
+        "fiscal": {
+          "item1": "Contrôle mensuel des déclarations fiscales",
+          "item2": "Conseils d'optimisation fiscale"
+        },
+        "social": {
+          "item1": "Déclarations d'embauche",
+          "item2": "Aide à la conformité des contrats de travail"
+        },
+        "recruitment": {
+          "item1": "Recherche de profils qualifiés",
+          "item2": "Externalisation du processus de recrutement"
+        },
+        "training": {
+          "item1": "Formations inter et intra-entreprises",
+          "item2": "Expertise en développement des compétences"
+        }
+      },
+      "stats": {
+        "title": "Nos Chiffres Clés",
+        "subtitle": "Une expérience reconnue au service de votre réussite",
+        "experience": "Années d'expérience",
+        "associatesExperience": "Années d'expertise cumulée",
+        "clients": "Clients accompagnés",
+        "satisfaction": "Satisfaction client",
+        "message": "Nos associés totalisent plus de 25 ans d'expérience auprès de PME et grandes entreprises, avec un engagement constant envers l'excellence et l'intégrité."
+      },
+      "posts": {
+        "title": "Actualités Juridiques",
+        "subtitle": "Restez informés des dernières évolutions du droit des affaires en Afrique",
+        "viewAll": "Voir tous les articles",
+        "category": {
+          "legal": "Juridique",
+          "fiscal": "Fiscal",
+          "social": "Social"
+        },
+        "post1": {
+          "title": "Les évolutions du droit des affaires au Tchad",
+          "excerpt": "Analyse approfondie des récentes réformes législatives et leur impact sur les entreprises locales et internationales opérant au Tchad."
+        },
+        "post2": {
+          "title": "Optimisation fiscale pour les entreprises en Afrique",
+          "excerpt": "Découvrez les meilleures stratégies d'optimisation fiscale conformes aux réglementations locales et internationales."
+        },
+        "post3": {
+          "title": "Le droit social en Afrique francophone",
+          "excerpt": "Guide complet sur les obligations sociales des employeurs et les bonnes pratiques en matière de gestion des ressources humaines."
+        }
+      },
+      "cta": {
+        "title": "Prêt à transformer votre entreprise ?",
+        "subtitle": "Discutons de vos projets et objectifs. Notre équipe d'experts est prête à vous accompagner dans votre réussite.",
+        "button1": "Contactez-nous",
+        "button2": "En savoir plus",
+        "or": "Ou contactez-nous directement"
+      },
+      "values": {
+        "title": "Nos Valeurs",
+        "vision": {
+          "title": "Notre Vision",
+          "content": "LexAfric est un cabinet de dimension internationale, offrant un accompagnement juridique et fiscal de premier plan aux entreprises évoluant sur le marché africain."
+        },
+        "mission": {
+          "title": "Notre Mission",
+          "content": "Accompagner les entreprises nationales et sous-régionales dans leur mise en conformité aux standards internationaux, tout en respectant les spécificités locales."
+        },
+        "integrity": {
+          "title": "Intégrité",
+          "content": "Nous plaçons l'éthique et la transparence au cœur de notre pratique professionnelle."
+        },
+        "listening": {
+          "title": "Écoute",
+          "content": "Nous accordons une attention particulière aux besoins spécifiques de chaque client."
+        },
+        "pedagogy": {
+          "title": "Pédagogie",
+          "content": "Nous expliquons clairement les enjeux juridiques et fiscaux pour une meilleure prise de décision."
+        },
+        "interaction": {
+          "title": "Interaction",
+          "content": "Nous favorisons un dialogue constant et constructif avec nos clients et partenaires."
+        }
+      },
+      "methodology": {
+        "title": "Notre Méthodologie",
+        "subtitle": "Une approche structurée en 3 étapes pour garantir votre réussite",
+        "strategy": {
+          "title": "Stratégie",
+          "content": "Analyse approfondie de votre situation et définition d'une stratégie adaptée à vos objectifs."
+        },
+        "planning": {
+          "title": "Planification",
+          "content": "Élaboration d'un plan d'action détaillé avec des jalons clairs et des délais réalistes."
+        },
+        "implementation": {
+          "title": "Mise en œuvre",
+          "content": "Exécution rigoureuse du plan avec un suivi continu et des ajustements si nécessaire."
+        }
+      },
+      "partners": {
+        "title": "Nos Partenaires",
+        "subtitle": "Un réseau d'experts diversifiés pour répondre à tous vos besoins",
+        "partner": "Partenaire",
+        "note": "Les logos des partenaires seront ajoutés ultérieurement"
+      },
+      "newsletter": {
+        "title": "Restez Informés",
+        "subtitle": "Inscrivez-vous à notre newsletter pour recevoir nos actualités et conseils juridiques",
+        "placeholder": "Votre adresse email",
+        "button": "S'inscrire",
+        "success": "Merci pour votre inscription !",
+        "blog": "Voir le Blog"
+      },
+      "seo": {
+        "title": "Lexafric - Accueil",
+        "description": "Cabinet de conseil juridique et fiscal en Afrique. Expertise reconnue depuis plus de 10 ans."
+      }
+    }
   }
 }

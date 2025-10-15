@@ -1,17 +1,17 @@
 <template>
   <NuxtLayout name="minimal">
     <div class="container mx-auto px-4 py-12 max-w-4xl">
-      <h1 class="text-4xl font-bold mb-8">{{ $t('common.legalNotice') }}</h1>
+      <h1 class="text-4xl font-bold mb-8">{{ $t('pages.legal.title') }}</h1>
 
       <div class="prose max-w-none">
-        <h2>Éditeur du site</h2>
-        <p>Informations sur l'éditeur...</p>
+        <h2>{{ $t('pages.legal.editor.title') }}</h2>
+        <p>{{ $t('pages.legal.editor.content') }}</p>
 
-        <h2>Hébergement</h2>
-        <p>Informations sur l'hébergeur...</p>
+        <h2>{{ $t('pages.legal.hosting.title') }}</h2>
+        <p>{{ $t('pages.legal.hosting.content') }}</p>
 
-        <h2>Propriété intellectuelle</h2>
-        <p>Contenu légal...</p>
+        <h2>{{ $t('pages.legal.intellectual.title') }}</h2>
+        <p>{{ $t('pages.legal.intellectual.content') }}</p>
       </div>
     </div>
   </NuxtLayout>

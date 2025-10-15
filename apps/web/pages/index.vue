@@ -1,20 +1,26 @@
 <template>
   <div>
-    <SectionHero />
+    <SectionHeroSlider />
     <SectionFeatures />
+    <SectionValues />
+    <SectionMethodology />
     <SectionStats />
+    <SectionPartners />
     <SectionPosts />
+    <SectionNewsletter />
     <SectionCTA />
   </div>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 // SEO
 useSeoMeta({
-  title: 'Lexafric - Accueil',
-  description: 'Site vitrine Lexafric - Expertise et solutions multilingues',
-  ogTitle: 'Lexafric - Accueil',
-  ogDescription: 'Site vitrine Lexafric - Expertise et solutions multilingues',
+  title: t('pages.home.seo.title'),
+  description: t('pages.home.seo.description'),
+  ogTitle: t('pages.home.seo.title'),
+  ogDescription: t('pages.home.seo.description'),
   ogImage: '/og-image.jpg',
   ogUrl: 'https://lexafric.com',
   twitterCard: 'summary_large_image'
