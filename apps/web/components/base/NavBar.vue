@@ -1,16 +1,16 @@
 <template>
   <header
     :class="[
-      'sticky top-0 z-40 transition-all duration-300',
+      'sticky top-0 z-50 transition-all duration-500',
       hasShadow
-        ? 'bg-white dark:bg-gray-900 shadow-lg'
-        : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm'
+        ? 'bg-white/80 dark:bg-black/80 backdrop-blur-2xl shadow-soft border-b border-gray-200/50 dark:border-gray-800/50'
+        : 'bg-white/70 dark:bg-black/70 backdrop-blur-xl'
     ]"
   >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[80px] flex items-center">
       <!-- Left: Logo -->
       <div class="flex-shrink-0">
-        <NuxtLink to="/" class="flex items-center gap-3 group">
+        <NuxtLink :to="localePath('/')" class="flex items-center gap-3 group">
           <img :src="logo" alt="LEX AFRIC" class="h-12 w-auto rounded-md shadow-sm group-hover:shadow-md transition-shadow" />
           <div class="hidden lg:flex flex-col">
             <span class="text-gray-900 dark:text-white font-bold text-xl tracking-tight leading-tight">LEX AFRIC</span>
@@ -24,16 +24,16 @@
         <ul class="flex items-center gap-1">
           <li v-for="item in items" :key="item.to">
             <NuxtLink
-              :to="item.to"
-              class="relative px-4 py-2 text-[15px] font-semibold transition-all duration-200 group"
+              :to="localePath(item.to)"
+              class="relative px-4 py-2 text-[15px] font-semibold tracking-tight transition-all duration-300 group"
               :class="isActive(item.to)
-                ? 'text-blue-600 dark:text-blue-400'
-                : 'text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400'"
+                ? 'text-gray-900 dark:text-white'
+                : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'"
             >
               {{ t(item.label) }}
               <span
-                class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform transition-transform duration-200"
-                :class="isActive(item.to) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'"
+                class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transform transition-all duration-300"
+                :class="isActive(item.to) ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100'"
               ></span>
             </NuxtLink>
           </li>
@@ -44,7 +44,7 @@
       <div class="hidden lg:flex items-center gap-4">
         <a
           :href="`tel:+23522519166`"
-          class="inline-flex items-center gap-2.5 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          class="inline-flex items-center gap-2.5 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
             <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.85 22 2 13.15 2 2a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/>
@@ -85,7 +85,7 @@
       >
         <!-- Header du drawer -->
         <div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-800">
-          <NuxtLink to="/" class="flex items-center gap-3" @click="closeMobile">
+          <NuxtLink :to="localePath('/')" class="flex items-center gap-3" @click="closeMobile">
             <img :src="logo" alt="LEX AFRIC" class="h-10 w-auto rounded-md shadow-sm" />
             <div class="flex flex-col">
               <span class="text-gray-900 dark:text-white font-bold text-lg tracking-tight">LEX AFRIC</span>
@@ -107,7 +107,7 @@
           <ul class="flex flex-col gap-1">
             <li v-for="item in items" :key="item.to">
               <NuxtLink
-                :to="item.to"
+                :to="localePath(item.to)"
                 class="block px-4 py-3.5 rounded-lg text-base font-semibold transition-all"
                 :class="isActive(item.to)
                   ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400'
@@ -140,6 +140,7 @@
 <script setup lang="ts">
 import logo from '~/assets/images/logo.jpg'
 const { t } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 
 const items = [
