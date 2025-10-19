@@ -1,14 +1,24 @@
 <template>
-  <div>
-    <SectionHeroSlider />
-    <SectionFeatures />
-    <SectionValues />
-    <SectionMethodology />
-    <SectionStats />
+  <div class="overflow-x-hidden">
+    <!-- Hero Premium Full-Screen -->
+    <SectionHeroPremium />
+
+    <!-- Features Premium avec animations -->
+    <SectionFeaturesPremium />
+
+    <!-- Methodology Premium avec timeline -->
+    <SectionMethodologyPremium />
+
+    <!-- Values Premium immersive -->
+    <SectionValuesPremium />
+
+    <!-- Sections conservées optimisées -->
     <SectionPartners />
     <SectionPosts />
     <SectionNewsletter />
-    <SectionCTA />
+
+    <!-- CTA Premium impactant -->
+    <SectionCTAPremium />
   </div>
 </template>
 

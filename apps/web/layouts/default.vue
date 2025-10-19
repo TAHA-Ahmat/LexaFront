@@ -18,12 +18,12 @@
             <h4 class="font-bold mb-4">{{ $t('common.legalNotice') }}</h4>
             <ul class="space-y-2">
               <li>
-                <NuxtLink to="/mentions-legales" class="text-gray-400 hover:text-white">
+                <NuxtLink :to="localePath('/mentions-legales')" class="text-gray-400 hover:text-white">
                   {{ $t('common.legalNotice') }}
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/politique-confidentialite" class="text-gray-400 hover:text-white">
+                <NuxtLink :to="localePath('/politique-confidentialite')" class="text-gray-400 hover:text-white">
                   {{ $t('common.privacyPolicy') }}
                 </NuxtLink>
               </li>
@@ -45,4 +45,6 @@
 <script setup lang="ts">
 import TopLangBar from '~/components/base/TopLangBar.vue'
 import NavBar from '~/components/base/NavBar.vue'
+
+const localePath = useLocalePath()
 </script>

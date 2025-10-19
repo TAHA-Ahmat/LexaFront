@@ -1,4 +1,11 @@
-User-Agent: *
+# www.robotstxt.org/
+
+# Allow all robots
+User-agent: *
 Allow: /
 
-Sitemap: http://localhost:3000/sitemap.xml
+# Disallow admin sections (if any in future)
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://lexafric.com/sitemap.xml

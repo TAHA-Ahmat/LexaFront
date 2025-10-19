@@ -34,7 +34,7 @@
                 {{ $t('pages.home.hero.slide1.subtitle') }}
               </p>
               <NuxtLink
-                to="/a-propos"
+                :to="localePath('/a-propos')"
                 class="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all transform hover:scale-105 animate-fade-in-up animation-delay-400"
               >
                 {{ $t('pages.home.hero.slide1.cta') }}
@@ -63,7 +63,7 @@
                 {{ $t('pages.home.hero.slide2.subtitle') }}
               </p>
               <NuxtLink
-                to="/contact"
+                :to="localePath('/contact')"
                 class="inline-block bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-all transform hover:scale-105 animate-fade-in-up animation-delay-400"
               >
                 {{ $t('pages.home.hero.slide2.cta') }}
@@ -85,6 +85,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
+const localePath = useLocalePath()
 const modules = [Navigation, Pagination, Autoplay]
 </script>
 
