@@ -3,15 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  // Nouveaux chemins vers src/
-  srcDir: 'src/',
-  dir: {
-    pages: 'pages',
-    layouts: 'layouts',
-    public: 'public',
-    assets: 'assets'
-  },
-
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
@@ -21,7 +12,7 @@ export default defineNuxtConfig({
   // Configuration Tailwind
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
-    configPath: './config/tailwind.config.ts',
+    configPath: 'tailwind.config.ts',
     exposeConfig: false,
     viewer: false
   },
