@@ -45,7 +45,7 @@
 
           <!-- Lien "Savoir plus" -->
           <NuxtLink
-            :to="feature.link"
+            :to="localePath(feature.link)"
             class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:gap-3 transition-all"
           >
             {{ $t('common.readMore') }}
@@ -61,6 +61,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const features = [
   {

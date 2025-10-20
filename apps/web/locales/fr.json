@@ -164,8 +164,9 @@
     },
     "home": {
       "hero": {
+        "badge": "Excellence Juridique",
         "slide1": {
-          "title": "Bienvenue sur LEXAFRIC",
+          "title": "BIENVENUE SUR LEXAFRIC",
           "subtitle": "L'expert qui vous accompagne",
           "cta": "Notre Équipe"
         },
@@ -175,26 +176,35 @@
           "cta": "Nous Contacter"
         }
       },
+      "presentation": {
+        "title": "Cabinet de Conseil Juridique et Fiscal",
+        "description": "Cabinet spécialisé en conseil juridique et fiscal, fondé sur un réseau d'anciens collaborateurs de grands cabinets internationaux orientés vers les marchés africains."
+      },
       "features": {
-        "title": "Nos Expertises",
+        "title": "Nos Services",
         "subtitle": "Des services professionnels adaptés à vos besoins spécifiques",
         "legal": {
+          "title": "Assistance Juridique",
           "item1": "Audit préalable de supports contractuels",
           "item2": "Conseil sur documents à incidence juridique"
         },
         "fiscal": {
+          "title": "Assistance Fiscale",
           "item1": "Contrôle mensuel des déclarations fiscales",
           "item2": "Conseils d'optimisation fiscale"
         },
         "social": {
+          "title": "Assistance Sociale",
           "item1": "Déclarations d'embauche",
           "item2": "Aide à la conformité des contrats de travail"
         },
         "recruitment": {
+          "title": "Assistance à Recrutement",
           "item1": "Recherche de profils qualifiés",
           "item2": "Externalisation du processus de recrutement"
         },
         "training": {
+          "title": "Formations",
           "item1": "Formations inter et intra-entreprises",
           "item2": "Expertise en développement des compétences"
         }
@@ -202,11 +212,17 @@
       "stats": {
         "title": "Nos Chiffres Clés",
         "subtitle": "Une expérience reconnue au service de votre réussite",
-        "experience": "Années d'expérience",
-        "associatesExperience": "Années d'expertise cumulée",
+        "experience": "10+",
+        "experienceLabel": "ANS D'EXPÉRIENCE",
+        "associatesExperience": "25+",
+        "associatesExperienceLabel": "Années d'expertise cumulée",
+        "team": "15+",
+        "teamLabel": "EXPERTS",
+        "expertise": "50+",
+        "expertiseLabel": "PROJETS RÉUSSIS",
         "clients": "Clients accompagnés",
         "satisfaction": "Satisfaction client",
-        "message": "Nos associés totalisent plus de 25 ans d'expérience auprès de PME et grandes entreprises, avec un engagement constant envers l'excellence et l'intégrité."
+        "message": "Nos associés totalisent plus de 25 ans d'expérience auprès de PME à grandes entreprises, avec un engagement constant envers l'excellence et l'intégrité."
       },
       "posts": {
         "title": "Actualités Juridiques",
@@ -231,58 +247,66 @@
         }
       },
       "cta": {
+        "badge": "Prenez contact",
         "title": "Prêt à transformer votre entreprise ?",
         "subtitle": "Discutons de vos projets et objectifs. Notre équipe d'experts est prête à vous accompagner dans votre réussite.",
-        "button1": "Contactez-nous",
-        "button2": "En savoir plus",
-        "or": "Ou contactez-nous directement"
+        "button1": "NOUS CONTACTER",
+        "button2": "NOTRE EQUIPE",
+        "or": "Ou contactez-nous directement",
+        "callUs": "Appelez-nous",
+        "writeUs": "Écrivez-nous"
       },
       "values": {
-        "title": "Nos Valeurs",
+        "title": "Vision, Mission, Valeurs",
+        "subtitle": "Notre raison d'être et nos principes fondamentaux",
         "vision": {
           "title": "Notre Vision",
-          "content": "LexAfric est un cabinet de dimension internationale, offrant un accompagnement juridique et fiscal de premier plan aux entreprises évoluant sur le marché africain."
+          "description": "Devenir un cabinet de dimension internationale, reconnu et respecté pour son professionnalisme et son intégrité dans l'accompagnement juridique et fiscal des entreprises en Afrique."
         },
         "mission": {
           "title": "Notre Mission",
-          "content": "Accompagner les entreprises nationales et sous-régionales dans leur mise en conformité aux standards internationaux, tout en respectant les spécificités locales."
+          "description": "Accompagner les entreprises nationales et sous-régionales dans leur mise aux normes internationales tout en assistant les multinationales dans leur implantation et développement sur le marché africain."
         },
-        "integrity": {
+        "value1": {
           "title": "Intégrité",
-          "content": "Nous plaçons l'éthique et la transparence au cœur de notre pratique professionnelle."
+          "description": "Nous plaçons l'éthique et la transparence au cœur de notre pratique professionnelle."
         },
-        "listening": {
+        "value2": {
           "title": "Écoute",
-          "content": "Nous accordons une attention particulière aux besoins spécifiques de chaque client."
+          "description": "Nous accordons une attention particulière aux besoins spécifiques de chaque client."
         },
-        "pedagogy": {
+        "value3": {
           "title": "Pédagogie",
-          "content": "Nous expliquons clairement les enjeux juridiques et fiscaux pour une meilleure prise de décision."
+          "description": "Nous expliquons clairement les enjeux juridiques et fiscaux pour une meilleure prise de décision."
         },
-        "interaction": {
+        "value4": {
           "title": "Interaction",
-          "content": "Nous favorisons un dialogue constant et constructif avec nos clients et partenaires."
+          "description": "Nous favorisons un dialogue constant et constructif avec nos clients et partenaires."
         }
       },
       "methodology": {
         "title": "Notre Méthodologie",
-        "subtitle": "Une approche structurée en 3 étapes pour garantir votre réussite",
-        "strategy": {
+        "subtitle": "Une approche structurée pour garantir votre réussite",
+        "step1": {
           "title": "Stratégie",
-          "content": "Analyse approfondie de votre situation et définition d'une stratégie adaptée à vos objectifs."
+          "description": "Approche spécifique adaptée au contexte, basée sur l'intégrité, l'écoute, la pédagogie et l'interaction avec nos clients."
         },
-        "planning": {
+        "step2": {
           "title": "Planification",
-          "content": "Élaboration d'un plan d'action détaillé avec des jalons clairs et des délais réalistes."
+          "description": "Organisation de réunions de cadrage et respect scrupuleux des délais fixés par nos clients."
         },
-        "implementation": {
-          "title": "Mise en œuvre",
-          "content": "Exécution rigoureuse du plan avec un suivi continu et des ajustements si nécessaire."
+        "step3": {
+          "title": "Implémentation",
+          "description": "Accompagnement sur le terrain pour la mise en œuvre effective des recommandations formulées."
+        },
+        "step4": {
+          "title": "Suivi",
+          "description": "Évaluation continue des résultats et ajustements pour garantir l'atteinte de vos objectifs."
         }
       },
       "partners": {
         "title": "Nos Partenaires",
-        "subtitle": "Un réseau d'experts diversifiés pour répondre à tous vos besoins",
+        "subtitle": "Plus de 25 partenaires internationaux nous font confiance",
         "partner": "Partenaire",
         "note": "Les logos des partenaires seront ajoutés ultérieurement"
       },
@@ -295,8 +319,8 @@
         "blog": "Voir le Blog"
       },
       "seo": {
-        "title": "Lexafric - Accueil",
-        "description": "Cabinet de conseil juridique et fiscal en Afrique. Expertise reconnue depuis plus de 10 ans."
+        "title": "LEXAFRIC - Cabinet de Conseil Juridique et Fiscal en Afrique",
+        "description": "Cabinet spécialisé en conseil juridique et fiscal fondé sur un réseau d'anciens collaborateurs de grands cabinets internationaux orientés vers les marchés africains. Plus de 10 ans d'expérience."
       }
     }
   }

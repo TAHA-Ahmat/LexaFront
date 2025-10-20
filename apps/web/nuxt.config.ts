@@ -9,6 +9,22 @@ export default defineNuxtConfig({
     '@nuxt/image'
   ],
 
+  // Configuration Tailwind
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css',
+    configPath: 'tailwind.config.ts',
+    exposeConfig: false,
+    viewer: false
+  },
+
+  // Configuration des composants
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    }
+  ],
+
   // Configuration i18n (FR/EN/AR avec RTL)
   i18n: {
     locales: [
@@ -83,9 +99,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-
-  // CSS global
-  css: [],
 
   // Build configuration
   experimental: {

@@ -36,7 +36,7 @@
         <!-- Lien vers le blog -->
         <div class="flex justify-center gap-6">
           <NuxtLink
-            to="/articles"
+            :to="localePath('/articles')"
             class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg font-semibold transition-all"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,6 +51,7 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath()
 const email = ref('')
 const subscribed = ref(false)
 

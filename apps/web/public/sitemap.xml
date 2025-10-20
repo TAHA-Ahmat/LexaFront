@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage FR/EN/AR -->
+  <url>
+    <loc>https://lexafric.com/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://lexafric.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://lexafric.com/ar</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://lexafric.com/services</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar/services" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Solutions -->
+  <url>
+    <loc>https://lexafric.com/solutions</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/solutions" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en/solutions" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar/solutions" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://lexafric.com/a-propos</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/a-propos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en/a-propos" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar/a-propos" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://lexafric.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar/contact" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Articles -->
+  <url>
+    <loc>https://lexafric.com/articles</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/articles" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en/articles" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar/articles" />
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://lexafric.com/mentions-legales</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://lexafric.com/politique-confidentialite</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

@@ -164,8 +164,9 @@
     },
     "home": {
       "hero": {
+        "badge": "Legal Excellence",
         "slide1": {
-          "title": "Welcome to LEXAFRIC",
+          "title": "WELCOME TO LEXAFRIC",
           "subtitle": "The expert who accompanies you",
           "cta": "Our Team"
         },
@@ -175,26 +176,35 @@
           "cta": "Contact Us"
         }
       },
+      "presentation": {
+        "title": "Legal and Tax Consulting Firm",
+        "description": "Specialized firm in legal and tax consulting, founded on a network of former collaborators from major international firms focused on African markets."
+      },
       "features": {
-        "title": "Our Expertise",
+        "title": "Our Services",
         "subtitle": "Professional services tailored to your specific needs",
         "legal": {
+          "title": "Legal Assistance",
           "item1": "Preliminary audit of contractual documents",
           "item2": "Advice on documents with legal impact"
         },
         "fiscal": {
+          "title": "Tax Assistance",
           "item1": "Monthly review of tax declarations",
           "item2": "Tax optimization advice"
         },
         "social": {
+          "title": "Social Assistance",
           "item1": "Hiring declarations",
           "item2": "Assistance with employment contract compliance"
         },
         "recruitment": {
+          "title": "Recruitment Assistance",
           "item1": "Search for qualified profiles",
           "item2": "Outsourcing of the recruitment process"
         },
         "training": {
+          "title": "Training",
           "item1": "Inter and intra-company training",
           "item2": "Skills development expertise"
         }
@@ -202,11 +212,17 @@
       "stats": {
         "title": "Our Key Figures",
         "subtitle": "Recognized experience at the service of your success",
-        "experience": "Years of experience",
-        "associatesExperience": "Years of cumulative expertise",
+        "experience": "10+",
+        "experienceLabel": "YEARS OF EXPERIENCE",
+        "associatesExperience": "25+",
+        "associatesExperienceLabel": "Years of cumulative expertise",
+        "team": "15+",
+        "teamLabel": "EXPERTS",
+        "expertise": "50+",
+        "expertiseLabel": "SUCCESSFUL PROJECTS",
         "clients": "Clients supported",
         "satisfaction": "Client satisfaction",
-        "message": "Our associates have over 25 years of combined experience with SMEs and large companies, with a constant commitment to excellence and integrity."
+        "message": "Our associates have over 25 years of combined experience with SMEs to large companies, with a constant commitment to excellence and integrity."
       },
       "posts": {
         "title": "Legal News",
@@ -231,21 +247,27 @@
         }
       },
       "cta": {
+        "badge": "Get in touch",
         "title": "Ready to transform your business?",
         "subtitle": "Let's discuss your projects and goals. Our team of experts is ready to support your success.",
-        "button1": "Contact us",
-        "button2": "Learn more",
-        "or": "Or contact us directly"
+        "button1": "CONTACT US",
+        "button2": "OUR TEAM",
+        "or": "Or contact us directly",
+        "callUs": "Call us",
+        "writeUs": "Write to us"
       },
       "values": {
-        "title": "Our Values",
+        "title": "Vision, Mission, Values",
+        "subtitle": "Our reason for being and fundamental principles",
         "vision": {
           "title": "Our Vision",
-          "content": "LexAfric is an international firm, offering top-tier legal and tax support to companies operating in the African market."
+          "content": "To become an international firm, recognized and respected for its professionalism and integrity in legal and tax support for companies in Africa.",
+          "description": "To become an international firm, recognized and respected for its professionalism and integrity in legal and tax support for companies in Africa."
         },
         "mission": {
           "title": "Our Mission",
-          "content": "To support national and sub-regional companies in their compliance with international standards, while respecting local specificities."
+          "content": "To support national and sub-regional companies in their compliance with international standards while assisting multinationals in their establishment and development in the African market.",
+          "description": "To support national and sub-regional companies in their compliance with international standards while assisting multinationals in their establishment and development in the African market."
         },
         "integrity": {
           "title": "Integrity",
@@ -262,27 +284,47 @@
         "interaction": {
           "title": "Interaction",
           "content": "We foster constant and constructive dialogue with our clients and partners."
+        },
+        "value1": {
+          "title": "Integrity",
+          "description": "We place ethics and transparency at the heart of our professional practice."
+        },
+        "value2": {
+          "title": "Listening",
+          "description": "We pay special attention to the specific needs of each client."
+        },
+        "value3": {
+          "title": "Pedagogy",
+          "description": "We clearly explain legal and tax issues for better decision-making."
+        },
+        "value4": {
+          "title": "Interaction",
+          "description": "We foster constant and constructive dialogue with our clients and partners."
         }
       },
       "methodology": {
         "title": "Our Methodology",
-        "subtitle": "A structured 3-step approach to ensure your success",
-        "strategy": {
+        "subtitle": "A structured approach to ensure your success",
+        "step1": {
           "title": "Strategy",
-          "content": "In-depth analysis of your situation and definition of a strategy tailored to your objectives."
+          "description": "Specific approach adapted to the context, based on integrity, listening, pedagogy and interaction with our clients."
         },
-        "planning": {
+        "step2": {
           "title": "Planning",
-          "content": "Development of a detailed action plan with clear milestones and realistic deadlines."
+          "description": "Organization of framing meetings and strict adherence to deadlines set by our clients."
         },
-        "implementation": {
+        "step3": {
           "title": "Implementation",
-          "content": "Rigorous execution of the plan with continuous monitoring and adjustments if necessary."
+          "description": "On-site support for the effective implementation of the recommendations made."
+        },
+        "step4": {
+          "title": "Follow-up",
+          "description": "Continuous evaluation of results and adjustments to ensure achievement of your goals."
         }
       },
       "partners": {
         "title": "Our Partners",
-        "subtitle": "A diverse network of experts to meet all your needs",
+        "subtitle": "More than 25 international partners trust us",
         "partner": "Partner",
         "note": "Partner logos will be added later"
       },
@@ -295,8 +337,8 @@
         "blog": "View Blog"
       },
       "seo": {
-        "title": "Lexafric - Home",
-        "description": "Legal and tax consulting firm in Africa. Recognized expertise for over 10 years."
+        "title": "LEXAFRIC - Legal and Tax Consulting Firm in Africa",
+        "description": "Specialized firm in legal and tax consulting founded on a network of former collaborators from major international firms focused on African markets. Over 10 years of experience."
       }
     }
   }

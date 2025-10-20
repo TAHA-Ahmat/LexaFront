@@ -52,7 +52,7 @@
 
             <!-- Lien -->
             <NuxtLink
-              :to="`/articles`"
+              :to="localePath('/articles')"
               class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:gap-3 transition-all"
             >
               {{ $t('common.readMore') }}
@@ -67,7 +67,7 @@
       <!-- Lien vers tous les articles -->
       <div class="text-center mt-12">
         <NuxtLink
-          to="/articles"
+          :to="localePath('/articles')"
           class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all"
         >
           {{ $t('pages.home.posts.viewAll') }}
@@ -82,6 +82,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 // Articles d'exemple - à remplacer par des données réelles
 const recentPosts = [
