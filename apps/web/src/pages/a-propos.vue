@@ -321,6 +321,9 @@
 </template>
 
 <script setup lang="ts">
+// i18n
+const localePath = useLocalePath()
+
 // SEO
 useSeoMeta({
   title: 'À propos - Lexafric',

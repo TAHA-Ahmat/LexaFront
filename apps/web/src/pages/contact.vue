@@ -219,6 +219,9 @@
 </template>
 
 <script setup lang="ts">
+// i18n
+const localePath = useLocalePath()
+
 const form = ref({
   name: '',
   email: '',

@@ -36,6 +36,7 @@ export default defineNuxtConfig({
 
   // Configuration i18n (FR/EN/AR avec RTL)
   i18n: {
+    restructureDir: false,
     locales: [
       {
         code: 'fr',
