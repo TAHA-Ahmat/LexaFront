@@ -43,29 +43,140 @@
       "subtitle": "Des solutions professionnelles adaptées à vos besoins",
       "legal": {
         "title": "Assistance Juridique",
-        "description": "Conseil et accompagnement juridique pour sécuriser vos activités et décisions stratégiques."
+        "description": "Dans vos relations avec vos partenaires d'affaires, vous avez la possibilité de solliciter tout audit préalable de vos supports contractuels ou de tout autre document pouvant avoir une incidence juridique.",
+        "longDescription": "Notre cabinet met à votre disposition une expertise juridique complète pour sécuriser l'ensemble de vos opérations commerciales et contractuelles. Nous intervenons en amont de vos engagements pour identifier les risques juridiques et vous proposer des solutions adaptées à votre activité. Notre approche préventive vous permet d'éviter les litiges coûteux et de préserver vos relations commerciales.",
+        "features": [
+          "Audit préalable de supports contractuels",
+          "Conseil sur documents à incidence juridique",
+          "Sécurisation des relations d'affaires",
+          "Accompagnement juridique personnalisé"
+        ],
+        "details": {
+          "intro": "Notre service d'assistance juridique vous accompagne dans toutes vos démarches légales et contractuelles.",
+          "section1": {
+            "title": "Audit Contractuel",
+            "content": "Nous analysons en profondeur vos contrats commerciaux, partenariats, accords de distribution, et tout autre document engageant votre responsabilité. Notre expertise vous permet d'identifier les clauses défavorables, les risques juridiques et les opportunités d'optimisation."
+          },
+          "section2": {
+            "title": "Conseil Juridique",
+            "content": "Nos juristes vous conseillent sur tous les aspects juridiques de votre activité : droit des sociétés, droit commercial, propriété intellectuelle, et conformité réglementaire. Nous vous aidons à prendre des décisions éclairées en toute connaissance des implications juridiques."
+          },
+          "section3": {
+            "title": "Rédaction et Négociation",
+            "content": "Nous rédigeons et négocions vos contrats pour protéger au mieux vos intérêts. Nos documents juridiques sont adaptés à votre secteur d'activité et conformes à la réglementation en vigueur."
+          }
+        }
       },
       "fiscal": {
         "title": "Assistance Fiscale",
-        "description": "Optimisation fiscale et conformité aux réglementations en vigueur."
+        "description": "Nous mettons à votre disposition notre expertise en fiscalité pour un contrôle mensuel de vos déclarations fiscales et des conseils d'optimisation de votre charge fiscale.",
+        "longDescription": "La fiscalité est un enjeu stratégique majeur pour toute entreprise. Notre équipe d'experts fiscalistes vous accompagne pour optimiser votre charge fiscale tout en respectant scrupuleusement la réglementation en vigueur. Nous assurons un suivi régulier de vos obligations déclaratives et vous conseillons sur les meilleures stratégies d'optimisation fiscale adaptées à votre situation.",
+        "features": [
+          "Contrôle mensuel des déclarations fiscales",
+          "Conseils d'optimisation fiscale",
+          "Conformité aux réglementations",
+          "Accompagnement lors des contrôles"
+        ],
+        "details": {
+          "intro": "Bénéficiez d'une expertise fiscale pointue pour sécuriser vos déclarations et optimiser votre fiscalité.",
+          "section1": {
+            "title": "Contrôle et Déclarations",
+            "content": "Nous effectuons un contrôle rigoureux de toutes vos déclarations fiscales mensuelles, trimestrielles et annuelles. Notre expertise vous garantit la conformité avec les obligations fiscales et évite tout risque de redressement."
+          },
+          "section2": {
+            "title": "Optimisation Fiscale",
+            "content": "Nos conseillers fiscaux identifient les opportunités d'optimisation légale de votre charge fiscale. Nous vous accompagnons dans la mise en place de stratégies fiscales efficaces adaptées à votre activité et à vos objectifs de développement."
+          },
+          "section3": {
+            "title": "Assistance aux Contrôles",
+            "content": "En cas de contrôle fiscal, notre équipe vous assiste et vous représente devant l'administration. Nous préparons l'ensemble des documents nécessaires et gérons les échanges avec les services fiscaux pour défendre au mieux vos intérêts."
+          }
+        }
       },
       "social": {
         "title": "Assistance Sociale",
-        "description": "Gestion des ressources humaines et conformité sociale pour votre entreprise."
+        "description": "Nous vous accompagnons dans vos déclarations d'embauche auprès de la CNPS et vous aidons à vous mettre en conformité avec vos contrats de travail.",
+        "longDescription": "Le droit social est un domaine complexe en constante évolution. Notre expertise vous permet de gérer sereinement vos obligations sociales et de sécuriser vos relations avec vos collaborateurs. Nous vous accompagnons dans toutes vos démarches administratives et veillons à la conformité de vos pratiques RH avec la législation du travail en vigueur.",
+        "features": [
+          "Déclarations d'embauche CNPS",
+          "Mise en conformité des contrats de travail",
+          "Gestion de la paie et des charges sociales",
+          "Conseil en droit du travail"
+        ],
+        "details": {
+          "intro": "Sécurisez votre gestion sociale et RH avec notre accompagnement expert.",
+          "section1": {
+            "title": "Gestion Administrative",
+            "content": "Nous prenons en charge l'ensemble de vos déclarations d'embauche auprès de la CNPS et assurons le suivi administratif de vos salariés. Notre expertise vous garantit le respect des délais et la conformité de vos démarches."
+          },
+          "section2": {
+            "title": "Contrats et Conformité",
+            "content": "Nos spécialistes en droit social rédigent et vérifient vos contrats de travail pour s'assurer de leur conformité avec la législation. Nous vous conseillons sur les clauses adaptées à chaque situation et protégeons vos intérêts en cas de contentieux."
+          },
+          "section3": {
+            "title": "Paie et Charges Sociales",
+            "content": "Nous vous assistons dans la gestion de la paie et le calcul des charges sociales. Notre accompagnement vous permet d'optimiser vos coûts sociaux tout en respectant vos obligations légales et conventionnelles."
+          }
+        }
       },
       "recruitment": {
         "title": "Assistance à Recrutement",
-        "description": "Accompagnement dans le recrutement et la sélection de vos talents."
+        "description": "Parce que nous comprenons que la recherche d'un profil adapté à vos besoins peut s'avérer fastidieuse, nous vous proposons d'externaliser cette procédure de recrutement.",
+        "longDescription": "Le recrutement est un enjeu crucial pour la réussite de votre entreprise. Trouver le bon candidat nécessite du temps, de l'expertise et des ressources. Notre service d'assistance au recrutement vous permet de déléguer cette mission stratégique à des professionnels expérimentés qui maîtrisent les techniques de sourcing et d'évaluation des candidats.",
+        "features": [
+          "Recherche de profils qualifiés",
+          "Externalisation du processus de recrutement",
+          "Présélection des candidats",
+          "Accompagnement à l'intégration"
+        ],
+        "details": {
+          "intro": "Confiez-nous votre recrutement pour accéder aux meilleurs talents du marché.",
+          "section1": {
+            "title": "Sourcing et Chasse de Têtes",
+            "content": "Nous utilisons notre réseau étendu et nos techniques de sourcing avancées pour identifier les meilleurs profils correspondant à vos besoins. Notre approche ciblée vous permet d'accéder à des talents qualifiés, même pour des postes difficiles à pourvoir."
+          },
+          "section2": {
+            "title": "Évaluation et Sélection",
+            "content": "Nous effectuons une présélection rigoureuse des candidats à travers des entretiens approfondis, des tests de compétences et des vérifications de références. Vous ne rencontrez que les candidats les plus pertinents pour votre poste."
+          },
+          "section3": {
+            "title": "Accompagnement à l'Intégration",
+            "content": "Notre accompagnement ne s'arrête pas au recrutement. Nous vous aidons à mettre en place un processus d'onboarding efficace pour faciliter l'intégration de vos nouvelles recrues et assurer leur réussite dans votre entreprise."
+          }
+        }
       },
       "training": {
         "title": "Formations",
-        "description": "Programmes de formation adaptés pour développer les compétences de vos équipes."
+        "description": "Nous avons développé une expertise avérée dans le domaine de la formation inter et intra-entreprises avec un savoir-faire éprouvé dans l'accompagnement au développement des compétences.",
+        "longDescription": "Le développement des compétences de vos collaborateurs est un investissement stratégique pour la performance et la compétitivité de votre entreprise. Notre offre de formation s'adapte à vos besoins spécifiques et aux réalités de votre secteur d'activité. Nous proposons des programmes sur-mesure animés par des experts reconnus dans leur domaine.",
+        "features": [
+          "Formations inter-entreprises",
+          "Formations intra-entreprises",
+          "Développement des compétences",
+          "Programmes sur-mesure"
+        ],
+        "details": {
+          "intro": "Développez les compétences de vos équipes avec nos programmes de formation adaptés.",
+          "section1": {
+            "title": "Formations Inter-Entreprises",
+            "content": "Nos sessions inter-entreprises permettent à vos collaborateurs de développer leurs compétences tout en échangeant avec des professionnels d'autres structures. Cette approche favorise le partage d'expériences et l'enrichissement mutuel."
+          },
+          "section2": {
+            "title": "Formations Intra-Entreprises",
+            "content": "Nous concevons des formations sur-mesure adaptées à votre contexte et à vos enjeux spécifiques. Nos programmes intra-entreprises sont dispensés dans vos locaux et personnalisés selon vos besoins et votre culture d'entreprise."
+          },
+          "section3": {
+            "title": "Accompagnement au Développement",
+            "content": "Au-delà de la formation, nous vous accompagnons dans la mise en place d'une véritable stratégie de développement des compétences. Nous vous aidons à identifier les besoins en formation, à concevoir des parcours de développement et à mesurer l'impact de vos investissements formation."
+          }
+        }
       },
       "cta": {
         "title": "Besoin d'un accompagnement personnalisé ?",
         "subtitle": "Notre équipe d'experts est à votre disposition",
         "button": "Contactez-nous"
-      }
+      },
+      "learnMore": "SAVOIR PLUS"
     },
     "solutions": {
       "title": "Nos Solutions",
