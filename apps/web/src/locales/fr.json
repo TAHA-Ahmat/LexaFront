@@ -12,6 +12,20 @@
     "submit": "Envoyer",
     "translationPending": "Traduction à venir"
   },
+  "chatbot": {
+    "title": "Assistant Lexafric",
+    "subtitle": "En ligne maintenant",
+    "open": "Ouvrir le chat",
+    "close": "Fermer le chat",
+    "openChat": "Ouvrir le chat",
+    "closeChat": "Fermer le chat",
+    "welcome": "Bienvenue sur le chat Lexafric",
+    "askQuestion": "Posez-nous vos questions sur nos services",
+    "reset": "Réinitialiser la conversation",
+    "placeholder": "Posez votre question...",
+    "send": "Envoyer",
+    "hint": "Appuyez sur Entrée pour envoyer, Shift + Entrée pour une nouvelle ligne"
+  },
   "nav": {
     "changeLanguage": "Changer de langue",
     "home": "Accueil",
