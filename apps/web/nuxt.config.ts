@@ -63,7 +63,11 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
     lazy: true,
-    langDir: 'locales'
+    langDir: 'locales',
+    // Configuration i18n v9 - Désactiver optimizeTranslationDirective
+    bundle: {
+      optimizeTranslationDirective: false
+    }
   },
 
   // Configuration Nuxt Image (provider local)
@@ -89,6 +93,9 @@ export default defineNuxtConfig({
 
   // Runtime config
   runtimeConfig: {
+    // Private keys (accessible uniquement côté serveur)
+    openaiApiKey: process.env.OPENAI_API_KEY,
+
     public: {
       siteUrl: process.env.SITE_URL || 'http://localhost:3000',
       defaultLocale: 'fr',

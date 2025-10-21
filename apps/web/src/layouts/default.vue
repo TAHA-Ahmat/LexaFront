@@ -39,12 +39,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- Chatbot intégré -->
+    <ChatWidget />
   </div>
 </template>
 
 <script setup lang="ts">
 import TopLangBar from '~/components/base/TopLangBar.vue'
 import NavBar from '~/components/base/NavBar.vue'
+import ChatWidget from '~/components/chat/ChatWidget.vue'
 
 const localePath = useLocalePath()
 </script>

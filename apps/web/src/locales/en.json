@@ -18,6 +18,20 @@
     "allSolutions": "All solutions",
     "interventionAreas": "Our Areas of Expertise"
   },
+  "chatbot": {
+    "title": "Lexafric Assistant",
+    "subtitle": "Online now",
+    "open": "Open chat",
+    "close": "Close chat",
+    "openChat": "Open chat",
+    "closeChat": "Close chat",
+    "welcome": "Welcome to Lexafric chat",
+    "askQuestion": "Ask us about our services",
+    "reset": "Reset conversation",
+    "placeholder": "Ask your question...",
+    "send": "Send",
+    "hint": "Press Enter to send, Shift + Enter for new line"
+  },
   "nav": {
     "changeLanguage": "Change language",
     "home": "Home",

@@ -18,6 +18,20 @@
     "allSolutions": "جميع الحلول",
     "interventionAreas": "مجالات خبرتنا"
   },
+  "chatbot": {
+    "title": "مساعد ليكسافريك",
+    "subtitle": "متصل الآن",
+    "open": "فتح المحادثة",
+    "close": "إغلاق المحادثة",
+    "openChat": "فتح المحادثة",
+    "closeChat": "إغلاق المحادثة",
+    "welcome": "مرحباً بك في دردشة ليكسافريك",
+    "askQuestion": "اسألنا عن خدماتنا",
+    "reset": "إعادة تعيين المحادثة",
+    "placeholder": "اطرح سؤالك...",
+    "send": "إرسال",
+    "hint": "اضغط Enter للإرسال، Shift + Enter لسطر جديد"
+  },
   "nav": {
     "changeLanguage": "تغيير اللغة",
     "home": "الصفحة الرئيسية",
