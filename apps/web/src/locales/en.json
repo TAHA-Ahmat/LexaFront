@@ -170,20 +170,86 @@
       "legal": {
         "title": "Legal Secretariat",
         "description": "Complete management of your legal and corporate secretariat.",
+        "longDescription": "Legal secretariat is a strategic function that ensures your company's compliance with legal and regulatory obligations. Our team of experts supports you in the daily management of your corporate obligations, thus guaranteeing the legal security of your structure.",
+        "features": [
+          "Maintaining mandatory legal registers",
+          "Preparation and organization of meetings",
+          "Drafting minutes and resolutions",
+          "Follow-up of formalities with the registry"
+        ],
         "feature1": "Maintaining legal registers",
-        "feature2": "Preparation of meetings"
+        "feature2": "Preparation of meetings",
+        "details": {
+          "intro": "Our legal secretariat service relieves you of all your legal and administrative obligations.",
+          "section1": {
+            "title": "Register Management",
+            "content": "We ensure all your mandatory registers are kept up to date: register of meetings, register of share movements, personnel register, register of regulated agreements. This documentary rigor protects you in case of inspection."
+          },
+          "section2": {
+            "title": "Meeting Organization",
+            "content": "From convocation to drafting minutes, we handle the entire process: preparing the agenda, sending convocations on time, drafting resolutions, holding the meeting, and post-meeting formalities."
+          },
+          "section3": {
+            "title": "Legal Formalities",
+            "content": "We take care of all publication and registration formalities: filing documents with the registry, publication in legal announcements journals, updating the commercial register. Your compliance is our priority."
+          }
+        }
       },
       "governance": {
         "title": "Corporate Governance",
         "description": "Implementation and optimization of your corporate governance.",
+        "longDescription": "Effective corporate governance is essential to create value, manage risks, and ensure the sustainability of your organization. We help you establish governance structures adapted to your size and strategic challenges.",
+        "features": [
+          "Governance organization consulting",
+          "Director training and support",
+          "Implementation of specialized committees",
+          "Development of charters and regulations"
+        ],
         "feature1": "Governance consulting",
-        "feature2": "Board member training"
+        "feature2": "Board member training",
+        "details": {
+          "intro": "Optimize the performance of your governance bodies with our recognized expertise.",
+          "section1": {
+            "title": "Governance Structuring",
+            "content": "We advise you on the best organization of your governing bodies: board composition, creation of committees (audit, remuneration, strategy), definition of roles and responsibilities. Our goal: effective and balanced governance."
+          },
+          "section2": {
+            "title": "Leadership Training",
+            "content": "We train your directors and executives in governance best practices: fiduciary duties, conflict of interest management, legal responsibilities, value creation strategy. Well-trained leaders make better decisions."
+          },
+          "section3": {
+            "title": "Governance Tools",
+            "content": "We develop all structuring documents for you: board internal regulations, director's charter, risk management policy, governance code. These tools formalize and secure the functioning of your bodies."
+          }
+        }
       },
       "creation": {
         "title": "Creation & Transformation",
         "description": "Support in creating and transforming your structure.",
+        "longDescription": "Whether you are launching a new activity or restructuring an existing company, we support you through all legal and administrative stages. Our expertise allows you to start on solid and compliant foundations.",
+        "features": [
+          "Creation of companies of all forms",
+          "Restructuring and transformation",
+          "Advice on optimal legal form",
+          "Completion of all formalities"
+        ],
         "feature1": "Company formation",
-        "feature2": "Business restructuring"
+        "feature2": "Business restructuring",
+        "details": {
+          "intro": "Bring your projects to life with tailored legal support from creation to transformation.",
+          "section1": {
+            "title": "Company Formation",
+            "content": "We guide you in choosing the legal form best suited to your project: LLC, SA, SAS, SCI, EIG... We draft your articles of association, complete all incorporation formalities, and ensure your company's registration. You can focus on your business."
+          },
+          "section2": {
+            "title": "Transformation and Restructuring",
+            "content": "Is your company evolving? We support you in transformation operations: change of corporate form, merger, spin-off, partial asset contribution, business transfer. We legally and fiscally secure these complex operations."
+          },
+          "section3": {
+            "title": "Legal Optimization",
+            "content": "Beyond simple creation, we advise you on optimizing your structure: holding company, subsidiaries, shareholders' agreements, adapted governance. Our strategic approach anticipates your future needs and facilitates your development."
+          }
+        }
       },
       "why": {
         "title": "Why choose us?",

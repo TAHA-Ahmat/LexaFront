@@ -170,20 +170,86 @@
       "legal": {
         "title": "Secrétariat Juridique",
         "description": "Gestion complète de votre secrétariat juridique et corporate.",
+        "longDescription": "Le secrétariat juridique est une fonction stratégique qui assure la conformité de votre entreprise aux obligations légales et réglementaires. Notre équipe d'experts vous accompagne dans la gestion quotidienne de vos obligations corporate, garantissant ainsi la sécurité juridique de votre structure.",
+        "features": [
+          "Tenue des registres légaux obligatoires",
+          "Préparation et organisation des assemblées",
+          "Rédaction des procès-verbaux et résolutions",
+          "Suivi des formalités auprès du greffe"
+        ],
         "feature1": "Tenue des registres légaux",
-        "feature2": "Préparation des assemblées"
+        "feature2": "Préparation des assemblées",
+        "details": {
+          "intro": "Notre service de secrétariat juridique vous décharge de toutes vos obligations légales et administratives.",
+          "section1": {
+            "title": "Gestion des Registres",
+            "content": "Nous assurons la tenue à jour de tous vos registres obligatoires : registre des assemblées, registre des mouvements de titres, registre du personnel, registre des conventions réglementées. Cette rigueur documentaire vous protège en cas de contrôle."
+          },
+          "section2": {
+            "title": "Organisation des Assemblées",
+            "content": "De la convocation à la rédaction du procès-verbal, nous prenons en charge l'ensemble du processus : préparation de l'ordre du jour, envoi des convocations dans les délais, rédaction des résolutions, tenue de l'assemblée et formalités post-assemblée."
+          },
+          "section3": {
+            "title": "Formalités Légales",
+            "content": "Nous nous occupons de toutes les formalités de publicité et d'enregistrement : dépôt des actes au greffe, publicité au journal d'annonces légales, mise à jour du registre du commerce. Votre conformité est notre priorité."
+          }
+        }
       },
       "governance": {
         "title": "Gouvernance d'Entreprise",
         "description": "Mise en place et optimisation de votre gouvernance d'entreprise.",
+        "longDescription": "Une gouvernance d'entreprise efficace est essentielle pour créer de la valeur, gérer les risques et assurer la pérennité de votre organisation. Nous vous aidons à mettre en place des structures de gouvernance adaptées à votre taille et à vos enjeux stratégiques.",
+        "features": [
+          "Conseil en organisation de la gouvernance",
+          "Formation et accompagnement des administrateurs",
+          "Mise en place de comités spécialisés",
+          "Élaboration de chartes et règlements"
+        ],
         "feature1": "Conseil en gouvernance",
-        "feature2": "Formation des administrateurs"
+        "feature2": "Formation des administrateurs",
+        "details": {
+          "intro": "Optimisez la performance de vos organes de gouvernance avec notre expertise reconnue.",
+          "section1": {
+            "title": "Structuration de la Gouvernance",
+            "content": "Nous vous conseillons sur la meilleure organisation de vos instances dirigeantes : composition du conseil d'administration, création de comités (audit, rémunération, stratégie), définition des rôles et responsabilités. Notre objectif : une gouvernance efficace et équilibrée."
+          },
+          "section2": {
+            "title": "Formation des Dirigeants",
+            "content": "Nous formons vos administrateurs et dirigeants aux meilleures pratiques de gouvernance : devoirs fiduciaires, gestion des conflits d'intérêts, responsabilités légales, stratégie de création de valeur. Des dirigeants bien formés prennent de meilleures décisions."
+          },
+          "section3": {
+            "title": "Outils de Gouvernance",
+            "content": "Nous élaborons pour vous tous les documents structurants : règlement intérieur du conseil, charte de l'administrateur, politique de gestion des risques, code de gouvernance. Ces outils formalisent et sécurisent le fonctionnement de vos instances."
+          }
+        }
       },
       "creation": {
         "title": "Création & Transformation",
         "description": "Accompagnement dans la création et la transformation de votre structure.",
+        "longDescription": "Que vous lanciez une nouvelle activité ou que vous restructuriez une entreprise existante, nous vous accompagnons dans toutes les étapes juridiques et administratives. Notre expertise vous permet de partir sur des bases solides et conformes.",
+        "features": [
+          "Création de sociétés de toutes formes",
+          "Restructuration et transformation",
+          "Conseil sur la forme juridique optimale",
+          "Accomplissement de toutes les formalités"
+        ],
         "feature1": "Création de sociétés",
-        "feature2": "Restructuration d'entreprise"
+        "feature2": "Restructuration d'entreprise",
+        "details": {
+          "intro": "Concrétisez vos projets avec un accompagnement juridique sur mesure de la création à la transformation.",
+          "section1": {
+            "title": "Création de Sociétés",
+            "content": "Nous vous guidons dans le choix de la forme juridique la plus adaptée à votre projet : SARL, SA, SAS, SCI, GIE... Nous rédigeons vos statuts, effectuons toutes les formalités de constitution et assurons l'immatriculation de votre société. Vous pouvez vous concentrer sur votre activité."
+          },
+          "section2": {
+            "title": "Transformation et Restructuration",
+            "content": "Votre entreprise évolue ? Nous vous accompagnons dans les opérations de transformation : changement de forme sociale, fusion, scission, apport partiel d'actif, cession de fonds de commerce. Nous sécurisons juridiquement et fiscalement ces opérations complexes."
+          },
+          "section3": {
+            "title": "Optimisation Juridique",
+            "content": "Au-delà de la simple création, nous vous conseillons sur l'optimisation de votre structure : holding, filialisation, pactes d'actionnaires, gouvernance adaptée. Notre approche stratégique anticipe vos besoins futurs et facilite votre développement."
+          }
+        }
       },
       "why": {
         "title": "Pourquoi nous choisir ?",
