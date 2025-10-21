@@ -10,7 +10,13 @@
     "readMore": "Lire la suite",
     "loadMore": "Charger plus",
     "submit": "Envoyer",
-    "translationPending": "Traduction à venir"
+    "translationPending": "Traduction à venir",
+    "ourServices": "Nos Prestations",
+    "ourSolutions": "Nos Solutions",
+    "contactUs": "Contactez-nous",
+    "allServices": "Tous les services",
+    "allSolutions": "Toutes les solutions",
+    "interventionAreas": "Nos Domaines d'Intervention"
   },
   "nav": {
     "changeLanguage": "Changer de langue",
@@ -27,6 +33,7 @@
     "services": {
       "title": "Nos Services",
       "subtitle": "Des solutions professionnelles adaptées à vos besoins",
+      "badge": "Excellence juridique professionnelle",
       "legal": {
         "title": "Assistance Juridique",
         "description": "Dans vos relations avec vos partenaires d'affaires, vous avez la possibilité de solliciter tout audit préalable de vos supports contractuels ou de tout autre document pouvant avoir une incidence juridique.",
@@ -160,13 +167,40 @@
       "cta": {
         "title": "Besoin d'un accompagnement personnalisé ?",
         "subtitle": "Notre équipe d'experts est à votre disposition",
-        "button": "Contactez-nous"
+        "button": "Contactez-nous",
+        "contactNow": "Contactez-nous dès aujourd'hui"
       },
       "learnMore": "EN SAVOIR PLUS"
     },
     "solutions": {
       "title": "Nos Solutions",
       "subtitle": "Des approches innovantes pour transformer votre entreprise",
+      "badge": "Solutions Corporate",
+      "intro": {
+        "title": "Des Solutions Adaptées à Vos Enjeux",
+        "description": "Chez Lexafric, nous comprenons que chaque entreprise est unique. C'est pourquoi nous proposons des solutions sur mesure qui s'adaptent à vos besoins spécifiques et à votre secteur d'activité.",
+        "text": "Notre approche consiste à vous accompagner de manière personnalisée dans la gestion de vos obligations juridiques et corporate. Nous mettons à votre disposition une équipe d'experts dédiés qui connaissent parfaitement les enjeux de votre secteur."
+      },
+      "methodology": {
+        "title": "Notre Méthodologie",
+        "subtitle": "Une approche structurée en 4 étapes",
+        "step1": {
+          "title": "Analyse",
+          "description": "Étude approfondie de vos besoins et de votre contexte"
+        },
+        "step2": {
+          "title": "Stratégie",
+          "description": "Élaboration d'une solution personnalisée"
+        },
+        "step3": {
+          "title": "Mise en œuvre",
+          "description": "Déploiement et accompagnement terrain"
+        },
+        "step4": {
+          "title": "Suivi",
+          "description": "Support continu et optimisation"
+        }
+      },
       "legal": {
         "title": "Secrétariat Juridique",
         "description": "Gestion complète de votre secrétariat juridique et corporate.",
@@ -267,6 +301,12 @@
     "about": {
       "title": "À propos",
       "subtitle": "Cabinet d'expertise juridique et de conseil en Afrique",
+      "badge": "Excellence juridique depuis plus de 30 ans",
+      "intro": {
+        "title": "Un cabinet à votre écoute",
+        "p1": "Cabinet de Conseil Juridique et fiscal, LEXAFRIC regroupe des jeunes professionnels cumulant plus de trente (30) années d'expérience dans le domaine du Conseil Juridique et de la Fiscalité autour des Co-gérants Mr Beti et Mme Saha.",
+        "p2": "Le Cabinet LEXAFRIC est un cabinet de Conseil Juridique et Fiscal. Il repose sur un réseau d'anciens collaborateurs de grands cabinets internationaux ayant décidé de s'unir afin de créer des synergies essentiellement orientées vers les marchés africains."
+      },
       "mission": {
         "title": "Notre mission",
         "p1": "Lexafric est un cabinet spécialisé dans l'accompagnement juridique des entreprises et des particuliers en Afrique francophone. Nous offrons une expertise pointue dans les domaines du droit des affaires, du droit social et du conseil stratégique.",
@@ -286,6 +326,30 @@
           "title": "Engagement",
           "description": "Nous nous engageons pleinement dans la défense des intérêts de nos clients et la réussite de leurs projets."
         }
+      },
+      "team": {
+        "title": "Notre Équipe",
+        "subtitle": "Des professionnels expérimentés au service de votre réussite",
+        "member1": {
+          "name": "Mr Beti",
+          "role": "Co-gérant",
+          "description": "Expert en conseil juridique avec plus de 15 ans d'expérience dans les grands cabinets internationaux."
+        },
+        "member2": {
+          "name": "Mme Saha",
+          "role": "Co-gérante",
+          "description": "Spécialiste en fiscalité et droit des affaires, forte d'une expérience internationale reconnue."
+        }
+      },
+      "stats": {
+        "experience": "Années d'expérience cumulée",
+        "satisfaction": "Satisfaction client",
+        "support": "Support disponible",
+        "services": "Services proposés"
+      },
+      "cta": {
+        "title": "Prêt à collaborer avec nous ?",
+        "subtitle": "Contactez-nous dès aujourd'hui pour discuter de vos besoins juridiques et fiscaux"
       }
     },
     "contact": {

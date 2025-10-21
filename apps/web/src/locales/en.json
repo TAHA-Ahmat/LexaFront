@@ -10,7 +10,13 @@
     "readMore": "Read more",
     "loadMore": "Load more",
     "submit": "Submit",
-    "translationPending": "Translation coming soon"
+    "translationPending": "Translation coming soon",
+    "ourServices": "Our Services",
+    "ourSolutions": "Our Solutions",
+    "contactUs": "Contact us",
+    "allServices": "All services",
+    "allSolutions": "All solutions",
+    "interventionAreas": "Our Areas of Expertise"
   },
   "nav": {
     "changeLanguage": "Change language",
@@ -27,6 +33,7 @@
     "services": {
       "title": "Our Services",
       "subtitle": "Professional solutions tailored to your needs",
+      "badge": "Professional legal excellence",
       "legal": {
         "title": "Legal Assistance",
         "description": "In your business relationships, you can request a preliminary audit of your contractual documents or any other document that may have legal implications.",
@@ -161,12 +168,39 @@
       "cta": {
         "title": "Need personalized support?",
         "subtitle": "Our team of experts is at your service",
-        "button": "Contact us"
+        "button": "Contact us",
+        "contactNow": "Contact us today"
       }
     },
     "solutions": {
       "title": "Our Solutions",
       "subtitle": "Innovative approaches to transform your business",
+      "badge": "Corporate Solutions",
+      "intro": {
+        "title": "Solutions Tailored to Your Challenges",
+        "description": "At Lexafric, we understand that every business is unique. That's why we offer custom solutions that adapt to your specific needs and industry.",
+        "text": "Our approach is to provide you with personalized support in managing your legal and corporate obligations. We provide you with a team of dedicated experts who are thoroughly familiar with the challenges of your sector."
+      },
+      "methodology": {
+        "title": "Our Methodology",
+        "subtitle": "A structured 4-step approach",
+        "step1": {
+          "title": "Analysis",
+          "description": "In-depth study of your needs and context"
+        },
+        "step2": {
+          "title": "Strategy",
+          "description": "Development of a personalized solution"
+        },
+        "step3": {
+          "title": "Implementation",
+          "description": "Deployment and field support"
+        },
+        "step4": {
+          "title": "Follow-up",
+          "description": "Continuous support and optimization"
+        }
+      },
       "legal": {
         "title": "Legal Secretariat",
         "description": "Complete management of your legal and corporate secretariat.",
@@ -267,6 +301,12 @@
     "about": {
       "title": "About",
       "subtitle": "Legal expertise and consulting firm in Africa",
+      "badge": "Legal excellence for over 30 years",
+      "intro": {
+        "title": "A firm that listens to you",
+        "p1": "Legal and Tax Consulting firm, LEXAFRIC brings together young professionals with more than thirty (30) years of combined experience in Legal and Tax Consulting around the Co-managers Mr Beti and Mrs Saha.",
+        "p2": "LEXAFRIC firm is a Legal and Tax Consulting firm. It is based on a network of former collaborators from major international firms who decided to unite to create synergies primarily oriented towards African markets."
+      },
       "mission": {
         "title": "Our mission",
         "p1": "Lexafric is a firm specializing in legal support for businesses and individuals in French-speaking Africa. We offer sharp expertise in business law, labor law, and strategic consulting.",
@@ -286,6 +326,30 @@
           "title": "Commitment",
           "description": "We are fully committed to defending our clients' interests and the success of their projects."
         }
+      },
+      "team": {
+        "title": "Our Team",
+        "subtitle": "Experienced professionals at the service of your success",
+        "member1": {
+          "name": "Mr Beti",
+          "role": "Co-manager",
+          "description": "Legal consulting expert with over 15 years of experience in major international firms."
+        },
+        "member2": {
+          "name": "Mrs Saha",
+          "role": "Co-manager",
+          "description": "Specialist in taxation and business law, with recognized international experience."
+        }
+      },
+      "stats": {
+        "experience": "Years of combined experience",
+        "satisfaction": "Client satisfaction",
+        "support": "Support available",
+        "services": "Services offered"
+      },
+      "cta": {
+        "title": "Ready to work with us?",
+        "subtitle": "Contact us today to discuss your legal and tax needs"
       }
     },
     "contact": {

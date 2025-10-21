@@ -17,11 +17,11 @@
         <!-- Breadcrumb -->
         <nav class="mb-8">
           <ol class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <li><NuxtLink to="/" class="hover:text-orange-600 dark:hover:text-orange-400">Accueil</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/')" class="hover:text-orange-600 dark:hover:text-orange-400">{{ $t('common.home') }}</NuxtLink></li>
             <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></li>
-            <li><NuxtLink to="/solutions" class="hover:text-orange-600 dark:hover:text-orange-400">Solutions</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/solutions')"  class="hover:text-orange-600 dark:hover:text-orange-400">{{ $t('nav.solutions') }}</NuxtLink></li>
             <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></li>
-            <li class="text-gray-900 dark:text-white font-medium">Création & Transformation</li>
+            <li class="text-gray-900 dark:text-white font-medium">{{ $t('pages.solutions.creation.title') }}</li>
           </ol>
         </nav>
 
@@ -31,7 +31,7 @@
             <svg class="w-4 h-4 text-orange-600 dark:text-orange-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-sm font-semibold text-orange-700 dark:text-orange-300">Accompagnement Structurel</span>
+            <span class="text-sm font-semibold text-orange-700 dark:text-orange-300">{{ $t('pages.solutions.creation.title') }}</span>
           </div>
 
           <!-- Title -->
@@ -68,7 +68,7 @@
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Nos Prestations
+            {{ $t('common.ourServices') }}
           </h2>
           <div class="grid md:grid-cols-2 gap-6">
             <div v-for="(feature, index) in $tm('pages.solutions.creation.features')" :key="index"
@@ -179,26 +179,26 @@
             <!-- Content -->
             <div class="relative text-center space-y-6">
               <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
-                Prêt à lancer votre projet ?
+                {{ $t('pages.solutions.cta.title') }}
               </h2>
               <p class="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
-                Notre équipe d'experts est à votre disposition pour créer ou transformer votre entreprise
+                {{ $t('pages.solutions.cta.subtitle') }}
               </p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <NuxtLink
-                  to="/contact"
+                  :to="localePath('/contact')" 
                   class="inline-flex items-center justify-center gap-3 bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
                 >
-                  Contactez-nous
+                  {{ $t('common.contactUs') }}
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
                 </NuxtLink>
                 <NuxtLink
-                  to="/solutions"
+                  :to="localePath('/solutions')" 
                   class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-orange-600 transition-all"
                 >
-                  Toutes les solutions
+                  {{ $t('common.allSolutions') }}
                 </NuxtLink>
               </div>
             </div>

@@ -17,9 +17,9 @@
         <!-- Breadcrumb -->
         <nav class="mb-8">
           <ol class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <li><NuxtLink to="/" class="hover:text-purple-600 dark:hover:text-purple-400">Accueil</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/')" class="hover:text-purple-600 dark:hover:text-purple-400">{{ $t('common.home') }}</NuxtLink></li>
             <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></li>
-            <li class="text-gray-900 dark:text-white font-medium">Solutions</li>
+            <li class="text-gray-900 dark:text-white font-medium">{{ $t('nav.solutions') }}</li>
           </ol>
         </nav>
 
@@ -29,7 +29,7 @@
             <svg class="w-4 h-4 text-purple-600 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-sm font-semibold text-purple-700 dark:text-purple-300">Solutions Innovantes</span>
+            <span class="text-sm font-semibold text-purple-700 dark:text-purple-300">{{ $t('pages.solutions.badge') }}</span>
           </div>
 
           <!-- Title -->
@@ -41,6 +41,141 @@
           <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
             {{ $t('pages.solutions.subtitle') }}
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-16 md:py-20 bg-white dark:bg-gray-950">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-6">
+              <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+                {{ $t('pages.solutions.intro.title') }}
+              </h2>
+              <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                {{ $t('pages.solutions.intro.description') }}
+              </p>
+              <p class="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                {{ $t('pages.solutions.intro.text') }}
+              </p>
+            </div>
+
+            <!-- Right Visual -->
+            <div class="relative">
+              <div class="relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-950/30 dark:to-indigo-950/30 border border-gray-200 dark:border-gray-800 p-12">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-indigo-500/10"></div>
+                <div class="relative z-10 flex items-center justify-center h-full">
+                  <svg class="w-48 h-48 md:w-64 md:h-64 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section class="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+      <div class="container mx-auto px-4 md:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              {{ $t('pages.solutions.methodology.title') }}
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              {{ $t('pages.solutions.methodology.subtitle') }}
+            </p>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mt-6 rounded-full"></div>
+          </div>
+
+          <!-- Steps Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="relative group">
+              <div class="text-center p-8 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 hover:shadow-xl transition-all duration-300">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  1
+                </div>
+                <div class="mt-4 mb-4">
+                  <svg class="w-16 h-16 mx-auto text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  {{ $t('pages.solutions.methodology.step1.title') }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                  {{ $t('pages.solutions.methodology.step1.description') }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative group">
+              <div class="text-center p-8 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 hover:shadow-xl transition-all duration-300">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  2
+                </div>
+                <div class="mt-4 mb-4">
+                  <svg class="w-16 h-16 mx-auto text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  {{ $t('pages.solutions.methodology.step2.title') }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                  {{ $t('pages.solutions.methodology.step2.description') }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative group">
+              <div class="text-center p-8 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 hover:shadow-xl transition-all duration-300">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  3
+                </div>
+                <div class="mt-4 mb-4">
+                  <svg class="w-16 h-16 mx-auto text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  {{ $t('pages.solutions.methodology.step3.title') }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                  {{ $t('pages.solutions.methodology.step3.description') }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative group">
+              <div class="text-center p-8 bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 hover:shadow-xl transition-all duration-300">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  4
+                </div>
+                <div class="mt-4 mb-4">
+                  <svg class="w-16 h-16 mx-auto text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  {{ $t('pages.solutions.methodology.step4.title') }}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                  {{ $t('pages.solutions.methodology.step4.description') }}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -90,7 +225,7 @@
                 </ul>
 
                 <!-- Link -->
-                <NuxtLink to="/solutions/secretariat-juridique" class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:gap-4 transition-all group-hover:text-indigo-700 dark:group-hover:text-indigo-300">
+                <NuxtLink :to="localePath('/solutions/secretariat-juridique')"  class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:gap-4 transition-all group-hover:text-indigo-700 dark:group-hover:text-indigo-300">
                   {{ $t('common.readMore') }}
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -139,7 +274,7 @@
                 </ul>
 
                 <!-- Link -->
-                <NuxtLink to="/solutions/gouvernance-entreprise" class="inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-semibold hover:gap-4 transition-all group-hover:text-teal-700 dark:group-hover:text-teal-300">
+                <NuxtLink :to="localePath('/solutions/gouvernance-entreprise')"  class="inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-semibold hover:gap-4 transition-all group-hover:text-teal-700 dark:group-hover:text-teal-300">
                   {{ $t('common.readMore') }}
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -188,7 +323,7 @@
                 </ul>
 
                 <!-- Link -->
-                <NuxtLink to="/solutions/creation-transformation" class="inline-flex items-center gap-2 text-orange-600 dark:text-orange-400 font-semibold hover:gap-4 transition-all group-hover:text-orange-700 dark:group-hover:text-orange-300">
+                <NuxtLink :to="localePath('/solutions/creation-transformation')"  class="inline-flex items-center gap-2 text-orange-600 dark:text-orange-400 font-semibold hover:gap-4 transition-all group-hover:text-orange-700 dark:group-hover:text-orange-300">
                   {{ $t('common.readMore') }}
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -292,7 +427,7 @@
               </p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <NuxtLink
-                  to="/contact"
+                  :to="localePath('/contact')" 
                   class="inline-flex items-center justify-center gap-3 bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   {{ $t('pages.solutions.cta.button') }}
@@ -301,10 +436,10 @@
                   </svg>
                 </NuxtLink>
                 <NuxtLink
-                  to="/services"
+                  :to="localePath('/services')" 
                   class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-all"
                 >
-                  Nos Services
+                  {{ $t('common.allServices') }}
                 </NuxtLink>
               </div>
             </div>

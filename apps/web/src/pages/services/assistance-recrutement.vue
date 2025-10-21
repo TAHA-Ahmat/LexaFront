@@ -17,11 +17,11 @@
         <!-- Breadcrumb -->
         <nav class="mb-8">
           <ol class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <li><NuxtLink to="/" class="hover:text-amber-600 dark:hover:text-amber-400">Accueil</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/')" class="hover:text-amber-600 dark:hover:text-amber-400">{{ $t('common.home') }}</NuxtLink></li>
             <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></li>
-            <li><NuxtLink to="/services" class="hover:text-amber-600 dark:hover:text-amber-400">Services</NuxtLink></li>
+            <li><NuxtLink :to="localePath('/services')"  class="hover:text-amber-600 dark:hover:text-amber-400">{{ $t('nav.services') }}</NuxtLink></li>
             <li><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg></li>
-            <li class="text-gray-900 dark:text-white font-medium">Assistance Recrutement</li>
+            <li class="text-gray-900 dark:text-white font-medium">{{ $t('pages.services.recruitment.title') }}</li>
           </ol>
         </nav>
 
@@ -68,7 +68,7 @@
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-            Nos Domaines d'Intervention
+            {{ $t('common.interventionAreas') }}
           </h2>
           <div class="grid md:grid-cols-2 gap-6">
             <div v-for="(feature, index) in $tm('pages.services.recruitment.features')" :key="index"
@@ -179,26 +179,26 @@
             <!-- Content -->
             <div class="relative text-center space-y-6">
               <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
-                Besoin d'aide pour vos recrutements ?
+                {{ $t('pages.services.cta.title') }}
               </h2>
               <p class="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
-                Notre équipe d'experts en recrutement est à votre disposition pour vous accompagner dans la recherche et la sélection des meilleurs talents
+                {{ $t('pages.services.cta.subtitle') }}
               </p>
               <div class="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                 <NuxtLink
-                  to="/contact"
+                  :to="localePath('/contact')" 
                   class="inline-flex items-center justify-center gap-3 bg-white text-amber-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
                 >
-                  Contactez-nous
+                  {{ $t('common.contactUs') }}
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
                 </NuxtLink>
                 <NuxtLink
-                  to="/services"
+                  :to="localePath('/services')" 
                   class="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-amber-600 transition-all"
                 >
-                  Tous les services
+                  {{ $t('common.allServices') }}
                 </NuxtLink>
               </div>
             </div>
