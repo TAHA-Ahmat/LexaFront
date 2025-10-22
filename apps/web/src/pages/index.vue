@@ -1,24 +1,19 @@
 <template>
   <div class="overflow-x-hidden">
-    <!-- Hero Premium Full-Screen -->
-    <SectionHeroPremium />
+    <!-- 1️⃣ QUI NOUS SOMMES -->
+    <SectionHeroSimple />
 
-    <!-- Features Premium avec animations -->
-    <SectionFeaturesPremium />
+    <!-- 2️⃣ CE QUE NOUS FAISONS -->
+    <SectionServicesSimple />
 
-    <!-- Methodology Premium avec timeline -->
-    <SectionMethodologyPremium />
+    <!-- 3️⃣ COMMENT NOUS LE FAISONS -->
+    <SectionApproach />
 
-    <!-- Values Premium immersive -->
-    <SectionValuesPremium />
+    <!-- 4️⃣ POURQUOI NOUS FAIRE CONFIANCE -->
+    <SectionTrust />
 
-    <!-- Sections conservées optimisées -->
-    <SectionPartners />
-    <!-- <SectionPosts /> Masqué temporairement - Section Actualités en cours de préparation -->
-    <SectionNewsletter />
-
-    <!-- CTA Premium impactant -->
-    <SectionCTAPremium />
+    <!-- 5️⃣ AGISSEZ MAINTENANT -->
+    <SectionCTASimple />
   </div>
 </template>
 

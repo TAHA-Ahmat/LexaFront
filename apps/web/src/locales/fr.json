@@ -437,66 +437,124 @@
       }
     },
     "home": {
+      "seo": {
+        "title": "Lexafric - Cabinet de Conseil Juridique et Fiscal au Tchad",
+        "description": "Cabinet d'excellence spécialisé en conseil juridique, fiscal, social et en recrutement. Plus de 10 ans d'expérience au service des entreprises en Afrique."
+      },
       "hero": {
-        "badge": "Excellence Juridique",
-        "slide1": {
-          "title": "BIENVENUE SUR LEXAFRIC",
-          "subtitle": "L'expert qui vous accompagne",
-          "cta": "Notre Équipe"
+        "badge": "Excellence Juridique & Fiscale",
+        "title": "Votre partenaire de confiance pour le conseil juridique et fiscal en Afrique",
+        "subtitle": "Cabinet fondé par d'anciens collaborateurs de grands cabinets internationaux, nous accompagnons les entreprises avec intégrité, écoute et expertise depuis plus de 10 ans.",
+        "cta": {
+          "contact": "Nous Contacter",
+          "services": "Nos Services"
         },
-        "slide2": {
-          "title": "LEXAFRIC vous offre des solutions idoines",
-          "subtitle": "Une expertise avérée",
-          "cta": "Nous Contacter"
+        "stats": {
+          "years": "Ans d'expérience",
+          "experts": "Experts qualifiés",
+          "partners": "Partenaires de confiance"
+        },
+        "scroll": "Découvrir nos services"
+      },
+      "services": {
+        "title": "Ce que nous faisons",
+        "subtitle": "Quatre domaines d'expertise pour répondre à tous vos besoins",
+        "items": {
+          "legal": {
+            "title": "Assistance Juridique",
+            "description": "Audit contractuel et conseil juridique complet"
+          },
+          "fiscal": {
+            "title": "Assistance Fiscale",
+            "description": "Optimisation fiscale et conformité réglementaire"
+          },
+          "social": {
+            "title": "Assistance Sociale",
+            "description": "Gestion du personnel et conformité sociale"
+          },
+          "recruitment": {
+            "title": "Assistance Recrutement",
+            "description": "Recherche de talents et externalisation RH"
+          }
+        },
+        "viewAll": "Voir tous nos services"
+      },
+      "approach": {
+        "title": "Comment nous le faisons",
+        "subtitle": "Une méthode éprouvée guidée par des valeurs fortes",
+        "method": {
+          "title": "Notre Méthodologie",
+          "steps": {
+            "analyze": {
+              "title": "Analyse",
+              "description": "Nous étudions votre situation en profondeur pour identifier les enjeux et opportunités"
+            },
+            "advise": {
+              "title": "Conseil",
+              "description": "Nous vous proposons des solutions sur mesure adaptées à vos objectifs"
+            },
+            "implement": {
+              "title": "Mise en œuvre",
+              "description": "Nous vous accompagnons dans l'exécution concrète des recommandations"
+            },
+            "followup": {
+              "title": "Suivi",
+              "description": "Nous assurons un suivi régulier pour garantir les résultats attendus"
+            }
+          }
+        },
+        "values": {
+          "title": "Nos Valeurs",
+          "items": {
+            "integrity": {
+              "title": "Intégrité",
+              "description": "Éthique et transparence dans toutes nos actions professionnelles"
+            },
+            "listening": {
+              "title": "Écoute",
+              "description": "Attention particulière à vos besoins et à votre contexte spécifique"
+            },
+            "pedagogy": {
+              "title": "Pédagogie",
+              "description": "Explication claire des enjeux pour faciliter vos décisions"
+            },
+            "interaction": {
+              "title": "Interaction",
+              "description": "Dialogue constant et constructif avec nos clients"
+            }
+          }
         }
       },
-      "presentation": {
-        "title": "Cabinet de Conseil Juridique et Fiscal",
-        "description": "Cabinet spécialisé en conseil juridique et fiscal, fondé sur un réseau d'anciens collaborateurs de grands cabinets internationaux orientés vers les marchés africains."
-      },
-      "features": {
-        "title": "Nos Services",
-        "subtitle": "Des services professionnels adaptés à vos besoins spécifiques",
-        "legal": {
-          "title": "Assistance Juridique",
-          "item1": "Audit préalable de supports contractuels",
-          "item2": "Conseil sur documents à incidence juridique"
+      "trust": {
+        "title": "Pourquoi nous faire confiance",
+        "subtitle": "Une expérience reconnue et des partenariats solides",
+        "stats": {
+          "years": "Ans d'expérience",
+          "experts": "Experts qualifiés",
+          "partners": "Partenaires actifs"
         },
-        "fiscal": {
-          "title": "Assistance Fiscale",
-          "item1": "Contrôle mensuel des déclarations fiscales",
-          "item2": "Conseils d'optimisation fiscale"
-        },
-        "social": {
-          "title": "Assistance Sociale",
-          "item1": "Déclarations d'embauche",
-          "item2": "Aide à la conformité des contrats de travail"
-        },
-        "recruitment": {
-          "title": "Assistance à Recrutement",
-          "item1": "Recherche de profils qualifiés",
-          "item2": "Externalisation du processus de recrutement"
-        },
-        "training": {
-          "title": "Formations",
-          "item1": "Formations inter et intra-entreprises",
-          "item2": "Expertise en développement des compétences"
+        "partnersTitle": "Ils nous font confiance",
+        "testimonial": {
+          "quote": "Lexafric nous accompagne depuis 5 ans avec professionnalisme et réactivité. Leur expertise juridique et fiscale est un atout majeur pour notre développement.",
+          "author": "Directeur Général",
+          "company": "Entreprise partenaire"
         }
       },
-      "stats": {
-        "title": "Nos Chiffres Clés",
-        "subtitle": "Une expérience reconnue au service de votre réussite",
-        "experience": "10+",
-        "experienceLabel": "ANS D'EXPÉRIENCE",
-        "associatesExperience": "25+",
-        "associatesExperienceLabel": "Années d'expertise cumulée",
-        "team": "15+",
-        "teamLabel": "EXPERTS",
-        "expertise": "50+",
-        "expertiseLabel": "PROJETS RÉUSSIS",
-        "clients": "Clients accompagnés",
-        "satisfaction": "Satisfaction client",
-        "message": "Nos associés totalisent plus de 25 ans d'expérience auprès de PME à grandes entreprises, avec un engagement constant envers l'excellence et l'intégrité."
+      "cta": {
+        "badge": "Contact Direct",
+        "title": "Prêt à discuter de votre projet ?",
+        "subtitle": "Notre équipe est disponible pour vous accompagner dès aujourd'hui",
+        "phone": {
+          "label": "Appelez-nous"
+        },
+        "email": {
+          "label": "Écrivez-nous"
+        },
+        "button": {
+          "contact": "Formulaire de Contact",
+          "services": "Découvrir nos Services"
+        },
+        "responseTime": "Nous vous répondons sous 24 heures"
       },
       "posts": {
         "title": "Actualités Juridiques",
@@ -519,70 +577,6 @@
           "title": "Le droit social en Afrique francophone",
           "excerpt": "Guide complet sur les obligations sociales des employeurs et les bonnes pratiques en matière de gestion des ressources humaines."
         }
-      },
-      "cta": {
-        "badge": "Prenez contact",
-        "title": "Prêt à transformer votre entreprise ?",
-        "subtitle": "Discutons de vos projets et objectifs. Notre équipe d'experts est prête à vous accompagner dans votre réussite.",
-        "button1": "NOUS CONTACTER",
-        "button2": "NOTRE EQUIPE",
-        "or": "Ou contactez-nous directement",
-        "callUs": "Appelez-nous",
-        "writeUs": "Écrivez-nous"
-      },
-      "values": {
-        "title": "Vision, Mission, Valeurs",
-        "subtitle": "Notre raison d'être et nos principes fondamentaux",
-        "vision": {
-          "title": "Notre Vision",
-          "description": "Devenir un cabinet de dimension internationale, reconnu et respecté pour son professionnalisme et son intégrité dans l'accompagnement juridique et fiscal des entreprises en Afrique."
-        },
-        "mission": {
-          "title": "Notre Mission",
-          "description": "Accompagner les entreprises nationales et sous-régionales dans leur mise aux normes internationales tout en assistant les multinationales dans leur implantation et développement sur le marché africain."
-        },
-        "value1": {
-          "title": "Intégrité",
-          "description": "Nous plaçons l'éthique et la transparence au cœur de notre pratique professionnelle."
-        },
-        "value2": {
-          "title": "Écoute",
-          "description": "Nous accordons une attention particulière aux besoins spécifiques de chaque client."
-        },
-        "value3": {
-          "title": "Pédagogie",
-          "description": "Nous expliquons clairement les enjeux juridiques et fiscaux pour une meilleure prise de décision."
-        },
-        "value4": {
-          "title": "Interaction",
-          "description": "Nous favorisons un dialogue constant et constructif avec nos clients et partenaires."
-        }
-      },
-      "methodology": {
-        "title": "Notre Méthodologie",
-        "subtitle": "Une approche structurée pour garantir votre réussite",
-        "step1": {
-          "title": "Stratégie",
-          "description": "Approche spécifique adaptée au contexte, basée sur l'intégrité, l'écoute, la pédagogie et l'interaction avec nos clients."
-        },
-        "step2": {
-          "title": "Planification",
-          "description": "Organisation de réunions de cadrage et respect scrupuleux des délais fixés par nos clients."
-        },
-        "step3": {
-          "title": "Implémentation",
-          "description": "Accompagnement sur le terrain pour la mise en œuvre effective des recommandations formulées."
-        },
-        "step4": {
-          "title": "Suivi",
-          "description": "Évaluation continue des résultats et ajustements pour garantir l'atteinte de vos objectifs."
-        }
-      },
-      "partners": {
-        "title": "Nos Partenaires",
-        "subtitle": "Plus de 25 partenaires internationaux nous font confiance",
-        "partner": "Partenaire",
-        "note": "Les logos des partenaires seront ajoutés ultérieurement"
       },
       "newsletter": {
         "title": "Restez Informés",
