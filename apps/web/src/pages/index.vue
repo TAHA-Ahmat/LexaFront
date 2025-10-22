@@ -14,7 +14,7 @@
 
     <!-- Sections conservées optimisées -->
     <SectionPartners />
-    <SectionPosts />
+    <!-- <SectionPosts /> Masqué temporairement - Section Actualités en cours de préparation -->
     <SectionNewsletter />
 
     <!-- CTA Premium impactant -->
@@ -25,14 +25,16 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// SEO
-useSeoMeta({
+// SEO - Using useHead with computed to ensure i18n is loaded
+useHead(() => ({
   title: t('pages.home.seo.title'),
-  description: t('pages.home.seo.description'),
-  ogTitle: t('pages.home.seo.title'),
-  ogDescription: t('pages.home.seo.description'),
-  ogImage: '/og-image.jpg',
-  ogUrl: 'https://lexafric.com',
-  twitterCard: 'summary_large_image'
-})
+  meta: [
+    { name: 'description', content: t('pages.home.seo.description') },
+    { property: 'og:title', content: t('pages.home.seo.title') },
+    { property: 'og:description', content: t('pages.home.seo.description') },
+    { property: 'og:image', content: '/og-image.jpg' },
+    { property: 'og:url', content: 'https://lexafric.com' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ]
+}))
 </script>

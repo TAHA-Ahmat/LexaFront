@@ -20,7 +20,7 @@
             <svg class="w-4 h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
-            <span class="text-sm font-semibold text-blue-700 dark:text-blue-300">Excellence juridique professionnelle</span>
+            <span class="text-sm font-semibold text-blue-700 dark:text-blue-300">{{ $t('pages.services.badge') }}</span>
           </div>
 
           <!-- Title -->
@@ -40,8 +40,8 @@
     <section class="relative py-16 md:py-24 bg-white dark:bg-gray-950">
       <div class="container mx-auto px-4 md:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto space-y-24">
-          <!-- Service 1: Assistance Juridique -->
-          <NuxtLink to="/services/assistance-juridique" class="block group">
+          <!-- Service 1: {{ $t('pages.services.legal.title') }} -->
+          <NuxtLink :to="localePath('/services/assistance-juridique')"  class="block group">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <!-- Contenu -->
               <div class="order-2 lg:order-1 space-y-6">
@@ -50,7 +50,7 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
                     <circle cx="3" cy="3" r="3"/>
                   </svg>
-                  Assistance Juridique
+                  {{ $t('pages.services.legal.title') }}
                 </div>
 
                 <!-- Titre -->
@@ -97,7 +97,7 @@
                   <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
                     <img
                       src="/images/services/assistance-juridique.png"
-                      alt="Assistance Juridique"
+                      alt="{{ $t('pages.services.legal.title') }}"
                       class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -106,8 +106,8 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 2: Assistance Fiscale -->
-          <NuxtLink to="/services/assistance-fiscale" class="block group">
+          <!-- Service 2: {{ $t('pages.services.fiscal.title') }} -->
+          <NuxtLink :to="localePath('/services/assistance-fiscale')"  class="block group">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <!-- Image Premium -->
               <div>
@@ -116,7 +116,7 @@
                   <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
                     <img
                       src="/images/services/assistance-fiscale.png"
-                      alt="Assistance Fiscale"
+                      alt="{{ $t('pages.services.fiscal.title') }}"
                       class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -129,7 +129,7 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
                     <circle cx="3" cy="3" r="3"/>
                   </svg>
-                  Assistance Fiscale
+                  {{ $t('pages.services.fiscal.title') }}
                 </div>
 
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
@@ -163,15 +163,15 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 3: Assistance Sociale -->
-          <NuxtLink to="/services/assistance-sociale" class="block group">
+          <!-- Service 3: {{ $t('pages.services.social.title') }} -->
+          <NuxtLink :to="localePath('/services/assistance-sociale')"  class="block group">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div class="order-2 lg:order-1 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800/30 rounded-lg text-sm font-medium text-purple-700 dark:text-purple-300">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
                     <circle cx="3" cy="3" r="3"/>
                   </svg>
-                  Assistance Sociale
+                  {{ $t('pages.services.social.title') }}
                 </div>
 
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
@@ -209,7 +209,7 @@
                   <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
                     <img
                       src="/images/services/assistance-sociale.png"
-                      alt="Assistance Sociale"
+                      alt="{{ $t('pages.services.social.title') }}"
                       class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -218,8 +218,8 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 4: Assistance à Recrutement -->
-          <NuxtLink to="/services/assistance-recrutement" class="block group">
+          <!-- Service 4: {{ $t('pages.services.recruitment.title') }} -->
+          <NuxtLink :to="localePath('/services/assistance-recrutement')"  class="block group">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div>
                 <div class="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border border-gray-200 dark:border-gray-800 group-hover:border-amber-300 dark:group-hover:border-amber-700 transition-all duration-300">
@@ -227,7 +227,7 @@
                   <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
                     <img
                       src="/images/services/assistance-recrutement.png"
-                      alt="Assistance à Recrutement"
+                      alt="{{ $t('pages.services.recruitment.title') }}"
                       class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -239,7 +239,7 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
                     <circle cx="3" cy="3" r="3"/>
                   </svg>
-                  Assistance Recrutement
+                  {{ $t('pages.services.recruitment.title') }}
                 </div>
 
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
@@ -274,7 +274,7 @@
           </NuxtLink>
 
           <!-- Service 5: Formations -->
-          <NuxtLink to="/services/formations" class="block group">
+          <NuxtLink :to="localePath('/services/formations')"  class="block group">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <div class="order-2 lg:order-1 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-rose-50 dark:bg-rose-900/20 border border-rose-100 dark:border-rose-800/30 rounded-lg text-sm font-medium text-rose-700 dark:text-rose-300">
@@ -364,7 +364,7 @@
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
-                <span>Contactez-nous dès aujourd'hui</span>
+                <span>{{ $t('pages.services.cta.contactNow') }}</span>
               </div>
 
               <!-- Title -->
@@ -380,7 +380,7 @@
               <!-- CTA Button -->
               <div class="pt-4">
                 <NuxtLink
-                  to="/contact"
+                  :to="localePath('/contact')" 
                   class="group inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-base hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   {{ $t('pages.services.cta.button') }}
@@ -398,6 +398,9 @@
 </template>
 
 <script setup lang="ts">
+// i18n
+const localePath = useLocalePath()
+
 // SEO
 useSeoMeta({
   title: 'Nos Services - Lexafric',
