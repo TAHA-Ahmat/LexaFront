@@ -437,66 +437,124 @@
       }
     },
     "home": {
+      "seo": {
+        "title": "Lexafric - Legal and Tax Consulting Firm in Chad",
+        "description": "Firm of excellence specialized in legal, tax, social consulting and recruitment. Over 10 years of experience serving businesses in Africa."
+      },
       "hero": {
-        "badge": "Legal Excellence",
-        "slide1": {
-          "title": "WELCOME TO LEXAFRIC",
-          "subtitle": "The expert who accompanies you",
-          "cta": "Our Team"
+        "badge": "Legal & Tax Excellence",
+        "title": "Your trusted partner for legal and tax consulting in Africa",
+        "subtitle": "Founded by former collaborators of major international firms, we support businesses with integrity, listening, and expertise for over 10 years.",
+        "cta": {
+          "contact": "Contact Us",
+          "services": "Our Services"
         },
-        "slide2": {
-          "title": "LEXAFRIC offers you suitable solutions",
-          "subtitle": "Proven expertise",
-          "cta": "Contact Us"
+        "stats": {
+          "years": "Years of experience",
+          "experts": "Qualified experts",
+          "partners": "Trusted partners"
+        },
+        "scroll": "Discover our services"
+      },
+      "services": {
+        "title": "What we do",
+        "subtitle": "Four areas of expertise to meet all your needs",
+        "items": {
+          "legal": {
+            "title": "Legal Assistance",
+            "description": "Contractual audit and comprehensive legal advice"
+          },
+          "fiscal": {
+            "title": "Tax Assistance",
+            "description": "Tax optimization and regulatory compliance"
+          },
+          "social": {
+            "title": "Labor Assistance",
+            "description": "Personnel management and social compliance"
+          },
+          "recruitment": {
+            "title": "Recruitment Assistance",
+            "description": "Talent search and HR outsourcing"
+          }
+        },
+        "viewAll": "View all our services"
+      },
+      "approach": {
+        "title": "How we do it",
+        "subtitle": "A proven method guided by strong values",
+        "method": {
+          "title": "Our Methodology",
+          "steps": {
+            "analyze": {
+              "title": "Analysis",
+              "description": "We study your situation in depth to identify challenges and opportunities"
+            },
+            "advise": {
+              "title": "Advisory",
+              "description": "We propose tailor-made solutions adapted to your objectives"
+            },
+            "implement": {
+              "title": "Implementation",
+              "description": "We support you in the concrete execution of recommendations"
+            },
+            "followup": {
+              "title": "Follow-up",
+              "description": "We ensure regular monitoring to guarantee expected results"
+            }
+          }
+        },
+        "values": {
+          "title": "Our Values",
+          "items": {
+            "integrity": {
+              "title": "Integrity",
+              "description": "Ethics and transparency in all our professional actions"
+            },
+            "listening": {
+              "title": "Listening",
+              "description": "Special attention to your needs and specific context"
+            },
+            "pedagogy": {
+              "title": "Pedagogy",
+              "description": "Clear explanation of issues to facilitate your decisions"
+            },
+            "interaction": {
+              "title": "Interaction",
+              "description": "Constant and constructive dialogue with our clients"
+            }
+          }
         }
       },
-      "presentation": {
-        "title": "Legal and Tax Consulting Firm",
-        "description": "Specialized firm in legal and tax consulting, founded on a network of former collaborators from major international firms focused on African markets."
-      },
-      "features": {
-        "title": "Our Services",
-        "subtitle": "Professional services tailored to your specific needs",
-        "legal": {
-          "title": "Legal Assistance",
-          "item1": "Preliminary audit of contractual documents",
-          "item2": "Advice on documents with legal impact"
+      "trust": {
+        "title": "Why trust us",
+        "subtitle": "Recognized experience and solid partnerships",
+        "stats": {
+          "years": "Years of experience",
+          "experts": "Qualified experts",
+          "partners": "Active partners"
         },
-        "fiscal": {
-          "title": "Tax Assistance",
-          "item1": "Monthly review of tax declarations",
-          "item2": "Tax optimization advice"
-        },
-        "social": {
-          "title": "Social Assistance",
-          "item1": "Hiring declarations",
-          "item2": "Assistance with employment contract compliance"
-        },
-        "recruitment": {
-          "title": "Recruitment Assistance",
-          "item1": "Search for qualified profiles",
-          "item2": "Outsourcing of the recruitment process"
-        },
-        "training": {
-          "title": "Training",
-          "item1": "Inter and intra-company training",
-          "item2": "Skills development expertise"
+        "partnersTitle": "They trust us",
+        "testimonial": {
+          "quote": "Lexafric has been supporting us for 5 years with professionalism and responsiveness. Their legal and tax expertise is a major asset for our development.",
+          "author": "CEO",
+          "company": "Partner company"
         }
       },
-      "stats": {
-        "title": "Our Key Figures",
-        "subtitle": "Recognized experience at the service of your success",
-        "experience": "10+",
-        "experienceLabel": "YEARS OF EXPERIENCE",
-        "associatesExperience": "25+",
-        "associatesExperienceLabel": "Years of cumulative expertise",
-        "team": "15+",
-        "teamLabel": "EXPERTS",
-        "expertise": "50+",
-        "expertiseLabel": "SUCCESSFUL PROJECTS",
-        "clients": "Clients supported",
-        "satisfaction": "Client satisfaction",
-        "message": "Our associates have over 25 years of combined experience with SMEs to large companies, with a constant commitment to excellence and integrity."
+      "cta": {
+        "badge": "Direct Contact",
+        "title": "Ready to discuss your project?",
+        "subtitle": "Our team is available to support you today",
+        "phone": {
+          "label": "Call us"
+        },
+        "email": {
+          "label": "Write to us"
+        },
+        "button": {
+          "contact": "Contact Form",
+          "services": "Discover our Services"
+        },
+        "responseTime": "We respond within 24 hours"
       },
       "posts": {
         "title": "Legal News",
@@ -519,88 +577,6 @@
           "title": "Labor law in French-speaking Africa",
           "excerpt": "Complete guide on employer social obligations and best practices in human resources management."
         }
-      },
-      "cta": {
-        "badge": "Get in touch",
-        "title": "Ready to transform your business?",
-        "subtitle": "Let's discuss your projects and goals. Our team of experts is ready to support your success.",
-        "button1": "CONTACT US",
-        "button2": "OUR TEAM",
-        "or": "Or contact us directly",
-        "callUs": "Call us",
-        "writeUs": "Write to us"
-      },
-      "values": {
-        "title": "Vision, Mission, Values",
-        "subtitle": "Our reason for being and fundamental principles",
-        "vision": {
-          "title": "Our Vision",
-          "content": "To become an international firm, recognized and respected for its professionalism and integrity in legal and tax support for companies in Africa.",
-          "description": "To become an international firm, recognized and respected for its professionalism and integrity in legal and tax support for companies in Africa."
-        },
-        "mission": {
-          "title": "Our Mission",
-          "content": "To support national and sub-regional companies in their compliance with international standards while assisting multinationals in their establishment and development in the African market.",
-          "description": "To support national and sub-regional companies in their compliance with international standards while assisting multinationals in their establishment and development in the African market."
-        },
-        "integrity": {
-          "title": "Integrity",
-          "content": "We place ethics and transparency at the heart of our professional practice."
-        },
-        "listening": {
-          "title": "Listening",
-          "content": "We pay special attention to the specific needs of each client."
-        },
-        "pedagogy": {
-          "title": "Pedagogy",
-          "content": "We clearly explain legal and tax issues for better decision-making."
-        },
-        "interaction": {
-          "title": "Interaction",
-          "content": "We foster constant and constructive dialogue with our clients and partners."
-        },
-        "value1": {
-          "title": "Integrity",
-          "description": "We place ethics and transparency at the heart of our professional practice."
-        },
-        "value2": {
-          "title": "Listening",
-          "description": "We pay special attention to the specific needs of each client."
-        },
-        "value3": {
-          "title": "Pedagogy",
-          "description": "We clearly explain legal and tax issues for better decision-making."
-        },
-        "value4": {
-          "title": "Interaction",
-          "description": "We foster constant and constructive dialogue with our clients and partners."
-        }
-      },
-      "methodology": {
-        "title": "Our Methodology",
-        "subtitle": "A structured approach to ensure your success",
-        "step1": {
-          "title": "Strategy",
-          "description": "Specific approach adapted to the context, based on integrity, listening, pedagogy and interaction with our clients."
-        },
-        "step2": {
-          "title": "Planning",
-          "description": "Organization of framing meetings and strict adherence to deadlines set by our clients."
-        },
-        "step3": {
-          "title": "Implementation",
-          "description": "On-site support for the effective implementation of the recommendations made."
-        },
-        "step4": {
-          "title": "Follow-up",
-          "description": "Continuous evaluation of results and adjustments to ensure achievement of your goals."
-        }
-      },
-      "partners": {
-        "title": "Our Partners",
-        "subtitle": "More than 25 international partners trust us",
-        "partner": "Partner",
-        "note": "Partner logos will be added later"
       },
       "newsletter": {
         "title": "Stay Informed",
