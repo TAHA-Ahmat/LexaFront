@@ -58,7 +58,8 @@ export default defineNuxtConfig({
     // Configuration i18n v9 - Désactiver optimizeTranslationDirective
     bundle: {
       optimizeTranslationDirective: false
-    }
+    },
+    restructureDir: 'i18n'
   },
 
   // Configuration Nuxt Image (provider local)
