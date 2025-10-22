@@ -35,11 +35,34 @@
             {{ $t('pages.home.trust.partnersTitle') }}
           </h3>
           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            <!-- Placeholder pour 6 logos -->
-            <div v-for="i in 6" :key="i" class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all">
-              <div class="w-24 h-16 bg-gray-200 dark:bg-gray-800 rounded flex items-center justify-center">
-                <span class="text-xs text-gray-400">Logo {{ i }}</span>
-              </div>
+            <!-- Logo 1 -->
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img src="/images/partenaires/00629590a71a367c0b0407e7ee2ae478.png" alt="Partenaire 1" class="w-full h-16 object-contain" />
+            </div>
+
+            <!-- Logo 2 -->
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img src="/images/partenaires/095289e5b516fa4b13ce1be71236bb7e.png" alt="Partenaire 2" class="w-full h-16 object-contain" />
+            </div>
+
+            <!-- Logo 3 -->
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img src="/images/partenaires/18ef91041de0acc4ba4fd2cc532f9fc0.png" alt="Partenaire 3" class="w-full h-16 object-contain" />
+            </div>
+
+            <!-- Logo 4 -->
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img src="/images/partenaires/1c127e5d2f219d4fdcbc053ed6e770b7.png" alt="Partenaire 4" class="w-full h-16 object-contain" />
+            </div>
+
+            <!-- Logo 5 -->
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img src="/images/partenaires/1c2192c0a456134d04c759799931c10a.png" alt="Partenaire 5" class="w-full h-16 object-contain" />
+            </div>
+
+            <!-- Logo 6 -->
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img src="/images/partenaires/24cfbb2cfad708920cfe0f7c2f583954.png" alt="Partenaire 6" class="w-full h-16 object-contain" />
             </div>
           </div>
         </div>
