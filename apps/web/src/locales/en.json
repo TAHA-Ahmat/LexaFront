@@ -367,18 +367,37 @@
       }
     },
     "contact": {
-      "title": "Contact",
-      "subtitle": "Contact us",
-      "form": {
-        "title": "Send us a message"
-      },
+      "badge": "Get in touch",
+      "title": "Contact Us",
+      "subtitle": "Our team is here to answer all your legal and tax questions",
       "info": {
-        "title": "Our contact details",
+        "title": "Our Contact Information",
+        "description": "Have a project or a question? Feel free to contact us, our team will respond as soon as possible.",
         "email": "Email",
         "phone": "Phone",
         "address": "Address",
         "addressValue": "N'Djamena, Chad",
-        "whatsapp": "Contact via WhatsApp"
+        "hours": "Business Hours",
+        "weekdays": "Mon - Fri: 8:00 AM - 6:00 PM",
+        "weekend": "Sat - Sun: Closed",
+        "whatsapp": "Contact via WhatsApp",
+        "whatsappTitle": "Need quick help?",
+        "whatsappText": "Chat with us on WhatsApp"
+      },
+      "form": {
+        "title": "Send us a message",
+        "subtitle": "Fill out the form below and we will get back to you quickly",
+        "name": "Full Name",
+        "namePlaceholder": "Your full name",
+        "email": "Email Address",
+        "emailPlaceholder": "example: contact.email.com",
+        "subject": "Subject",
+        "subjectPlaceholder": "What is your message about?",
+        "message": "Message",
+        "messagePlaceholder": "Describe your need or question...",
+        "sending": "Sending...",
+        "success": "Your message has been sent successfully! We will respond as soon as possible.",
+        "successTitle": "Message sent!"
       }
     },
     "articles": {

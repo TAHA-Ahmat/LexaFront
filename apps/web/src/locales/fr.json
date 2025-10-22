@@ -367,18 +367,37 @@
       }
     },
     "contact": {
-      "title": "Contact",
-      "subtitle": "Contactez-nous",
-      "form": {
-        "title": "Envoyez-nous un message"
-      },
+      "badge": "Nous contacter",
+      "title": "Contactez-nous",
+      "subtitle": "Notre équipe est à votre écoute pour répondre à toutes vos questions juridiques et fiscales",
       "info": {
         "title": "Nos coordonnées",
+        "description": "Vous avez un projet ou une question ? N'hésitez pas à nous contacter, notre équipe vous répond dans les plus brefs délais.",
         "email": "Email",
         "phone": "Téléphone",
         "address": "Adresse",
         "addressValue": "N'Djamena, Tchad",
-        "whatsapp": "Contacter via WhatsApp"
+        "hours": "Horaires d'ouverture",
+        "weekdays": "Lun - Ven: 8h00 - 18h00",
+        "weekend": "Sam - Dim: Fermé",
+        "whatsapp": "Contacter via WhatsApp",
+        "whatsappTitle": "Besoin d'aide rapide ?",
+        "whatsappText": "Discutez avec nous sur WhatsApp"
+      },
+      "form": {
+        "title": "Envoyez-nous un message",
+        "subtitle": "Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement",
+        "name": "Nom complet",
+        "namePlaceholder": "Votre nom complet",
+        "email": "Adresse email",
+        "emailPlaceholder": "exemple: contact.email.com",
+        "subject": "Sujet",
+        "subjectPlaceholder": "Quel est l'objet de votre message ?",
+        "message": "Message",
+        "messagePlaceholder": "Décrivez votre besoin ou votre question...",
+        "sending": "Envoi en cours...",
+        "success": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
+        "successTitle": "Message envoyé !"
       }
     },
     "articles": {
