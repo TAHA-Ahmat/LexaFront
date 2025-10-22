@@ -14,7 +14,7 @@
 
     <!-- Sections conservées optimisées -->
     <SectionPartners />
-    <SectionPosts />
+    <!-- <SectionPosts /> Masqué temporairement - Section Actualités en cours de préparation -->
     <SectionNewsletter />
 
     <!-- CTA Premium impactant -->
