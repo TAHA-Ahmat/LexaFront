@@ -3,15 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
-  // Nouveaux chemins vers src/
-  srcDir: 'src/',
-  dir: {
-    pages: 'pages',
-    layouts: 'layouts',
-    public: 'public',
-    assets: 'assets'
-  },
-
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
@@ -36,7 +27,6 @@ export default defineNuxtConfig({
 
   // Configuration i18n (FR/EN/AR avec RTL)
   i18n: {
-    restructureDir: false,
     locales: [
       {
         code: 'fr',
@@ -64,11 +54,7 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
     lazy: true,
-    langDir: 'locales',
-    // Configuration i18n v9 - Désactiver optimizeTranslationDirective
-    bundle: {
-      optimizeTranslationDirective: false
-    }
+    langDir: 'locales'
   },
 
   // Configuration Nuxt Image (provider local)
@@ -94,9 +80,6 @@ export default defineNuxtConfig({
 
   // Runtime config
   runtimeConfig: {
-    // Private keys (accessible uniquement côté serveur)
-    openaiApiKey: process.env.OPENAI_API_KEY,
-
     public: {
       siteUrl: process.env.SITE_URL || 'http://localhost:3000',
       defaultLocale: 'fr',

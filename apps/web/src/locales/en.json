@@ -1,0 +1,595 @@
+{
+  "common": {
+    "home": "Home",
+    "expertises": "Our Expertise",
+    "publications": "Publications",
+    "about": "About",
+    "contact": "Contact",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy",
+    "readMore": "Read more",
+    "loadMore": "Load more",
+    "submit": "Submit",
+    "translationPending": "Translation coming soon",
+    "ourServices": "Our Services",
+    "ourSolutions": "Our Solutions",
+    "contactUs": "Contact us",
+    "allServices": "All services",
+    "allSolutions": "All solutions",
+    "interventionAreas": "Our Areas of Expertise"
+  },
+  "chatbot": {
+    "title": "Lexafric Assistant",
+    "subtitle": "Online now",
+    "open": "Open chat",
+    "close": "Close chat",
+    "openChat": "Open chat",
+    "closeChat": "Close chat",
+    "welcome": "Welcome to Lexafric chat",
+    "askQuestion": "Ask us about our services",
+    "reset": "Reset conversation",
+    "placeholder": "Ask your question...",
+    "send": "Send",
+    "hint": "Press Enter to send, Shift + Enter for new line"
+  },
+  "nav": {
+    "changeLanguage": "Change language",
+    "home": "Home",
+    "services": "Services",
+    "solutions": "Solutions",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "ui": {
+    "phone": "(+235) 22 51 91 66"
+  },
+  "pages": {
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Professional solutions tailored to your needs",
+      "badge": "Professional legal excellence",
+      "legal": {
+        "title": "Legal Assistance",
+        "description": "In your business relationships, you can request a preliminary audit of your contractual documents or any other document that may have legal implications.",
+        "longDescription": "Our firm provides comprehensive legal expertise to secure all your commercial and contractual operations. We work upstream of your commitments to identify legal risks and propose solutions tailored to your activity. Our preventive approach helps you avoid costly disputes and preserve your business relationships.",
+        "features": [
+          "Preliminary audit of contractual documents",
+          "Advice on documents with legal implications",
+          "Securing business relationships",
+          "Personalized legal support"
+        ],
+        "details": {
+          "intro": "Our legal assistance service supports you in all your legal and contractual procedures.",
+          "section1": {
+            "title": "Contractual Audit",
+            "content": "We thoroughly analyze your commercial contracts, partnerships, distribution agreements, and any other document engaging your liability. Our expertise allows you to identify unfavorable clauses, legal risks, and optimization opportunities."
+          },
+          "section2": {
+            "title": "Legal Advice",
+            "content": "Our lawyers advise you on all legal aspects of your activity: corporate law, commercial law, intellectual property, and regulatory compliance. We help you make informed decisions with full knowledge of legal implications."
+          },
+          "section3": {
+            "title": "Drafting and Negotiation",
+            "content": "We draft and negotiate your contracts to best protect your interests. Our legal documents are adapted to your sector of activity and comply with current regulations."
+          }
+        }
+      },
+      "fiscal": {
+        "title": "Tax Assistance",
+        "description": "We provide our tax expertise for monthly control of your tax declarations and advice on optimizing your tax burden.",
+        "longDescription": "Taxation is a major strategic issue for any company. Our team of tax experts supports you to optimize your tax burden while strictly complying with current regulations. We ensure regular monitoring of your declarative obligations and advise you on the best tax optimization strategies adapted to your situation.",
+        "features": [
+          "Monthly control of tax declarations",
+          "Tax burden optimization",
+          "Support during tax audits",
+          "Regulatory compliance"
+        ],
+        "details": {
+          "intro": "Benefit from expert tax support to optimize your taxation and ensure your compliance.",
+          "section1": {
+            "title": "Declaration Control",
+            "content": "We perform monthly verification of all your tax declarations to ensure their accuracy and compliance with current legislation. This systematic approach minimizes the risk of errors and potential penalties."
+          },
+          "section2": {
+            "title": "Tax Optimization",
+            "content": "Our tax experts analyze your situation to identify all legal optimization opportunities. We advise you on the most advantageous tax regimes and help you structure your operations to minimize your tax burden while respecting legal frameworks."
+          },
+          "section3": {
+            "title": "Tax Audit Support",
+            "content": "In case of tax audit, we support you throughout the procedure. We prepare necessary documents, represent you before tax authorities, and defend your interests to obtain the best possible outcome."
+          }
+        }
+      },
+      "social": {
+        "title": "Social Assistance",
+        "description": "Administrative management, employment contracts, and complete HR support.",
+        "longDescription": "Social management is complex and constantly evolving. Our social and HR experts support you in managing all your obligations towards employees and social protection organizations. We help you secure your employment relationships and optimize your HR practices.",
+        "features": [
+          "Hiring and exit declarations",
+          "Employment contract review",
+          "HR compliance support",
+          "Staff cost management"
+        ],
+        "details": {
+          "intro": "Our social assistance service provides expert support for all your HR and social obligations.",
+          "section1": {
+            "title": "Administrative Management",
+            "content": "We handle all administrative formalities related to your staff: hiring declarations, social security registrations, employment contract updates, exit procedures. We ensure your compliance with social legislation and deadlines to respect."
+          },
+          "section2": {
+            "title": "Employment Contracts",
+            "content": "We draft and review your employment contracts to ensure they comply with labor legislation and protect your interests. We advise you on specific clauses and applicable collective agreements in your sector."
+          },
+          "section3": {
+            "title": "HR Advice",
+            "content": "Beyond administrative management, we support you in implementing HR best practices: performance evaluation, skills development, conflict management, and internal communication. Our goal is to help you create a productive and fulfilling work environment."
+          }
+        }
+      },
+      "recruitment": {
+        "title": "Recruitment Assistance",
+        "description": "Because we understand that finding a profile adapted to your needs can be tedious, we offer to outsource this recruitment process.",
+        "longDescription": "Recruitment is a crucial issue for your company's success. Finding the right candidate requires time, expertise, and resources. Our recruitment assistance service allows you to delegate this strategic mission to experienced professionals who master sourcing and candidate evaluation techniques.",
+        "features": [
+          "Search for qualified profiles",
+          "Outsourcing of the recruitment process",
+          "Candidate pre-selection",
+          "Integration support"
+        ],
+        "details": {
+          "intro": "Entrust us with your recruitment to access the best market talents.",
+          "section1": {
+            "title": "Sourcing and Headhunting",
+            "content": "We use our extensive network and advanced sourcing techniques to identify the best profiles matching your needs. Our targeted approach gives you access to qualified talents, even for hard-to-fill positions."
+          },
+          "section2": {
+            "title": "Evaluation and Selection",
+            "content": "We perform rigorous pre-selection of candidates through in-depth interviews, skills tests, and reference checks. You only meet the most relevant candidates for your position."
+          },
+          "section3": {
+            "title": "Integration Support",
+            "content": "Our support doesn't stop at recruitment. We help you implement an effective onboarding process to facilitate your new hires' integration and ensure their success in your company."
+          }
+        }
+      },
+      "training": {
+        "title": "Training",
+        "description": "We have developed proven expertise in inter and intra-company training with established know-how in skills development support.",
+        "longDescription": "Developing your employees' skills is a strategic investment for your company's performance and competitiveness. Our training offer adapts to your specific needs and your sector's realities. We offer tailor-made programs led by recognized experts in their field.",
+        "features": [
+          "Inter-company training",
+          "Intra-company training",
+          "Skills development",
+          "Tailor-made programs"
+        ],
+        "details": {
+          "intro": "Develop your teams' skills with our adapted training programs.",
+          "section1": {
+            "title": "Inter-Company Training",
+            "content": "Our inter-company sessions allow your employees to develop their skills while exchanging with professionals from other structures. This approach promotes experience sharing and mutual enrichment."
+          },
+          "section2": {
+            "title": "Intra-Company Training",
+            "content": "We design tailor-made training adapted to your context and specific issues. Our intra-company programs are delivered at your premises and personalized according to your needs and company culture."
+          },
+          "section3": {
+            "title": "Development Support",
+            "content": "Beyond training, we support you in implementing a true skills development strategy. We help you identify training needs, design development paths, and measure the impact of your training investments."
+          }
+        }
+      },
+      "learnMore": "LEARN MORE",
+      "cta": {
+        "title": "Need personalized support?",
+        "subtitle": "Our team of experts is at your service",
+        "button": "Contact us",
+        "contactNow": "Contact us today"
+      }
+    },
+    "solutions": {
+      "title": "Our Solutions",
+      "subtitle": "Innovative approaches to transform your business",
+      "badge": "Corporate Solutions",
+      "intro": {
+        "title": "Solutions Tailored to Your Challenges",
+        "description": "At Lexafric, we understand that every business is unique. That's why we offer custom solutions that adapt to your specific needs and industry.",
+        "text": "Our approach is to provide you with personalized support in managing your legal and corporate obligations. We provide you with a team of dedicated experts who are thoroughly familiar with the challenges of your sector."
+      },
+      "methodology": {
+        "title": "Our Methodology",
+        "subtitle": "A structured 4-step approach",
+        "step1": {
+          "title": "Analysis",
+          "description": "In-depth study of your needs and context"
+        },
+        "step2": {
+          "title": "Strategy",
+          "description": "Development of a personalized solution"
+        },
+        "step3": {
+          "title": "Implementation",
+          "description": "Deployment and field support"
+        },
+        "step4": {
+          "title": "Follow-up",
+          "description": "Continuous support and optimization"
+        }
+      },
+      "legal": {
+        "title": "Legal Secretariat",
+        "description": "Complete management of your legal and corporate secretariat.",
+        "longDescription": "Legal secretariat is a strategic function that ensures your company's compliance with legal and regulatory obligations. Our team of experts supports you in the daily management of your corporate obligations, thus guaranteeing the legal security of your structure.",
+        "features": [
+          "Maintaining mandatory legal registers",
+          "Preparation and organization of meetings",
+          "Drafting minutes and resolutions",
+          "Follow-up of formalities with the registry"
+        ],
+        "feature1": "Maintaining legal registers",
+        "feature2": "Preparation of meetings",
+        "details": {
+          "intro": "Our legal secretariat service relieves you of all your legal and administrative obligations.",
+          "section1": {
+            "title": "Register Management",
+            "content": "We ensure all your mandatory registers are kept up to date: register of meetings, register of share movements, personnel register, register of regulated agreements. This documentary rigor protects you in case of inspection."
+          },
+          "section2": {
+            "title": "Meeting Organization",
+            "content": "From convocation to drafting minutes, we handle the entire process: preparing the agenda, sending convocations on time, drafting resolutions, holding the meeting, and post-meeting formalities."
+          },
+          "section3": {
+            "title": "Legal Formalities",
+            "content": "We take care of all publication and registration formalities: filing documents with the registry, publication in legal announcements journals, updating the commercial register. Your compliance is our priority."
+          }
+        }
+      },
+      "governance": {
+        "title": "Corporate Governance",
+        "description": "Implementation and optimization of your corporate governance.",
+        "longDescription": "Effective corporate governance is essential to create value, manage risks, and ensure the sustainability of your organization. We help you establish governance structures adapted to your size and strategic challenges.",
+        "features": [
+          "Governance organization consulting",
+          "Director training and support",
+          "Implementation of specialized committees",
+          "Development of charters and regulations"
+        ],
+        "feature1": "Governance consulting",
+        "feature2": "Board member training",
+        "details": {
+          "intro": "Optimize the performance of your governance bodies with our recognized expertise.",
+          "section1": {
+            "title": "Governance Structuring",
+            "content": "We advise you on the best organization of your governing bodies: board composition, creation of committees (audit, remuneration, strategy), definition of roles and responsibilities. Our goal: effective and balanced governance."
+          },
+          "section2": {
+            "title": "Leadership Training",
+            "content": "We train your directors and executives in governance best practices: fiduciary duties, conflict of interest management, legal responsibilities, value creation strategy. Well-trained leaders make better decisions."
+          },
+          "section3": {
+            "title": "Governance Tools",
+            "content": "We develop all structuring documents for you: board internal regulations, director's charter, risk management policy, governance code. These tools formalize and secure the functioning of your bodies."
+          }
+        }
+      },
+      "creation": {
+        "title": "Creation & Transformation",
+        "description": "Support in creating and transforming your structure.",
+        "longDescription": "Whether you are launching a new activity or restructuring an existing company, we support you through all legal and administrative stages. Our expertise allows you to start on solid and compliant foundations.",
+        "features": [
+          "Creation of companies of all forms",
+          "Restructuring and transformation",
+          "Advice on optimal legal form",
+          "Completion of all formalities"
+        ],
+        "feature1": "Company formation",
+        "feature2": "Business restructuring",
+        "details": {
+          "intro": "Bring your projects to life with tailored legal support from creation to transformation.",
+          "section1": {
+            "title": "Company Formation",
+            "content": "We guide you in choosing the legal form best suited to your project: LLC, SA, SAS, SCI, EIG... We draft your articles of association, complete all incorporation formalities, and ensure your company's registration. You can focus on your business."
+          },
+          "section2": {
+            "title": "Transformation and Restructuring",
+            "content": "Is your company evolving? We support you in transformation operations: change of corporate form, merger, spin-off, partial asset contribution, business transfer. We legally and fiscally secure these complex operations."
+          },
+          "section3": {
+            "title": "Legal Optimization",
+            "content": "Beyond simple creation, we advise you on optimizing your structure: holding company, subsidiaries, shareholders' agreements, adapted governance. Our strategic approach anticipates your future needs and facilitates your development."
+          }
+        }
+      },
+      "why": {
+        "title": "Why choose us?",
+        "experience": "Years of experience",
+        "partners": "Expert partners",
+        "satisfaction": "Client satisfaction",
+        "support": "Available support"
+      },
+      "cta": {
+        "title": "Ready to transform your business?",
+        "subtitle": "Let's discuss your projects together",
+        "button": "Request a quote"
+      }
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "Legal expertise and consulting firm in Africa",
+      "badge": "Legal excellence for over 30 years",
+      "intro": {
+        "title": "A firm that listens to you",
+        "p1": "Legal and Tax Consulting firm, LEXAFRIC brings together young professionals with more than thirty (30) years of combined experience in Legal and Tax Consulting around the Co-managers Mr Beti and Mrs Saha.",
+        "p2": "LEXAFRIC firm is a Legal and Tax Consulting firm. It is based on a network of former collaborators from major international firms who decided to unite to create synergies primarily oriented towards African markets."
+      },
+      "mission": {
+        "title": "Our mission",
+        "p1": "Lexafric is a firm specializing in legal support for businesses and individuals in French-speaking Africa. We offer sharp expertise in business law, labor law, and strategic consulting.",
+        "p2": "Our approach combines legal rigor and fine understanding of local issues, allowing our clients to navigate serenely in a constantly evolving regulatory environment."
+      },
+      "values": {
+        "title": "Our values",
+        "excellence": {
+          "title": "Excellence",
+          "description": "We guarantee high-quality legal service, based on recognized expertise and constant monitoring."
+        },
+        "proximity": {
+          "title": "Proximity",
+          "description": "We cultivate a relationship of trust with our clients, based on listening, availability, and responsiveness."
+        },
+        "commitment": {
+          "title": "Commitment",
+          "description": "We are fully committed to defending our clients' interests and the success of their projects."
+        }
+      },
+      "team": {
+        "title": "Our Team",
+        "subtitle": "Experienced professionals at the service of your success",
+        "member1": {
+          "name": "Mr Beti",
+          "role": "Co-manager",
+          "description": "Legal consulting expert with over 15 years of experience in major international firms."
+        },
+        "member2": {
+          "name": "Mrs Saha",
+          "role": "Co-manager",
+          "description": "Specialist in taxation and business law, with recognized international experience."
+        }
+      },
+      "stats": {
+        "experience": "Years of combined experience",
+        "satisfaction": "Client satisfaction",
+        "support": "Support available",
+        "services": "Services offered"
+      },
+      "cta": {
+        "title": "Ready to work with us?",
+        "subtitle": "Contact us today to discuss your legal and tax needs"
+      }
+    },
+    "contact": {
+      "badge": "Get in touch",
+      "title": "Contact Us",
+      "subtitle": "Our team is here to answer all your legal and tax questions",
+      "info": {
+        "title": "Our Contact Information",
+        "description": "Have a project or a question? Feel free to contact us, our team will respond as soon as possible.",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "addressValue": "N'Djamena, Chad",
+        "hours": "Business Hours",
+        "weekdays": "Mon - Fri: 8:00 AM - 6:00 PM",
+        "weekend": "Sat - Sun: Closed",
+        "whatsapp": "Contact via WhatsApp",
+        "whatsappTitle": "Need quick help?",
+        "whatsappText": "Chat with us on WhatsApp"
+      },
+      "form": {
+        "title": "Send us a message",
+        "subtitle": "Fill out the form below and we will get back to you quickly",
+        "name": "Full Name",
+        "namePlaceholder": "Your full name",
+        "email": "Email Address",
+        "emailPlaceholder": "example: contact.email.com",
+        "subject": "Subject",
+        "subjectPlaceholder": "What is your message about?",
+        "message": "Message",
+        "messagePlaceholder": "Describe your need or question...",
+        "sending": "Sending...",
+        "success": "Your message has been sent successfully! We will respond as soon as possible.",
+        "successTitle": "Message sent!"
+      }
+    },
+    "articles": {
+      "title": "Articles",
+      "subtitle": "Our articles and legal news",
+      "article": "Article",
+      "excerpt": "Article excerpt..."
+    },
+    "legal": {
+      "title": "Legal Notice",
+      "editor": {
+        "title": "Site Publisher",
+        "content": "Information about the publisher..."
+      },
+      "hosting": {
+        "title": "Hosting",
+        "content": "Information about the hosting provider..."
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "content": "Legal content..."
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "collection": {
+        "title": "Data Collection",
+        "content": "Information about data collection..."
+      },
+      "usage": {
+        "title": "Data Usage",
+        "content": "How we use your data..."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Cookie policy..."
+      }
+    },
+    "home": {
+      "seo": {
+        "title": "Lexafric - Legal and Tax Consulting Firm in Chad",
+        "description": "Firm of excellence specialized in legal, tax, social consulting and recruitment. Over 10 years of experience serving businesses in Africa."
+      },
+      "hero": {
+        "badge": "Legal & Tax Excellence",
+        "title": "Your trusted partner for legal and tax consulting in Africa",
+        "subtitle": "Founded by former collaborators of major international firms, we support businesses with integrity, listening, and expertise for over 10 years.",
+        "cta": {
+          "contact": "Contact Us",
+          "services": "Our Services"
+        },
+        "stats": {
+          "years": "Years of experience",
+          "experts": "Qualified experts",
+          "partners": "Trusted partners"
+        },
+        "scroll": "Discover our services"
+      },
+      "services": {
+        "title": "What we do",
+        "subtitle": "Four areas of expertise to meet all your needs",
+        "items": {
+          "legal": {
+            "title": "Legal Assistance",
+            "description": "Contractual audit and comprehensive legal advice"
+          },
+          "fiscal": {
+            "title": "Tax Assistance",
+            "description": "Tax optimization and regulatory compliance"
+          },
+          "social": {
+            "title": "Labor Assistance",
+            "description": "Personnel management and social compliance"
+          },
+          "recruitment": {
+            "title": "Recruitment Assistance",
+            "description": "Talent search and HR outsourcing"
+          }
+        },
+        "viewAll": "View all our services"
+      },
+      "approach": {
+        "title": "How we do it",
+        "subtitle": "A proven method guided by strong values",
+        "method": {
+          "title": "Our Methodology",
+          "steps": {
+            "analyze": {
+              "title": "Analysis",
+              "description": "We study your situation in depth to identify challenges and opportunities"
+            },
+            "advise": {
+              "title": "Advisory",
+              "description": "We propose tailor-made solutions adapted to your objectives"
+            },
+            "implement": {
+              "title": "Implementation",
+              "description": "We support you in the concrete execution of recommendations"
+            },
+            "followup": {
+              "title": "Follow-up",
+              "description": "We ensure regular monitoring to guarantee expected results"
+            }
+          }
+        },
+        "values": {
+          "title": "Our Values",
+          "items": {
+            "integrity": {
+              "title": "Integrity",
+              "description": "Ethics and transparency in all our professional actions"
+            },
+            "listening": {
+              "title": "Listening",
+              "description": "Special attention to your needs and specific context"
+            },
+            "pedagogy": {
+              "title": "Pedagogy",
+              "description": "Clear explanation of issues to facilitate your decisions"
+            },
+            "interaction": {
+              "title": "Interaction",
+              "description": "Constant and constructive dialogue with our clients"
+            }
+          }
+        }
+      },
+      "trust": {
+        "title": "Why trust us",
+        "subtitle": "Recognized experience and solid partnerships",
+        "stats": {
+          "years": "Years of experience",
+          "experts": "Qualified experts",
+          "partners": "Active partners"
+        },
+        "partnersTitle": "They trust us",
+        "testimonial": {
+          "quote": "Lexafric has been supporting us for 5 years with professionalism and responsiveness. Their legal and tax expertise is a major asset for our development.",
+          "author": "CEO",
+          "company": "Partner company"
+        }
+      },
+      "cta": {
+        "badge": "Direct Contact",
+        "title": "Ready to discuss your project?",
+        "subtitle": "Our team is available to support you today",
+        "phone": {
+          "label": "Call us"
+        },
+        "email": {
+          "label": "Write to us"
+        },
+        "button": {
+          "contact": "Contact Form",
+          "services": "Discover our Services"
+        },
+        "responseTime": "We respond within 24 hours"
+      },
+      "posts": {
+        "title": "Legal News",
+        "subtitle": "Stay informed about the latest developments in business law in Africa",
+        "viewAll": "View all articles",
+        "category": {
+          "legal": "Legal",
+          "fiscal": "Tax",
+          "social": "Labor"
+        },
+        "post1": {
+          "title": "Developments in business law in Chad",
+          "excerpt": "In-depth analysis of recent legislative reforms and their impact on local and international companies operating in Chad."
+        },
+        "post2": {
+          "title": "Tax optimization for businesses in Africa",
+          "excerpt": "Discover the best tax optimization strategies compliant with local and international regulations."
+        },
+        "post3": {
+          "title": "Labor law in French-speaking Africa",
+          "excerpt": "Complete guide on employer social obligations and best practices in human resources management."
+        }
+      },
+      "newsletter": {
+        "title": "Stay Informed",
+        "subtitle": "Subscribe to our newsletter to receive our news and legal advice",
+        "placeholder": "Your email address",
+        "button": "Subscribe",
+        "success": "Thank you for subscribing!",
+        "blog": "View Blog"
+      },
+      "seo": {
+        "title": "LEXAFRIC - Legal and Tax Consulting Firm in Africa",
+        "description": "Specialized firm in legal and tax consulting founded on a network of former collaborators from major international firms focused on African markets. Over 10 years of experience."
+      }
+    }
+  }
+}
