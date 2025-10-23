@@ -14,13 +14,6 @@
 
     <!-- 5️⃣ AGISSEZ MAINTENANT -->
     <SectionCTASimple />
-    <!-- Sections conservées optimisées -->
-    <SectionPartners />
-    <!-- <SectionPosts /> Masqué temporairement - Section Actualités en cours de préparation -->
-    <SectionNewsletter />
-
-    <!-- CTA Premium impactant -->
-    <SectionCTAPremium />
   </div>
 </template>
 

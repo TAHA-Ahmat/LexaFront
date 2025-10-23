@@ -446,8 +446,8 @@
         "title": "Your trusted partner for legal and tax consulting in Africa",
         "subtitle": "Founded by former collaborators of major international firms, we support businesses with integrity, listening, and expertise for over 10 years.",
         "cta": {
-          "contact": "Contact Us",
-          "services": "Our Services"
+          "contact": "Talk to an Expert",
+          "services": "Discover"
         },
         "stats": {
           "years": "Years of experience",
@@ -457,33 +457,37 @@
         "scroll": "Discover our services"
       },
       "services": {
-        "title": "What we do",
-        "subtitle": "Four areas of expertise to meet all your needs",
+        "title": "Our Expertise",
+        "subtitle": "Tailored legal and tax solutions to secure your business",
         "items": {
           "legal": {
             "title": "Legal Assistance",
-            "description": "Contractual audit and comprehensive legal advice"
+            "description": "Contractual audit and comprehensive legal advice",
+            "link": "Learn more"
           },
           "fiscal": {
             "title": "Tax Assistance",
-            "description": "Tax optimization and regulatory compliance"
+            "description": "Tax optimization and regulatory compliance",
+            "link": "Learn more"
           },
           "social": {
             "title": "Labor Assistance",
-            "description": "Personnel management and social compliance"
+            "description": "Personnel management and social compliance",
+            "link": "Learn more"
           },
           "recruitment": {
             "title": "Recruitment Assistance",
-            "description": "Talent search and HR outsourcing"
+            "description": "Talent search and HR outsourcing",
+            "link": "Learn more"
           }
         },
-        "viewAll": "View all our services"
+        "viewAll": "Discover all our expertise"
       },
       "approach": {
-        "title": "How we do it",
+        "title": "Excellence & Rigor",
         "subtitle": "A proven method guided by strong values",
         "method": {
-          "title": "Our Methodology",
+          "title": "Proven Methodology",
           "steps": {
             "analyze": {
               "title": "Analysis",
@@ -504,7 +508,7 @@
           }
         },
         "values": {
-          "title": "Our Values",
+          "title": "Core Values",
           "items": {
             "integrity": {
               "title": "Integrity",
@@ -551,8 +555,8 @@
           "label": "Write to us"
         },
         "button": {
-          "contact": "Contact Form",
-          "services": "Discover our Services"
+          "contact": "Schedule a Meeting",
+          "call": "Call Now"
         },
         "responseTime": "We respond within 24 hours"
       },

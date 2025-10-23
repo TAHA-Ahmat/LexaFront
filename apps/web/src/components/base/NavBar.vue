@@ -10,12 +10,8 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[80px] flex items-center">
       <!-- Left: Logo -->
       <div class="flex-shrink-0">
-        <NuxtLink :to="localePath('/')" class="flex items-center gap-3 group">
-          <img :src="logo" alt="LEX AFRIC" class="h-12 w-auto rounded-md shadow-sm group-hover:shadow-md transition-shadow" />
-          <div class="hidden lg:flex flex-col">
-            <span class="text-gray-900 dark:text-white font-bold text-xl tracking-tight leading-tight">LEX AFRIC</span>
-            <span class="text-blue-600 dark:text-blue-400 text-[10px] uppercase tracking-widest font-medium">Legal Expertise</span>
-          </div>
+        <NuxtLink :to="localePath('/')" class="flex items-center group">
+          <img :src="logo" alt="Lexafric" class="h-12 w-auto rounded-md shadow-sm group-hover:shadow-md transition-shadow" />
         </NuxtLink>
       </div>
 
@@ -85,12 +81,8 @@
       >
         <!-- Header du drawer -->
         <div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-800">
-          <NuxtLink :to="localePath('/')" class="flex items-center gap-3" @click="closeMobile">
-            <img :src="logo" alt="LEX AFRIC" class="h-10 w-auto rounded-md shadow-sm" />
-            <div class="flex flex-col">
-              <span class="text-gray-900 dark:text-white font-bold text-lg tracking-tight">LEX AFRIC</span>
-              <span class="text-blue-600 dark:text-blue-400 text-[9px] uppercase tracking-widest font-medium">Legal Expertise</span>
-            </div>
+          <NuxtLink :to="localePath('/')" class="flex items-center" @click="closeMobile">
+            <img :src="logo" alt="Lexafric" class="h-10 w-auto rounded-md shadow-sm" />
           </NuxtLink>
           <button class="h-10 w-10 grid place-items-center rounded-lg text-gray-600 dark:text-gray-300
                          hover:text-blue-600 hover:bg-blue-50 dark:hover:text-white dark:hover:bg-gray-800
