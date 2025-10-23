@@ -446,8 +446,8 @@
         "title": "Votre partenaire de confiance pour le conseil juridique et fiscal en Afrique",
         "subtitle": "Cabinet fondé par d'anciens collaborateurs de grands cabinets internationaux, nous accompagnons les entreprises avec intégrité, écoute et expertise depuis plus de 10 ans.",
         "cta": {
-          "contact": "Nous Contacter",
-          "services": "Nos Services"
+          "contact": "Parler à un Expert",
+          "services": "Découvrir"
         },
         "stats": {
           "years": "Ans d'expérience",
@@ -457,33 +457,37 @@
         "scroll": "Découvrir nos services"
       },
       "services": {
-        "title": "Ce que nous faisons",
-        "subtitle": "Quatre domaines d'expertise pour répondre à tous vos besoins",
+        "title": "Nos Expertises",
+        "subtitle": "Des solutions juridiques et fiscales sur-mesure pour sécuriser votre activité",
         "items": {
           "legal": {
             "title": "Assistance Juridique",
-            "description": "Audit contractuel et conseil juridique complet"
+            "description": "Audit contractuel et conseil juridique complet",
+            "link": "En savoir plus"
           },
           "fiscal": {
             "title": "Assistance Fiscale",
-            "description": "Optimisation fiscale et conformité réglementaire"
+            "description": "Optimisation fiscale et conformité réglementaire",
+            "link": "En savoir plus"
           },
           "social": {
             "title": "Assistance Sociale",
-            "description": "Gestion du personnel et conformité sociale"
+            "description": "Gestion du personnel et conformité sociale",
+            "link": "En savoir plus"
           },
           "recruitment": {
             "title": "Assistance Recrutement",
-            "description": "Recherche de talents et externalisation RH"
+            "description": "Recherche de talents et externalisation RH",
+            "link": "En savoir plus"
           }
         },
-        "viewAll": "Voir tous nos services"
+        "viewAll": "Découvrir toutes nos expertises"
       },
       "approach": {
-        "title": "Comment nous le faisons",
+        "title": "Excellence & Rigueur",
         "subtitle": "Une méthode éprouvée guidée par des valeurs fortes",
         "method": {
-          "title": "Notre Méthodologie",
+          "title": "Méthodologie Éprouvée",
           "steps": {
             "analyze": {
               "title": "Analyse",
@@ -504,7 +508,7 @@
           }
         },
         "values": {
-          "title": "Nos Valeurs",
+          "title": "Valeurs Fondamentales",
           "items": {
             "integrity": {
               "title": "Intégrité",
@@ -551,8 +555,8 @@
           "label": "Écrivez-nous"
         },
         "button": {
-          "contact": "Formulaire de Contact",
-          "services": "Découvrir nos Services"
+          "contact": "Prendre Rendez-vous",
+          "call": "Appeler Maintenant"
         },
         "responseTime": "Nous vous répondons sous 24 heures"
       },
