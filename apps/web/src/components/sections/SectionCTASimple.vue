@@ -1,6 +1,6 @@
 <template>
   <!-- 5️⃣ AGISSEZ MAINTENANT -->
-  <section class="py-20 md:py-28 bg-gray-900">
+  <section class="py-20 md:py-28 bg-gradient-to-br from-blue-900 via-gray-900 to-gray-900">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center space-y-8">
         <!-- Badge -->

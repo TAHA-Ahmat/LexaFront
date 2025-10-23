@@ -76,7 +76,13 @@
         </div>
 
         <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p class="text-sm">&copy; {{ new Date().getFullYear() }} Lexafric. Tous droits réservés.</p>
+          <p class="text-sm mb-2">&copy; {{ new Date().getFullYear() }} Lexafric. Tous droits réservés.</p>
+          <p class="text-xs flex items-center justify-center gap-2 text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+            <span>Développé par <a href="mailto:madmit@madmit.com" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">madmit</a></span>
+          </p>
         </div>
       </div>
     </footer>
