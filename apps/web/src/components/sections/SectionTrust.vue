@@ -14,7 +14,7 @@
         </div>
 
         <!-- Stats -->
-        <div class="grid grid-cols-3 gap-8 mb-20 max-w-3xl mx-auto">
+        <div class="grid grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-20 max-w-3xl mx-auto">
           <div class="text-center">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">
               10+

@@ -47,7 +47,7 @@
         </div>
 
         <!-- Stats rapides -->
-        <div class="grid grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
+        <div class="grid grid-cols-3 gap-4 sm:gap-8 pt-12 max-w-2xl mx-auto">
           <div class="text-center">
             <div class="text-3xl md:text-4xl font-bold text-white">10+</div>
             <div class="text-sm text-gray-400 mt-1">{{ $t('pages.home.hero.stats.years') }}</div>
