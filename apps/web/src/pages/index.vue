@@ -1,38 +1,35 @@
 <template>
   <div class="overflow-x-hidden">
-    <!-- Hero Premium Full-Screen -->
-    <SectionHeroPremium />
+    <!-- 1️⃣ QUI NOUS SOMMES -->
+    <SectionHeroSimple />
 
-    <!-- Features Premium avec animations -->
-    <SectionFeaturesPremium />
+    <!-- 2️⃣ CE QUE NOUS FAISONS -->
+    <SectionServicesSimple />
 
-    <!-- Methodology Premium avec timeline -->
-    <SectionMethodologyPremium />
+    <!-- 3️⃣ COMMENT NOUS LE FAISONS -->
+    <SectionApproach />
 
-    <!-- Values Premium immersive -->
-    <SectionValuesPremium />
+    <!-- 4️⃣ POURQUOI NOUS FAIRE CONFIANCE -->
+    <SectionTrust />
 
-    <!-- Sections conservées optimisées -->
-    <SectionPartners />
-    <SectionPosts />
-    <SectionNewsletter />
-
-    <!-- CTA Premium impactant -->
-    <SectionCTAPremium />
+    <!-- 5️⃣ AGISSEZ MAINTENANT -->
+    <SectionCTASimple />
   </div>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
 
-// SEO
-useSeoMeta({
+// SEO - Using useHead with computed to ensure i18n is loaded
+useHead(() => ({
   title: t('pages.home.seo.title'),
-  description: t('pages.home.seo.description'),
-  ogTitle: t('pages.home.seo.title'),
-  ogDescription: t('pages.home.seo.description'),
-  ogImage: '/og-image.jpg',
-  ogUrl: 'https://lexafric.com',
-  twitterCard: 'summary_large_image'
-})
+  meta: [
+    { name: 'description', content: t('pages.home.seo.description') },
+    { property: 'og:title', content: t('pages.home.seo.title') },
+    { property: 'og:description', content: t('pages.home.seo.description') },
+    { property: 'og:image', content: '/og-image.jpg' },
+    { property: 'og:url', content: 'https://lexafric.com' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ]
+}))
 </script>

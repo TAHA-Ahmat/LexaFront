@@ -10,7 +10,27 @@
     "readMore": "Lire la suite",
     "loadMore": "Charger plus",
     "submit": "Envoyer",
-    "translationPending": "Traduction à venir"
+    "translationPending": "Traduction à venir",
+    "ourServices": "Nos Prestations",
+    "ourSolutions": "Nos Solutions",
+    "contactUs": "Contactez-nous",
+    "allServices": "Tous les services",
+    "allSolutions": "Toutes les solutions",
+    "interventionAreas": "Nos Domaines d'Intervention"
+  },
+  "chatbot": {
+    "title": "Assistant Lexafric",
+    "subtitle": "En ligne maintenant",
+    "open": "Ouvrir le chat",
+    "close": "Fermer le chat",
+    "openChat": "Ouvrir le chat",
+    "closeChat": "Fermer le chat",
+    "welcome": "Bienvenue sur le chat Lexafric",
+    "askQuestion": "Posez-nous vos questions sur nos services",
+    "reset": "Réinitialiser la conversation",
+    "placeholder": "Posez votre question...",
+    "send": "Envoyer",
+    "hint": "Appuyez sur Entrée pour envoyer, Shift + Entrée pour une nouvelle ligne"
   },
   "chatbot": {
     "title": "Assistant Lexafric",
@@ -41,6 +61,7 @@
     "services": {
       "title": "Nos Services",
       "subtitle": "Des solutions professionnelles adaptées à vos besoins",
+      "badge": "Excellence juridique professionnelle",
       "legal": {
         "title": "Assistance Juridique",
         "description": "Dans vos relations avec vos partenaires d'affaires, vous avez la possibilité de solliciter tout audit préalable de vos supports contractuels ou de tout autre document pouvant avoir une incidence juridique.",
@@ -174,30 +195,123 @@
       "cta": {
         "title": "Besoin d'un accompagnement personnalisé ?",
         "subtitle": "Notre équipe d'experts est à votre disposition",
-        "button": "Contactez-nous"
+        "button": "Contactez-nous",
+        "contactNow": "Contactez-nous dès aujourd'hui"
       },
-      "learnMore": "SAVOIR PLUS"
+      "learnMore": "EN SAVOIR PLUS"
     },
     "solutions": {
       "title": "Nos Solutions",
       "subtitle": "Des approches innovantes pour transformer votre entreprise",
+      "badge": "Solutions Corporate",
+      "intro": {
+        "title": "Des Solutions Adaptées à Vos Enjeux",
+        "description": "Chez Lexafric, nous comprenons que chaque entreprise est unique. C'est pourquoi nous proposons des solutions sur mesure qui s'adaptent à vos besoins spécifiques et à votre secteur d'activité.",
+        "text": "Notre approche consiste à vous accompagner de manière personnalisée dans la gestion de vos obligations juridiques et corporate. Nous mettons à votre disposition une équipe d'experts dédiés qui connaissent parfaitement les enjeux de votre secteur."
+      },
+      "methodology": {
+        "title": "Notre Méthodologie",
+        "subtitle": "Une approche structurée en 4 étapes",
+        "step1": {
+          "title": "Analyse",
+          "description": "Étude approfondie de vos besoins et de votre contexte"
+        },
+        "step2": {
+          "title": "Stratégie",
+          "description": "Élaboration d'une solution personnalisée"
+        },
+        "step3": {
+          "title": "Mise en œuvre",
+          "description": "Déploiement et accompagnement terrain"
+        },
+        "step4": {
+          "title": "Suivi",
+          "description": "Support continu et optimisation"
+        }
+      },
       "legal": {
         "title": "Secrétariat Juridique",
         "description": "Gestion complète de votre secrétariat juridique et corporate.",
+        "longDescription": "Le secrétariat juridique est une fonction stratégique qui assure la conformité de votre entreprise aux obligations légales et réglementaires. Notre équipe d'experts vous accompagne dans la gestion quotidienne de vos obligations corporate, garantissant ainsi la sécurité juridique de votre structure.",
+        "features": [
+          "Tenue des registres légaux obligatoires",
+          "Préparation et organisation des assemblées",
+          "Rédaction des procès-verbaux et résolutions",
+          "Suivi des formalités auprès du greffe"
+        ],
         "feature1": "Tenue des registres légaux",
-        "feature2": "Préparation des assemblées"
+        "feature2": "Préparation des assemblées",
+        "details": {
+          "intro": "Notre service de secrétariat juridique vous décharge de toutes vos obligations légales et administratives.",
+          "section1": {
+            "title": "Gestion des Registres",
+            "content": "Nous assurons la tenue à jour de tous vos registres obligatoires : registre des assemblées, registre des mouvements de titres, registre du personnel, registre des conventions réglementées. Cette rigueur documentaire vous protège en cas de contrôle."
+          },
+          "section2": {
+            "title": "Organisation des Assemblées",
+            "content": "De la convocation à la rédaction du procès-verbal, nous prenons en charge l'ensemble du processus : préparation de l'ordre du jour, envoi des convocations dans les délais, rédaction des résolutions, tenue de l'assemblée et formalités post-assemblée."
+          },
+          "section3": {
+            "title": "Formalités Légales",
+            "content": "Nous nous occupons de toutes les formalités de publicité et d'enregistrement : dépôt des actes au greffe, publicité au journal d'annonces légales, mise à jour du registre du commerce. Votre conformité est notre priorité."
+          }
+        }
       },
       "governance": {
         "title": "Gouvernance d'Entreprise",
         "description": "Mise en place et optimisation de votre gouvernance d'entreprise.",
+        "longDescription": "Une gouvernance d'entreprise efficace est essentielle pour créer de la valeur, gérer les risques et assurer la pérennité de votre organisation. Nous vous aidons à mettre en place des structures de gouvernance adaptées à votre taille et à vos enjeux stratégiques.",
+        "features": [
+          "Conseil en organisation de la gouvernance",
+          "Formation et accompagnement des administrateurs",
+          "Mise en place de comités spécialisés",
+          "Élaboration de chartes et règlements"
+        ],
         "feature1": "Conseil en gouvernance",
-        "feature2": "Formation des administrateurs"
+        "feature2": "Formation des administrateurs",
+        "details": {
+          "intro": "Optimisez la performance de vos organes de gouvernance avec notre expertise reconnue.",
+          "section1": {
+            "title": "Structuration de la Gouvernance",
+            "content": "Nous vous conseillons sur la meilleure organisation de vos instances dirigeantes : composition du conseil d'administration, création de comités (audit, rémunération, stratégie), définition des rôles et responsabilités. Notre objectif : une gouvernance efficace et équilibrée."
+          },
+          "section2": {
+            "title": "Formation des Dirigeants",
+            "content": "Nous formons vos administrateurs et dirigeants aux meilleures pratiques de gouvernance : devoirs fiduciaires, gestion des conflits d'intérêts, responsabilités légales, stratégie de création de valeur. Des dirigeants bien formés prennent de meilleures décisions."
+          },
+          "section3": {
+            "title": "Outils de Gouvernance",
+            "content": "Nous élaborons pour vous tous les documents structurants : règlement intérieur du conseil, charte de l'administrateur, politique de gestion des risques, code de gouvernance. Ces outils formalisent et sécurisent le fonctionnement de vos instances."
+          }
+        }
       },
       "creation": {
         "title": "Création & Transformation",
         "description": "Accompagnement dans la création et la transformation de votre structure.",
+        "longDescription": "Que vous lanciez une nouvelle activité ou que vous restructuriez une entreprise existante, nous vous accompagnons dans toutes les étapes juridiques et administratives. Notre expertise vous permet de partir sur des bases solides et conformes.",
+        "features": [
+          "Création de sociétés de toutes formes",
+          "Restructuration et transformation",
+          "Conseil sur la forme juridique optimale",
+          "Accomplissement de toutes les formalités"
+        ],
         "feature1": "Création de sociétés",
-        "feature2": "Restructuration d'entreprise"
+        "feature2": "Restructuration d'entreprise",
+        "details": {
+          "intro": "Concrétisez vos projets avec un accompagnement juridique sur mesure de la création à la transformation.",
+          "section1": {
+            "title": "Création de Sociétés",
+            "content": "Nous vous guidons dans le choix de la forme juridique la plus adaptée à votre projet : SARL, SA, SAS, SCI, GIE... Nous rédigeons vos statuts, effectuons toutes les formalités de constitution et assurons l'immatriculation de votre société. Vous pouvez vous concentrer sur votre activité."
+          },
+          "section2": {
+            "title": "Transformation et Restructuration",
+            "content": "Votre entreprise évolue ? Nous vous accompagnons dans les opérations de transformation : changement de forme sociale, fusion, scission, apport partiel d'actif, cession de fonds de commerce. Nous sécurisons juridiquement et fiscalement ces opérations complexes."
+          },
+          "section3": {
+            "title": "Optimisation Juridique",
+            "content": "Au-delà de la simple création, nous vous conseillons sur l'optimisation de votre structure : holding, filialisation, pactes d'actionnaires, gouvernance adaptée. Notre approche stratégique anticipe vos besoins futurs et facilite votre développement."
+          }
+        }
       },
       "why": {
         "title": "Pourquoi nous choisir ?",
@@ -215,6 +329,12 @@
     "about": {
       "title": "À propos",
       "subtitle": "Cabinet d'expertise juridique et de conseil en Afrique",
+      "badge": "Excellence juridique depuis plus de 30 ans",
+      "intro": {
+        "title": "Un cabinet à votre écoute",
+        "p1": "Cabinet de Conseil Juridique et fiscal, LEXAFRIC regroupe des jeunes professionnels cumulant plus de trente (30) années d'expérience dans le domaine du Conseil Juridique et de la Fiscalité autour des Co-gérants Mr Beti et Mme Saha.",
+        "p2": "Le Cabinet LEXAFRIC est un cabinet de Conseil Juridique et Fiscal. Il repose sur un réseau d'anciens collaborateurs de grands cabinets internationaux ayant décidé de s'unir afin de créer des synergies essentiellement orientées vers les marchés africains."
+      },
       "mission": {
         "title": "Notre mission",
         "p1": "Lexafric est un cabinet spécialisé dans l'accompagnement juridique des entreprises et des particuliers en Afrique francophone. Nous offrons une expertise pointue dans les domaines du droit des affaires, du droit social et du conseil stratégique.",
@@ -234,21 +354,64 @@
           "title": "Engagement",
           "description": "Nous nous engageons pleinement dans la défense des intérêts de nos clients et la réussite de leurs projets."
         }
+      },
+      "team": {
+        "title": "Notre Équipe",
+        "subtitle": "Des professionnels expérimentés au service de votre réussite",
+        "member1": {
+          "name": "Mr Beti",
+          "role": "Co-gérant",
+          "description": "Expert en conseil juridique avec plus de 15 ans d'expérience dans les grands cabinets internationaux."
+        },
+        "member2": {
+          "name": "Mme Saha",
+          "role": "Co-gérante",
+          "description": "Spécialiste en fiscalité et droit des affaires, forte d'une expérience internationale reconnue."
+        }
+      },
+      "stats": {
+        "experience": "Années d'expérience cumulée",
+        "satisfaction": "Satisfaction client",
+        "support": "Support disponible",
+        "services": "Services proposés"
+      },
+      "cta": {
+        "title": "Prêt à collaborer avec nous ?",
+        "subtitle": "Contactez-nous dès aujourd'hui pour discuter de vos besoins juridiques et fiscaux"
       }
     },
     "contact": {
-      "title": "Contact",
-      "subtitle": "Contactez-nous",
-      "form": {
-        "title": "Envoyez-nous un message"
-      },
+      "badge": "Nous contacter",
+      "title": "Contactez-nous",
+      "subtitle": "Notre équipe est à votre écoute pour répondre à toutes vos questions juridiques et fiscales",
       "info": {
         "title": "Nos coordonnées",
+        "description": "Vous avez un projet ou une question ? N'hésitez pas à nous contacter, notre équipe vous répond dans les plus brefs délais.",
         "email": "Email",
         "phone": "Téléphone",
         "address": "Adresse",
         "addressValue": "N'Djamena, Tchad",
-        "whatsapp": "Contacter via WhatsApp"
+        "hours": "Horaires d'ouverture",
+        "weekdays": "Lun - Ven: 8h00 - 18h00",
+        "weekend": "Sam - Dim: Fermé",
+        "whatsapp": "Contacter via WhatsApp",
+        "whatsappTitle": "Besoin d'aide rapide ?",
+        "whatsappText": "Discutez avec nous sur WhatsApp"
+      },
+      "form": {
+        "title": "Envoyez-nous un message",
+        "subtitle": "Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement",
+        "name": "Nom complet",
+        "namePlaceholder": "Votre nom complet",
+        "email": "Adresse email",
+        "emailPlaceholder": "exemple: contact.email.com",
+        "subject": "Sujet",
+        "subjectPlaceholder": "Quel est l'objet de votre message ?",
+        "message": "Message",
+        "messagePlaceholder": "Décrivez votre besoin ou votre question...",
+        "sending": "Envoi en cours...",
+        "success": "Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
+        "successTitle": "Message envoyé !"
       }
     },
     "articles": {
@@ -288,66 +451,128 @@
       }
     },
     "home": {
+      "seo": {
+        "title": "Lexafric - Cabinet de Conseil Juridique et Fiscal au Tchad",
+        "description": "Cabinet d'excellence spécialisé en conseil juridique, fiscal, social et en recrutement. Plus de 10 ans d'expérience au service des entreprises en Afrique."
+      },
       "hero": {
-        "badge": "Excellence Juridique",
-        "slide1": {
-          "title": "BIENVENUE SUR LEXAFRIC",
-          "subtitle": "L'expert qui vous accompagne",
-          "cta": "Notre Équipe"
+        "badge": "Excellence Juridique & Fiscale",
+        "title": "Votre partenaire de confiance pour le conseil juridique et fiscal en Afrique",
+        "subtitle": "Cabinet fondé par d'anciens collaborateurs de grands cabinets internationaux, nous accompagnons les entreprises avec intégrité, écoute et expertise depuis plus de 10 ans.",
+        "cta": {
+          "contact": "Parler à un Expert",
+          "services": "Découvrir"
         },
-        "slide2": {
-          "title": "LEXAFRIC vous offre des solutions idoines",
-          "subtitle": "Une expertise avérée",
-          "cta": "Nous Contacter"
+        "stats": {
+          "years": "Ans d'expérience",
+          "experts": "Experts qualifiés",
+          "partners": "Partenaires de confiance"
+        },
+        "scroll": "Découvrir nos services"
+      },
+      "services": {
+        "title": "Nos Expertises",
+        "subtitle": "Des solutions juridiques et fiscales sur-mesure pour sécuriser votre activité",
+        "items": {
+          "legal": {
+            "title": "Assistance Juridique",
+            "description": "Audit contractuel et conseil juridique complet",
+            "link": "En savoir plus"
+          },
+          "fiscal": {
+            "title": "Assistance Fiscale",
+            "description": "Optimisation fiscale et conformité réglementaire",
+            "link": "En savoir plus"
+          },
+          "social": {
+            "title": "Assistance Sociale",
+            "description": "Gestion du personnel et conformité sociale",
+            "link": "En savoir plus"
+          },
+          "recruitment": {
+            "title": "Assistance Recrutement",
+            "description": "Recherche de talents et externalisation RH",
+            "link": "En savoir plus"
+          }
+        },
+        "viewAll": "Découvrir toutes nos expertises"
+      },
+      "approach": {
+        "title": "Excellence & Rigueur",
+        "subtitle": "Une méthode éprouvée guidée par des valeurs fortes",
+        "method": {
+          "title": "Méthodologie Éprouvée",
+          "steps": {
+            "analyze": {
+              "title": "Analyse",
+              "description": "Nous étudions votre situation en profondeur pour identifier les enjeux et opportunités"
+            },
+            "advise": {
+              "title": "Conseil",
+              "description": "Nous vous proposons des solutions sur mesure adaptées à vos objectifs"
+            },
+            "implement": {
+              "title": "Mise en œuvre",
+              "description": "Nous vous accompagnons dans l'exécution concrète des recommandations"
+            },
+            "followup": {
+              "title": "Suivi",
+              "description": "Nous assurons un suivi régulier pour garantir les résultats attendus"
+            }
+          }
+        },
+        "values": {
+          "title": "Valeurs Fondamentales",
+          "items": {
+            "integrity": {
+              "title": "Intégrité",
+              "description": "Éthique et transparence dans toutes nos actions professionnelles"
+            },
+            "listening": {
+              "title": "Écoute",
+              "description": "Attention particulière à vos besoins et à votre contexte spécifique"
+            },
+            "pedagogy": {
+              "title": "Pédagogie",
+              "description": "Explication claire des enjeux pour faciliter vos décisions"
+            },
+            "interaction": {
+              "title": "Interaction",
+              "description": "Dialogue constant et constructif avec nos clients"
+            }
+          }
         }
       },
-      "presentation": {
-        "title": "Cabinet de Conseil Juridique et Fiscal",
-        "description": "Cabinet spécialisé en conseil juridique et fiscal, fondé sur un réseau d'anciens collaborateurs de grands cabinets internationaux orientés vers les marchés africains."
-      },
-      "features": {
-        "title": "Nos Services",
-        "subtitle": "Des services professionnels adaptés à vos besoins spécifiques",
-        "legal": {
-          "title": "Assistance Juridique",
-          "item1": "Audit préalable de supports contractuels",
-          "item2": "Conseil sur documents à incidence juridique"
+      "trust": {
+        "title": "Pourquoi nous faire confiance",
+        "subtitle": "Une expérience reconnue et des partenariats solides",
+        "stats": {
+          "years": "Ans d'expérience",
+          "experts": "Experts qualifiés",
+          "partners": "Partenaires actifs"
         },
-        "fiscal": {
-          "title": "Assistance Fiscale",
-          "item1": "Contrôle mensuel des déclarations fiscales",
-          "item2": "Conseils d'optimisation fiscale"
-        },
-        "social": {
-          "title": "Assistance Sociale",
-          "item1": "Déclarations d'embauche",
-          "item2": "Aide à la conformité des contrats de travail"
-        },
-        "recruitment": {
-          "title": "Assistance à Recrutement",
-          "item1": "Recherche de profils qualifiés",
-          "item2": "Externalisation du processus de recrutement"
-        },
-        "training": {
-          "title": "Formations",
-          "item1": "Formations inter et intra-entreprises",
-          "item2": "Expertise en développement des compétences"
+        "partnersTitle": "Ils nous font confiance",
+        "testimonial": {
+          "quote": "Lexafric nous accompagne depuis 5 ans avec professionnalisme et réactivité. Leur expertise juridique et fiscale est un atout majeur pour notre développement.",
+          "author": "Directeur Général",
+          "company": "Entreprise partenaire"
         }
       },
-      "stats": {
-        "title": "Nos Chiffres Clés",
-        "subtitle": "Une expérience reconnue au service de votre réussite",
-        "experience": "10+",
-        "experienceLabel": "ANS D'EXPÉRIENCE",
-        "associatesExperience": "25+",
-        "associatesExperienceLabel": "Années d'expertise cumulée",
-        "team": "15+",
-        "teamLabel": "EXPERTS",
-        "expertise": "50+",
-        "expertiseLabel": "PROJETS RÉUSSIS",
-        "clients": "Clients accompagnés",
-        "satisfaction": "Satisfaction client",
-        "message": "Nos associés totalisent plus de 25 ans d'expérience auprès de PME à grandes entreprises, avec un engagement constant envers l'excellence et l'intégrité."
+      "cta": {
+        "badge": "Contact Direct",
+        "title": "Prêt à discuter de votre projet ?",
+        "subtitle": "Notre équipe est disponible pour vous accompagner dès aujourd'hui",
+        "phone": {
+          "label": "Appelez-nous"
+        },
+        "email": {
+          "label": "Écrivez-nous"
+        },
+        "button": {
+          "contact": "Prendre Rendez-vous",
+          "call": "Appeler Maintenant"
+        },
+        "responseTime": "Nous vous répondons sous 24 heures"
       },
       "posts": {
         "title": "Actualités Juridiques",
@@ -370,70 +595,6 @@
           "title": "Le droit social en Afrique francophone",
           "excerpt": "Guide complet sur les obligations sociales des employeurs et les bonnes pratiques en matière de gestion des ressources humaines."
         }
-      },
-      "cta": {
-        "badge": "Prenez contact",
-        "title": "Prêt à transformer votre entreprise ?",
-        "subtitle": "Discutons de vos projets et objectifs. Notre équipe d'experts est prête à vous accompagner dans votre réussite.",
-        "button1": "NOUS CONTACTER",
-        "button2": "NOTRE EQUIPE",
-        "or": "Ou contactez-nous directement",
-        "callUs": "Appelez-nous",
-        "writeUs": "Écrivez-nous"
-      },
-      "values": {
-        "title": "Vision, Mission, Valeurs",
-        "subtitle": "Notre raison d'être et nos principes fondamentaux",
-        "vision": {
-          "title": "Notre Vision",
-          "description": "Devenir un cabinet de dimension internationale, reconnu et respecté pour son professionnalisme et son intégrité dans l'accompagnement juridique et fiscal des entreprises en Afrique."
-        },
-        "mission": {
-          "title": "Notre Mission",
-          "description": "Accompagner les entreprises nationales et sous-régionales dans leur mise aux normes internationales tout en assistant les multinationales dans leur implantation et développement sur le marché africain."
-        },
-        "value1": {
-          "title": "Intégrité",
-          "description": "Nous plaçons l'éthique et la transparence au cœur de notre pratique professionnelle."
-        },
-        "value2": {
-          "title": "Écoute",
-          "description": "Nous accordons une attention particulière aux besoins spécifiques de chaque client."
-        },
-        "value3": {
-          "title": "Pédagogie",
-          "description": "Nous expliquons clairement les enjeux juridiques et fiscaux pour une meilleure prise de décision."
-        },
-        "value4": {
-          "title": "Interaction",
-          "description": "Nous favorisons un dialogue constant et constructif avec nos clients et partenaires."
-        }
-      },
-      "methodology": {
-        "title": "Notre Méthodologie",
-        "subtitle": "Une approche structurée pour garantir votre réussite",
-        "step1": {
-          "title": "Stratégie",
-          "description": "Approche spécifique adaptée au contexte, basée sur l'intégrité, l'écoute, la pédagogie et l'interaction avec nos clients."
-        },
-        "step2": {
-          "title": "Planification",
-          "description": "Organisation de réunions de cadrage et respect scrupuleux des délais fixés par nos clients."
-        },
-        "step3": {
-          "title": "Implémentation",
-          "description": "Accompagnement sur le terrain pour la mise en œuvre effective des recommandations formulées."
-        },
-        "step4": {
-          "title": "Suivi",
-          "description": "Évaluation continue des résultats et ajustements pour garantir l'atteinte de vos objectifs."
-        }
-      },
-      "partners": {
-        "title": "Nos Partenaires",
-        "subtitle": "Plus de 25 partenaires internationaux nous font confiance",
-        "partner": "Partenaire",
-        "note": "Les logos des partenaires seront ajoutés ultérieurement"
       },
       "newsletter": {
         "title": "Restez Informés",
