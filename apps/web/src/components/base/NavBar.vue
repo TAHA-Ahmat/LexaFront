@@ -11,11 +11,7 @@
       <!-- Left: Logo -->
       <div class="flex-shrink-0">
         <NuxtLink :to="localePath('/')" class="flex items-center group">
-
           <img :src="logo" alt="Lexafric" class="h-12 landscape:h-10 w-auto rounded-md shadow-sm group-hover:shadow-md transition-shadow" />
-
-          <img :src="logo" alt="Lexafric" class="h-12 w-auto rounded-md shadow-sm group-hover:shadow-md transition-shadow" />
-
         </NuxtLink>
       </div>
 
@@ -82,29 +78,16 @@
     </transition>
 
     <transition name="slide">
-
-<aside
-  v-if="mobileOpen"
-  class="fixed top-0 right-0 bottom-0 w-[90%] max-w-[360px] h-[88vh] bg-white dark:bg-gray-900 z-[100]
-         flex flex-col shadow-2xl focus:outline-none overscroll-contain"
-  @touchmove.stop
->
+      <aside
+        v-if="mobileOpen"
+        class="fixed top-0 right-0 bottom-0 w-[90%] max-w-[360px] h-[88vh] bg-white dark:bg-gray-900 z-[100]
+               flex flex-col shadow-2xl focus:outline-none overscroll-contain"
+        @touchmove.stop
+      >
         <!-- Header du drawer - Compact et élégant -->
         <div class="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 flex-shrink-0">
           <NuxtLink :to="localePath('/')" class="flex items-center" @click="closeMobile">
             <img :src="logo" alt="Lexafric" class="h-9 w-auto rounded-md shadow-md" />
-
-      <aside
-        v-if="mobileOpen"
-        class="lg:hidden fixed top-0 bottom-0 right-0 w-full sm:w-[380px] bg-white dark:bg-gray-900 z-[60]
-               flex flex-col shadow-2xl focus:outline-none overflow-y-auto"
-        role="dialog" aria-modal="true"
-      >
-        <!-- Header du drawer -->
-        <div class="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-800">
-          <NuxtLink :to="localePath('/')" class="flex items-center" @click="closeMobile">
-            <img :src="logo" alt="Lexafric" class="h-10 w-auto rounded-md shadow-sm" />
-
           </NuxtLink>
           <button
             class="h-9 w-9 grid place-items-center rounded-lg bg-white/20 hover:bg-white/30 text-white transition-all duration-200"
