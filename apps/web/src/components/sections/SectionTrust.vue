@@ -57,6 +57,7 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -67,6 +68,7 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -82,6 +84,7 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -92,6 +95,7 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -99,6 +103,25 @@
           </div>
         </div>
 
+        <!-- Témoignage -->
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-gray-50 dark:bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg">
+            <svg class="w-10 h-10 text-blue-600 dark:text-blue-400 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic mb-6 text-center leading-relaxed">
+              {{ $t('pages.home.trust.testimonial.quote') }}
+            </p>
+            <div class="text-center">
+              <div class="font-semibold text-gray-900 dark:text-white text-lg">
+                {{ $t('pages.home.trust.testimonial.author') }}
+              </div>
+              <div class="text-gray-500 dark:text-gray-400">
+                {{ $t('pages.home.trust.testimonial.company') }}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -154,6 +177,7 @@ const partnersRow2 = [
 
 .carousel-track {
   display: flex;
+
   gap: 2rem;
   animation: scroll-right 40s linear infinite;
 }
@@ -169,6 +193,12 @@ const partnersRow2 = [
     gap: 4rem;
   }
 }
+
+
+  gap: 4rem;
+  animation: scroll-right 40s linear infinite;
+}
+
 
 .carousel-row:hover .carousel-track {
   animation-play-state: paused;
@@ -199,6 +229,10 @@ const partnersRow2 = [
   }
 }
 
+  gap: 4rem;
+  animation: scroll-left 40s linear infinite;
+}
+
 .carousel-row-reverse:hover .carousel-track-reverse {
   animation-play-state: paused;
 }
@@ -221,6 +255,7 @@ const partnersRow2 = [
   .carousel-item {
     min-width: 180px;
   }
+  min-width: 180px;
 }
 
 /* Animations */
@@ -242,4 +277,15 @@ const partnersRow2 = [
   }
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 120px;
+  }
+
+  .carousel-track,
+  .carousel-track-reverse {
+    gap: 2rem;
+  }
+}
 </style>
