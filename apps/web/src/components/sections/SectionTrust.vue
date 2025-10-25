@@ -57,7 +57,6 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -68,7 +67,6 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -84,7 +82,6 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -95,7 +92,6 @@
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                  class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
               </div>
@@ -194,12 +190,6 @@ const partnersRow2 = [
   }
 }
 
-
-  gap: 4rem;
-  animation: scroll-right 40s linear infinite;
-}
-
-
 .carousel-row:hover .carousel-track {
   animation-play-state: paused;
 }
@@ -227,10 +217,6 @@ const partnersRow2 = [
   .carousel-track-reverse {
     gap: 4rem;
   }
-}
-
-  gap: 4rem;
-  animation: scroll-left 40s linear infinite;
 }
 
 .carousel-row-reverse:hover .carousel-track-reverse {
