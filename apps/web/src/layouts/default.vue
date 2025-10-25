@@ -104,9 +104,9 @@
               </svg>
               <div class="text-sm">
                 <span class="text-gray-400">Développé par</span>
-                <a href="mailto:madmit@madmit.com" class="ml-1 text-blue-400 hover:text-blue-300 font-semibold transition-colors">
-                  madmit
-                </a>
+                <span class="ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                  Madmit
+                </span>
               </div>
             </div>
           </div>

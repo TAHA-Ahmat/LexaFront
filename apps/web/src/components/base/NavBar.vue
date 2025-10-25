@@ -80,7 +80,7 @@
     <transition name="slide">
 <aside
   v-if="mobileOpen"
-  class="fixed top-0 right-0 bottom-0 w-[90%] max-w-[360px] h-[94vh] bg-white dark:bg-gray-900 z-[100]
+  class="fixed top-0 right-0 bottom-0 w-[90%] max-w-[360px] h-[88vh] bg-white dark:bg-gray-900 z-[100]
          flex flex-col shadow-2xl focus:outline-none overscroll-contain"
   @touchmove.stop
 >
@@ -135,7 +135,7 @@
         </nav>
 
         <!-- Footer fixé en bas - Compact et toujours visible avec marge de sécurité -->
-        <div class="border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-900 dark:to-blue-950/30 flex-shrink-0 px-3 pt-2.5 pb-4">
+        <div class="border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-900 dark:to-blue-950/30 flex-shrink-0 px-3 pt-2.5 pb-8">
           <!-- Bouton téléphone compact -->
           <a
             href="tel:+23522519166"
