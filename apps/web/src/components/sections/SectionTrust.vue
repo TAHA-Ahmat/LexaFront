@@ -56,6 +56,7 @@
                 <img
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
+                  class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
@@ -66,6 +67,7 @@
                 <img
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
+                  class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
@@ -81,6 +83,7 @@
                 <img
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
+                  class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
@@ -91,6 +94,7 @@
                 <img
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
+                  class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   class="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
@@ -173,9 +177,28 @@ const partnersRow2 = [
 
 .carousel-track {
   display: flex;
+
+  gap: 2rem;
+  animation: scroll-right 40s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .carousel-track {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-track {
+    gap: 4rem;
+  }
+}
+
+
   gap: 4rem;
   animation: scroll-right 40s linear infinite;
 }
+
 
 .carousel-row:hover .carousel-track {
   animation-play-state: paused;
@@ -190,6 +213,22 @@ const partnersRow2 = [
 
 .carousel-track-reverse {
   display: flex;
+  gap: 2rem;
+  animation: scroll-left 40s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .carousel-track-reverse {
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-track-reverse {
+    gap: 4rem;
+  }
+}
+
   gap: 4rem;
   animation: scroll-left 40s linear infinite;
 }
@@ -203,6 +242,19 @@ const partnersRow2 = [
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 100px;
+}
+
+@media (min-width: 640px) {
+  .carousel-item {
+    min-width: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    min-width: 180px;
+  }
   min-width: 180px;
 }
 

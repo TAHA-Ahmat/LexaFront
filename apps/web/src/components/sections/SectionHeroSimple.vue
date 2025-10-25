@@ -1,6 +1,24 @@
 <template>
   <!-- 1️⃣ QUI NOUS SOMMES -->
-  <section class="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+  <section class="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
+    <!-- Animated stars background -->
+    <div class="absolute inset-0">
+      <div
+        v-for="star in stars"
+        :key="star.id"
+        class="absolute rounded-full bg-white animate-star"
+        :style="{
+          left: star.x + '%',
+          top: star.y + '%',
+          width: star.size + 'px',
+          height: star.size + 'px',
+          animationDelay: star.delay + 's',
+          animationDuration: star.duration + 's',
+          opacity: star.opacity
+        }"
+      ></div>
+    </div>
+
     <!-- Subtle grid pattern -->
     <div class="absolute inset-0 opacity-[0.03]">
       <div class="absolute inset-0" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 50px 50px;"></div>
@@ -75,4 +93,58 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
+
+// Generate random stars for the background
+interface Star {
+  id: number
+  x: number
+  y: number
+  size: number
+  delay: number
+  duration: number
+  opacity: number
+}
+
+const stars = ref<Star[]>([])
+
+// Generate 50 random stars
+onMounted(() => {
+  for (let i = 0; i < 50; i++) {
+    stars.value.push({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      size: Math.random() * 3 + 1, // 1-4px
+      delay: Math.random() * 5,
+      duration: Math.random() * 10 + 10, // 10-20s
+      opacity: Math.random() * 0.5 + 0.3 // 0.3-0.8
+    })
+  }
+})
 </script>
+
+<style scoped>
+@keyframes star {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: var(--star-opacity);
+  }
+  25% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(20px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.animate-star {
+  animation: star linear infinite;
+  --star-opacity: 0.5;
+}
+</style>
