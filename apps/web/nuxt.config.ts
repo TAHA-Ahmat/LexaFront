@@ -124,5 +124,10 @@ export default defineNuxtConfig({
   // Build configuration
   experimental: {
     payloadExtraction: false
+  },
+
+  // Nitro configuration for Vercel
+  nitro: {
+    preset: 'vercel'
   }
 })
