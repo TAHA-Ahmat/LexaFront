@@ -112,7 +112,9 @@
 
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-import botAvatar from '~/assets/images/image_lexafric_Bot.png'
+
+// Avatar du bot (dans public pour le déploiement)
+const botAvatar = '/images/image_lexafric_Bot.png'
 
 // Types
 interface Message {
