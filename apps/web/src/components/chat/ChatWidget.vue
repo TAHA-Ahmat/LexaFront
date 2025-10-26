@@ -8,7 +8,7 @@
       @click="toggleChat"
       :aria-label="$t('chatbot.openChat')"
     >
-      <span class="chat-icon">💬</span>
+      <img :src="botAvatar" alt="Lexafric AI" class="chat-icon-img" />
     </button>
 
     <!-- Fenêtre de chat -->
@@ -20,10 +20,14 @@
       <!-- En-tête -->
       <div class="chatbot-header">
         <div class="header-content">
-          <div class="header-icon">🤖</div>
+          <div class="header-icon">
+            <img :src="botAvatar" alt="Lexafric AI" class="header-avatar" />
+          </div>
           <div class="header-text">
             <h3>{{ $t('chatbot.title') }}</h3>
-            <p>{{ $t('chatbot.subtitle') }}</p>
+            <p class="ai-badge">
+              <span class="ai-chip">🤖 Intelligence Artificielle</span>
+            </p>
           </div>
         </div>
         <button
@@ -50,6 +54,14 @@
           class="message"
           :class="{ 'user-message': msg.role === 'user', 'bot-message': msg.role === 'assistant' }"
         >
+          <!-- Avatar du bot (à gauche des messages) -->
+          <img
+            v-if="msg.role === 'assistant'"
+            :src="botAvatar"
+            alt="Lexafric AI"
+            class="message-avatar"
+          />
+
           <div class="message-bubble">
             <p>{{ msg.content }}</p>
             <span v-if="msg.role === 'assistant' && msg.confidence !== undefined" class="confidence-badge">
@@ -60,6 +72,7 @@
 
         <!-- Indicateur de chargement -->
         <div v-if="isLoading" class="message bot-message">
+          <img :src="botAvatar" alt="Lexafric AI" class="message-avatar" />
           <div class="message-bubble loading-bubble">
             <div class="typing-indicator">
               <span></span>
@@ -99,6 +112,7 @@
 
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
+import botAvatar from '~/assets/images/image_lexafric_Bot.png'
 
 // Types
 interface Message {
@@ -200,8 +214,8 @@ const sendMessage = async () => {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 64px;
-  height: 64px;
+  width: 90px;
+  height: 90px;
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   border: none;
   border-radius: 50%;
@@ -211,6 +225,7 @@ const sendMessage = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 }
 
 .chatbot-button:hover {
@@ -223,9 +238,12 @@ const sendMessage = async () => {
   left: 24px;
 }
 
-.chat-icon {
-  font-size: 28px;
-  filter: grayscale(100%) brightness(0) invert(1);
+.chat-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Fenêtre de chat */
@@ -279,7 +297,16 @@ const sendMessage = async () => {
 }
 
 .header-icon {
-  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.header-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-text h3 {
@@ -288,10 +315,21 @@ const sendMessage = async () => {
   font-weight: 600;
 }
 
-.header-text p {
+.ai-badge {
   margin: 4px 0 0 0;
-  font-size: 12px;
-  opacity: 0.9;
+}
+
+.ai-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .close-button {
@@ -337,6 +375,8 @@ const sendMessage = async () => {
 .message {
   margin-bottom: 16px;
   display: flex;
+  gap: 8px;
+  align-items: flex-start;
 }
 
 .user-message {
@@ -345,6 +385,16 @@ const sendMessage = async () => {
 
 .bot-message {
   justify-content: flex-start;
+}
+
+.message-avatar {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
 }
 
 .message-bubble {
