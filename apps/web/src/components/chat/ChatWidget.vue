@@ -64,8 +64,8 @@
 
           <div class="message-bubble">
             <p>{{ msg.content }}</p>
-            <span v-if="msg.role === 'assistant' && msg.confidence !== undefined" class="confidence-badge">
-              {{ msg.source === 'knowledge_base_gpt' ? '🤖 GPT' : msg.source === 'knowledge_base_direct' ? '📚 KB' : '💬' }}
+            <span v-if="msg.role === 'assistant' && msg.source" class="confidence-badge">
+              {{ getSourceBadge(msg.source) }}
             </span>
           </div>
         </div>
@@ -128,6 +128,8 @@ interface ChatResponse {
   answer: string
   confidence: number
   source: string
+  category?: string
+  section?: string
 }
 
 // Composables
@@ -153,6 +155,21 @@ const scrollToBottom = async () => {
   await nextTick()
   if (messagesContainer.value) {
     messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight
+  }
+}
+
+const getSourceBadge = (source: string): string => {
+  switch (source) {
+    case 'faq_gpt':
+      return '🤖 FAQ+GPT'
+    case 'faq_direct':
+      return '📚 FAQ'
+    case 'rag_doing_business':
+      return '📖 Guide Tchad'
+    case 'fallback':
+      return '💬 Standard'
+    default:
+      return '💬'
   }
 }
 
