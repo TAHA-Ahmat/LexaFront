@@ -128,8 +128,28 @@
     "contact": {
       "title": "Contact",
       "subtitle": "Contactez-nous",
+      "tagline": "Expertise Juridique & Fiscale",
+      "description": "Cabinet de conseil en droit des affaires et fiscalité au Tchad",
+      "revealButton": "Révéler les contacts",
+      "back": "Retour",
+      "clickToReveal": "Cliquez pour révéler",
+      "clickToCall": "Cliquer pour appeler",
+      "clickToEmail": "Cliquer pour envoyer un email",
+      "clickToMap": "Cliquer pour ouvrir Google Maps",
+      "open": "Ouvert",
+      "closed": "Fermé",
       "form": {
-        "title": "Envoyez-nous un message"
+        "title": "Envoyez-nous un message",
+        "name": "Nom",
+        "namePlaceholder": "Votre nom",
+        "email": "Email",
+        "emailPlaceholder": "votre@email.com",
+        "subject": "Sujet",
+        "subjectPlaceholder": "Sujet de votre message",
+        "message": "Message",
+        "messagePlaceholder": "Votre message...",
+        "sending": "Envoi en cours...",
+        "success": "Message envoyé avec succès !"
       },
       "info": {
         "title": "Nos coordonnées",
@@ -137,7 +157,10 @@
         "phone": "Téléphone",
         "address": "Adresse",
         "addressValue": "N'Djamena, Tchad",
-        "whatsapp": "Contacter via WhatsApp"
+        "hours": "Horaires",
+        "weekdays": "Lun - Ven: 8h - 18h",
+        "weekend": "Sam: 9h - 13h",
+        "whatsapp": "WhatsApp"
       }
     },
     "articles": {
