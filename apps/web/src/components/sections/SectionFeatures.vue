@@ -2,7 +2,7 @@
   <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
     <div class="container mx-auto px-4">
       <!-- En-tête de section -->
-      <div class="text-center mb-16">
+      <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
           {{ $t('pages.home.features.title') }}
         </h2>
@@ -17,6 +17,8 @@
           v-for="(feature, index) in features"
           :key="index"
           class="group relative p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          data-aos="zoom-in"
+          :data-aos-delay="index * 100"
         >
           <!-- Icône -->
           <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">

@@ -1,7 +1,11 @@
 <template>
   <div :dir="currentDir" class="font-sans antialiased">
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage :transition="{
+        name: 'page',
+        mode: 'out-in',
+        duration: 300
+      }" />
     </NuxtLayout>
   </div>
 </template>

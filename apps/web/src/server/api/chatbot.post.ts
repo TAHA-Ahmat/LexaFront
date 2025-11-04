@@ -1,13 +1,23 @@
 import OpenAI from 'openai'
 import type { H3Event } from 'h3'
 
-// Type pour le body de la requête
+// ============================================================================
+// TYPES
+// ============================================================================
+
 interface ChatbotRequest {
-  message: string
-  locale: string
+  message?: string  // Ancien format (deprecated)
+  question: string  // Nouveau format
+  contextData?: Array<{
+    question: string
+    answer: string
+    theme: string
+    themeId: string
+  }>
+  locale?: string
 }
 
-// Type pour la structure de la base de connaissances
+// Type pour la structure FAQ
 interface KnowledgeEntry {
   id: string
   questions: Record<string, string[]>
@@ -20,7 +30,41 @@ interface KnowledgeBase {
   fallbackResponses: Record<string, string>
 }
 
-// Fonction de calcul de similarité (algorithme de Levenshtein simplifié)
+// Type pour la structure RAG (Doing Business)
+interface DocumentSection {
+  id: string
+  title: string
+  content: string
+}
+
+// Type pour la structure réelle du fichier JSON
+interface DoingBusinessTheme {
+  id: string
+  theme: string
+  qa: Array<{
+    question: string
+    answer: string
+  }>
+}
+
+// ============================================================================
+// CONVERSION DES DONNÉES
+// ============================================================================
+
+function convertDoingBusinessToSections(themes: DoingBusinessTheme[]): DocumentSection[] {
+  return themes.map(theme => ({
+    id: theme.id,
+    title: theme.theme,
+    content: theme.qa
+      .map(item => `Q: ${item.question}\nR: ${item.answer}`)
+      .join('\n\n')
+  }))
+}
+
+// ============================================================================
+// FONCTIONS DE SIMILARITÉ (pour FAQ)
+// ============================================================================
+
 function calculateSimilarity(str1: string, str2: string): number {
   const longer = str1.length > str2.length ? str1 : str2
   const shorter = str1.length > str2.length ? str2 : str1
@@ -31,7 +75,6 @@ function calculateSimilarity(str1: string, str2: string): number {
   return (longer.length - editDistance) / longer.length
 }
 
-// Calcul de la distance de Levenshtein
 function getEditDistance(s1: string, s2: string): number {
   s1 = s1.toLowerCase()
   s2 = s2.toLowerCase()
@@ -58,15 +101,18 @@ function getEditDistance(s1: string, s2: string): number {
   return costs[s2.length]
 }
 
-// Fonction pour trouver la meilleure correspondance dans la base de connaissances
+// ============================================================================
+// RECHERCHE FAQ
+// ============================================================================
+
 function findBestMatch(
   userQuestion: string,
   knowledgeBase: KnowledgeBase,
   locale: string
-): { answer: string; confidence: number } | null {
-  let bestMatch: { answer: string; confidence: number } | null = null
+): { answer: string; confidence: number; category: string } | null {
+  let bestMatch: { answer: string; confidence: number; category: string } | null = null
   let highestSimilarity = 0
-  const threshold = 0.4 // Seuil de confiance minimum
+  const threshold = 0.4
 
   for (const entry of knowledgeBase.knowledgeBase) {
     const questions = entry.questions[locale] || entry.questions.fr
@@ -78,7 +124,8 @@ function findBestMatch(
         highestSimilarity = similarity
         bestMatch = {
           answer: entry.answer[locale] || entry.answer.fr,
-          confidence: similarity
+          confidence: similarity,
+          category: entry.category
         }
       }
     }
@@ -87,7 +134,79 @@ function findBestMatch(
   return bestMatch
 }
 
-// Fonction pour reformuler la réponse avec GPT
+// ============================================================================
+// RECHERCHE RAG (Doing Business)
+// ============================================================================
+
+function normalizeText(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+    .replace(/[^\w\s]/g, ' ') // Remplacer la ponctuation par des espaces
+    .replace(/\s+/g, ' ') // Normaliser les espaces
+    .trim()
+}
+
+function extractKeywords(question: string): string[] {
+  const stopWords = [
+    'le', 'la', 'les', 'un', 'une', 'des', 'de', 'du', 'et', 'ou', 'mais',
+    'dans', 'pour', 'avec', 'sur', 'est', 'sont', 'a', 'ont', 'ce', 'ces',
+    'quel', 'quelle', 'quels', 'quelles', 'comment', 'pourquoi', 'quand',
+    'combien', 'que', 'qui', 'quoi', 'au', 'aux', 'en', 'par', 'ne', 'pas'
+  ]
+
+  const normalized = normalizeText(question)
+  const words = normalized.split(' ').filter(w => w.length > 2 && !stopWords.includes(w))
+  return words
+}
+
+function searchInDocumentSections(
+  userQuestion: string,
+  sections: DocumentSection[]
+): { section: DocumentSection; score: number } | null {
+  const keywords = extractKeywords(userQuestion)
+
+  if (keywords.length === 0) {
+    return null
+  }
+
+  let bestMatch: { section: DocumentSection; score: number } | null = null
+  let highestScore = 0
+
+  for (const section of sections) {
+    const normalizedTitle = normalizeText(section.title)
+    const normalizedContent = normalizeText(section.content)
+    const combinedText = `${normalizedTitle} ${normalizedContent}`
+
+    let score = 0
+
+    // Score basé sur les occurrences dans le titre (pondération x3)
+    for (const keyword of keywords) {
+      const titleOccurrences = (normalizedTitle.match(new RegExp(keyword, 'g')) || []).length
+      score += titleOccurrences * 3
+
+      // Score basé sur les occurrences dans le contenu (pondération x1)
+      const contentOccurrences = (normalizedContent.match(new RegExp(keyword, 'g')) || []).length
+      score += contentOccurrences
+    }
+
+    // Normaliser le score par le nombre de mots-clés
+    const normalizedScore = score / keywords.length
+
+    if (normalizedScore > highestScore && normalizedScore > 1) {
+      highestScore = normalizedScore
+      bestMatch = { section, score: normalizedScore }
+    }
+  }
+
+  return bestMatch
+}
+
+// ============================================================================
+// REFORMULATION AVEC GPT
+// ============================================================================
+
 async function reformulateWithGPT(
   originalAnswer: string,
   userQuestion: string,
@@ -117,80 +236,278 @@ async function reformulateWithGPT(
     return completion.choices[0]?.message?.content || originalAnswer
   } catch (error) {
     console.error('Erreur lors de la reformulation GPT:', error)
-    // En cas d'erreur, retourner la réponse originale
     return originalAnswer
   }
 }
+
+// Générer une réponse RAG à partir d'une section du document
+async function generateRAGResponse(
+  section: DocumentSection,
+  userQuestion: string,
+  locale: string,
+  openai: OpenAI
+): Promise<string> {
+  try {
+    const systemPrompt = locale === 'ar'
+      ? `أنت مساعد قانوني وضريبي متخصص لشركة LEXAFRIC. استخدم المعلومات التالية من دليل "Doing Business Tchad" للإجابة على السؤال بدقة ومهنية.
+
+عنوان القسم: ${section.title}
+
+محتوى القسم:
+${section.content}
+
+تعليمات:
+- قدم إجابة موجزة ودقيقة (2-4 جمل)
+- استخدم فقط المعلومات من المحتوى المقدم
+- إذا لم تكن المعلومات كافية، اذكر ذلك واقترح الاتصال بـ LEXAFRIC
+- استخدم لهجة مهنية وودية`
+      : locale === 'en'
+      ? `You are a specialized legal and tax assistant for LEXAFRIC. Use the following information from the "Doing Business Tchad" guide to answer the question accurately and professionally.
+
+Section Title: ${section.title}
+
+Section Content:
+${section.content}
+
+Instructions:
+- Provide a concise and accurate answer (2-4 sentences)
+- Use only information from the provided content
+- If information is insufficient, mention it and suggest contacting LEXAFRIC
+- Use a professional and friendly tone`
+      : `Tu es un assistant juridique et fiscal spécialisé pour LEXAFRIC. Utilise les informations suivantes du guide "Doing Business Tchad" pour répondre à la question de manière précise et professionnelle.
+
+Titre de section: ${section.title}
+
+Contenu de section:
+${section.content}
+
+Instructions:
+- Fournis une réponse concise et précise (2-4 phrases)
+- Utilise uniquement les informations du contenu fourni
+- Si les informations sont insuffisantes, mentionne-le et suggère de contacter LEXAFRIC
+- Utilise un ton professionnel et amical`
+
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        {
+          role: 'user',
+          content: userQuestion
+        }
+      ],
+      temperature: 0.3, // Température basse pour plus de précision
+      max_tokens: 600
+    })
+
+    return completion.choices[0]?.message?.content || 'Désolé, je n\'ai pas pu générer une réponse appropriée.'
+  } catch (error) {
+    console.error('Erreur lors de la génération RAG:', error)
+    throw error
+  }
+}
+
+// ============================================================================
+// GÉNÉRATION RAG AVEC CONTEXTE JSON FOURNI
+// ============================================================================
+
+async function generateRAGResponseWithContext(
+  question: string,
+  contextData: Array<{ question: string; answer: string; theme: string }>,
+  openai: OpenAI
+): Promise<string> {
+  try {
+    // Construire le contexte à partir des Q&A fournies
+    const contextText = contextData
+      .map((item, index) => `[${index + 1}] Thème: ${item.theme}\nQ: ${item.question}\nR: ${item.answer}`)
+      .join('\n\n---\n\n')
+
+    const systemPrompt = `Tu es Lexa, l'assistant IA juridique et fiscal du cabinet LEXAFRIC au Tchad.
+
+CONTEXTE (extrait de notre base de connaissances) :
+${contextText}
+
+INSTRUCTIONS STRICTES :
+- Réponds à la question de l'utilisateur en te basant UNIQUEMENT sur le CONTEXTE ci-dessus
+- Reformule de manière claire, professionnelle et naturelle
+- Structure ta réponse avec des émojis pertinents (📋, 💼, 💰, etc.) pour améliorer la lisibilité
+- Utilise des listes à puces si nécessaire
+- Reste factuel et précis - NE JAMAIS inventer d'informations
+- Si le contexte ne suffit pas pour répondre complètement, mentionne-le et propose de contacter LEXAFRIC
+- Utilise un ton professionnel mais amical
+- Termine par une question ouverte ou une offre d'aide si pertinent`
+
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: question }
+      ],
+      temperature: 0.3, // Bas pour rester factuel
+      max_tokens: 600
+    })
+
+    return completion.choices[0]?.message?.content || 'Désolé, je n\'ai pas pu générer une réponse appropriée.'
+  } catch (error) {
+    console.error('Erreur lors de la génération RAG avec contexte:', error)
+    throw error
+  }
+}
+
+// ============================================================================
+// HANDLER PRINCIPAL
+// ============================================================================
 
 export default defineEventHandler(async (event: H3Event) => {
   try {
     // Lire le body de la requête
     const body = await readBody<ChatbotRequest>(event)
-    const { message, locale = 'fr' } = body
+    const { question, contextData, message, locale = 'fr' } = body
 
-    if (!message || typeof message !== 'string') {
+    // Support ancien format (message) et nouveau format (question)
+    const userQuestion = question || message
+
+    if (!userQuestion || typeof userQuestion !== 'string') {
       throw createError({
         statusCode: 400,
-        statusMessage: 'Message manquant ou invalide'
+        statusMessage: 'Question manquante ou invalide'
       })
     }
 
-    // Charger la base de connaissances
+    const config = useRuntimeConfig()
+
+    // ========================================================================
+    // NOUVEAU FLOW : Avec contextData fourni par le frontend
+    // ========================================================================
+    if (contextData && contextData.length > 0 && config.openaiApiKey) {
+      console.log(`✅ Contexte reçu : ${contextData.length} élément(s)`)
+
+      const openai = new OpenAI({ apiKey: config.openaiApiKey })
+
+      try {
+        const ragAnswer = await generateRAGResponseWithContext(
+          userQuestion,
+          contextData,
+          openai
+        )
+
+        return {
+          answer: ragAnswer,
+          confidence: 0.9,
+          source: 'rag_gpt'
+        }
+      } catch (error) {
+        console.error('❌ Erreur GPT, fallback sur réponse JSON directe')
+
+        // Fallback : Retourner la première réponse du contexte
+        return {
+          answer: contextData[0].answer,
+          confidence: 0.8,
+          source: 'faq_fallback'
+        }
+      }
+    }
+
+    // ========================================================================
+    // ANCIEN FLOW : Sans contextData (backward compatibility)
+    // ========================================================================
+    console.log('⚠️ Mode legacy sans contextData')
+
+    // Charger les deux bases de connaissances
     const knowledgeBase: KnowledgeBase = await import('~/data/chatbot-kb.json').then(
       (module) => module.default
     )
 
-    // Rechercher une correspondance dans la base de connaissances
-    const match = findBestMatch(message, knowledgeBase, locale)
+    const doingBusinessThemes: DoingBusinessTheme[] = await import('~/data/doing_business_tchad_final.json').then(
+      (module) => module.default
+    )
+    const doingBusinessSections: DocumentSection[] = convertDoingBusinessToSections(doingBusinessThemes)
 
-    if (match && match.confidence > 0.6) {
-      // Haute confiance : reformuler avec GPT
-      const config = useRuntimeConfig()
+    // ÉTAPE 1 : Recherche dans la FAQ
+    const faqMatch = findBestMatch(userQuestion, knowledgeBase, locale)
 
+    if (faqMatch && faqMatch.confidence > 0.6) {
+      // ✅ HAUTE CONFIANCE FAQ : reformuler avec GPT
       if (config.openaiApiKey) {
-        const openai = new OpenAI({
-          apiKey: config.openaiApiKey
-        })
-
+        const openai = new OpenAI({ apiKey: config.openaiApiKey })
         const reformulatedAnswer = await reformulateWithGPT(
-          match.answer,
-          message,
+          faqMatch.answer,
+          userQuestion,
           locale,
           openai
         )
 
         return {
           answer: reformulatedAnswer,
-          confidence: match.confidence,
-          source: 'knowledge_base_gpt'
+          confidence: faqMatch.confidence,
+          source: 'faq_gpt',
+          category: faqMatch.category
         }
       } else {
-        // Pas de clé API : retourner la réponse directe
         return {
-          answer: match.answer,
-          confidence: match.confidence,
-          source: 'knowledge_base_direct'
+          answer: faqMatch.answer,
+          confidence: faqMatch.confidence,
+          source: 'faq_direct',
+          category: faqMatch.category
         }
       }
-    } else if (match && match.confidence > 0.4) {
-      // Confiance moyenne : retourner la réponse sans GPT
-      return {
-        answer: match.answer,
-        confidence: match.confidence,
-        source: 'knowledge_base_direct'
-      }
-    } else {
-      // Aucune correspondance : réponse de fallback
-      const fallbackResponse =
-        knowledgeBase.fallbackResponses[locale] ||
-        knowledgeBase.fallbackResponses.fr
+    }
 
-      return {
-        answer: fallbackResponse,
-        confidence: 0,
-        source: 'fallback'
+    // ÉTAPE 2 : Recherche dans le guide Doing Business (RAG)
+    const ragMatch = searchInDocumentSections(userQuestion, doingBusinessSections)
+
+    if (ragMatch && ragMatch.score > 3 && config.openaiApiKey) {
+      // ✅ MATCH RAG TROUVÉ : générer une réponse contextuelle
+      const openai = new OpenAI({ apiKey: config.openaiApiKey })
+
+      try {
+        const ragAnswer = await generateRAGResponse(
+          ragMatch.section,
+          userQuestion,
+          locale,
+          openai
+        )
+
+        return {
+          answer: ragAnswer,
+          confidence: Math.min(ragMatch.score / 10, 0.95),
+          source: 'rag_doing_business',
+          section: ragMatch.section.title
+        }
+      } catch (error) {
+        console.error('Erreur RAG, fallback vers FAQ si disponible')
+        if (faqMatch && faqMatch.confidence > 0.4) {
+          return {
+            answer: faqMatch.answer,
+            confidence: faqMatch.confidence,
+            source: 'faq_direct',
+            category: faqMatch.category
+          }
+        }
       }
     }
+
+    // ÉTAPE 3 : FAQ avec confiance moyenne (0.4-0.6)
+    if (faqMatch && faqMatch.confidence > 0.4) {
+      return {
+        answer: faqMatch.answer,
+        confidence: faqMatch.confidence,
+        source: 'faq_direct',
+        category: faqMatch.category
+      }
+    }
+
+    // ÉTAPE 4 : Réponse de fallback
+    const fallbackResponse =
+      knowledgeBase.fallbackResponses[locale] ||
+      knowledgeBase.fallbackResponses.fr
+
+    return {
+      answer: fallbackResponse,
+      confidence: 0,
+      source: 'fallback'
+    }
+
   } catch (error: any) {
     console.error('Erreur dans /api/chatbot:', error)
 

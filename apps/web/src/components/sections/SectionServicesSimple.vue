@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <!-- Header -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {{ $t('pages.home.services.title') }}
           </h2>
@@ -19,6 +19,8 @@
           <NuxtLink
             :to="localePath('/services/assistance-juridique')"
             class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-400 overflow-hidden"
+            data-aos="zoom-in"
+            data-aos-delay="0"
           >
             <!-- Gradient overlay on hover -->
             <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -53,6 +55,8 @@
           <NuxtLink
             :to="localePath('/services/assistance-fiscale')"
             class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-emerald-500 dark:hover:border-emerald-400 overflow-hidden"
+            data-aos="zoom-in"
+            data-aos-delay="100"
           >
             <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 to-transparent dark:from-emerald-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -84,6 +88,8 @@
           <NuxtLink
             :to="localePath('/services/assistance-sociale')"
             class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-400 overflow-hidden"
+            data-aos="zoom-in"
+            data-aos-delay="200"
           >
             <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent dark:from-purple-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -115,6 +121,8 @@
           <NuxtLink
             :to="localePath('/services/assistance-recrutement')"
             class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-amber-500 dark:hover:border-amber-400 overflow-hidden"
+            data-aos="zoom-in"
+            data-aos-delay="300"
           >
             <div class="absolute inset-0 bg-gradient-to-br from-amber-50 to-transparent dark:from-amber-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -144,7 +152,7 @@
         </div>
 
         <!-- CTA vers tous les services -->
-        <div class="text-center">
+        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
           <NuxtLink
             :to="localePath('/services')"
             class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"

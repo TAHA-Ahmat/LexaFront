@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <!-- Header -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {{ $t('pages.home.trust.title') }}
           </h2>
@@ -15,7 +15,7 @@
 
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-20 max-w-3xl mx-auto">
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">
               10+
             </div>
@@ -23,7 +23,7 @@
               {{ $t('pages.home.trust.stats.years') }}
             </div>
           </div>
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent mb-2">
               15+
             </div>
@@ -31,7 +31,7 @@
               {{ $t('pages.home.trust.stats.experts') }}
             </div>
           </div>
-          <div class="text-center">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent mb-2">
               25+
             </div>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Carousel Title -->
-        <h3 class="text-2xl font-semibold text-center text-gray-900 dark:text-white mb-12">
+        <h3 class="text-2xl font-semibold text-center text-gray-900 dark:text-white mb-12" data-aos="fade-up" data-aos-delay="400">
           {{ $t('pages.home.trust.partnersTitle') }}
         </h3>
 
@@ -100,7 +100,7 @@
         </div>
 
         <!-- Témoignage -->
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="500">
           <div class="bg-gray-50 dark:bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg">
             <svg class="w-10 h-10 text-blue-600 dark:text-blue-400 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
