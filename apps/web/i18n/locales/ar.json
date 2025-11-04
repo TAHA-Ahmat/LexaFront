@@ -128,8 +128,28 @@
     "contact": {
       "title": "اتصل بنا",
       "subtitle": "تواصل معنا",
+      "tagline": "الخبرة القانونية والضريبية",
+      "description": "مكتب استشارات في قانون الأعمال والضرائب في تشاد",
+      "revealButton": "كشف جهات الاتصال",
+      "back": "رجوع",
+      "clickToReveal": "انقر للكشف",
+      "clickToCall": "انقر للاتصال",
+      "clickToEmail": "انقر لإرسال بريد إلكتروني",
+      "clickToMap": "انقر لفتح خرائط جوجل",
+      "open": "مفتوح",
+      "closed": "مغلق",
       "form": {
-        "title": "أرسل لنا رسالة"
+        "title": "أرسل لنا رسالة",
+        "name": "الاسم",
+        "namePlaceholder": "اسمك",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "your@email.com",
+        "subject": "الموضوع",
+        "subjectPlaceholder": "موضوع رسالتك",
+        "message": "الرسالة",
+        "messagePlaceholder": "رسالتك...",
+        "sending": "جاري الإرسال...",
+        "success": "تم إرسال الرسالة بنجاح!"
       },
       "info": {
         "title": "معلومات الاتصال",
@@ -137,7 +157,10 @@
         "phone": "الهاتف",
         "address": "العنوان",
         "addressValue": "نجامينا، تشاد",
-        "whatsapp": "التواصل عبر واتساب"
+        "hours": "ساعات العمل",
+        "weekdays": "الإثنين - الجمعة: 8 صباحاً - 6 مساءً",
+        "weekend": "السبت: 9 صباحاً - 1 ظهراً",
+        "whatsapp": "واتساب"
       }
     },
     "articles": {

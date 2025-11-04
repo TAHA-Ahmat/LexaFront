@@ -1,17 +1,24 @@
 <template>
   <header
     :class="[
-      'transition-all duration-500',
+      'transition-all duration-500 relative z-50',
       hasShadow
         ? 'bg-white/80 dark:bg-black/80 backdrop-blur-2xl shadow-soft border-b border-gray-200/50 dark:border-gray-800/50'
         : 'bg-white/70 dark:bg-black/70 backdrop-blur-xl'
     ]"
   >
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[80px] landscape:h-[64px] flex items-center">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[110px] sm:h-[140px] landscape:h-[100px] flex items-center gap-3">
       <!-- Left: Logo -->
-      <div class="flex-shrink-0">
-        <NuxtLink :to="localePath('/')" class="flex items-center group">
-          <img src="/logo.svg" alt="Lexafric" class="h-12 landscape:h-10 w-auto transition-all duration-300 group-hover:scale-105" />
+      <div class="flex-shrink-0 pl-1 sm:pl-0">
+        <NuxtLink :to="localePath('/')" class="flex items-center group relative">
+          <!-- Logo minimaliste pur - Background transparent -->
+          <div class="logo-wrapper relative">
+            <img
+              src="/logo-lexafric.svg"
+              alt="Lexafric"
+              class="navbar-logo navbar-logo-scaled h-[110px] sm:h-[150px] landscape:h-[90px] w-auto transition-all duration-600 ease-out"
+            />
+          </div>
         </NuxtLink>
       </div>
 
@@ -51,17 +58,18 @@
 
       <!-- Mobile hamburger -->
       <button
-        class="lg:hidden ml-auto inline-flex items-center justify-center h-11 w-11 landscape:h-9 landscape:w-9 rounded-lg
+        class="hamburger-btn lg:hidden ml-auto inline-flex items-center justify-center h-11 w-11 landscape:h-9 landscape:w-9 rounded-lg
                text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800
-               focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+               focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-out
+               hover:scale-110 active:scale-95 hover:rotate-12"
         :aria-expanded="mobileOpen ? 'true' : 'false'"
         @click="toggleMobile"
       >
         <span class="sr-only">Menu</span>
-        <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 landscape:h-5 landscape:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 landscape:h-5 landscape:w-5 hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 landscape:h-5 landscape:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 landscape:h-5 landscape:w-5 close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
@@ -86,8 +94,15 @@
       >
         <!-- Header du drawer - Compact et élégant -->
         <div class="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 flex-shrink-0">
-          <NuxtLink :to="localePath('/')" class="flex items-center" @click="closeMobile">
-            <img :src="logo" alt="Lexafric" class="h-9 w-auto rounded-md shadow-md" />
+          <NuxtLink :to="localePath('/')" class="flex items-center group" @click="closeMobile">
+            <div class="drawer-logo-container bg-white/95 backdrop-blur-sm rounded-lg p-2.5 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-active:scale-95">
+              <img
+                src="/logo-lexafric.svg"
+                alt="Lexafric"
+                class="h-14 w-auto transition-all duration-300 group-hover:brightness-110"
+                style="object-fit: contain;"
+              />
+            </div>
           </NuxtLink>
           <button
             class="h-9 w-9 grid place-items-center rounded-lg bg-white/20 hover:bg-white/30 text-white transition-all duration-200"
@@ -203,6 +218,124 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* ==================== LOGO MINIMALISME ABSOLU - Background transparent ==================== */
+.navbar-logo {
+  object-fit: contain;
+  filter: brightness(1.25) contrast(1.15) drop-shadow(0 3px 12px rgba(0, 0, 0, 0.15));
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  animation: logo-entrance 1s cubic-bezier(0.25, 1, 0.5, 1) 0.3s both;
+}
+
+/* Scale agrandi au maximum pour zoom dans le SVG */
+.navbar-logo-scaled {
+  transform: scale(1.65);
+  transform-origin: center;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.group:hover .navbar-logo-scaled {
+  transform: scale(1.70);
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 90px;
+    filter: brightness(1.25) contrast(1.15) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+  }
+  .navbar-logo-scaled {
+    transform: scale(1.45);
+  }
+  .group:hover .navbar-logo-scaled {
+    transform: scale(1.50);
+  }
+}
+
+/* Ajustement mobile très petit écran pour éviter débordement excessif */
+@media (max-width: 640px) {
+  .navbar-logo-scaled {
+    transform: scale(1.40);
+  }
+  .group:hover .navbar-logo-scaled {
+    transform: scale(1.45);
+  }
+}
+
+/* Wrapper minimaliste du logo - Débordement autorisé */
+.logo-wrapper {
+  display: inline-block;
+  overflow: visible;
+}
+
+/* Animation d'entrée minimaliste - Simple et élégante */
+@keyframes logo-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== DRAWER MOBILE LOGO ==================== */
+.drawer-logo-container {
+  position: relative;
+  overflow: hidden;
+  animation: drawer-logo-pop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s both;
+}
+
+@keyframes drawer-logo-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Effet de brillance sur le conteneur du logo drawer */
+.drawer-logo-container::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.group:hover .drawer-logo-container::after {
+  transform: translateX(100%) translateY(100%) rotate(45deg);
+}
+
+/* Pulsation subtile au repos pour attirer l'attention */
+.drawer-logo-container {
+  animation: drawer-logo-pop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s both,
+             subtle-pulse 3s ease-in-out 1s infinite;
+}
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  50% {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04),
+                0 0 20px rgba(59, 130, 246, 0.3);
+  }
+}
+
+/* ==================== OVERLAY & DRAWER ANIMATIONS ==================== */
 /* Overlay fade animation */
 .fade-enter-active, .fade-leave-active {
   transition: opacity 200ms ease-out;
@@ -211,14 +344,75 @@ onMounted(() => {
   opacity: 0;
 }
 
-/* Drawer slide animation - Plus fluide */
+/* Drawer slide animation - Plus fluide avec bounce */
 .slide-enter-active {
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .slide-leave-active {
-  transition: transform 250ms cubic-bezier(0.7, 0, 0.84, 0);
+  transition: transform 300ms cubic-bezier(0.7, 0, 0.84, 0);
 }
 .slide-enter-from, .slide-leave-to {
   transform: translateX(100%);
+}
+
+/* ==================== HAMBURGER MENU BUTTON ==================== */
+.hamburger-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.hamburger-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  border-radius: 0.5rem;
+}
+
+.hamburger-btn:hover::before {
+  transform: scale(1);
+}
+
+.hamburger-icon {
+  animation: hamburger-pulse 2s ease-in-out infinite;
+}
+
+@keyframes hamburger-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.close-icon {
+  animation: close-rotate 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes close-rotate {
+  0% {
+    transform: rotate(-90deg) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ==================== MICRO-INTERACTIONS ==================== */
+/* Effet ripple au clic */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }
 </style>

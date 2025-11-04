@@ -1,194 +1,290 @@
 <template>
   <div class="overflow-x-hidden">
-    <!-- Hero Section avec réseau de lignes connectées -->
-    <section class="relative min-h-[60vh] flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
-      <!-- Network canvas -->
-      <canvas ref="networkCanvas" class="absolute inset-0 w-full h-full"></canvas>
-
-      <!-- Subtle grid pattern -->
-      <div class="absolute inset-0 opacity-[0.03]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 50px 50px;"></div>
+    <!-- Business Card Section -->
+    <section
+      ref="cardSection"
+      class="relative min-h-screen py-20 md:py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 dark:from-gray-950 dark:via-blue-950 dark:to-gray-900 overflow-hidden"
+      @mousemove="handleMouseMove"
+    >
+      <!-- Holographic background shimmer -->
+      <div class="absolute inset-0 opacity-30 pointer-events-none">
+        <div class="holographic-bg"></div>
       </div>
 
-      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            {{ $t('pages.contact.title') }}
-          </h1>
+      <!-- Orbital particles -->
+      <div class="particles-container">
+        <div v-for="i in 20" :key="i" class="particle" :style="getParticleStyle(i)"></div>
+      </div>
 
-          <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            {{ $t('pages.contact.subtitle') }}
-          </p>
+      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <!-- Main Business Card -->
+        <div
+          v-if="!cardsRevealed"
+          class="main-card-container perspective-container"
+          :style="{ '--mouse-x': mouseX + 'px', '--mouse-y': mouseY + 'px' }"
+        >
+          <div class="main-card glassmorphism">
+            <!-- Spotlight effect -->
+            <div class="spotlight"></div>
+
+            <!-- Card content -->
+            <div class="card-content">
+              <!-- Logo -->
+              <div class="logo-container mb-8">
+                <img
+                  src="/logo-lexafric.svg"
+                  alt="Lexafric"
+                  class="card-logo"
+                />
+              </div>
+
+              <!-- Identity -->
+              <div class="identity-section">
+                <h2 class="company-name">LEXAFRIC</h2>
+                <p class="company-tagline">{{ $t('pages.contact.tagline') || 'Expertise Juridique & Fiscale' }}</p>
+                <div class="separator"></div>
+                <p class="company-description">
+                  {{ $t('pages.contact.description') || 'Cabinet de conseil en droit des affaires et fiscalité au Tchad' }}
+                </p>
+              </div>
+
+              <!-- Magnetic CTA Button -->
+              <button
+                ref="ctaButton"
+                @click="revealCards"
+                class="cta-button magnetic-button"
+                @mouseenter="magneticHover = true"
+                @mouseleave="magneticHover = false"
+              >
+                <span class="button-content">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                  <span>{{ $t('pages.contact.revealButton') || 'Révéler les contacts' }}</span>
+                </span>
+                <div class="button-shine"></div>
+              </button>
+
+              <!-- Breathing indicator -->
+              <div class="breathing-rings">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Contact Content Minimaliste -->
-    <section class="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-          <div class="grid lg:grid-cols-2 gap-16">
-            <!-- Contact Info -->
-            <div class="space-y-12">
-              <div>
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-                  {{ $t('pages.contact.info.title') }}
-                </h2>
+        <!-- Satellite Cards (revealed state) -->
+        <div v-else class="satellite-cards-container">
+          <!-- Back button -->
+          <button @click="hideCards" class="back-button glassmorphism">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            </svg>
+            <span>{{ $t('pages.contact.back') || 'Retour' }}</span>
+          </button>
 
-                <div class="space-y-8">
-                  <!-- Email -->
-                  <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                      {{ $t('pages.contact.info.email') }}
-                    </h3>
-                    <a href="mailto:contact@lexafric.com" class="text-xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition">
-                      contact@lexafric.com
-                    </a>
+          <!-- Cards Grid -->
+          <div class="cards-grid">
+            <!-- Phone Card -->
+            <div
+              class="satellite-card"
+              :class="{ 'flipped': flippedCards.phone }"
+              @click="toggleFlip('phone')"
+            >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-face card-front glassmorphism">
+                  <div class="icon-wrapper phone-icon">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring delay-1"></div>
+                    <div class="pulse-ring delay-2"></div>
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
                   </div>
+                  <h3 class="card-title">{{ $t('pages.contact.info.phone') || 'Téléphone' }}</h3>
+                  <p class="card-hint">{{ $t('pages.contact.clickToReveal') || 'Cliquez pour révéler' }}</p>
+                </div>
 
-                  <!-- Phone -->
-                  <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                      {{ $t('pages.contact.info.phone') }}
-                    </h3>
-                    <a href="tel:+23522519166" class="text-xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition">
-                      {{ $t('ui.phone') }}
+                <!-- Back -->
+                <div class="card-face card-back glassmorphism">
+                  <div class="card-back-content">
+                    <svg class="w-8 h-8 mb-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <h4 class="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase mb-2">
+                      {{ $t('pages.contact.info.phone') || 'Téléphone' }}
+                    </h4>
+                    <a
+                      href="tel:+23522519166"
+                      class="contact-link"
+                      @click.stop="handlePhoneClick"
+                    >
+                      {{ $t('ui.phone') || '+235 22 51 91 66' }}
                     </a>
-                  </div>
-
-                  <!-- Address -->
-                  <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                      {{ $t('pages.contact.info.address') }}
-                    </h3>
-                    <p class="text-xl text-gray-900 dark:text-white">
-                      {{ $t('pages.contact.info.addressValue') }}
+                    <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                      {{ $t('pages.contact.clickToCall') || 'Cliquer pour appeler' }}
                     </p>
                   </div>
+                  <div class="ripple-effect" v-if="ripplePhone"></div>
+                </div>
+              </div>
+            </div>
 
-                  <!-- Hours -->
-                  <div>
-                    <h3 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
-                      {{ $t('pages.contact.info.hours') }}
-                    </h3>
-                    <div class="space-y-1 text-gray-900 dark:text-white">
-                      <p>{{ $t('pages.contact.info.weekdays') }}</p>
-                      <p class="text-gray-600 dark:text-gray-400">{{ $t('pages.contact.info.weekend') }}</p>
+            <!-- Email Card -->
+            <div
+              class="satellite-card"
+              :class="{ 'flipped': flippedCards.email }"
+              @click="toggleFlip('email')"
+            >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-face card-front glassmorphism">
+                  <div class="icon-wrapper email-icon">
+                    <svg class="w-12 h-12 envelope-animation" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <h3 class="card-title">{{ $t('pages.contact.info.email') || 'Email' }}</h3>
+                  <p class="card-hint">{{ $t('pages.contact.clickToReveal') || 'Cliquez pour révéler' }}</p>
+                </div>
+
+                <!-- Back -->
+                <div class="card-face card-back glassmorphism">
+                  <div class="card-back-content">
+                    <svg class="w-8 h-8 mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <h4 class="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase mb-2">
+                      {{ $t('pages.contact.info.email') || 'Email' }}
+                    </h4>
+                    <a
+                      href="mailto:contact@lexafric.com"
+                      class="contact-link"
+                      @click.stop
+                    >
+                      contact@lexafric.com
+                    </a>
+                    <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                      {{ $t('pages.contact.clickToEmail') || 'Cliquer pour envoyer un email' }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Address Card -->
+            <div
+              class="satellite-card"
+              :class="{ 'flipped': flippedCards.address }"
+              @click="toggleFlip('address')"
+            >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-face card-front glassmorphism">
+                  <div class="icon-wrapper address-icon">
+                    <div class="bouncing-pin">
+                      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 class="card-title">{{ $t('pages.contact.info.address') || 'Adresse' }}</h3>
+                  <p class="card-hint">{{ $t('pages.contact.clickToReveal') || 'Cliquez pour révéler' }}</p>
+                </div>
+
+                <!-- Back -->
+                <div class="card-face card-back glassmorphism">
+                  <div class="card-back-content">
+                    <svg class="w-8 h-8 mb-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <h4 class="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase mb-2">
+                      {{ $t('pages.contact.info.address') || 'Adresse' }}
+                    </h4>
+                    <a
+                      :href="addressMapUrl"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact-link text-center"
+                      @click.stop
+                    >
+                      {{ $t('pages.contact.info.addressValue') || 'N\'Djamena, Tchad' }}
+                    </a>
+                    <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                      {{ $t('pages.contact.clickToMap') || 'Cliquer pour ouvrir Google Maps' }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hours Card -->
+            <div
+              class="satellite-card"
+              :class="{ 'flipped': flippedCards.hours }"
+              @click="toggleFlip('hours')"
+            >
+              <div class="card-inner">
+                <!-- Front -->
+                <div class="card-face card-front glassmorphism">
+                  <div class="icon-wrapper hours-icon">
+                    <div class="clock-container">
+                      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3"/>
+                      </svg>
+                      <div class="clock-hand hour-hand"></div>
+                      <div class="clock-hand minute-hand"></div>
+                    </div>
+                  </div>
+                  <h3 class="card-title">{{ $t('pages.contact.info.hours') || 'Horaires' }}</h3>
+                  <p class="card-hint">{{ $t('pages.contact.clickToReveal') || 'Cliquez pour révéler' }}</p>
+                </div>
+
+                <!-- Back -->
+                <div class="card-face card-back glassmorphism">
+                  <div class="card-back-content">
+                    <svg class="w-8 h-8 mb-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="9" stroke-width="2"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3"/>
+                    </svg>
+                    <h4 class="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase mb-2">
+                      {{ $t('pages.contact.info.hours') || 'Horaires' }}
+                    </h4>
+                    <div class="text-gray-800 dark:text-gray-200 font-medium space-y-1">
+                      <p class="text-sm">{{ $t('pages.contact.info.weekdays') || 'Lun - Ven: 8h - 18h' }}</p>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">{{ $t('pages.contact.info.weekend') || 'Sam: 9h - 13h' }}</p>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                      <span :class="['status-badge', isOpen ? 'status-open' : 'status-closed']">
+                        <span class="status-dot"></span>
+                        {{ isOpen ? (($t('pages.contact.open') as string) || 'Ouvert') : (($t('pages.contact.closed') as string) || 'Fermé') }}
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <!-- WhatsApp -->
-              <div class="pt-8 border-t border-gray-200 dark:border-gray-800">
-                <a
-                  href="https://wa.me/23522519166"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all"
-                >
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                  </svg>
-                  {{ $t('pages.contact.info.whatsapp') }}
-                </a>
-              </div>
             </div>
+          </div>
 
-            <!-- Contact Form -->
-            <div>
-              <div class="bg-white dark:bg-gray-950 rounded-2xl p-8 border border-gray-200 dark:border-gray-800">
-                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  {{ $t('pages.contact.form.title') }}
-                </h2>
-
-                <form @submit.prevent="handleSubmit" class="space-y-6">
-                  <!-- Name -->
-                  <div>
-                    <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                      {{ $t('pages.contact.form.name') }}
-                    </label>
-                    <input
-                      v-model="form.name"
-                      type="text"
-                      required
-                      class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent transition text-gray-900 dark:text-white"
-                      :placeholder="$t('pages.contact.form.namePlaceholder')"
-                    />
-                  </div>
-
-                  <!-- Email -->
-                  <div>
-                    <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                      {{ $t('pages.contact.form.email') }}
-                    </label>
-                    <input
-                      v-model="form.email"
-                      type="email"
-                      required
-                      class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent transition text-gray-900 dark:text-white"
-                      :placeholder="$t('pages.contact.form.emailPlaceholder')"
-                    />
-                  </div>
-
-                  <!-- Subject -->
-                  <div>
-                    <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                      {{ $t('pages.contact.form.subject') }}
-                    </label>
-                    <input
-                      v-model="form.subject"
-                      type="text"
-                      required
-                      class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent transition text-gray-900 dark:text-white"
-                      :placeholder="$t('pages.contact.form.subjectPlaceholder')"
-                    />
-                  </div>
-
-                  <!-- Message -->
-                  <div>
-                    <label class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                      {{ $t('pages.contact.form.message') }}
-                    </label>
-                    <textarea
-                      v-model="form.message"
-                      rows="5"
-                      required
-                      class="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-white focus:border-transparent transition resize-none text-gray-900 dark:text-white"
-                      :placeholder="$t('pages.contact.form.messagePlaceholder')"
-                    ></textarea>
-                  </div>
-
-                  <!-- Submit Button -->
-                  <button
-                    type="submit"
-                    :disabled="loading"
-                    class="w-full py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <span v-if="!loading" class="flex items-center justify-center gap-2">
-                      {{ $t('common.submit') }}
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                      </svg>
-                    </span>
-                    <span v-else class="flex items-center justify-center gap-2">
-                      <svg class="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      {{ $t('pages.contact.form.sending') }}
-                    </span>
-                  </button>
-
-                  <!-- Success Message -->
-                  <div v-if="submitted" class="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-                    <p class="text-green-800 dark:text-green-200 font-medium">
-                      {{ $t('pages.contact.form.success') }}
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
+          <!-- WhatsApp Floating Action -->
+          <div class="whatsapp-fab">
+            <a
+              href="https://wa.me/23522519166"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="whatsapp-button glassmorphism"
+            >
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <span>{{ $t('pages.contact.info.whatsapp') || 'WhatsApp' }}</span>
+            </a>
           </div>
         </div>
       </div>
@@ -200,121 +296,93 @@
 // i18n
 const localePath = useLocalePath()
 
-const form = ref({
-  name: '',
-  email: '',
-  subject: '',
-  message: ''
+// Refs
+const cardSection = ref<HTMLElement | null>(null)
+const ctaButton = ref<HTMLButtonElement | null>(null)
+
+// State
+const cardsRevealed = ref(false)
+const flippedCards = ref({
+  phone: false,
+  email: false,
+  address: false,
+  hours: false
+})
+const ripplePhone = ref(false)
+const mouseX = ref(0)
+const mouseY = ref(0)
+const magneticHover = ref(false)
+
+// Computed
+const addressMapUrl = computed(() => {
+  const address = 'Lexafric N\'Djamena Tchad'
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
 })
 
-const loading = ref(false)
-const submitted = ref(false)
+const isOpen = computed(() => {
+  // Tchad timezone: GMT+1
+  const now = new Date()
+  const tchadTime = new Date(now.toLocaleString('en-US', { timeZone: 'Africa/Ndjamena' }))
+  const day = tchadTime.getDay()
+  const hours = tchadTime.getHours()
 
-const handleSubmit = async () => {
-  loading.value = true
+  // Lun-Ven: 8h-18h, Sam: 9h-13h, Dim: fermé
+  if (day === 0) return false // Dimanche
+  if (day === 6) return hours >= 9 && hours < 13 // Samedi
+  return hours >= 8 && hours < 18 // Lundi-Vendredi
+})
 
-  // Simulation d'envoi
-  await new Promise(resolve => setTimeout(resolve, 1500))
+// Methods
+const handleMouseMove = (e: MouseEvent) => {
+  if (!cardSection.value) return
+  const rect = cardSection.value.getBoundingClientRect()
+  mouseX.value = e.clientX - rect.left
+  mouseY.value = e.clientY - rect.top
+}
 
-  submitted.value = true
-  loading.value = false
+const revealCards = () => {
+  cardsRevealed.value = true
+}
 
-  // Reset form
+const hideCards = () => {
+  cardsRevealed.value = false
+  // Reset flipped states
+  flippedCards.value = {
+    phone: false,
+    email: false,
+    address: false,
+    hours: false
+  }
+}
+
+const toggleFlip = (card: keyof typeof flippedCards.value) => {
+  flippedCards.value[card] = !flippedCards.value[card]
+}
+
+const handlePhoneClick = () => {
+  ripplePhone.value = true
   setTimeout(() => {
-    form.value = { name: '', email: '', subject: '', message: '' }
-    submitted.value = false
-  }, 4000)
+    ripplePhone.value = false
+  }, 600)
 }
 
-// Network animation
-const networkCanvas = ref<HTMLCanvasElement | null>(null)
+const getParticleStyle = (index: number) => {
+  const angle = (index / 20) * 360
+  const distance = 300 + Math.random() * 200
+  const duration = 10 + Math.random() * 20
+  const delay = Math.random() * 5
 
-interface Node {
-  x: number
-  y: number
-  vx: number
-  vy: number
+  return {
+    '--angle': `${angle}deg`,
+    '--distance': `${distance}px`,
+    animationDuration: `${duration}s`,
+    animationDelay: `${delay}s`
+  }
 }
 
-onMounted(() => {
-  const canvas = networkCanvas.value
-  if (!canvas) return
+// No additional setup needed for business card
 
-  const ctx = canvas.getContext('2d')
-  if (!ctx) return
-
-  // Set canvas size
-  const resizeCanvas = () => {
-    canvas.width = canvas.offsetWidth
-    canvas.height = canvas.offsetHeight
-  }
-  resizeCanvas()
-  window.addEventListener('resize', resizeCanvas)
-
-  // Create nodes
-  const nodes: Node[] = []
-  const nodeCount = 40
-
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5
-    })
-  }
-
-  // Animation loop
-  const animate = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-    // Update and draw nodes
-    nodes.forEach(node => {
-      // Update position
-      node.x += node.vx
-      node.y += node.vy
-
-      // Bounce off edges
-      if (node.x < 0 || node.x > canvas.width) node.vx *= -1
-      if (node.y < 0 || node.y > canvas.height) node.vy *= -1
-
-      // Draw node
-      ctx.beginPath()
-      ctx.arc(node.x, node.y, 2, 0, Math.PI * 2)
-      ctx.fillStyle = 'rgba(147, 197, 253, 0.5)'
-      ctx.fill()
-    })
-
-    // Draw connections
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x
-        const dy = nodes[i].y - nodes[j].y
-        const distance = Math.sqrt(dx * dx + dy * dy)
-
-        if (distance < 150) {
-          ctx.beginPath()
-          ctx.moveTo(nodes[i].x, nodes[i].y)
-          ctx.lineTo(nodes[j].x, nodes[j].y)
-          ctx.strokeStyle = `rgba(147, 197, 253, ${0.2 * (1 - distance / 150)})`
-          ctx.lineWidth = 1
-          ctx.stroke()
-        }
-      }
-    }
-
-    requestAnimationFrame(animate)
-  }
-
-  animate()
-
-  // Cleanup
-  onUnmounted(() => {
-    window.removeEventListener('resize', resizeCanvas)
-  })
-})
-
-// SEO
+// SEO (préservé)
 useSeoMeta({
   title: 'Contact - Lexafric',
   description: 'Contactez LEXAFRIC pour toutes vos questions juridiques et fiscales. Notre équipe est à votre écoute pour vous accompagner.',
@@ -322,3 +390,787 @@ useSeoMeta({
   ogDescription: 'Contactez LEXAFRIC pour toutes vos questions juridiques et fiscales'
 })
 </script>
+
+<style scoped>
+/* ========================================
+   HOLOGRAPHIC BACKGROUND
+   ======================================== */
+.holographic-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(147, 51, 234, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(59, 130, 246, 0.1) 75%,
+    rgba(147, 51, 234, 0.1) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 15s ease infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ========================================
+   PARTICLES
+   ======================================== */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
+  border-radius: 50%;
+  animation: orbit linear infinite;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(var(--angle)) translateX(var(--distance)) rotate(calc(-1 * var(--angle)));
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(calc(var(--angle) + 360deg)) translateX(var(--distance)) rotate(calc(-1 * (var(--angle) + 360deg)));
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   MAIN BUSINESS CARD
+   ======================================== */
+.perspective-container {
+  perspective: 2000px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-card-container {
+  animation: card-arrival 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes card-arrival {
+  0% {
+    opacity: 0;
+    transform: perspective(2000px) translateZ(-500px) rotateX(45deg) scale(0.3);
+    filter: blur(30px);
+  }
+  60% {
+    transform: perspective(2000px) translateZ(30px) rotateX(-5deg) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(2000px) translateZ(0) rotateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.main-card {
+  position: relative;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.main-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.dark .glassmorphism {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Spotlight effect */
+.spotlight {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.1) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  left: var(--mouse-x);
+  top: var(--mouse-y);
+  transform: translate(-50%, -50%);
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-logo {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  animation: logo-float 3s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Identity */
+.identity-section {
+  margin-bottom: 2rem;
+}
+
+.company-name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.company-tagline {
+  font-size: 1.125rem;
+  color: #4b5563;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dark .company-tagline {
+  color: #9ca3af;
+}
+
+.separator {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  margin: 1rem auto;
+}
+
+.company-description {
+  font-size: 1rem;
+  color: #6b7280;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.dark .company-description {
+  color: #9ca3af;
+}
+
+/* CTA Button */
+.cta-button {
+  position: relative;
+  margin: 2rem auto 0;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow:
+    0 4px 15px rgba(59, 130, 246, 0.4),
+    0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+.cta-button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 8px 25px rgba(59, 130, 246, 0.5),
+    0 15px 40px rgba(59, 130, 246, 0.3);
+}
+
+.cta-button:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.button-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shine 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Breathing rings */
+.breathing-rings {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: breathe 3s ease-in-out infinite;
+}
+
+.ring-2 {
+  animation-delay: 1s;
+}
+
+.ring-3 {
+  animation-delay: 2s;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+  }
+  50% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   SATELLITE CARDS
+   ======================================== */
+.satellite-cards-container {
+  animation: fade-in 0.6s ease both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  color: #3b82f6;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-4px);
+  color: #1e40af;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Individual satellite card */
+.satellite-card {
+  perspective: 1500px;
+  height: 320px;
+  cursor: pointer;
+  animation: card-entrance 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.satellite-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.satellite-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.satellite-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.satellite-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes card-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  60% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-style: preserve-3d;
+}
+
+.satellite-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card-front {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* Icon wrappers */
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+  color: #3b82f6;
+}
+
+/* Phone icon - pulse rings */
+.phone-icon .pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: pulse 2s ease-out infinite;
+}
+
+.pulse-ring.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.pulse-ring.delay-2 {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Email icon - envelope animation */
+.email-icon {
+  color: #10b981;
+}
+
+.envelope-animation {
+  animation: envelope-bounce 2s ease-in-out infinite;
+}
+
+@keyframes envelope-bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-5px) rotate(-2deg); }
+  75% { transform: translateY(-5px) rotate(2deg); }
+}
+
+/* Address icon - bouncing pin */
+.address-icon {
+  color: #ef4444;
+}
+
+.bouncing-pin {
+  animation: pin-bounce 2s ease-in-out infinite;
+}
+
+@keyframes pin-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Hours icon - clock */
+.hours-icon {
+  color: #8b5cf6;
+}
+
+.clock-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-hand {
+  position: absolute;
+  background: #8b5cf6;
+  transform-origin: bottom center;
+  border-radius: 2px;
+}
+
+.hour-hand {
+  width: 3px;
+  height: 25px;
+  animation: rotate-hour 60s linear infinite;
+}
+
+.minute-hand {
+  width: 2px;
+  height: 35px;
+  animation: rotate-minute 5s linear infinite;
+}
+
+@keyframes rotate-hour {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-minute {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Card titles and hints */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.dark .card-title {
+  color: #f3f4f6;
+}
+
+.card-hint {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.dark .card-hint {
+  color: #9ca3af;
+}
+
+/* Card back content */
+.card-back-content {
+  text-align: center;
+  width: 100%;
+}
+
+.contact-link {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  word-break: break-all;
+}
+
+.contact-link:hover {
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  transform: scale(1.05);
+}
+
+.dark .contact-link {
+  color: #f3f4f6;
+}
+
+.dark .contact-link:hover {
+  color: #60a5fa;
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* Ripple effect for phone */
+.ripple-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.5);
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Status badge for hours */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-open {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-closed {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ========================================
+   WHATSAPP FAB
+   ======================================== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  animation: fab-entrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both;
+}
+
+@keyframes fab-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: #25d366;
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 767px) {
+  .whatsapp-fab {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .whatsapp-button span {
+    display: none;
+  }
+
+  .whatsapp-button {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 767px) {
+  .main-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-logo {
+    height: 80px;
+  }
+
+  .company-name {
+    font-size: 2rem;
+  }
+
+  .company-tagline {
+    font-size: 1rem;
+  }
+
+  .company-description {
+    font-size: 0.875rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.875rem 2rem;
+  }
+
+  .satellite-card {
+    height: 280px;
+  }
+
+  .icon-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-wrapper svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cards-grid {
+    max-width: 700px;
+  }
+}
+</style>
