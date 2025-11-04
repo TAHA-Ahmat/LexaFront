@@ -1,7 +1,7 @@
 <template>
   <header
     :class="[
-      'sticky top-0 z-50 transition-all duration-500',
+      'transition-all duration-500',
       hasShadow
         ? 'bg-white/80 dark:bg-black/80 backdrop-blur-2xl shadow-soft border-b border-gray-200/50 dark:border-gray-800/50'
         : 'bg-white/70 dark:bg-black/70 backdrop-blur-xl'
@@ -11,7 +11,7 @@
       <!-- Left: Logo -->
       <div class="flex-shrink-0">
         <NuxtLink :to="localePath('/')" class="flex items-center group">
-          <img :src="logo" alt="Lexafric" class="h-12 landscape:h-10 w-auto rounded-md shadow-sm group-hover:shadow-md transition-shadow" />
+          <img src="/logo.svg" alt="Lexafric" class="h-12 landscape:h-10 w-auto transition-all duration-300 group-hover:scale-105" />
         </NuxtLink>
       </div>
 
@@ -158,7 +158,6 @@
 </template>
 
 <script setup lang="ts">
-import logo from '~/assets/images/logo.jpg'
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()

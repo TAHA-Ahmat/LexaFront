@@ -4,7 +4,7 @@
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center space-y-8">
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full" data-aos="fade-down">
           <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
@@ -13,17 +13,17 @@
         </div>
 
         <!-- Titre -->
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white" data-aos="fade-up" data-aos-delay="100">
           {{ $t('pages.home.cta.title') }}
         </h2>
 
         <!-- Sous-titre -->
-        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
           {{ $t('pages.home.cta.subtitle') }}
         </p>
 
         <!-- Coordonnées directes -->
-        <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto pt-4">
+        <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto pt-4" data-aos="fade-up" data-aos-delay="300">
           <!-- Téléphone -->
           <a
             href="tel:+23522519166"
@@ -58,7 +58,7 @@
         </div>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4" data-aos="fade-up" data-aos-delay="400">
           <NuxtLink
             :to="localePath('/contact')"
             class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:scale-105"

@@ -1,8 +1,11 @@
 <template>
   <div class="min-h-screen flex flex-col bg-white dark:bg-gray-950">
-    <TopLangBar />
-    <NavBar />
-
+      <!-- Header Group - Tout collé ensemble -->
+      <div class="sticky top-0 z-50">
+        <TopLangBar />
+        <NavBar />
+        <ScrollProgress :hide-on-top="false" height="4px" />
+      </div>
     <main class="flex-1">
       <slot />
     </main>
@@ -126,6 +129,6 @@
 import TopLangBar from '~/components/base/TopLangBar.vue'
 import NavBar from '~/components/base/NavBar.vue'
 import ChatWidget from '~/components/chat/ChatWidget.vue'
-
+import ScrollProgress from '~/components/base/ScrollProgress.vue'
 const localePath = useLocalePath()
 </script>

@@ -6,8 +6,15 @@ import type { H3Event } from 'h3'
 // ============================================================================
 
 interface ChatbotRequest {
-  message: string
-  locale: string
+  message?: string  // Ancien format (deprecated)
+  question: string  // Nouveau format
+  contextData?: Array<{
+    question: string
+    answer: string
+    theme: string
+    themeId: string
+  }>
+  locale?: string
 }
 
 // Type pour la structure FAQ
@@ -28,6 +35,30 @@ interface DocumentSection {
   id: string
   title: string
   content: string
+}
+
+// Type pour la structure réelle du fichier JSON
+interface DoingBusinessTheme {
+  id: string
+  theme: string
+  qa: Array<{
+    question: string
+    answer: string
+  }>
+}
+
+// ============================================================================
+// CONVERSION DES DONNÉES
+// ============================================================================
+
+function convertDoingBusinessToSections(themes: DoingBusinessTheme[]): DocumentSection[] {
+  return themes.map(theme => ({
+    id: theme.id,
+    title: theme.theme,
+    content: theme.qa
+      .map(item => `Q: ${item.question}\nR: ${item.answer}`)
+      .join('\n\n')
+  }))
 }
 
 // ============================================================================
@@ -277,6 +308,53 @@ Instructions:
 }
 
 // ============================================================================
+// GÉNÉRATION RAG AVEC CONTEXTE JSON FOURNI
+// ============================================================================
+
+async function generateRAGResponseWithContext(
+  question: string,
+  contextData: Array<{ question: string; answer: string; theme: string }>,
+  openai: OpenAI
+): Promise<string> {
+  try {
+    // Construire le contexte à partir des Q&A fournies
+    const contextText = contextData
+      .map((item, index) => `[${index + 1}] Thème: ${item.theme}\nQ: ${item.question}\nR: ${item.answer}`)
+      .join('\n\n---\n\n')
+
+    const systemPrompt = `Tu es Lexa, l'assistant IA juridique et fiscal du cabinet LEXAFRIC au Tchad.
+
+CONTEXTE (extrait de notre base de connaissances) :
+${contextText}
+
+INSTRUCTIONS STRICTES :
+- Réponds à la question de l'utilisateur en te basant UNIQUEMENT sur le CONTEXTE ci-dessus
+- Reformule de manière claire, professionnelle et naturelle
+- Structure ta réponse avec des émojis pertinents (📋, 💼, 💰, etc.) pour améliorer la lisibilité
+- Utilise des listes à puces si nécessaire
+- Reste factuel et précis - NE JAMAIS inventer d'informations
+- Si le contexte ne suffit pas pour répondre complètement, mentionne-le et propose de contacter LEXAFRIC
+- Utilise un ton professionnel mais amical
+- Termine par une question ouverte ou une offre d'aide si pertinent`
+
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: question }
+      ],
+      temperature: 0.3, // Bas pour rester factuel
+      max_tokens: 600
+    })
+
+    return completion.choices[0]?.message?.content || 'Désolé, je n\'ai pas pu générer une réponse appropriée.'
+  } catch (error) {
+    console.error('Erreur lors de la génération RAG avec contexte:', error)
+    throw error
+  }
+}
+
+// ============================================================================
 // HANDLER PRINCIPAL
 // ============================================================================
 
@@ -284,36 +362,69 @@ export default defineEventHandler(async (event: H3Event) => {
   try {
     // Lire le body de la requête
     const body = await readBody<ChatbotRequest>(event)
-    const { message, locale = 'fr' } = body
+    const { question, contextData, message, locale = 'fr' } = body
 
-    if (!message || typeof message !== 'string') {
+    // Support ancien format (message) et nouveau format (question)
+    const userQuestion = question || message
+
+    if (!userQuestion || typeof userQuestion !== 'string') {
       throw createError({
         statusCode: 400,
-        statusMessage: 'Message manquant ou invalide'
+        statusMessage: 'Question manquante ou invalide'
       })
     }
 
     const config = useRuntimeConfig()
+
+    // ========================================================================
+    // NOUVEAU FLOW : Avec contextData fourni par le frontend
+    // ========================================================================
+    if (contextData && contextData.length > 0 && config.openaiApiKey) {
+      console.log(`✅ Contexte reçu : ${contextData.length} élément(s)`)
+
+      const openai = new OpenAI({ apiKey: config.openaiApiKey })
+
+      try {
+        const ragAnswer = await generateRAGResponseWithContext(
+          userQuestion,
+          contextData,
+          openai
+        )
+
+        return {
+          answer: ragAnswer,
+          confidence: 0.9,
+          source: 'rag_gpt'
+        }
+      } catch (error) {
+        console.error('❌ Erreur GPT, fallback sur réponse JSON directe')
+
+        // Fallback : Retourner la première réponse du contexte
+        return {
+          answer: contextData[0].answer,
+          confidence: 0.8,
+          source: 'faq_fallback'
+        }
+      }
+    }
+
+    // ========================================================================
+    // ANCIEN FLOW : Sans contextData (backward compatibility)
+    // ========================================================================
+    console.log('⚠️ Mode legacy sans contextData')
 
     // Charger les deux bases de connaissances
     const knowledgeBase: KnowledgeBase = await import('~/data/chatbot-kb.json').then(
       (module) => module.default
     )
 
-    const doingBusinessSections: DocumentSection[] = await import('~/data/doing_business_tchad_final.json').then(
+    const doingBusinessThemes: DoingBusinessTheme[] = await import('~/data/doing_business_tchad_final.json').then(
       (module) => module.default
     )
-
-    // ========================================================================
-    // STRATÉGIE DE PONDÉRATION
-    // ========================================================================
-    // 1. Chercher d'abord dans la FAQ (priorité haute)
-    // 2. Si pas de match FAQ ou confiance faible, chercher dans le guide RAG
-    // 3. En dernier recours, réponse de fallback
-    // ========================================================================
+    const doingBusinessSections: DocumentSection[] = convertDoingBusinessToSections(doingBusinessThemes)
 
     // ÉTAPE 1 : Recherche dans la FAQ
-    const faqMatch = findBestMatch(message, knowledgeBase, locale)
+    const faqMatch = findBestMatch(userQuestion, knowledgeBase, locale)
 
     if (faqMatch && faqMatch.confidence > 0.6) {
       // ✅ HAUTE CONFIANCE FAQ : reformuler avec GPT
@@ -321,7 +432,7 @@ export default defineEventHandler(async (event: H3Event) => {
         const openai = new OpenAI({ apiKey: config.openaiApiKey })
         const reformulatedAnswer = await reformulateWithGPT(
           faqMatch.answer,
-          message,
+          userQuestion,
           locale,
           openai
         )
@@ -343,7 +454,7 @@ export default defineEventHandler(async (event: H3Event) => {
     }
 
     // ÉTAPE 2 : Recherche dans le guide Doing Business (RAG)
-    const ragMatch = searchInDocumentSections(message, doingBusinessSections)
+    const ragMatch = searchInDocumentSections(userQuestion, doingBusinessSections)
 
     if (ragMatch && ragMatch.score > 3 && config.openaiApiKey) {
       // ✅ MATCH RAG TROUVÉ : générer une réponse contextuelle
@@ -352,20 +463,19 @@ export default defineEventHandler(async (event: H3Event) => {
       try {
         const ragAnswer = await generateRAGResponse(
           ragMatch.section,
-          message,
+          userQuestion,
           locale,
           openai
         )
 
         return {
           answer: ragAnswer,
-          confidence: Math.min(ragMatch.score / 10, 0.95), // Normaliser le score
+          confidence: Math.min(ragMatch.score / 10, 0.95),
           source: 'rag_doing_business',
           section: ragMatch.section.title
         }
       } catch (error) {
         console.error('Erreur RAG, fallback vers FAQ si disponible')
-        // En cas d'erreur RAG, utiliser la FAQ si disponible
         if (faqMatch && faqMatch.confidence > 0.4) {
           return {
             answer: faqMatch.answer,
