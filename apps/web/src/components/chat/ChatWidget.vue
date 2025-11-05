@@ -2,7 +2,7 @@
   <div class="chatbot-container">
     <!-- Bouton d'ouverture du chat -->
     <button
-      v-if="!isOpen"
+      v-if="!isOpen && !isDrawerOpen"
       class="chatbot-button"
       :class="{ 'rtl': locale === 'ar', 'has-notification': showNotificationBadge }"
       @click="toggleChat"
@@ -331,6 +331,7 @@ const errorMessage = ref('')
 const messagesContainer = ref<HTMLElement | null>(null)
 const showNotificationBadge = ref(false)
 const inputField = ref<HTMLInputElement | null>(null)
+const isDrawerOpen = ref(false) // Détecte si le menu mobile est ouvert
 
 // États UX enrichis
 const showSuccessState = ref(false)
@@ -447,6 +448,21 @@ onMounted(() => {
       currentPlaceholderIndex.value = (currentPlaceholderIndex.value + 1) % placeholders.length
     }
   }, 4000)
+
+  // Détecter l'ouverture du drawer mobile (quand body a overflow: hidden)
+  const checkDrawerState = () => {
+    isDrawerOpen.value = document.body.style.overflow === 'hidden'
+  }
+
+  // Observer les changements de style du body
+  const observer = new MutationObserver(checkDrawerState)
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['style']
+  })
+
+  // Nettoyage à la destruction
+  onBeforeUnmount(() => observer.disconnect())
 })
 
 // Sauvegarder les messages dans localStorage à chaque changement
@@ -913,8 +929,8 @@ const sendMessage = async () => {
   right: 24px;
   width: 380px;
   max-width: calc(100vw - 48px);
-  height: 600px;
-  max-height: calc(100vh - 100px);
+  height: 550px;
+  max-height: calc(100vh - 120px);
   background: white;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -2307,8 +2323,9 @@ const sendMessage = async () => {
 /* Responsive */
 @media (max-width: 640px) {
   .chatbot-window {
-    width: calc(100vw - 32px);
-    height: calc(100vh - 100px);
+    width: calc(100vw - 48px);
+    height: 520px;
+    max-height: calc(100vh - 140px);
     bottom: 16px;
     right: 16px;
   }

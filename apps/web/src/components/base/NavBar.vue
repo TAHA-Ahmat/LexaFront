@@ -7,7 +7,7 @@
         : 'bg-white/70 dark:bg-black/70 backdrop-blur-xl'
     ]"
   >
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[110px] sm:h-[140px] landscape:h-[100px] flex items-center gap-3">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[70px] sm:h-[120px] landscape:h-[80px] flex items-center gap-3">
       <!-- Left: Logo -->
       <div class="flex-shrink-0 pl-1 sm:pl-0">
         <NuxtLink :to="localePath('/')" class="flex items-center group relative">
@@ -16,7 +16,7 @@
             <img
               src="/logo-lexafric.svg"
               alt="Lexafric"
-              class="navbar-logo navbar-logo-scaled h-[110px] sm:h-[150px] landscape:h-[90px] w-auto transition-all duration-600 ease-out"
+              class="navbar-logo navbar-logo-scaled h-[70px] sm:h-[130px] landscape:h-[75px] w-auto transition-all duration-600 ease-out"
             />
           </div>
         </NuxtLink>
@@ -58,7 +58,7 @@
 
       <!-- Mobile hamburger -->
       <button
-        class="hamburger-btn lg:hidden ml-auto inline-flex items-center justify-center h-11 w-11 landscape:h-9 landscape:w-9 rounded-lg
+        class="hamburger-btn lg:hidden ml-auto inline-flex items-center justify-center h-10 w-10 landscape:h-9 landscape:w-9 rounded-lg
                text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800
                focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-out
                hover:scale-110 active:scale-95 hover:rotate-12"
@@ -66,10 +66,10 @@
         @click="toggleMobile"
       >
         <span class="sr-only">Menu</span>
-        <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 landscape:h-5 landscape:w-5 hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 landscape:h-5 landscape:w-5 hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 landscape:h-5 landscape:w-5 close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 landscape:h-5 landscape:w-5 close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
@@ -88,18 +88,18 @@
     <transition name="slide">
       <aside
         v-if="mobileOpen"
-        class="fixed top-0 right-0 bottom-0 w-[90%] max-w-[360px] h-[88vh] bg-white dark:bg-gray-900 z-[100]
+        class="fixed top-0 right-0 bottom-0 w-[90%] max-w-[360px] h-[82vh] max-h-[calc(100vh-80px)] bg-white dark:bg-gray-900 z-[100]
                flex flex-col shadow-2xl focus:outline-none overscroll-contain"
         @touchmove.stop
       >
         <!-- Header du drawer - Compact et élégant -->
-        <div class="flex items-center justify-between px-5 py-3 border-b border-gray-200 dark:border-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 flex-shrink-0">
+        <div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 flex-shrink-0">
           <NuxtLink :to="localePath('/')" class="flex items-center group" @click="closeMobile">
-            <div class="drawer-logo-container bg-white/95 backdrop-blur-sm rounded-lg p-2.5 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-active:scale-95">
+            <div class="drawer-logo-container bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-active:scale-95">
               <img
                 src="/logo-lexafric.svg"
                 alt="Lexafric"
-                class="h-14 w-auto transition-all duration-300 group-hover:brightness-110"
+                class="h-12 w-auto transition-all duration-300 group-hover:brightness-110"
                 style="object-fit: contain;"
               />
             </div>
@@ -117,11 +117,11 @@
 
         <!-- Navigation mobile - Occupe tout l'espace vertical disponible -->
         <nav aria-label="Navigation principale (mobile)" class="flex-1 flex items-center px-3">
-          <ul class="flex flex-col justify-evenly w-full h-full py-2">
+          <ul class="flex flex-col justify-evenly w-full h-full py-1">
             <li v-for="item in items" :key="item.to">
               <NuxtLink
                 :to="localePath(item.to)"
-                class="flex items-center gap-3 px-4 py-3 rounded-lg text-[15px] font-medium transition-all duration-200"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[14px] font-medium transition-all duration-200"
                 :class="isActive(item.to)
                   ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 dark:from-blue-900/30 dark:to-purple-900/30 dark:text-blue-400 shadow-sm'
                   : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800/60 hover:text-blue-600 dark:hover:text-blue-400'"
@@ -150,20 +150,20 @@
         </nav>
 
         <!-- Footer fixé en bas - Compact et toujours visible avec marge de sécurité -->
-        <div class="border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-900 dark:to-blue-950/30 flex-shrink-0 px-3 pt-2.5 pb-8">
+        <div class="border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-900 dark:to-blue-950/30 flex-shrink-0 px-3 pt-2 pb-5">
           <!-- Bouton téléphone compact -->
           <a
             href="tel:+23522519166"
-            class="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg active:scale-[0.98] transition-all duration-200"
+            class="flex items-center justify-center gap-2 w-full px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg active:scale-[0.98] transition-all duration-200"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.85 22 2 13.15 2 2a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/>
             </svg>
-            <span class="text-sm tracking-wide">+235 22 51 91 66</span>
+            <span class="text-xs tracking-wide">+235 22 51 91 66</span>
           </a>
 
           <!-- Crédit développeur - Une seule ligne avec marge -->
-          <p class="text-center text-[11px] text-gray-600 dark:text-gray-400 mt-2 mb-1">
+          <p class="text-center text-[10px] text-gray-600 dark:text-gray-400 mt-1.5 mb-0.5">
             Développé par <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">Madmit</span>
           </p>
         </div>
@@ -240,24 +240,24 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .navbar-logo {
-    height: 90px;
+    height: 65px;
     filter: brightness(1.25) contrast(1.15) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
   }
   .navbar-logo-scaled {
-    transform: scale(1.45);
+    transform: scale(1.30);
   }
   .group:hover .navbar-logo-scaled {
-    transform: scale(1.50);
+    transform: scale(1.35);
   }
 }
 
 /* Ajustement mobile très petit écran pour éviter débordement excessif */
 @media (max-width: 640px) {
   .navbar-logo-scaled {
-    transform: scale(1.40);
+    transform: scale(1.20);
   }
   .group:hover .navbar-logo-scaled {
-    transform: scale(1.45);
+    transform: scale(1.25);
   }
 }
 
