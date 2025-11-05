@@ -1,6 +1,6 @@
 <template>
   <!-- 4️⃣ POURQUOI NOUS FAIRE CONFIANCE -->
-  <section class="py-20 md:py-28 bg-white dark:bg-gray-950 overflow-hidden">
+  <section class="section-trust-premium py-20 md:py-28 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <!-- Header -->
@@ -94,26 +94,6 @@
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   loading="lazy"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Témoignage -->
-        <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="500">
-          <div class="bg-gray-50 dark:bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-lg">
-            <svg class="w-10 h-10 text-blue-600 dark:text-blue-400 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-            </svg>
-            <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic mb-6 text-center leading-relaxed">
-              {{ $t('pages.home.trust.testimonial.quote') }}
-            </p>
-            <div class="text-center">
-              <div class="font-semibold text-gray-900 dark:text-white text-lg">
-                {{ $t('pages.home.trust.testimonial.author') }}
-              </div>
-              <div class="text-gray-500 dark:text-gray-400">
-                {{ $t('pages.home.trust.testimonial.company') }}
               </div>
             </div>
           </div>
@@ -273,5 +253,53 @@ const partnersRow2 = [
   .carousel-track-reverse {
     gap: 2rem;
   }
+}
+
+/* ========================================
+   V3 ULTRA PREMIUM EFFECTS
+   ======================================== */
+
+/* Noise texture visible */
+.section-trust-premium {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  position: relative;
+}
+
+/* Gradient mesh visible pour variation */
+.section-trust-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 900px 700px at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 700px 900px at 90% 80%, rgba(139, 92, 246, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content is above effects */
+.section-trust-premium > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Subtle border transitions */
+.section-trust-premium {
+  border-top: 1px solid rgba(229, 231, 235, 0.5);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+/* Dark mode */
+:deep(.dark) .section-trust-premium {
+  border-top-color: rgba(55, 65, 81, 0.5);
+  border-bottom-color: rgba(55, 65, 81, 0.5);
+}
+
+:deep(.dark) .section-trust-premium::before {
+  background:
+    radial-gradient(ellipse 900px 700px at 10% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 700px 900px at 90% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
 }
 </style>
