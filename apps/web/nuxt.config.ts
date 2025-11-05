@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: '/',
       globPatterns: ['**/*.{js,css,html,png,svg,ico,webp,avif}'],
+      maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB (pour hero-background.png)
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
