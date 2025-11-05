@@ -553,6 +553,33 @@
           }
         }
       },
+      "values": {
+        "vision": {
+          "title": "Notre Vision",
+          "content": "Devenir le cabinet de référence en conseil juridique et fiscal en Afrique, reconnu pour son excellence, son éthique et son engagement au service de la réussite de nos clients."
+        },
+        "mission": {
+          "title": "Notre Mission",
+          "content": "Accompagner les entreprises et les particuliers dans leurs enjeux juridiques et fiscaux avec expertise, intégrité et proximité. Nous nous engageons à fournir des solutions sur-mesure qui créent de la valeur pour nos clients."
+        },
+        "title": "Nos Valeurs",
+        "integrity": {
+          "title": "Intégrité",
+          "content": "Éthique et transparence dans toutes nos actions professionnelles"
+        },
+        "listening": {
+          "title": "Écoute",
+          "content": "Attention particulière à vos besoins et à votre contexte spécifique"
+        },
+        "pedagogy": {
+          "title": "Pédagogie",
+          "content": "Explication claire des enjeux pour faciliter vos décisions"
+        },
+        "interaction": {
+          "title": "Interaction",
+          "content": "Dialogue constant et constructif avec nos clients"
+        }
+      },
       "trust": {
         "title": "Pourquoi nous faire confiance",
         "subtitle": "Une expérience reconnue et des partenariats solides",

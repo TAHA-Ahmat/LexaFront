@@ -1,6 +1,6 @@
 <template>
   <!-- 5️⃣ AGISSEZ MAINTENANT -->
-  <section class="py-20 md:py-28 bg-gradient-to-br from-blue-900 via-gray-900 to-gray-900">
+  <section class="section-cta-premium py-20 md:py-28 bg-gradient-to-br from-blue-900 via-gray-900 to-gray-900 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center space-y-8">
         <!-- Badge -->
@@ -92,3 +92,67 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 </script>
+
+<style scoped>
+/* ========================================
+   V3 ULTRA PREMIUM EFFECTS
+   ======================================== */
+
+/* Border top gradient ultra lumineux */
+.section-cta-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(96, 165, 250, 0.8) 15%,
+    rgba(192, 132, 252, 1) 30%,
+    rgba(251, 191, 36, 0.9) 50%,
+    rgba(192, 132, 252, 1) 70%,
+    rgba(96, 165, 250, 0.8) 85%,
+    transparent 100%
+  );
+  z-index: 10;
+  box-shadow: 0 2px 25px rgba(96, 165, 250, 0.5), 0 0 50px rgba(192, 132, 252, 0.3);
+}
+
+/* Animated glow effect on border */
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+}
+
+.section-cta-premium::before {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Noise texture - Using multiple backgrounds to preserve gradient */
+.section-cta-premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 1200px 800px at 50% 0%, rgba(96, 165, 250, 0.12) 0%, transparent 40%),
+    radial-gradient(ellipse 900px 600px at 20% 100%, rgba(192, 132, 252, 0.1) 0%, transparent 50%);
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-size: 150px 150px, 100% 100%, 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content is above effects */
+.section-cta-premium > .container {
+  position: relative;
+  z-index: 2;
+}
+</style>

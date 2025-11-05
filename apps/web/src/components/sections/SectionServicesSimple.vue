@@ -1,6 +1,6 @@
 <template>
   <!-- 2️⃣ NOS EXPERTISES -->
-  <section class="py-20 md:py-28 bg-white dark:bg-gray-950">
+  <section class="section-services-premium py-20 md:py-28 bg-white dark:bg-gray-950 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <!-- Header -->
@@ -15,35 +15,35 @@
 
         <!-- Services Grid - 4 cartes avec animations -->
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <!-- Service 1 : Juridique -->
+          <!-- Service 1 : Juridique AVEC IMAGE -->
           <NuxtLink
             :to="localePath('/services/assistance-juridique')"
-            class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-blue-500 dark:hover:border-blue-400 overflow-hidden"
+            class="card-juridique-bg group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-blue-500 dark:border-blue-400 overflow-hidden"
             data-aos="zoom-in"
             data-aos-delay="0"
           >
-            <!-- Gradient overlay on hover -->
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <!-- Overlay sombre pour lisibilité -->
+            <div class="card-image-overlay absolute inset-0"></div>
 
-            <div class="relative">
+            <div class="relative z-10">
               <!-- Icon with gradient background and animation -->
-              <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+              <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg border border-white/30">
                 <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
                 </svg>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-3 transition-colors">
                 {{ $t('pages.home.services.items.legal.title') }}
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              <p class="text-sm text-white/90 mb-4 leading-relaxed">
                 {{ $t('pages.home.services.items.legal.description') }}
               </p>
 
               <!-- Call to action -->
-              <div class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm group-hover:gap-3 transition-all">
-                <span>{{ $t('pages.home.services.items.legal.link') }}</span>
+              <div class="flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
+                <span class="border-b-2 border-white/50">{{ $t('pages.home.services.items.legal.link') }}</span>
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
@@ -51,32 +51,30 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 2 : Fiscale -->
+          <!-- Service 2 : Fiscale GRADIENT ANIMÉ -->
           <NuxtLink
             :to="localePath('/services/assistance-fiscale')"
-            class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-emerald-500 dark:hover:border-emerald-400 overflow-hidden"
+            class="card-fiscale-special group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-emerald-400 overflow-hidden"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 to-transparent dark:from-emerald-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-            <div class="relative">
-              <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg border border-white/30">
                 <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                 </svg>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-3 transition-colors">
                 {{ $t('pages.home.services.items.fiscal.title') }}
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              <p class="text-sm text-white/90 mb-4 leading-relaxed">
                 {{ $t('pages.home.services.items.fiscal.description') }}
               </p>
 
-              <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold text-sm group-hover:gap-3 transition-all">
-                <span>{{ $t('pages.home.services.items.fiscal.link') }}</span>
+              <div class="flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
+                <span class="border-b-2 border-white/50">{{ $t('pages.home.services.items.fiscal.link') }}</span>
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
@@ -84,32 +82,33 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 3 : Sociale -->
+          <!-- Service 3 : Sociale AVEC IMAGE -->
           <NuxtLink
             :to="localePath('/services/assistance-sociale')"
-            class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-400 overflow-hidden"
+            class="card-sociale-bg group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-purple-500 dark:border-purple-400 overflow-hidden"
             data-aos="zoom-in"
             data-aos-delay="200"
           >
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent dark:from-purple-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <!-- Overlay sombre pour lisibilité -->
+            <div class="card-image-overlay absolute inset-0"></div>
 
-            <div class="relative">
-              <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+            <div class="relative z-10">
+              <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg border border-white/30">
                 <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                 </svg>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-3 transition-colors">
                 {{ $t('pages.home.services.items.social.title') }}
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              <p class="text-sm text-white/90 mb-4 leading-relaxed">
                 {{ $t('pages.home.services.items.social.description') }}
               </p>
 
-              <div class="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-semibold text-sm group-hover:gap-3 transition-all">
-                <span>{{ $t('pages.home.services.items.social.link') }}</span>
+              <div class="flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
+                <span class="border-b-2 border-white/50">{{ $t('pages.home.services.items.social.link') }}</span>
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
@@ -169,5 +168,82 @@
 </template>
 
 <script setup lang="ts">
+import juridiqueImg from '~/assets/images/Exterieur/juridique.jpg'
+import socialeImg from '~/assets/images/Exterieur/sociale.jpg'
+
 const localePath = useLocalePath()
 </script>
+
+<style scoped>
+/* Card 1 - Juridique avec image background */
+.card-juridique-bg {
+  background-image: url('~/assets/images/Exterieur/juridique.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card 3 - Sociale avec image background */
+.card-sociale-bg {
+  background-image: url('~/assets/images/Exterieur/sociale.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay sombre pour lisibilité */
+.card-image-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* Card 2 - Fiscale avec gradient animé */
+.card-fiscale-special {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   PREMIUM EFFECTS - V3 Ultra Moderne
+   ======================================== */
+
+/* Dots pattern visible pour texture */
+.section-services-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-services-premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(147, 51, 234, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Dark mode dots */
+:deep(.dark) .section-services-premium::before {
+  background-image: radial-gradient(circle, rgba(96, 165, 250, 0.08) 1px, transparent 1px);
+}
+
+:deep(.dark) .section-services-premium::after {
+  background-image: radial-gradient(circle, rgba(192, 132, 252, 0.06) 1px, transparent 1px);
+}
+
+/* Ensure content is above patterns */
+.section-services-premium > * {
+  position: relative;
+  z-index: 2;
+}
+</style>
