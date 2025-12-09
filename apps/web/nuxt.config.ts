@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   dir: {
     pages: 'pages',
     layouts: 'layouts',
-    public: 'public',
+    public: '../public',  // Public doit être à la racine de apps/web
     assets: 'assets'
   },
 
@@ -60,7 +60,8 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg,ico,webp,avif}'],
+      globPatterns: ['**/*.{js,css,html}'],
+      globDirectory: '.output/public',
       maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB (pour hero-background.png)
       runtimeCaching: [
         {
@@ -105,7 +106,7 @@ export default defineNuxtConfig({
       ]
     },
     devOptions: {
-      enabled: true,
+      enabled: false, // Désactivé en dev pour éviter les warnings Workbox
       type: 'module'
     }
   },
@@ -163,11 +164,11 @@ export default defineNuxtConfig({
     }
   },
 
-  // Configuration Nuxt Image (provider local)
+  // Configuration Nuxt Image
   image: {
-    provider: 'ipx',
-    format: ['webp', 'avif'],
+    // Ne pas spécifier 'dir' - laisse Nuxt utiliser public/ par défaut
     quality: 80,
+    format: ['webp', 'avif'],
     screens: {
       xs: 320,
       sm: 640,
@@ -175,6 +176,11 @@ export default defineNuxtConfig({
       lg: 1024,
       xl: 1280,
       xxl: 1536
+    },
+    // Configuration IPX pour trouver les images dans public/
+    provider: 'ipx',
+    ipx: {
+      dir: 'public'
     }
   },
 
@@ -213,6 +219,18 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
       ]
+    }
+  },
+
+  // Vite configuration
+  vite: {
+    build: {
+      assetsInlineLimit: 0 // Ne pas inliner les assets
+    },
+    server: {
+      fs: {
+        allow: ['..'] // Permettre l'accès au dossier parent
+      }
     }
   },
 

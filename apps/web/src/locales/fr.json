@@ -32,20 +32,6 @@
     "send": "Envoyer",
     "hint": "Appuyez sur Entrée pour envoyer, Shift + Entrée pour une nouvelle ligne"
   },
-  "chatbot": {
-    "title": "Assistant Lexafric",
-    "subtitle": "En ligne maintenant",
-    "open": "Ouvrir le chat",
-    "close": "Fermer le chat",
-    "openChat": "Ouvrir le chat",
-    "closeChat": "Fermer le chat",
-    "welcome": "Bienvenue sur le chat Lexafric",
-    "askQuestion": "Posez-nous vos questions sur nos services",
-    "reset": "Réinitialiser la conversation",
-    "placeholder": "Posez votre question...",
-    "send": "Envoyer",
-    "hint": "Appuyez sur Entrée pour envoyer, Shift + Entrée pour une nouvelle ligne"
-  },
   "nav": {
     "changeLanguage": "Changer de langue",
     "home": "Accueil",
@@ -461,10 +447,6 @@
       }
     },
     "home": {
-      "seo": {
-        "title": "Lexafric - Cabinet de Conseil Juridique et Fiscal au Tchad",
-        "description": "Cabinet d'excellence spécialisé en conseil juridique, fiscal, social et en recrutement. Plus de 10 ans d'expérience au service des entreprises en Afrique."
-      },
       "hero": {
         "badge": "Excellence Juridique & Fiscale",
         "title": "Votre partenaire de confiance pour le conseil juridique et fiscal en Afrique",

@@ -18,12 +18,21 @@
           <!-- Service 1 : Juridique AVEC IMAGE -->
           <NuxtLink
             :to="localePath('/services/assistance-juridique')"
-            class="card-juridique-bg group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-blue-500 dark:border-blue-400 overflow-hidden"
+            class="group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-blue-500 dark:border-blue-400 overflow-hidden min-h-[350px]"
+            :style="{ minHeight: '350px' }"
             data-aos="zoom-in"
             data-aos-delay="0"
           >
+            <!-- Image de fond optimisée -->
+            <img
+              src="/images/Exterieur/juridique.webp"
+              alt="Assistance juridique Lexafric"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="z-index: 0; display: block;"
+              loading="lazy"
+            />
             <!-- Overlay sombre pour lisibilité -->
-            <div class="card-image-overlay absolute inset-0"></div>
+            <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
 
             <div class="relative z-10">
               <!-- Icon with gradient background and animation -->
@@ -85,12 +94,21 @@
           <!-- Service 3 : Sociale AVEC IMAGE -->
           <NuxtLink
             :to="localePath('/services/assistance-sociale')"
-            class="card-sociale-bg group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-purple-500 dark:border-purple-400 overflow-hidden"
+            class="group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-purple-500 dark:border-purple-400 overflow-hidden min-h-[350px]"
+            :style="{ minHeight: '350px' }"
             data-aos="zoom-in"
             data-aos-delay="200"
           >
+            <!-- Image de fond optimisée -->
+            <img
+              src="/images/Exterieur/sociale.webp"
+              alt="Assistance sociale Lexafric"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="z-index: 0; display: block;"
+              loading="lazy"
+            />
             <!-- Overlay sombre pour lisibilité -->
-            <div class="card-image-overlay absolute inset-0"></div>
+            <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
 
             <div class="relative z-10">
               <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg border border-white/30">
@@ -168,27 +186,10 @@
 </template>
 
 <script setup lang="ts">
-import juridiqueImg from '~/assets/images/Exterieur/juridique.jpg'
-import socialeImg from '~/assets/images/Exterieur/sociale.jpg'
-
 const localePath = useLocalePath()
 </script>
 
 <style scoped>
-/* Card 1 - Juridique avec image background */
-.card-juridique-bg {
-  background-image: url('~/assets/images/Exterieur/juridique.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* Card 3 - Sociale avec image background */
-.card-sociale-bg {
-  background-image: url('~/assets/images/Exterieur/sociale.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
 /* Overlay sombre pour lisibilité */
 .card-image-overlay {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);

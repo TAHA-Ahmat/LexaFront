@@ -21,7 +21,7 @@
           <!-- Desktop: Deux zones côte à côte -->
           <div class="hidden lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16">
             <!-- Zone GAUCHE: Images Asymétriques avec Motion Design -->
-            <div class="relative min-h-[800px]" data-aos="fade-right">
+            <div class="relative min-h-[800px]" :style="{ minHeight: '800px' }" data-aos="fade-right">
               <!-- Image 1 -->
               <div
                 ref="parallaxImg1"
@@ -33,7 +33,8 @@
                   :src="images.img1"
                   alt="Équipe Lexafric en réunion collaborative"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="lazy"
+                  loading="eager"
+                  style="display: block;"
                 />
               </div>
 
@@ -48,7 +49,8 @@
                   :src="images.img2"
                   alt="Bureau professionnel Lexafric"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="lazy"
+                  loading="eager"
+                  style="display: block;"
                 />
               </div>
 
@@ -63,7 +65,8 @@
                   :src="images.img3"
                   alt="Banderoles Lexafric"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="lazy"
+                  loading="eager"
+                  style="display: block;"
                 />
               </div>
 
@@ -78,7 +81,8 @@
                   :src="images.img4"
                   alt="Professionnel Lexafric"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="lazy"
+                  loading="eager"
+                  style="display: block;"
                 />
               </div>
 
@@ -93,7 +97,8 @@
                   :src="images.img5"
                   alt="Expert Lexafric"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="lazy"
+                  loading="eager"
+                  style="display: block;"
                 />
               </div>
             </div>
@@ -332,10 +337,16 @@
                     </svg>
                   </div>
 
-                  <!-- Carte avec image background -->
-                  <div class="card-methode-analyse relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-blue-300 dark:border-blue-600 group-hover:border-blue-500 dark:group-hover:border-blue-400 group-hover:-translate-y-2 group-hover:scale-105">
+                  <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-blue-300 dark:border-blue-600 group-hover:border-blue-500 dark:group-hover:border-blue-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
+                    <img
+                      src="/images/Salle_Reunion/4.webp"
+                      alt="Analyse - Méthodologie Lexafric"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      style="z-index: 0;"
+                      loading="lazy"
+                    />
                     <!-- Overlay gradient léger pour voir l'image -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -358,8 +369,15 @@
                     </svg>
                   </div>
 
-                  <div class="card-methode-conseil relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-emerald-300 dark:border-emerald-600 group-hover:border-emerald-500 dark:group-hover:border-emerald-400 group-hover:-translate-y-2 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent"></div>
+                  <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-emerald-300 dark:border-emerald-600 group-hover:border-emerald-500 dark:group-hover:border-emerald-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
+                    <img
+                      src="/images/team/25.webp"
+                      alt="Conseil - Méthodologie Lexafric"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      style="z-index: 0;"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -382,8 +400,15 @@
                     </svg>
                   </div>
 
-                  <div class="card-methode-oeuvre relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-purple-300 dark:border-purple-600 group-hover:border-purple-500 dark:group-hover:border-purple-400 group-hover:-translate-y-2 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent"></div>
+                  <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-purple-300 dark:border-purple-600 group-hover:border-purple-500 dark:group-hover:border-purple-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
+                    <img
+                      src="/images/team/IMG_6393.webp"
+                      alt="Mise en œuvre - Méthodologie Lexafric"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      style="z-index: 0;"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -406,8 +431,15 @@
                     </svg>
                   </div>
 
-                  <div class="card-methode-suivi relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-amber-300 dark:border-amber-600 group-hover:border-amber-500 dark:group-hover:border-amber-400 group-hover:-translate-y-2 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent"></div>
+                  <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-amber-300 dark:border-amber-600 group-hover:border-amber-500 dark:group-hover:border-amber-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
+                    <img
+                      src="/images/team/27.webp"
+                      alt="Suivi - Méthodologie Lexafric"
+                      class="absolute inset-0 w-full h-full object-cover"
+                      style="z-index: 0;"
+                      loading="lazy"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -436,8 +468,15 @@
                 <div class="w-0.5 flex-1 bg-blue-200 dark:bg-blue-800 mt-4"></div>
               </div>
               <div class="flex-1 pb-8">
-                <div class="card-methode-analyse-mobile relative overflow-hidden rounded-xl shadow-md border-2 border-blue-300 dark:border-blue-600">
-                  <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent"></div>
+                <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-blue-300 dark:border-blue-600 min-h-[160px]">
+                  <img
+                    src="/images/Salle_Reunion/4.webp"
+                    alt="Analyse - Méthodologie Lexafric"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    style="z-index: 0;"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
                     <h4 class="text-lg font-bold text-white mb-2 drop-shadow-lg">
                       {{ $t('pages.home.approach.method.steps.analyze.title') }}
@@ -461,8 +500,15 @@
                 <div class="w-0.5 flex-1 bg-emerald-200 dark:bg-emerald-800 mt-4"></div>
               </div>
               <div class="flex-1 pb-8">
-                <div class="card-methode-conseil-mobile relative overflow-hidden rounded-xl shadow-md border-2 border-emerald-300 dark:border-emerald-600">
-                  <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent"></div>
+                <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-emerald-300 dark:border-emerald-600 min-h-[160px]">
+                  <img
+                    src="/images/team/25.webp"
+                    alt="Conseil - Méthodologie Lexafric"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    style="z-index: 0;"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
                     <h4 class="text-lg font-bold text-white mb-2 drop-shadow-lg">
                       {{ $t('pages.home.approach.method.steps.advise.title') }}
@@ -486,8 +532,15 @@
                 <div class="w-0.5 flex-1 bg-purple-200 dark:bg-purple-800 mt-4"></div>
               </div>
               <div class="flex-1 pb-8">
-                <div class="card-methode-oeuvre-mobile relative overflow-hidden rounded-xl shadow-md border-2 border-purple-300 dark:border-purple-600">
-                  <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent"></div>
+                <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-purple-300 dark:border-purple-600 min-h-[160px]">
+                  <img
+                    src="/images/team/IMG_6393.webp"
+                    alt="Mise en œuvre - Méthodologie Lexafric"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    style="z-index: 0;"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
                     <h4 class="text-lg font-bold text-white mb-2 drop-shadow-lg">
                       {{ $t('pages.home.approach.method.steps.implement.title') }}
@@ -510,8 +563,15 @@
                 </div>
               </div>
               <div class="flex-1">
-                <div class="card-methode-suivi-mobile relative overflow-hidden rounded-xl shadow-md border-2 border-amber-300 dark:border-amber-600">
-                  <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent"></div>
+                <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-amber-300 dark:border-amber-600 min-h-[160px]">
+                  <img
+                    src="/images/team/27.webp"
+                    alt="Suivi - Méthodologie Lexafric"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    style="z-index: 0;"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
                     <h4 class="text-lg font-bold text-white mb-2 drop-shadow-lg">
                       {{ $t('pages.home.approach.method.steps.followup.title') }}
@@ -617,25 +677,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import img1 from '~/assets/images/Salle_Reunion/3.JPG'
-import img2 from '~/assets/images/M_Beti/beti_4.JPG'
-import img3 from '~/assets/images/Exterieur/IMG_6454.JPG'
-import img4 from '~/assets/images/team/24.JPG'
-import img5 from '~/assets/images/team/26.JPG'
+import { ref } from 'vue'
 
-// Images pour méthodologie
-import methodeAnalyse from '~/assets/images/Salle_Reunion/4.JPG'
-import methodeConseil from '~/assets/images/team/25.JPG'
-import methodeMiseEnOeuvre from '~/assets/images/team/IMG_6393.JPG'
-import methodeSuivi from '~/assets/images/team/27.JPG'
-
+// Images optimisées WebP depuis /public
 const images = {
-  img1,
-  img2,
-  img3,
-  img4,
-  img5
+  img1: '/images/Salle_Reunion/3.webp',
+  img2: '/images/M_Beti/beti_4.webp',
+  img3: '/images/Exterieur/IMG_6454.webp',
+  img4: '/images/team/24.webp',
+  img5: '/images/team/26.webp'
+}
+
+// Images pour méthodologie (utilisées dans CSS backgrounds)
+const methodImages = {
+  analyse: '/images/Salle_Reunion/4.webp',
+  conseil: '/images/team/25.webp',
+  oeuvre: '/images/team/IMG_6393.webp',
+  suivi: '/images/team/27.webp'
 }
 
 // Refs pour parallaxe
@@ -645,36 +703,14 @@ const parallaxImg3 = ref<HTMLElement | null>(null)
 const parallaxImg4 = ref<HTMLElement | null>(null)
 const parallaxImg5 = ref<HTMLElement | null>(null)
 
-// Parallaxe au scroll (desktop uniquement) - Version ultra subtile
+// Parallaxe désactivé pour performances
+// Le coût CPU du scroll listener + calculs constant est trop élevé
+// L'effet visuel est minime comparé à l'impact performance
 const handleScroll = () => {
-  if (window.innerWidth < 1024) return // Désactiver sur mobile/tablet
-
-  const scrolled = window.scrollY
-  const parallaxElements = [
-    { el: parallaxImg1.value, speed: 0.15 },
-    { el: parallaxImg2.value, speed: 0.25 },
-    { el: parallaxImg3.value, speed: 0.2 },
-    { el: parallaxImg4.value, speed: 0.3 },
-    { el: parallaxImg5.value, speed: 0.1 }
-  ]
-
-  parallaxElements.forEach(({ el, speed }) => {
-    if (el) {
-      const yPos = -(scrolled * speed * 0.05) // Facteur très réduit pour effet ultra subtil
-      el.style.transform = `translateY(${yPos}px)`
-    }
-  })
+  // Désactivé pour optimisation
 }
 
-onMounted(() => {
-  if (window.innerWidth >= 1024) {
-    window.addEventListener('scroll', handleScroll, { passive: true })
-  }
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+// Pas de listener scroll = meilleure performance
 </script>
 
 <style scoped>
@@ -1008,38 +1044,6 @@ onUnmounted(() => {
 }
 
 /* ========================================
-   MÉTHODOLOGIE - Images Backgrounds
-   ======================================== */
-
-.card-methode-analyse {
-  background-image: url('~/assets/images/Salle_Reunion/4.JPG');
-  background-size: cover;
-  background-position: center;
-  min-height: 200px;
-}
-
-.card-methode-conseil {
-  background-image: url('~/assets/images/team/25.JPG');
-  background-size: cover;
-  background-position: center;
-  min-height: 200px;
-}
-
-.card-methode-oeuvre {
-  background-image: url('~/assets/images/team/IMG_6393.JPG');
-  background-size: cover;
-  background-position: center 25%;
-  min-height: 200px;
-}
-
-.card-methode-suivi {
-  background-image: url('~/assets/images/team/27.JPG');
-  background-size: cover;
-  background-position: center;
-  min-height: 200px;
-}
-
-/* ========================================
    MÉTHODOLOGIE - Glow Animations
    ======================================== */
 
@@ -1072,35 +1076,4 @@ onUnmounted(() => {
   color: rgba(245, 158, 11, 0.6);
 }
 
-/* ========================================
-   MÉTHODOLOGIE MOBILE - Images Backgrounds
-   ======================================== */
-
-.card-methode-analyse-mobile {
-  background-image: url('~/assets/images/Salle_Reunion/4.JPG');
-  background-size: cover;
-  background-position: center;
-  min-height: 180px;
-}
-
-.card-methode-conseil-mobile {
-  background-image: url('~/assets/images/team/25.JPG');
-  background-size: cover;
-  background-position: center;
-  min-height: 180px;
-}
-
-.card-methode-oeuvre-mobile {
-  background-image: url('~/assets/images/team/IMG_6393.JPG');
-  background-size: cover;
-  background-position: center 25%;
-  min-height: 180px;
-}
-
-.card-methode-suivi-mobile {
-  background-image: url('~/assets/images/team/27.JPG');
-  background-size: cover;
-  background-position: center;
-  min-height: 180px;
-}
 </style>

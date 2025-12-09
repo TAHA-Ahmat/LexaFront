@@ -32,20 +32,6 @@
     "send": "Send",
     "hint": "Press Enter to send, Shift + Enter for new line"
   },
-  "chatbot": {
-    "title": "Lexafric Assistant",
-    "subtitle": "Online now",
-    "open": "Open chat",
-    "close": "Close chat",
-    "openChat": "Open chat",
-    "closeChat": "Close chat",
-    "welcome": "Welcome to Lexafric chat",
-    "askQuestion": "Ask us about our services",
-    "reset": "Reset conversation",
-    "placeholder": "Ask your question...",
-    "send": "Send",
-    "hint": "Press Enter to send, Shift + Enter for new line"
-  },
   "nav": {
     "changeLanguage": "Change language",
     "home": "Home",
@@ -461,10 +447,6 @@
       }
     },
     "home": {
-      "seo": {
-        "title": "Lexafric - Legal and Tax Consulting Firm in Chad",
-        "description": "Firm of excellence specialized in legal, tax, social consulting and recruitment. Over 10 years of experience serving businesses in Africa."
-      },
       "hero": {
         "badge": "Legal & Tax Excellence",
         "title": "Your trusted partner for legal and tax consulting in Africa",

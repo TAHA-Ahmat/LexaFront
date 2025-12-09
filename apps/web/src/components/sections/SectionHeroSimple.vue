@@ -2,9 +2,12 @@
   <!-- 1️⃣ QUI NOUS SOMMES -->
   <section class="relative min-h-screen flex items-center overflow-hidden">
     <!-- Image de fond avec animation Ken Burns -->
-    <div class="absolute inset-0 hero-background" :style="{ backgroundImage: backgroundImageUrl }">
-      <div class="hero-image-zoom" :style="{ backgroundImage: backgroundImageUrl }"></div>
-    </div>
+    <div
+      class="absolute inset-0 hero-background hero-image-zoom"
+      :style="{ backgroundImage: `url(${heroBackgroundImage})` }"
+      role="img"
+      aria-label="Lexafric - Cabinet juridique et fiscal"
+    ></div>
 
     <!-- Overlay gradient pour lisibilité -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
@@ -106,12 +109,10 @@
 </template>
 
 <script setup lang="ts">
-import heroImage from '~/assets/images/Exterieur/hero-background.png'
-
 const localePath = useLocalePath()
 
-// URL de l'image de fond
-const backgroundImageUrl = computed(() => `url(${heroImage})`)
+// Image de fond hero (depuis public/ pour éviter erreurs hydration SSR)
+const heroBackgroundImage = '/images/Exterieur/hero-background.webp'
 
 // Generate random stars for the background
 interface Star {
@@ -126,9 +127,9 @@ interface Star {
 
 const stars = ref<Star[]>([])
 
-// Generate 50 random stars
+// Generate 15 random stars (optimisé de 50 -> 15 pour performances)
 onMounted(() => {
-  for (let i = 0; i < 50; i++) {
+  for (let i = 0; i < 15; i++) {
     stars.value.push({
       id: i,
       x: Math.random() * 100,
@@ -145,14 +146,11 @@ onMounted(() => {
 <style scoped>
 /* ==================== IMAGE DE FOND AVEC KEN BURNS ==================== */
 .hero-background {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 0;
 }
 
 .hero-image-zoom {
-  position: absolute;
-  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,26 +161,21 @@ onMounted(() => {
 /* Animation Ken Burns - Zoom cinématographique lent */
 @keyframes kenBurns {
   0% {
-    transform: scale(0.85);
+    transform: scale(1.0);
   }
   100% {
-    transform: scale(0.95);
+    transform: scale(1.15);
   }
 }
 
 /* Responsive - Ajustement mobile */
 @media (max-width: 768px) {
-  .hero-background,
-  .hero-image-zoom {
-    background-position: center center;
-  }
-
   @keyframes kenBurns {
     0% {
-      transform: scale(1);
+      transform: scale(1.05);
     }
     100% {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 }
