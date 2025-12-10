@@ -20,7 +20,9 @@
   },
   "breadcrumb": {
     "home": "Home",
-    "services": "Services"
+    "services": "Services",
+    "solutions": "Solutions",
+    "about": "About"
   },
   "chatbot": {
     "title": "Lexafric Assistant",

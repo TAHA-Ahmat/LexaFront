@@ -181,8 +181,7 @@ const items = [
   { to: '/',          label: 'nav.home' },
   { to: '/services',  label: 'nav.services' },
   { to: '/solutions', label: 'nav.solutions' },
-  { to: '/a-propos',  label: 'nav.about' },
-  { to: '/contact',   label: 'nav.contact' }
+  { to: '/a-propos',  label: 'nav.about' }
 ]
 
 const isActive = (to: string) => route.path === to

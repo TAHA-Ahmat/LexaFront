@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="min-h-screen bg-gray-100 dark:bg-gray-900 overflow-x-hidden">
     <!-- Business Card Section -->
     <section
       ref="cardSection"

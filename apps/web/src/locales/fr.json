@@ -20,7 +20,9 @@
   },
   "breadcrumb": {
     "home": "Accueil",
-    "services": "Services"
+    "services": "Services",
+    "solutions": "Solutions",
+    "about": "À propos"
   },
   "chatbot": {
     "title": "Assistant Lexafric",

@@ -20,7 +20,9 @@
   },
   "breadcrumb": {
     "home": "الصفحة الرئيسية",
-    "services": "الخدمات"
+    "services": "الخدمات",
+    "solutions": "الحلول",
+    "about": "من نحن"
   },
   "chatbot": {
     "title": "مساعد ليكسافريك",
