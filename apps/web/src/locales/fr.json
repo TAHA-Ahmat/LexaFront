@@ -18,6 +18,10 @@
     "allSolutions": "Toutes les solutions",
     "interventionAreas": "Nos Domaines d'Intervention"
   },
+  "breadcrumb": {
+    "home": "Accueil",
+    "services": "Services"
+  },
   "chatbot": {
     "title": "Assistant Lexafric",
     "subtitle": "En ligne maintenant",

@@ -2,7 +2,7 @@
   <section class="py-20 md:py-28 bg-white dark:bg-gray-950 overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <!-- Vision -->
-      <div class="max-w-5xl mx-auto mb-20 md:mb-24 text-center" data-aos="fade-up">
+      <div class="aos-init max-w-5xl mx-auto mb-20 md:mb-24 text-center" data-aos="fade-up">
         <span class="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold mb-6">
           Vision
         </span>
@@ -15,7 +15,7 @@
       </div>
 
       <!-- Mission -->
-      <div class="max-w-5xl mx-auto mb-24 md:mb-32 text-center" data-aos="fade-up">
+      <div class="aos-init max-w-5xl mx-auto mb-24 md:mb-32 text-center" data-aos="fade-up">
         <span class="inline-block px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-semibold mb-6">
           Mission
         </span>
@@ -136,7 +136,7 @@
 
         <!-- Mobile & Tablet: Stack Vertical -->
         <div class="lg:hidden">
-          <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+          <div class="aos-init text-center mb-12 md:mb-16" data-aos="fade-up">
             <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl px-6 py-10 md:px-10 md:py-12 shadow-lg border border-blue-200/50 dark:border-blue-700/50">
               <span class="inline-block px-4 py-2 bg-white dark:bg-gray-800 text-blue-700 dark:text-blue-300 rounded-full text-xs md:text-sm font-semibold mb-4 shadow-sm">
                 Excellence & Rigueur
@@ -152,7 +152,7 @@
 
           <div class="space-y-6 md:space-y-8">
             <!-- Image principale full width -->
-            <div data-aos="fade-up" data-aos-delay="0" class="rounded-xl overflow-hidden shadow-xl">
+            <div data-aos="fade-up" data-aos-delay="0" class="aos-init rounded-xl overflow-hidden shadow-xl">
               <img
                 :src="images.img1"
                 alt="Équipe Lexafric en réunion collaborative"
@@ -163,7 +163,7 @@
 
             <!-- Grid 2 colonnes - Images moyennes -->
             <div class="grid grid-cols-2 gap-4 md:gap-6">
-              <div data-aos="fade-up" data-aos-delay="100" class="rounded-xl overflow-hidden shadow-lg">
+              <div data-aos="fade-up" data-aos-delay="100" class="aos-init rounded-xl overflow-hidden shadow-lg">
                 <img
                   :src="images.img2"
                   alt="Bureau professionnel Lexafric"
@@ -171,7 +171,7 @@
                   loading="lazy"
                 />
               </div>
-              <div data-aos="fade-up" data-aos-delay="150" class="rounded-xl overflow-hidden shadow-lg">
+              <div data-aos="fade-up" data-aos-delay="150" class="aos-init rounded-xl overflow-hidden shadow-lg">
                 <img
                   :src="images.img3"
                   alt="Banderoles Lexafric"
@@ -183,7 +183,7 @@
 
             <!-- Grid 2 colonnes - Portraits -->
             <div class="grid grid-cols-2 gap-4 md:gap-6">
-              <div data-aos="fade-up" data-aos-delay="200" class="rounded-xl overflow-hidden shadow-lg">
+              <div data-aos="fade-up" data-aos-delay="200" class="aos-init rounded-xl overflow-hidden shadow-lg">
                 <img
                   :src="images.img4"
                   alt="Équipe Lexafric - Professionnel"
@@ -191,7 +191,7 @@
                   loading="lazy"
                 />
               </div>
-              <div data-aos="fade-up" data-aos-delay="250" class="rounded-xl overflow-hidden shadow-lg">
+              <div data-aos="fade-up" data-aos-delay="250" class="aos-init rounded-xl overflow-hidden shadow-lg">
                 <img
                   :src="images.img5"
                   alt="Équipe Lexafric - Expert"
@@ -206,7 +206,7 @@
 
       <!-- Valeurs - Grid classique conservée -->
       <div class="mb-12 max-w-7xl mx-auto">
-        <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+        <div class="aos-init text-center mb-16 md:mb-20" data-aos="fade-up">
           <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/50 dark:to-purple-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold mb-6">
             Nos Valeurs
           </span>
@@ -217,7 +217,7 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <!-- Intégrité -->
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="0">
+          <div class="aos-init bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="0">
             <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -232,7 +232,7 @@
           </div>
 
           <!-- Écoute -->
-          <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="aos-init bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="100">
             <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
@@ -247,7 +247,7 @@
           </div>
 
           <!-- Pédagogie -->
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
+          <div class="aos-init bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="200">
             <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -262,7 +262,7 @@
           </div>
 
           <!-- Interaction -->
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
+          <div class="aos-init bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-lg p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="300">
             <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />

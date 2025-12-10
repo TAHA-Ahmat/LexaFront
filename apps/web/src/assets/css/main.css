@@ -305,6 +305,12 @@
   filter: blur(8px);
 }
 
+/* AOS - Éviter le flash avant init */
+[data-aos]:not(.aos-animate) {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Print styles */
 @media print {
   body {

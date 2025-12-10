@@ -18,6 +18,10 @@
     "allSolutions": "All solutions",
     "interventionAreas": "Our Areas of Expertise"
   },
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Services"
+  },
   "chatbot": {
     "title": "Lexafric Assistant",
     "subtitle": "Online now",

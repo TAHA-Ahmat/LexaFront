@@ -4,7 +4,7 @@
     <!-- Image de fond avec animation Ken Burns -->
     <div
       class="absolute inset-0 hero-background hero-image-zoom"
-      :style="{ backgroundImage: `url(${heroBackgroundImage})` }"
+      :style="`background-image: url(${heroBackgroundImage});`"
       role="img"
       aria-label="Lexafric - Cabinet juridique et fiscal"
     ></div>
@@ -39,7 +39,7 @@
       <div class="w-full lg:w-1/2 space-y-6 lg:space-y-8">
         <!-- Badge -->
         <div
-          class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full"
+          class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full aos-init"
           data-aos="fade-right"
         >
           <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
@@ -50,7 +50,7 @@
 
         <!-- Titre principal -->
         <h1
-          class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight"
+          class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight aos-init"
           data-aos="fade-right"
           data-aos-delay="100"
         >
@@ -59,7 +59,7 @@
 
         <!-- CTA Buttons -->
         <div
-          class="flex flex-col sm:flex-row items-start gap-3 pt-2"
+          class="flex flex-col sm:flex-row items-start gap-3 pt-2 aos-init"
           data-aos="fade-right"
           data-aos-delay="300"
         >
@@ -83,15 +83,15 @@
 
         <!-- Stats rapides -->
         <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-8 max-w-md">
-          <div data-aos="fade-right" data-aos-delay="400">
+          <div class="aos-init" data-aos="fade-right" data-aos-delay="400">
             <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">10+</div>
             <div class="text-xs md:text-sm text-gray-400 mt-0.5">{{ $t('pages.home.hero.stats.years') }}</div>
           </div>
-          <div data-aos="fade-right" data-aos-delay="500">
+          <div class="aos-init" data-aos="fade-right" data-aos-delay="500">
             <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">15+</div>
             <div class="text-xs md:text-sm text-gray-400 mt-0.5">{{ $t('pages.home.hero.stats.experts') }}</div>
           </div>
-          <div data-aos="fade-right" data-aos-delay="600">
+          <div class="aos-init" data-aos="fade-right" data-aos-delay="600">
             <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">25+</div>
             <div class="text-xs md:text-sm text-gray-400 mt-0.5">{{ $t('pages.home.hero.stats.partners') }}</div>
           </div>

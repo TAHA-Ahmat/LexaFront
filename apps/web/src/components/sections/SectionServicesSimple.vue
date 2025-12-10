@@ -1,10 +1,10 @@
 <template>
   <!-- 2️⃣ NOS EXPERTISES -->
-  <section class="section-services-premium py-20 md:py-28 bg-white dark:bg-gray-950 relative overflow-hidden">
+  <section class="section-services-premium py-20 md:py-28 bg-gray-190 dark:bg-gray-900 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-6xl mx-auto">
         <!-- Header -->
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="aos-init text-center mb-16" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {{ $t('pages.home.services.title') }}
           </h2>
@@ -60,13 +60,25 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 2 : Fiscale GRADIENT ANIMÉ -->
+          <!-- Service 2 : Fiscale AVEC IMAGE -->
           <NuxtLink
             :to="localePath('/services/assistance-fiscale')"
-            class="card-fiscale-special group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-emerald-400 overflow-hidden"
+            class="group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-emerald-500 dark:border-emerald-400 overflow-hidden min-h-[350px]"
+            :style="{ minHeight: '350px' }"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
+            <!-- Image de fond optimisée -->
+            <img
+              src="/images/team/27.webp"
+              alt="Assistance fiscale Lexafric"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="z-index: 0; display: block;"
+              loading="lazy"
+            />
+            <!-- Overlay sombre pour lisibilité -->
+            <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
+
             <div class="relative z-10">
               <div class="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg border border-white/30">
                 <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,32 +146,42 @@
             </div>
           </NuxtLink>
 
-          <!-- Service 4 : Recrutement -->
+          <!-- Service 4 : Recrutement AVEC IMAGE -->
           <NuxtLink
             :to="localePath('/services/assistance-recrutement')"
-            class="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-gray-100 dark:border-gray-800 hover:border-amber-500 dark:hover:border-amber-400 overflow-hidden"
+            class="group relative p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-amber-500 dark:border-amber-400 overflow-hidden min-h-[350px]"
+            :style="{ minHeight: '350px' }"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
-            <div class="absolute inset-0 bg-gradient-to-br from-amber-50 to-transparent dark:from-amber-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <!-- Image de fond optimisée -->
+            <img
+              src="/images/team/28.JPG"
+              alt="Assistance recrutement Lexafric"
+              class="absolute inset-0 w-full h-full object-cover"
+              style="z-index: 0; display: block;"
+              loading="lazy"
+            />
+            <!-- Overlay sombre pour lisibilité -->
+            <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
 
-            <div class="relative">
+            <div class="relative z-10">
               <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                 <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+              <h3 class="text-xl font-bold text-white mb-3 transition-colors">
                 {{ $t('pages.home.services.items.recruitment.title') }}
               </h3>
 
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              <p class="text-sm text-white/90 mb-4 leading-relaxed">
                 {{ $t('pages.home.services.items.recruitment.description') }}
               </p>
 
-              <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-semibold text-sm group-hover:gap-3 transition-all">
-                <span>{{ $t('pages.home.services.items.recruitment.link') }}</span>
+              <div class="flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
+                <span class="border-b-2 border-white/50">{{ $t('pages.home.services.items.recruitment.link') }}</span>
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
@@ -169,7 +191,7 @@
         </div>
 
         <!-- CTA vers tous les services -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="aos-init text-center" data-aos="fade-up" data-aos-delay="400">
           <NuxtLink
             :to="localePath('/services')"
             class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
@@ -192,7 +214,7 @@ const localePath = useLocalePath()
 <style scoped>
 /* Overlay sombre pour lisibilité */
 .card-image-overlay {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 /* Card 2 - Fiscale avec gradient animé */

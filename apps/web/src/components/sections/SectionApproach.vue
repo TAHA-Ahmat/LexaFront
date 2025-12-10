@@ -1,10 +1,10 @@
 <template>
   <!-- 3️⃣ EXCELLENCE & RIGUEUR -->
-  <section class="section-approach-premium py-20 md:py-28 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 dark:bg-gradient-to-br dark:from-gray-950 dark:via-blue-950/20 dark:to-purple-950/20 relative overflow-hidden">
+  <section class="section-approach-premium py-20 md:py-28 bg-gray-175 dark:bg-gray-900 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <!-- Header Principal -->
-        <div class="text-center mb-16 md:mb-24" data-aos="fade-up">
+        <div class="aos-init text-center mb-16 md:mb-24" data-aos="fade-up">
           <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/50 dark:to-purple-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold mb-6">
             Excellence & Rigueur
           </span>
@@ -21,7 +21,7 @@
           <!-- Desktop: Deux zones côte à côte -->
           <div class="hidden lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16">
             <!-- Zone GAUCHE: Images Asymétriques avec Motion Design -->
-            <div class="relative min-h-[800px]" :style="{ minHeight: '800px' }" data-aos="fade-right">
+            <div class="aos-init relative min-h-[800px]" :style="{ minHeight: '800px' }" data-aos="fade-right">
               <!-- Image 1 -->
               <div
                 ref="parallaxImg1"
@@ -104,7 +104,7 @@
             </div>
 
             <!-- Zone DROITE: Valeurs en Stack -->
-            <div class="flex flex-col justify-center space-y-6" data-aos="fade-left">
+            <div class="aos-init flex flex-col justify-center space-y-6" data-aos="fade-left">
               <!-- Valeur 1: Intégrité -->
               <div class="group relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:-translate-y-1">
                 <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
@@ -190,7 +190,7 @@
           <!-- Mobile & Tablet: Stack Vertical -->
           <div class="lg:hidden space-y-12">
             <!-- Images en grilles -->
-            <div class="space-y-6" data-aos="fade-up">
+            <div class="aos-init space-y-6" data-aos="fade-up">
               <div class="rounded-xl overflow-hidden shadow-xl">
                 <img
                   :src="images.img1"
@@ -238,7 +238,7 @@
             </div>
 
             <!-- Valeurs -->
-            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="aos-init space-y-4" data-aos="fade-up" data-aos-delay="100">
               <!-- Les mêmes 4 cartes valeurs mais en stack mobile -->
               <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700">
                 <div class="flex items-start gap-4">
@@ -328,11 +328,11 @@
 
             <div class="grid grid-cols-4 gap-6">
               <!-- Étape 1 : Analyse -->
-              <div class="relative group" data-aos="zoom-in" data-aos-delay="0">
+              <div class="aos-init relative group" data-aos="zoom-in" data-aos-delay="0">
                 <div class="flex flex-col items-center text-center">
                   <!-- Numéro avec glow pulsé -->
                   <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 relative z-10 mb-6 method-step-glow-blue">
-                    <svg class="w-8 h-8 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-8 h-8 absolute" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                     </svg>
                   </div>
@@ -346,7 +346,7 @@
                       loading="lazy"
                     />
                     <!-- Overlay gradient léger pour voir l'image -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent" style="z-index: 1;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -361,10 +361,10 @@
               </div>
 
               <!-- Étape 2 : Conseil -->
-              <div class="relative group" data-aos="zoom-in" data-aos-delay="100">
+              <div class="aos-init relative group" data-aos="zoom-in" data-aos-delay="100">
                 <div class="flex flex-col items-center text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 relative z-10 mb-6 method-step-glow-emerald">
-                    <svg class="w-8 h-8 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-8 h-8 absolute" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                     </svg>
                   </div>
@@ -377,7 +377,7 @@
                       style="z-index: 0;"
                       loading="lazy"
                     />
-                    <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent" style="z-index: 1;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -392,10 +392,10 @@
               </div>
 
               <!-- Étape 3 : Mise en œuvre -->
-              <div class="relative group" data-aos="zoom-in" data-aos-delay="200">
+              <div class="aos-init relative group" data-aos="zoom-in" data-aos-delay="200">
                 <div class="flex flex-col items-center text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 relative z-10 mb-6 method-step-glow-purple">
-                    <svg class="w-8 h-8 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-8 h-8 absolute" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                     </svg>
                   </div>
@@ -408,7 +408,7 @@
                       style="z-index: 0;"
                       loading="lazy"
                     />
-                    <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent" style="z-index: 1;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -423,10 +423,10 @@
               </div>
 
               <!-- Étape 4 : Suivi -->
-              <div class="relative group" data-aos="zoom-in" data-aos-delay="300">
+              <div class="aos-init relative group" data-aos="zoom-in" data-aos-delay="300">
                 <div class="flex flex-col items-center text-center">
                   <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300 relative z-10 mb-6 method-step-glow-amber">
-                    <svg class="w-8 h-8 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-8 h-8 absolute" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                     </svg>
                   </div>
@@ -439,7 +439,7 @@
                       style="z-index: 0;"
                       loading="lazy"
                     />
-                    <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent" style="z-index: 1;"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
                     <div class="relative z-10 p-6">
                       <h4 class="text-lg font-bold text-white mb-3 drop-shadow-lg">
@@ -458,7 +458,7 @@
           <!-- Timeline mobile/tablet (vertical) -->
           <div class="lg:hidden space-y-8">
             <!-- Étape 1 : Analyse -->
-            <div class="flex gap-4 group" data-aos="fade-up" data-aos-delay="0">
+            <div class="aos-init flex gap-4 group" data-aos="fade-up" data-aos-delay="0">
               <div class="flex flex-col items-center">
                 <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all method-step-glow-blue">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -490,7 +490,7 @@
             </div>
 
             <!-- Étape 2 : Conseil -->
-            <div class="flex gap-4 group" data-aos="fade-up" data-aos-delay="100">
+            <div class="aos-init flex gap-4 group" data-aos="fade-up" data-aos-delay="100">
               <div class="flex flex-col items-center">
                 <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all method-step-glow-emerald">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -522,7 +522,7 @@
             </div>
 
             <!-- Étape 3 : Mise en œuvre -->
-            <div class="flex gap-4 group" data-aos="fade-up" data-aos-delay="200">
+            <div class="aos-init flex gap-4 group" data-aos="fade-up" data-aos-delay="200">
               <div class="flex flex-col items-center">
                 <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all method-step-glow-purple">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -554,7 +554,7 @@
             </div>
 
             <!-- Étape 4 : Suivi -->
-            <div class="flex gap-4 group" data-aos="fade-up" data-aos-delay="300">
+            <div class="aos-init flex gap-4 group" data-aos="fade-up" data-aos-delay="300">
               <div class="flex flex-col items-center">
                 <div class="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all method-step-glow-amber">
                   <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1049,31 +1049,31 @@ const handleScroll = () => {
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px currentColor;
-  }
+    box-shadow: 0 0 30px currentColor, 0 0 50px currentColor;  /* Plus fort */
+    }
   50% {
-    box-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
-  }
+    box-shadow: 0 0 60px currentColor, 0 0 80px currentColor, 0 0 100px currentColor;  /* Très fort */
+    }
 }
 
 .method-step-glow-blue {
   animation: glowPulse 3s ease-in-out infinite;
-  color: rgba(59, 130, 246, 0.6);
+  color: rgba(59, 130, 246, 4);
 }
 
 .method-step-glow-emerald {
   animation: glowPulse 3s ease-in-out infinite 0.3s;
-  color: rgba(16, 185, 129, 0.6);
+  color: rgba(16, 185, 129, 4);
 }
 
 .method-step-glow-purple {
   animation: glowPulse 3s ease-in-out infinite 0.6s;
-  color: rgba(147, 51, 234, 0.6);
+  color: rgba(147, 51, 234, 4);
 }
 
 .method-step-glow-amber {
   animation: glowPulse 3s ease-in-out infinite 0.9s;
-  color: rgba(245, 158, 11, 0.6);
+  color: rgba(245, 158, 11, 4);
 }
 
 </style>

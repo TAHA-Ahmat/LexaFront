@@ -18,6 +18,10 @@
     "allSolutions": "جميع الحلول",
     "interventionAreas": "مجالات خبرتنا"
   },
+  "breadcrumb": {
+    "home": "الصفحة الرئيسية",
+    "services": "الخدمات"
+  },
   "chatbot": {
     "title": "مساعد ليكسافريك",
     "subtitle": "متصل الآن",
