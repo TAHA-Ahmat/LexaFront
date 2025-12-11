@@ -23,13 +23,17 @@
             data-aos="zoom-in"
             data-aos-delay="0"
           >
-            <!-- Image de fond optimisée -->
-            <img
+            <!-- Image de fond optimisée NuxtImg -->
+            <NuxtImg
               src="/images/Exterieur/juridique.webp"
               alt="Assistance juridique Lexafric"
+              width="5760"
+              height="3840"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
+              format="webp"
+              quality="85"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
@@ -68,13 +72,17 @@
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <!-- Image de fond optimisée -->
-            <img
+            <!-- Image de fond optimisée NuxtImg -->
+            <NuxtImg
               src="/images/team/27.webp"
               alt="Assistance fiscale Lexafric"
+              width="5760"
+              height="3840"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
+              format="webp"
+              quality="85"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
@@ -111,13 +119,17 @@
             data-aos="zoom-in"
             data-aos-delay="200"
           >
-            <!-- Image de fond optimisée -->
-            <img
+            <!-- Image de fond optimisée NuxtImg -->
+            <NuxtImg
               src="/images/Exterieur/sociale.webp"
               alt="Assistance sociale Lexafric"
+              width="5760"
+              height="3840"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
+              format="webp"
+              quality="85"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
@@ -154,13 +166,17 @@
             data-aos="zoom-in"
             data-aos-delay="300"
           >
-            <!-- Image de fond optimisée -->
-            <img
-              src="/images/team/28.JPG"
+            <!-- Image de fond optimisée NuxtImg -->
+            <NuxtImg
+              src="/images/team/28.webp"
               alt="Assistance recrutement Lexafric"
+              width="1810"
+              height="1706"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
+              format="webp"
+              quality="85"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
