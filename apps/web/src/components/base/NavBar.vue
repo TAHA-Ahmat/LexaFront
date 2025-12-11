@@ -100,11 +100,17 @@
         <div class="flex items-center justify-between px-4 py-2 border-b border-gray-200 dark:border-gray-800 bg-gradient-to-r from-blue-600 to-purple-600 flex-shrink-0">
           <NuxtLink :to="localePath('/')" class="flex items-center group" @click="closeMobile">
             <div class="drawer-logo-container bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-lg transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105 group-active:scale-95">
+<<<<<<< HEAD
               <NuxtImg
                 src="/logo-lexafric.svg"
                 alt="Lexafric"
                 width="130"
                 height="130"
+=======
+              <img
+                src="/logo-lexafric.svg"
+                alt="Lexafric"
+>>>>>>> origin/main
                 class="h-12 w-auto transition-all duration-300 group-hover:brightness-110"
                 style="object-fit: contain;"
                 loading="eager"
