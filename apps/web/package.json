@@ -8,15 +8,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "generate:pwa-icons": "node generate-pwa-icons.js"
+    "generate:pwa-icons": "node generate-pwa-icons.js",
+    "optimize:images": "node ../../optimize-images.js"
   },
   "dependencies": {
     "@vueuse/core": "^14.0.0",
-    "@vueuse/motion": "^3.0.3",
     "aos": "^2.3.4",
-    "gsap": "^3.13.0",
     "nuxt": "3.17.5",
     "openai": "^6.6.0",
+    "sharp": "^0.34.5",
     "swiper": "^12.0.2",
     "undici": "5.28.4",
     "vue": "^3.5.22",

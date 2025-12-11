@@ -1,39 +1,9 @@
 <template>
-  <div class="overflow-x-hidden">
-    <!-- Hero Section avec cercles concentriques animés -->
-    <section class="relative min-h-[60vh] flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
-      <!-- Concentric circles -->
-      <div class="absolute inset-0 flex items-center justify-center">
-        <div
-          v-for="ring in rings"
-          :key="ring.id"
-          class="absolute rounded-full border border-blue-400/20 animate-ping-slow"
-          :style="{
-            width: ring.size + 'px',
-            height: ring.size + 'px',
-            animationDelay: ring.delay + 's',
-            animationDuration: ring.duration + 's'
-          }"
-        ></div>
-      </div>
-
-      <!-- Subtle grid pattern -->
-      <div class="absolute inset-0 opacity-[0.03]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 50px 50px;"></div>
-      </div>
-
-      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            {{ $t('pages.about.title') }}
-          </h1>
-
-          <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-            {{ $t('pages.about.subtitle') }}
-          </p>
-        </div>
-      </div>
-    </section>
+  <div class="min-h-screen bg-gray-100 dark:bg-gray-900 overflow-x-hidden">
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <Breadcrumb :items="[{ label: $t('breadcrumb.about') }]" />
+    </div>
 
     <!-- Introduction Section -->
     <section class="py-20 md:py-32 bg-gray-50 dark:bg-gray-900">
@@ -239,30 +209,7 @@
 </template>
 
 <script setup lang="ts">
-// i18n
 const localePath = useLocalePath()
-
-// Generate concentric rings
-interface Ring {
-  id: number
-  size: number
-  delay: number
-  duration: number
-}
-
-const rings = ref<Ring[]>([])
-
-// Generate 6 rings
-onMounted(() => {
-  for (let i = 0; i < 6; i++) {
-    rings.value.push({
-      id: i,
-      size: 200 + (i * 200), // 200, 400, 600, 800, 1000, 1200
-      delay: i * 2, // Stagger animation
-      duration: 8 + (i * 2) // Slower for larger rings
-    })
-  }
-})
 
 // SEO
 useSeoMeta({
@@ -272,23 +219,3 @@ useSeoMeta({
   ogDescription: 'Cabinet de Conseil Juridique et Fiscal regroupant des professionnels avec plus de 30 ans d\'expérience'
 })
 </script>
-
-<style scoped>
-@keyframes ping-slow {
-  0% {
-    transform: scale(0.8);
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
-
-.animate-ping-slow {
-  animation: ping-slow ease-in-out infinite;
-}
-</style>

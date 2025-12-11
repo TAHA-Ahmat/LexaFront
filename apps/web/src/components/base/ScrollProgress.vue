@@ -19,7 +19,6 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { gsap } from 'gsap'
 
 interface Props {
   position?: 'top' | 'bottom' | 'left' | 'right'
@@ -53,7 +52,8 @@ const progressStyle = computed(() => {
   return {
     [isHorizontal ? 'width' : 'height']: `${scrollProgress.value}%`,
     background: props.color,
-    backgroundColor: props.backgroundColor
+    backgroundColor: props.backgroundColor,
+    transition: `${isHorizontal ? 'width' : 'height'} ${props.smoothness}s cubic-bezier(0.4, 0, 0.2, 1)`
   }
 })
 
@@ -66,12 +66,8 @@ const updateProgress = () => {
   const totalScroll = documentHeight - windowHeight
   const currentProgress = (scrollTop / totalScroll) * 100
 
-  // Animer le changement de progression
-  gsap.to(scrollProgress, {
-    value: Math.min(Math.max(currentProgress, 0), 100),
-    duration: props.smoothness,
-    ease: 'power2.out'
-  })
+  // Mettre à jour la progression (animation CSS via transition)
+  scrollProgress.value = Math.min(Math.max(currentProgress, 0), 100)
 
   // Gérer la visibilité
   if (props.hideOnTop) {

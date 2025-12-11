@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   dir: {
     pages: 'pages',
     layouts: 'layouts',
-    public: 'public',
+    public: '../public',  // Public doit être à la racine de apps/web
     assets: 'assets'
   },
 
@@ -105,7 +105,7 @@ export default defineNuxtConfig({
       ]
     },
     devOptions: {
-      enabled: true,
+      enabled: false, // Désactivé en dev pour éviter les warnings Workbox
       type: 'module'
     }
   },
@@ -163,11 +163,11 @@ export default defineNuxtConfig({
     }
   },
 
-  // Configuration Nuxt Image (provider local)
+  // Configuration Nuxt Image
   image: {
-    provider: 'ipx',
-    format: ['webp', 'avif'],
+    // Ne pas spécifier 'dir' - laisse Nuxt utiliser public/ par défaut
     quality: 80,
+    format: ['webp', 'avif'],
     screens: {
       xs: 320,
       sm: 640,
@@ -175,6 +175,21 @@ export default defineNuxtConfig({
       lg: 1024,
       xl: 1280,
       xxl: 1536
+    },
+    // FIX Windows: provider 'none' en dev (Sharp incompatible), 'ipx' en production
+    // En dev: <NuxtImg> devient <img> natif sans transformation
+    // En prod: IPX active avec toutes les optimisations (WebP, AVIF, srcset)
+    provider: process.env.NUXT_IMAGE_PROVIDER || 'ipx',
+    ipx: {
+      dir: 'public',
+      // Configuration Sharp explicite pour Vercel
+      sharp: {
+        // Options Sharp pour optimisation production
+        quality: 80,
+        progressive: true,
+        optimizeScans: true,
+        chromaSubsampling: '4:2:0'
+      }
     }
   },
 
@@ -206,6 +221,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#1e40af' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }
       ],
@@ -213,6 +229,18 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
       ]
+    }
+  },
+
+  // Vite configuration
+  vite: {
+    build: {
+      assetsInlineLimit: 0 // Ne pas inliner les assets
+    },
+    server: {
+      fs: {
+        allow: ['..'] // Permettre l'accès au dossier parent
+      }
     }
   },
 

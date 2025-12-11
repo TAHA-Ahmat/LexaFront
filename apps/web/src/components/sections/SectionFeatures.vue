@@ -2,7 +2,7 @@
   <section class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 overflow-hidden">
     <div class="container mx-auto px-4">
       <!-- En-tête de section -->
-      <div class="text-center mb-16" data-aos="fade-up">
+      <div class="aos-init text-center mb-16" data-aos="fade-up">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
           {{ $t('pages.home.features.title') }}
         </h2>

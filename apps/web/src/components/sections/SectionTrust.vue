@@ -1,10 +1,10 @@
 <template>
   <!-- 4️⃣ POURQUOI NOUS FAIRE CONFIANCE -->
-  <section class="section-trust-premium py-20 md:py-28 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+  <section class="section-trust-premium py-20 md:py-28 bg-gray-150 dark:bg-gray-900 relative overflow-hidden">
     <div class="container mx-auto px-4 md:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <!-- Header -->
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="aos-init text-center mb-16" data-aos="fade-up">
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             {{ $t('pages.home.trust.title') }}
           </h2>
@@ -15,7 +15,7 @@
 
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-20 max-w-3xl mx-auto">
-          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="aos-init text-center" data-aos="fade-up" data-aos-delay="100">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">
               10+
             </div>
@@ -23,7 +23,7 @@
               {{ $t('pages.home.trust.stats.years') }}
             </div>
           </div>
-          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="aos-init text-center" data-aos="fade-up" data-aos-delay="200">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent mb-2">
               15+
             </div>
@@ -31,7 +31,7 @@
               {{ $t('pages.home.trust.stats.experts') }}
             </div>
           </div>
-          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="aos-init text-center" data-aos="fade-up" data-aos-delay="300">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-700 bg-clip-text text-transparent mb-2">
               25+
             </div>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Carousel Title -->
-        <h3 class="text-2xl font-semibold text-center text-gray-900 dark:text-white mb-12" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="aos-init text-2xl font-semibold text-center text-gray-900 dark:text-white mb-12" data-aos="fade-up" data-aos-delay="400">
           {{ $t('pages.home.trust.partnersTitle') }}
         </h3>
 
