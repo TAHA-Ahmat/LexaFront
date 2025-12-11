@@ -176,20 +176,11 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536
     },
-    // FIX Windows: provider 'none' en dev (Sharp incompatible), 'ipx' en production
-    // En dev: <NuxtImg> devient <img> natif sans transformation
-    // En prod: IPX active avec toutes les optimisations (WebP, AVIF, srcset)
-    provider: process.env.NUXT_IMAGE_PROVIDER || 'ipx',
-    ipx: {
-      dir: 'public',
-      // Configuration Sharp explicite pour Vercel
-      sharp: {
-        // Options Sharp pour optimisation production
-        quality: 80,
-        progressive: true,
-        optimizeScans: true,
-        chromaSubsampling: '4:2:0'
-      }
+    // Provider Vercel natif - pas besoin de Sharp
+    provider: 'vercel',
+    vercel: {
+      formats: ['webp', 'avif'],
+      quality: 80
     }
   },
 
