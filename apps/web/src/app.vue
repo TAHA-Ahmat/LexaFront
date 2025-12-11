@@ -1,7 +1,11 @@
 <template>
   <div :dir="currentDir" class="font-sans antialiased">
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage :transition="{
+        name: 'page',
+        mode: 'out-in',
+        duration: 300
+      }" />
     </NuxtLayout>
   </div>
 </template>
@@ -13,7 +17,7 @@ const currentDir = computed(() => {
   return (l as any)?.dir === 'rtl' ? 'rtl' : 'ltr'
 })
 
-// Charger la police Google Fonts
+// Charger la police Google Fonts de manière optimisée
 useHead({
   link: [
     {
@@ -27,7 +31,10 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
+      // Chargement non-bloquant
+      media: 'print',
+      onload: "this.media='all'"
     }
   ]
 })

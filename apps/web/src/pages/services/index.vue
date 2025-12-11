@@ -1,396 +1,172 @@
 <template>
-  <div class="overflow-x-hidden">
-    <!-- Hero Section Premium -->
-    <section class="relative py-20 md:py-28 bg-gradient-to-b from-gray-50 via-white to-white dark:from-gray-900 dark:via-gray-950 dark:to-gray-950 overflow-hidden">
-      <!-- Subtle grid pattern -->
-      <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 50px 50px;"></div>
-      </div>
+  <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <Breadcrumb :items="[{ label: $t('breadcrumb.services') }]" />
+    </div>
 
-      <!-- Gradient accents -->
-      <div class="absolute inset-0">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl"></div>
-      </div>
+    <!-- Bento Grid Services -->
+    <section class="container mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-20">
+      <div class="max-w-6xl mx-auto">
+        <!-- Grid asymétrique Bento -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <!-- Service 1: Juridique - Grande card (2 cols) -->
+          <NuxtLink
+            :to="localePath('/services/assistance-juridique')"
+            class="group relative lg:col-span-2 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gradient-to-br from-blue-100 via-blue-50 to-white/80 dark:from-blue-950/20 dark:to-gray-950 p-8 md:p-12 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 hover:shadow-xl overflow-hidden min-h-[280px]"
+          >
+            <!-- Background subtle pattern -->
+            <div class="absolute inset-0 opacity-[0.02]">
+              <div class="absolute inset-0" style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 30px 30px;"></div>
+            </div>
 
-      <div class="relative container mx-auto px-4 md:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-          <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 rounded-full">
-            <svg class="w-4 h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-            <span class="text-sm font-semibold text-blue-700 dark:text-blue-300">{{ $t('pages.services.badge') }}</span>
-          </div>
-
-          <!-- Title -->
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
-            {{ $t('pages.services.title') }}
-          </h1>
-
-          <!-- Subtitle -->
-          <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            {{ $t('pages.services.subtitle') }}
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Grid Premium -->
-    <section class="relative py-16 md:py-24 bg-white dark:bg-gray-950">
-      <div class="container mx-auto px-4 md:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto space-y-24">
-          <!-- Service 1: {{ $t('pages.services.legal.title') }} -->
-          <NuxtLink :to="localePath('/services/assistance-juridique')"  class="block group">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <!-- Contenu -->
-              <div class="order-2 lg:order-1 space-y-6">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800/30 rounded-lg text-sm font-medium text-blue-700 dark:text-blue-300">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
-                    <circle cx="3" cy="3" r="3"/>
+            <div class="relative flex flex-col justify-between h-full">
+              <div>
+                <!-- Icône Balance de justice -->
+                <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
                   </svg>
-                  {{ $t('pages.services.legal.title') }}
                 </div>
-
-                <!-- Titre -->
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {{ $t('pages.services.legal.title') }}
                 </h2>
-
-                <!-- Description -->
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {{ $t('pages.services.legal.description') }}
-                </p>
-
-                <!-- Features -->
-                <ul class="space-y-3 pt-2">
-                  <li v-for="(feature, index) in $tm('pages.services.legal.features')" :key="index"
-                      class="flex items-start gap-3">
-                    <div class="flex-shrink-0 mt-0.5">
-                      <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{{ $t(`pages.services.legal.features.${index}`) }}</span>
-                  </li>
-                </ul>
-
-                <!-- CTA -->
-                <div class="pt-4">
-                  <div class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold group/link">
-                    <span>{{ $t('pages.services.learnMore') }}</span>
-                    <svg class="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </div>
-                </div>
               </div>
 
-              <!-- Image Premium -->
-              <div class="order-1 lg:order-2">
-                <div class="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 border border-gray-200 dark:border-gray-800 group-hover:border-blue-300 dark:group-hover:border-blue-700 transition-all duration-300">
-                  <!-- Gradient overlay -->
-                  <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-indigo-500/5 group-hover:from-blue-500/10 group-hover:to-indigo-500/10 transition-all duration-300"></div>
-
-                  <!-- Image -->
-                  <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
-                    <img
-                      src="/images/services/assistance-juridique.png"
-                      alt="{{ $t('pages.services.legal.title') }}"
-                      class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:gap-3 transition-all">
+                <span class="text-sm font-medium">Explorer nos solutions juridiques</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </div>
             </div>
           </NuxtLink>
 
-          <!-- Service 2: {{ $t('pages.services.fiscal.title') }} -->
-          <NuxtLink :to="localePath('/services/assistance-fiscale')"  class="block group">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <!-- Image Premium -->
+          <!-- Service 2: Fiscale - Petite card -->
+          <NuxtLink
+            :to="localePath('/services/assistance-fiscale')"
+            class="group relative rounded-2xl border border-gray-200 dark:border-gray-800 bg-gradient-to-br from-emerald-50 to-emerald-100/40 dark:from-emerald-950/20 dark:to-gray-950 p-8 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all duration-300 hover:shadow-xl overflow-hidden min-h-[280px]"
+          >
+            <div class="absolute inset-0 opacity-[0.02]">
+              <div class="absolute inset-0" style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 30px 30px;"></div>
+            </div>
+
+            <div class="relative flex flex-col justify-between h-full">
               <div>
-                <div class="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 border border-gray-200 dark:border-gray-800 group-hover:border-emerald-300 dark:group-hover:border-emerald-700 transition-all duration-300">
-                  <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-green-500/5 group-hover:from-emerald-500/10 group-hover:to-green-500/10 transition-all duration-300"></div>
-                  <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
-                    <img
-                      src="/images/services/assistance-fiscale.png"
-                      alt="{{ $t('pages.services.fiscal.title') }}"
-                      class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <!-- Contenu -->
-              <div class="space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-100 dark:border-emerald-800/30 rounded-lg text-sm font-medium text-emerald-700 dark:text-emerald-300">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
-                    <circle cx="3" cy="3" r="3"/>
+                <!-- Icône Calculatrice -->
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                   </svg>
-                  {{ $t('pages.services.fiscal.title') }}
                 </div>
-
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                   {{ $t('pages.services.fiscal.title') }}
                 </h2>
+              </div>
 
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {{ $t('pages.services.fiscal.description') }}
-                </p>
-
-                <ul class="space-y-3 pt-2">
-                  <li v-for="(feature, index) in $tm('pages.services.fiscal.features')" :key="index" class="flex items-start gap-3">
-                    <div class="flex-shrink-0 mt-0.5">
-                      <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{{ $t(`pages.services.fiscal.features.${index}`) }}</span>
-                  </li>
-                </ul>
-
-                <div class="pt-4">
-                  <div class="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold group/link">
-                    <span>{{ $t('pages.services.learnMore') }}</span>
-                    <svg class="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </div>
-                </div>
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 group-hover:gap-3 transition-all">
+                <span class="text-sm font-medium">Optimiser votre fiscalité</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </div>
             </div>
           </NuxtLink>
 
-          <!-- Service 3: {{ $t('pages.services.social.title') }} -->
-          <NuxtLink :to="localePath('/services/assistance-sociale')"  class="block group">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <div class="order-2 lg:order-1 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-purple-50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800/30 rounded-lg text-sm font-medium text-purple-700 dark:text-purple-300">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
-                    <circle cx="3" cy="3" r="3"/>
-                  </svg>
-                  {{ $t('pages.services.social.title') }}
-                </div>
-
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
-                  {{ $t('pages.services.social.title') }}
-                </h2>
-
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {{ $t('pages.services.social.description') }}
-                </p>
-
-                <ul class="space-y-3 pt-2">
-                  <li v-for="(feature, index) in $tm('pages.services.social.features')" :key="index" class="flex items-start gap-3">
-                    <div class="flex-shrink-0 mt-0.5">
-                      <svg class="w-5 h-5 text-purple-600 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{{ $t(`pages.services.social.features.${index}`) }}</span>
-                  </li>
-                </ul>
-
-                <div class="pt-4">
-                  <div class="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 font-semibold group/link">
-                    <span>{{ $t('pages.services.learnMore') }}</span>
-                    <svg class="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div class="order-1 lg:order-2">
-                <div class="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-purple-50 to-violet-50 dark:from-purple-950/30 dark:to-violet-950/30 border border-gray-200 dark:border-gray-800 group-hover:border-purple-300 dark:group-hover:border-purple-700 transition-all duration-300">
-                  <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 group-hover:from-purple-500/10 group-hover:to-violet-500/10 transition-all duration-300"></div>
-                  <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
-                    <img
-                      src="/images/services/assistance-sociale.png"
-                      alt="{{ $t('pages.services.social.title') }}"
-                      class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
-              </div>
+          <!-- Service 3: Sociale - Petite card -->
+          <NuxtLink
+            :to="localePath('/services/assistance-sociale')"
+            class="group relative rounded-2xl border border-gray-200 dark:border-gray-800 bg-gradient-to-br from-purple-100 via-purple-50 to-transparent dark:from-purple-950/20 dark:to-gray-950 p-8 hover:border-purple-500 dark:hover:border-purple-400 transition-all duration-300 hover:shadow-xl overflow-hidden min-h-[280px]"
+          >
+            <div class="absolute inset-0 opacity-[0.02]">
+              <div class="absolute inset-0" style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 30px 30px;"></div>
             </div>
-          </NuxtLink>
 
-          <!-- Service 4: {{ $t('pages.services.recruitment.title') }} -->
-          <NuxtLink :to="localePath('/services/assistance-recrutement')"  class="block group">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div class="relative flex flex-col justify-between h-full">
               <div>
-                <div class="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 border border-gray-200 dark:border-gray-800 group-hover:border-amber-300 dark:group-hover:border-amber-700 transition-all duration-300">
-                  <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-orange-500/5 group-hover:from-amber-500/10 group-hover:to-orange-500/10 transition-all duration-300"></div>
-                  <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
-                    <img
-                      src="/images/services/assistance-recrutement.png"
-                      alt="{{ $t('pages.services.recruitment.title') }}"
-                      class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
+                <!-- Icône Groupe de personnes -->
+                <div class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
                 </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                  {{ $t('pages.services.social.title') }}
+                </h2>
               </div>
 
-              <div class="space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800/30 rounded-lg text-sm font-medium text-amber-700 dark:text-amber-300">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
-                    <circle cx="3" cy="3" r="3"/>
-                  </svg>
-                  {{ $t('pages.services.recruitment.title') }}
-                </div>
-
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
-                  {{ $t('pages.services.recruitment.title') }}
-                </h2>
-
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {{ $t('pages.services.recruitment.description') }}
-                </p>
-
-                <ul class="space-y-3 pt-2">
-                  <li v-for="(feature, index) in $tm('pages.services.recruitment.features')" :key="index" class="flex items-start gap-3">
-                    <div class="flex-shrink-0 mt-0.5">
-                      <svg class="w-5 h-5 text-amber-600 dark:text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{{ $t(`pages.services.recruitment.features.${index}`) }}</span>
-                  </li>
-                </ul>
-
-                <div class="pt-4">
-                  <div class="inline-flex items-center gap-2 text-amber-600 dark:text-amber-400 font-semibold group/link">
-                    <span>{{ $t('pages.services.learnMore') }}</span>
-                    <svg class="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </div>
-                </div>
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 group-hover:gap-3 transition-all">
+                <span class="text-sm font-medium">Protéger vos équipes</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </div>
             </div>
           </NuxtLink>
 
-          <!-- Service 5: Formations -->
-          <NuxtLink :to="localePath('/services/formations')"  class="block group">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              <div class="order-2 lg:order-1 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-rose-50 dark:bg-rose-900/20 border border-rose-100 dark:border-rose-800/30 rounded-lg text-sm font-medium text-rose-700 dark:text-rose-300">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 6 6">
-                    <circle cx="3" cy="3" r="3"/>
-                  </svg>
-                  Formations
-                </div>
+          <!-- Service 4: Recrutement - Grande card (2 cols) -->
+          <NuxtLink
+            :to="localePath('/services/assistance-recrutement')"
+            class="group relative lg:col-span-2 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gradient-to-br from-amber-100 via-amber-50 to-white/80 dark:from-amber-950/20 dark:to-gray-950 p-8 md:p-12 hover:border-amber-500 dark:hover:border-amber-400 transition-all duration-300 hover:shadow-xl overflow-hidden min-h-[280px]"
+          >
+            <div class="absolute inset-0 opacity-[0.02]">
+              <div class="absolute inset-0" style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 30px 30px;"></div>
+            </div>
 
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-tight leading-tight">
+            <div class="relative flex flex-col justify-between h-full">
+              <div>
+                <!-- Icône Porte-documents -->
+                <div class="w-14 h-14 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                  {{ $t('pages.services.recruitment.title') }}
+                </h2>
+              </div>
+
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 group-hover:gap-3 transition-all">
+                <span class="text-sm font-medium">Trouver vos talents</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </div>
+          </NuxtLink>
+
+          <!-- Service 5: Formations - Petite card -->
+          <NuxtLink
+            :to="localePath('/services/formations')"
+            class="group relative rounded-2xl border border-gray-200 dark:border-gray-800 bg-gradient-to-br from-rose-50 to-rose-100/40 dark:from-rose-950/20 dark:to-gray-950 p-8 hover:border-rose-500 dark:hover:border-rose-400 transition-all duration-300 hover:shadow-xl overflow-hidden min-h-[280px]"
+          >
+            <div class="absolute inset-0 opacity-[0.02]">
+              <div class="absolute inset-0" style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 30px 30px;"></div>
+            </div>
+
+            <div class="relative flex flex-col justify-between h-full">
+              <div>
+                <!-- Icône Graduation -->
+                <div class="w-14 h-14 bg-rose-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-rose-600 dark:text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+                  </svg>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
                   {{ $t('pages.services.training.title') }}
                 </h2>
-
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {{ $t('pages.services.training.description') }}
-                </p>
-
-                <ul class="space-y-3 pt-2">
-                  <li v-for="(feature, index) in $tm('pages.services.training.features')" :key="index" class="flex items-start gap-3">
-                    <div class="flex-shrink-0 mt-0.5">
-                      <svg class="w-5 h-5 text-rose-600 dark:text-rose-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                      </svg>
-                    </div>
-                    <span class="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{{ $t(`pages.services.training.features.${index}`) }}</span>
-                  </li>
-                </ul>
-
-                <div class="pt-4">
-                  <div class="inline-flex items-center gap-2 text-rose-600 dark:text-rose-400 font-semibold group/link">
-                    <span>{{ $t('pages.services.learnMore') }}</span>
-                    <svg class="w-5 h-5 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                  </div>
-                </div>
               </div>
 
-              <div class="order-1 lg:order-2">
-                <div class="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-950/30 dark:to-pink-950/30 border border-gray-200 dark:border-gray-800 group-hover:border-rose-300 dark:group-hover:border-rose-700 transition-all duration-300">
-                  <div class="absolute inset-0 bg-gradient-to-br from-rose-500/5 via-transparent to-pink-500/5 group-hover:from-rose-500/10 group-hover:to-pink-500/10 transition-all duration-300"></div>
-                  <div class="relative w-full h-full flex items-center justify-center p-8 md:p-12">
-                    <img
-                      src="/images/services/formations.png"
-                      alt="Formations"
-                      class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </div>
+              <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-400 group-hover:gap-3 transition-all">
+                <span class="text-sm font-medium">Former vos collaborateurs</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </div>
             </div>
           </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section Premium -->
-    <section class="relative py-20 md:py-28 overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900">
-      <!-- Subtle grid pattern -->
-      <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle, #000 1px, transparent 1px); background-size: 50px 50px;"></div>
-      </div>
-
-      <!-- Gradient accents -->
-      <div class="absolute inset-0">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/20 rounded-full blur-3xl"></div>
-      </div>
-
-      <div class="container mx-auto px-4 md:px-6 lg:px-8 relative">
-        <div class="max-w-4xl mx-auto">
-          <!-- Card Premium -->
-          <div class="relative bg-gradient-to-br from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 rounded-2xl p-12 md:p-16 shadow-2xl border border-blue-500/20 overflow-hidden">
-            <!-- Subtle pattern overlay -->
-            <div class="absolute inset-0 opacity-10">
-              <div class="absolute inset-0" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 30px 30px;"></div>
-            </div>
-
-            <!-- Gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent"></div>
-
-            <!-- Content -->
-            <div class="relative text-center space-y-6">
-              <!-- Badge -->
-              <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-sm font-medium text-white">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                </svg>
-                <span>{{ $t('pages.services.cta.contactNow') }}</span>
-              </div>
-
-              <!-- Title -->
-              <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
-                {{ $t('pages.services.cta.title') }}
-              </h2>
-
-              <!-- Subtitle -->
-              <p class="text-base md:text-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
-                {{ $t('pages.services.cta.subtitle') }}
-              </p>
-
-              <!-- CTA Button -->
-              <div class="pt-4">
-                <NuxtLink
-                  :to="localePath('/contact')" 
-                  class="group inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-base hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
-                >
-                  {{ $t('pages.services.cta.button') }}
-                  <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -398,10 +174,9 @@
 </template>
 
 <script setup lang="ts">
-// i18n
 const localePath = useLocalePath()
 
-// SEO
+// SEO - Conservé pour éviter régression
 useSeoMeta({
   title: 'Nos Services - Lexafric',
   description: 'Découvrez nos services en assistance juridique, fiscale, sociale, recrutement et formations',

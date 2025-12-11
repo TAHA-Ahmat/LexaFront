@@ -1,0 +1,514 @@
+﻿[
+{
+    "id": "13",
+    "theme": "AVANT-PROPOS",
+    "qa": [
+      {
+        "question": "Quel est l'objectif du guide rédigé par le cabinet LEXAFRIC ?",
+        "answer": "Le guide vise à fournir un outil de travail et d'information pour les dirigeants d'entreprises étrangères et les investisseurs nationaux souhaitant s'implanter au Tchad."
+      },
+      {
+        "question": "Qui a rédigé ce guide ?",
+        "answer": "Ce guide a été rédigé par les spécialistes reconnus du cabinet de conseil juridique et fiscal LEXAFRIC."
+      },
+      {
+        "question": "À qui s'adresse le guide du cabinet LEXAFRIC ?",
+        "answer": "Le guide s'adresse aux dirigeants d'entreprises étrangères et aux investisseurs nationaux souhaitant s'implanter au Tchad sous diverses formes juridiques."
+      },
+      {
+        "question": "Quels sont les principaux objectifs des réformes engagées au Tchad ?",
+        "answer": "Les réformes visent à simplifier les procédures administratives et fiscales, élargir les mesures incitatives pour l'investissement privé, moderniser le droit du travail et harmoniser la législation avec les règles de l'OHADA."
+      },
+      {
+        "question": "Quelles sont les principales mesures issues des réformes économiques et juridiques au Tchad ?",
+        "answer": "Elles incluent la simplification des procédures de création d'entreprises, l'allègement fiscal, l'élargissement des incitations à l'investissement privé, la modernisation du droit du travail et l'harmonisation du droit national avec l'OHADA."
+      },
+      {
+        "question": "Quel est le rôle du cabinet LEXAFRIC selon le guide ?",
+        "answer": "LEXAFRIC met à disposition son expertise pour aider les investisseurs à éviter les pièges d'une réglementation insuffisamment vulgarisée et leur faire bénéficier des meilleures options juridiques et fiscales."
+      },
+      {
+        "question": "Qui signe le guide pour le cabinet LEXAFRIC ?",
+        "answer": "Le guide est signé par Nodjitan BETI, associé et Conseil Fiscal agréé CEMAC n°."
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "theme": "INFORMATIONS GÉNÉRALES SUR LE TCHAD",
+    "qa": [
+      {
+        "question": "Quelle est la superficie du Tchad ?",
+        "answer": "Le Tchad couvre une superficie de 1 284  km², ce qui en fait le cinquième plus grand pays d'Afrique."
+      },
+      {
+        "question": "Quels sont les pays frontaliers du Tchad ?",
+        "answer": "Le Tchad partage ses frontières avec la Libye au nord, le Soudan à l'est, la République Centrafricaine au sud, et le Cameroun, le Nigéria et le Niger à l'ouest."
+      },
+      {
+        "question": "Le Tchad possède-t-il une façade maritime ?",
+        "answer": "Non, le Tchad est un pays enclavé sans façade maritime. Le port le plus proche se trouve au Nigéria, à Port Harcourt, à environ 1  km de N'Djaména."
+      },
+      {
+        "question": "Quelles sont les principales villes du Tchad ?",
+        "answer": "Les plus grandes villes sont N'Djaména (capitale politique), Moundou (capitale économique), Abéché et Sarh."
+      },
+      {
+        "question": "Quelles sont les principales zones climatiques du Tchad ?",
+        "answer": "Le pays compte trois zones climatiques : saharienne, sahélienne et soudanienne, avec des variations de pluviométrie et de durée des saisons des pluies."
+      },
+      {
+        "question": "Quelle est la population du Tchad en 2022 ?",
+        "answer": "Le pays compte environ  millions d’habitants en 2022, dont 48,4 % d’hommes et 51,6 % de femmes."
+      },
+      {
+        "question": "Quelle est la densité moyenne de population au Tchad ?",
+        "answer": "Elle est estimée à 13 habitants/km² en moyenne, mais varie fortement selon les provinces."
+      },
+      {
+        "question": "Quel est l'âge moyen et médian de la population tchadienne ?",
+        "answer": "L'âge moyen est de 19 ans et l'âge médian de 14 ans environ."
+      },
+      {
+        "question": "Quelle proportion de la population vit en zone rurale ?",
+        "answer": "Environ 78,1 % des habitants vivent en milieu rural."
+      },
+      {
+        "question": "Quelles sont les langues officielles du Tchad ?",
+        "answer": "Le Français et l’Arabe sont les deux langues officielles du pays."
+      },
+      {
+        "question": "Comment est organisée l'administration territoriale du Tchad ?",
+        "answer": "Le pays est divisé en provinces et départements dirigés respectivement par des Gouverneurs et des Préfets, selon l’ordonnance N° 038/PR/2."
+      },
+      {
+        "question": "Quelle est la monnaie utilisée au Tchad ?",
+        "answer": "Le Franc CFA (Franc de la Coopération Financière d’Afrique), partagé avec les autres pays membres de la CEMAC."
+      },
+      {
+        "question": "Quels sont les principaux secteurs économiques du Tchad ?",
+        "answer": "L’économie repose sur le pétrole, l’agriculture, l’élevage et la pêche."
+      },
+      {
+        "question": "Quelle est la part de l’élevage dans le PIB tchadien ?",
+        "answer": "L’élevage représente environ 17 % du PIB annuel."
+      },
+      {
+        "question": "À combien estime-t-on le cheptel tchadien ?",
+        "answer": "Le cheptel est estimé à plus de  millions de têtes, incluant bétail et volailles."
+      },
+      {
+        "question": "Quelle est la superficie des terres cultivables au Tchad ?",
+        "answer": "Elle est estimée à  millions d’hectares, soit environ 30 % du territoire national."
+      },
+      {
+        "question": "Depuis quand le pétrole constitue-t-il une ressource majeure pour le Tchad ?",
+        "answer": "Depuis les années 2, l’exploitation du pétrole est devenue une source importante de revenus pour l’économie nationale."
+      }
+    ]
+  },
+     {
+    "id": "23",
+    "theme": "LES INCITATIONS FISCALES À L’INVESTISSEMENT",
+    "qa": [
+      {
+        "question": "Quel est l’objectif de la charte des investissements au Tchad ?",
+        "answer": "La charte vise à améliorer l’environnement institutionnel et fiscal du secteur privé afin de favoriser le développement, la croissance et la diversification de l’économie."
+      },
+      {
+        "question": "Quels sont les principaux secteurs concernés par la charte des investissements ?",
+        "answer": "Les secteurs concernés sont l’industrie, l’agro-alimentaire, l’hôtellerie et le tourisme, les mines, l’énergie et l’eau, le BTP et transport, les technologies de l’information et de la communication et d’autres activités concourant à la lutte contre la pauvreté."
+      },
+      {
+        "question": "Quels types d’activités sont encouragés dans le secteur industriel ?",
+        "answer": "Les activités industrielles de transformation ou de conditionnement de produits, la fabrication et le montage d’articles de grande consommation, ainsi que la maintenance des équipements industriels."
+      },
+      {
+        "question": "Quels types d’activités sont visés dans le secteur agro-industriel ?",
+        "answer": "Les activités de préparation ou de transformation de produits d’origine végétale, animale ou piscicole, fondées sur les produits de base."
+      },
+      {
+        "question": "Quelles sont les activités encouragées dans les secteurs hôtellerie et tourisme ?",
+        "answer": "Les activités d’exploitation touristique et hôtelière."
+      },
+      {
+        "question": "Quelles activités relèvent du secteur des mines et de la géologie ?",
+        "answer": "Les activités d’exploration, de recherche, d’exploitation et de transformation des substances minérales et pétrolières."
+      },
+      {
+        "question": "Quels secteurs bénéficient des incitations dans le domaine de l’énergie et de l’eau ?",
+        "answer": "Les activités de production, de distribution d’énergie et d’eau, ainsi que la mise en valeur des sources d’énergie renouvelable (solaire, éolienne, etc.)."
+      },
+      {
+        "question": "Quelles sont les activités couvertes par le secteur BTP et transport ?",
+        "answer": "Les industries du bâtiment, des travaux publics, du transport et de la construction métallique."
+      },
+      {
+        "question": "Quelles activités relèvent du secteur TIC selon la charte ?",
+        "answer": "Les activités des technologies de l’information et de la communication."
+      },
+      {
+        "question": "Quels sont les objectifs des autres secteurs d’activités mentionnés ?",
+        "answer": "Ils visent la création d’emplois, la valorisation des ressources locales, le développement des zones enclavées, l’amélioration de la balance commerciale et la diversification de l’économie."
+      },
+      {
+        "question": "Qui peut bénéficier des régimes particuliers prévus par la charte des investissements ?",
+        "answer": "Toute personne physique ou morale établie au Tchad, quelle que soit sa nationalité, dès lors qu’elle remplit les conditions d’éligibilité."
+      },
+      {
+        "question": "Quels sont les trois régimes particuliers d’incitation à l’investissement ?",
+        "answer": "Le régime A (PME), le régime B (grandes entreprises) et le régime C (entreprises d’exportation)."
+      },
+      {
+        "question": "Que prévoit le régime A ?",
+        "answer": "Il favorise le développement des petites entreprises artisanales et des PME contribuant au développement économique et social, notamment sous forme coopérative."
+      },
+      {
+        "question": "Que prévoit le régime B ?",
+        "answer": "Il vise à promouvoir les entreprises nationales ou étrangères qui participent par leurs investissements au développement économique et social du Tchad."
+      },
+      {
+        "question": "Que prévoit le régime C ?",
+        "answer": "Il concerne les entreprises tournées exclusivement vers l’exportation et leur accorde des avantages spécifiques en plus de ceux du régime B."
+      },
+      {
+        "question": "Comment une entreprise peut-elle obtenir un régime particulier d’investissement ?",
+        "answer": "En présentant une demande au Ministre du Commerce et de l’Industrie, accompagnée d’un dossier préparé par l’ANIE contenant les informations juridiques, techniques, économiques et financières requises."
+      },
+      {
+        "question": "Quel est le rôle de la Commission d’Investissement ?",
+        "answer": "Elle examine les dossiers et donne un avis motivé pour l’admission au régime particulier, formalisé par une convention ou un arrêté conjoint."
+      },
+      {
+        "question": "Quels avantages douaniers sont accordés aux entreprises bénéficiant d’un régime particulier ?",
+        "answer": "L’exemption ou la suspension des droits de douane pour les matériaux de construction, les équipements nécessaires à la production, la recherche ou l’exportation."
+      },
+      {
+        "question": "Les entreprises installées dans des zones enclavées bénéficient-elles d’avantages spécifiques ?",
+        "answer": "Oui, elles peuvent obtenir un délai supplémentaire de 3 à 5 ans d’exemption et des subventions d’équipements en compensation de services sociaux."
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "theme": "RÉGLEMENTATION DOUANIÈRE",
+    "qa": [
+      {
+        "question": "Quels sont les principaux éléments de la réglementation douanière au Tchad ?",
+        "answer": "Elle comprend le Tarif Extérieur Commun (TEC), le Tarif Préférentiel Généralisé (TPG) et diverses taxes indirectes."
+      },
+      {
+        "question": "Qu’est-ce que le Tarif Extérieur Commun (TEC) ?",
+        "answer": "Le TEC regroupe les droits de douane à l’importation et la taxe communautaire d’intégration appliqués par les pays membres de la CEMAC."
+      },
+      {
+        "question": "Quels sont les taux de droits de douane selon les catégories de produits ?",
+        "answer": "5 % pour les produits de première nécessité, 10 % pour les matières premières et équipements, 20 % pour les produits intermédiaires, et 30 % pour les produits de consommation courante."
+      },
+      {
+        "question": "Sur quelle base sont calculés les droits de douane ?",
+        "answer": "Ils sont assis sur la valeur CAF ou la valeur FOB des marchandises importées."
+      },
+      {
+        "question": "Qu’est-ce que la Taxe Communautaire d’Intégration (TCI) ?",
+        "answer": "C’est une taxe de 1 % sur la valeur en douane des produits importés des pays tiers, destinée à financer la CEMAC."
+      },
+      {
+        "question": "Qu’est-ce que le Tarif Préférentiel Généralisé (TPG) ?",
+        "answer": "Le TPG s’applique aux produits d’origine communautaire, avec un taux de 0 %, pour encourager les échanges intra-CEMAC."
+      },
+      {
+        "question": "Quelles sont les principales taxes indirectes à l’exportation ?",
+        "answer": "Elles comprennent la redevance statistique à 2 %, la taxe préférentielle communautaire à 0,4 %, un droit d’exportation de 1 à 2 %, la taxe du contrôle du conditionnement à 0,5 % et la taxe de recherche de 0,5 à 1 %."
+      },
+      {
+        "question": "Quels produits sont soumis à la taxe du contrôle du conditionnement (TCC) ?",
+        "answer": "La gomme arabique, le coton, le cacao, les agrumes, l’huile de palme, certains tabacs, le savon, le caoutchouc et les cuirs et peaux."
+      },
+      {
+        "question": "Quels produits sont concernés par la taxe de recherche (TRC) ?",
+        "answer": "Le beurre, le tabac brut et le bois brut ou scié."
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "theme": "RÉGLEMENTATION DES CHANGES",
+    "qa": [
+      {
+        "question": "Qu’est-ce que la réglementation des changes dans la zone CEMAC ?",
+        "answer": "C’est un cadre légal adopté par le règlement n°2/18/CEMAC/UMAC pour régir les opérations en devises et renforcer le contrôle des flux financiers dans la région."
+      },
+      {
+        "question": "Quels sont les objectifs de la réglementation des changes ?",
+        "answer": "Reconstituer les réserves de change, limiter les transactions non légitimes, assurer le rapatriement des recettes d’exportation et renforcer le contrôle de la BEAC et de la COBAC."
+      },
+      {
+        "question": "Quelles restrictions s’appliquent aux voyageurs dans la zone CEMAC ?",
+        "answer": "Les voyageurs doivent déclarer tout montant supérieur à 5 000  FCFA ou équivalent en devises et ne peuvent détenir plus de 5  FCFA en pièces de monnaie hors zone CEMAC."
+      },
+      {
+        "question": "Quelles sont les règles pour les investissements à l’étranger ?",
+        "answer": "Tout investissement supérieur à 100 000  FCFA par un résident nécessite une autorisation préalable de la Banque Centrale."
+      },
+      {
+        "question": "Quelles sont les règles applicables aux transactions financières ?",
+        "answer": "Les transactions inférieures à 50 000  FCFA font l’objet d’une déclaration préalable, celles supérieures nécessitent une autorisation de la BEAC après avis du régulateur."
+      },
+      {
+        "question": "Quels organismes assurent le contrôle de la réglementation des changes ?",
+        "answer": "La BEAC, la COBAC et le Ministère en charge de la monnaie et du crédit, via le droit de communication et le contrôle sur pièces et sur place."
+      },
+      {
+        "question": "Quelles sanctions s’appliquent en cas de non-respect de la réglementation ?",
+        "answer": "Des sanctions administratives pécuniaires (amendes de 2 % à 100 %) et non pécuniaires (avertissement, interdiction, suspension, retrait de licence) peuvent être prononcées."
+      },
+      {
+        "question": "Qui peut déclencher une procédure disciplinaire contre un intermédiaire agréé ?",
+        "answer": "Le Gouverneur de la BEAC peut saisir directement la COBAC ou le Ministère de la monnaie et du crédit pour demander la suspension ou le retrait d’agrément."
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "theme": "DROIT DU TRAVAIL ET SÉCURITÉ SOCIALE",
+    "qa": [
+      {
+        "question": "Quels contrats de travail doivent obligatoirement être écrits et visés par l’ONAPE au Tchad ?",
+        "answer": "Les contrats avec des travailleurs étrangers, ceux impliquant une installation hors du lieu d’embauche, les CDD supérieurs à six mois et les CDI doivent être écrits et visés par l’Office Nationale de l’Emploi (ONAPE)."
+      },
+      {
+        "question": "Quels types de contrat de travail existent au Tchad ?",
+        "answer": "Il existe le contrat à durée déterminée (CDD) et le contrat à durée indéterminée (CDI)."
+      },
+      {
+        "question": "Quelle est la durée maximale d’un CDD au Tchad ?",
+        "answer": "Un CDD ne peut excéder  ans, renouvelable une seule fois. Les contrats de courte durée peuvent être renouvelés plusieurs fois si leur durée totale ne dépasse pas deux ans."
+      },
+      {
+        "question": "Quels types de congés sont prévus par la législation tchadienne du travail ?",
+        "answer": "Le congé annuel payé, le congé pour formation, le congé de maternité/paternité, le congé pour maladie et les permissions d’absence pour accidents de travail."
+      },
+      {
+        "question": "Quelle est la durée du congé annuel au Tchad ?",
+        "answer": "Le travailleur a droit à vingt-quatre (24) jours de congé par an, soit deux jours ouvrables par mois de travail effectif."
+      },
+      {
+        "question": "Quelles permissions exceptionnelles peuvent être accordées aux travailleurs ?",
+        "answer": "Jusqu’à dix (10) jours pour des événements familiaux touchant directement le foyer du travailleur, sans déduction du congé annuel."
+      },
+      {
+        "question": "Dans quels cas un salarié peut-il être licencié au Tchad ?",
+        "answer": "Un salarié ne peut être licencié que pour un motif objectif et sérieux justifiant la rupture du contrat."
+      },
+      {
+        "question": "Quelles sont les indemnités prévues en cas de licenciement abusif d’un CDD ?",
+        "answer": "Le salarié a droit au paiement des salaires et avantages qu’il aurait perçus jusqu’à la fin du contrat."
+      },
+      {
+        "question": "Quelle indemnité est prévue pour licenciement sans respect de la procédure disciplinaire ?",
+        "answer": "Une indemnité égale au quart de l’indemnité principale est versée au salarié."
+      },
+      {
+        "question": "Comment est calculée l’indemnité de licenciement d’un salarié en CDI ?",
+        "answer": "Elle est calculée sur le salaire mensuel brut moyen des 12 derniers mois, à raison de 25 % par an pour les 5 premières années, 30 % pour les 5 suivantes et 35 % à partir de la onzième année."
+      },
+      {
+        "question": "Quel est le taux global des cotisations sociales au Tchad ?",
+        "answer": "Les cotisations patronales s’élèvent à 16,5 % et la part salariale à 3,5 % du salaire brut, indemnités et avantages inclus."
+      },
+      {
+        "question": "Comment sont réparties les cotisations patronales ?",
+        "answer": "7,5 % pour les prestations familiales et maternité, 5 % pour les pensions de vieillesse et 4 % pour les accidents de travail et maladies professionnelles."
+      },
+      {
+        "question": "À quelle institution sont versées les cotisations sociales des salariés ?",
+        "answer": "À la Caisse Nationale de Prévoyance Sociale (CNPS)."
+      },
+      {
+        "question": "À quelle fréquence les cotisations sociales doivent-elles être payées ?",
+        "answer": "Mensuellement pour les employeurs ayant 20 employés ou plus, et trimestriellement pour ceux ayant moins de 20 salariés."
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "theme": "ASSURANCE",
+    "qa": [
+      {
+        "question": "Quelle institution régit le secteur des assurances au Tchad ?",
+        "answer": "Le secteur des assurances est régi par la Conférence Interafricaine des Marchés d’Assurance (CIMA)."
+      },
+      {
+        "question": "Combien de pays composent la CIMA ?",
+        "answer": "La CIMA regroupe quatorze (14) pays africains."
+      },
+      {
+        "question": "Quels sont les organes principaux de la CIMA ?",
+        "answer": "Le Conseil des Ministres des Assurances (CMA), la Commission Régionale de Contrôle des Assurances (CRCA) et le Secrétariat Général."
+      },
+      {
+        "question": "Quel est le rôle du Conseil des Ministres des Assurances (CMA) ?",
+        "answer": "C’est l’organe politique et directeur regroupant les ministres des assurances des États membres, chargé d’assurer la réalisation des objectifs du Traité CIMA."
+      },
+      {
+        "question": "Quel est le rôle de la Commission Régionale de Contrôle des Assurances (CRCA) ?",
+        "answer": "La CRCA contrôle les sociétés d’assurance et de réassurance par des inspections sur pièces et sur place et veille au respect de la réglementation."
+      },
+      {
+        "question": "Quelles sanctions peut prononcer la CRCA contre une société d’assurance ?",
+        "answer": "Avertissement, blâme, limitation d’activités, suspension, démission d’office des dirigeants ou retrait d’agrément."
+      },
+      {
+        "question": "Quel est le rôle du Secrétariat Général de la CIMA ?",
+        "answer": "Il assiste les deux autres organes, prépare et suit leurs travaux et contribue à la réalisation des objectifs du Traité CIMA."
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "theme": "DROIT COMPTABLE",
+    "qa": [
+      {
+        "question": "Quel est le principal référentiel comptable en vigueur au Tchad ?",
+        "answer": "Le Système Comptable OHADA (SYSCOHADA), défini par l’Acte uniforme OHADA sur le Droit Comptable et l’Information Financière (AUDCIF)."
+      },
+      {
+        "question": "Quels sont les autres plans comptables applicables dans des secteurs spécifiques ?",
+        "answer": "Le Plan Comptable des Établissements de Crédit (PCEC) pour les banques et le plan comptable du Code CIMA pour les assurances."
+      },
+      {
+        "question": "Quelles entités sont soumises à la tenue d’une comptabilité selon l’AUDCIF ?",
+        "answer": "Les entités commerciales, publiques, parapubliques, d’économie mixte ou produisant des biens et services marchands ou non marchands."
+      },
+      {
+        "question": "Quels sont les grands principes comptables du système OHADA ?",
+        "answer": "La prudence, la permanence des méthodes, la spécialisation des exercices, le coût historique, la continuité d’exploitation, la transparence, la prééminence de la réalité économique et la correspondance bilan d’ouverture-bilan de clôture."
+      },
+      {
+        "question": "Quels systèmes comptables distingue-t-on dans le SYSCOHADA ?",
+        "answer": "Le Système Normal (droit commun) et le Système Minimal de Trésorerie (SMT) applicable aux petites entreprises."
+      },
+      {
+        "question": "À quelles entreprises s’applique le Système Minimal de Trésorerie ?",
+        "answer": "Aux entreprises dont le chiffre d’affaires est inférieur à 60 millions FCFA pour le négoce, 40 millions pour l’artisanat et 30 millions pour les services."
+      },
+      {
+        "question": "Quels sont les états financiers obligatoires selon le SYSCOHADA ?",
+        "answer": "Le bilan, le compte de résultat, le tableau des flux de trésorerie et les notes annexes."
+      },
+      {
+        "question": "Que décrit le bilan comptable ?",
+        "answer": "Le bilan décrit les éléments d’actif et de passif constituant le patrimoine de l’entreprise et distingue les capitaux propres."
+      },
+      {
+        "question": "À quoi sert le compte de résultat ?",
+        "answer": "Il récapitule les produits et les charges pour déterminer le bénéfice ou la perte nette de l’exercice."
+      },
+      {
+        "question": "Que retrace le tableau des flux de trésorerie ?",
+        "answer": "Les mouvements d’entrée et de sortie de liquidités au cours de l’exercice."
+      },
+      {
+        "question": "À quoi servent les notes annexes ?",
+        "answer": "Elles complètent et précisent les informations contenues dans les autres états financiers."
+      },
+      {
+        "question": "Quelles entreprises doivent établir des comptes consolidés ?",
+        "answer": "Toute entreprise qui contrôle de manière exclusive ou conjointe une ou plusieurs autres entreprises ou exerce sur elles une influence notable."
+      },
+      {
+        "question": "Quelles sont les entreprises concernées par les comptes combinés ?",
+        "answer": "Celles constituant un ensemble économique sous un même centre stratégique de décision situé hors de la région OHADA, sans liens juridiques de domination."
+      },
+      {
+        "question": "Quand les états financiers doivent-ils être arrêtés ?",
+        "answer": "Au plus tard quatre mois après la clôture de l’exercice, fixée au 31 décembre."
+      },
+      {
+        "question": "Quels sont les documents comptables obligatoires ?",
+        "answer": "Le livre-journal, le grand livre, la balance générale des comptes et le livre d’inventaire."
+      },
+      {
+        "question": "Quelles opérations spécifiques font l’objet de dispositions particulières ?",
+        "answer": "Le crédit-bail, la réserve de propriété, les opérations en monnaies étrangères, les contrats pluri-exercices, la réévaluation des bilans, les GIE, la concession de service public, etc."
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "theme": "PROPRIÉTÉ INTELLECTUELLE",
+    "qa": [
+      {
+        "question": "Le Tchad est-il membre d'une organisation régionale pour la propriété intellectuelle ?",
+        "answer": "Oui, le Tchad est membre de l’Organisation Africaine de la Propriété Intellectuelle (OAPI)."
+      },
+      {
+        "question": "Où se situe le registre central de l’OAPI ?",
+        "answer": "Le registre central de l’OAPI est situé au Cameroun."
+      },
+      {
+        "question": "Quels droits de propriété intellectuelle sont protégés par l’OAPI ?",
+        "answer": "L’OAPI protège les marques, brevets, noms commerciaux, indications géographiques, dessins et modèles industriels."
+      },
+      {
+        "question": "Une demande déposée à l’OAPI couvre-t-elle plusieurs pays ?",
+        "answer": "Oui, une demande OAPI couvre automatiquement tous les États membres de l’organisation."
+      },
+      {
+        "question": "Pourquoi les États membres de l’OAPI ont-ils renoncé à leurs lois nationales ?",
+        "answer": "Ils ont renoncé à leurs lois nationales sur la propriété intellectuelle afin de permettre une protection uniforme à travers l’OAPI."
+      },
+      {
+        "question": "Quel est le rôle principal de l’OAPI ?",
+        "answer": "L’OAPI délivre les titres de protection et assure une protection uniforme des droits de propriété intellectuelle sur le territoire de ses États membres."
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "theme": "ARBITRAGE ET RÉSOLUTION DES LITIGES",
+    "qa": [
+      {
+        "question": "Quel est le rôle de la Cour Commune de Justice et d’Arbitrage (CCJA) ?",
+        "answer": "La CCJA est l’institution spécialisée de l’OHADA chargée d’assurer l’interprétation et l’application communes du droit OHADA. Elle est à la fois consultative, judiciaire et arbitrale."
+      },
+      {
+        "question": "Où est située la Cour Commune de Justice et d’Arbitrage (CCJA) ?",
+        "answer": "Elle est sise à Abidjan, en Côte d’Ivoire."
+      },
+      {
+        "question": "Combien de juges composent la CCJA et pour quelle durée de mandat ?",
+        "answer": "La CCJA est composée de treize juges élus pour un mandat de sept ans non renouvelable."
+      },
+      {
+        "question": "Quels sont les trois rôles de la CCJA ?",
+        "answer": "Consultatif (avis sur l’interprétation du Traité), judiciaire (pourvois en dernier ressort) et arbitral (gestion d’un centre d’arbitrage institutionnel)."
+      },
+      {
+        "question": "Qu’est-ce que la Cour de Justice de la CEMAC (CJ-CEMAC) ?",
+        "answer": "C’est une institution communautaire chargée du contrôle juridictionnel, budgétaire et du respect des traités de la CEMAC par les États membres et institutions."
+      },
+      {
+        "question": "Quelles sont les principales compétences de la CJ-CEMAC ?",
+        "answer": "Elle statue en dernier ressort sur les violations des traités de la CEMAC, les litiges d’interprétation, les différends entre la COBAC et les établissements de crédit, et les litiges internes entre la CEMAC et ses agents."
+      },
+      {
+        "question": "La CJ-CEMAC dispose-t-elle d’un centre d’arbitrage ?",
+        "answer": "Oui, elle connaît également des arbitrages de litiges qui lui sont soumis par compromis ou clause compromissoire."
+      },
+      {
+        "question": "Qu’est-ce que le Centre International pour le Règlement des Différends relatifs aux Investissements (CIRDI) ?",
+        "answer": "Le CIRDI, situé à Washington (États-Unis), est une institution internationale offrant des services de conciliation et d’arbitrage pour les différends relatifs aux investissements."
+      },
+      {
+        "question": "Quels types de différends le CIRDI traite-t-il ?",
+        "answer": "Il traite les différends juridiques entre un État contractant ou une collectivité publique et un ressortissant d’un autre État contractant liés à un investissement."
+      },
+      {
+        "question": "Quelle condition est nécessaire pour la compétence du CIRDI ?",
+        "answer": "Le consentement écrit des parties au différend est requis et ce consentement ne peut être révoqué unilatéralement."
+      }
+    ]
+  }
+]
