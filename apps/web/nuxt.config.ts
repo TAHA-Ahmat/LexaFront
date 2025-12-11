@@ -182,7 +182,15 @@ export default defineNuxtConfig({
     // En prod: IPX active avec toutes les optimisations (WebP, AVIF, srcset)
     provider: process.env.NUXT_IMAGE_PROVIDER || 'ipx',
     ipx: {
-      dir: 'public'
+      dir: 'public',
+      // Configuration Sharp explicite pour Vercel
+      sharp: {
+        // Options Sharp pour optimisation production
+        quality: 80,
+        progressive: true,
+        optimizeScans: true,
+        chromaSubsampling: '4:2:0'
+      }
     }
   },
 
