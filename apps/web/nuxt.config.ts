@@ -177,8 +177,10 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536
     },
-    // Configuration IPX pour trouver les images dans public/
-    provider: 'ipx',
+    // FIX Windows: provider 'none' en dev (Sharp incompatible), 'ipx' en production
+    // En dev: <NuxtImg> devient <img> natif sans transformation
+    // En prod: IPX active avec toutes les optimisations (WebP, AVIF, srcset)
+    provider: process.env.NUXT_IMAGE_PROVIDER || 'ipx',
     ipx: {
       dir: 'public'
     }

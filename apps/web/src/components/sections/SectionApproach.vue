@@ -29,11 +29,15 @@
                 data-aos="fade-up"
                 data-aos-delay="0"
               >
-                <img
+                <NuxtImg
                   :src="images.img1"
                   alt="Équipe Lexafric en réunion collaborative"
+                  width="800"
+                  height="533"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="eager"
+                  loading="lazy"
+                  format="webp"
+                  quality="85"
                   style="display: block;"
                 />
               </div>
@@ -45,11 +49,15 @@
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <img
+                <NuxtImg
                   :src="images.img2"
                   alt="Bureau professionnel Lexafric"
+                  width="800"
+                  height="533"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="eager"
+                  loading="lazy"
+                  format="webp"
+                  quality="85"
                   style="display: block;"
                 />
               </div>
@@ -61,11 +69,15 @@
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <img
+                <NuxtImg
                   :src="images.img3"
                   alt="Banderoles Lexafric"
+                  width="800"
+                  height="533"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="eager"
+                  loading="lazy"
+                  format="webp"
+                  quality="85"
                   style="display: block;"
                 />
               </div>
@@ -77,11 +89,15 @@
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <img
+                <NuxtImg
                   :src="images.img4"
                   alt="Professionnel Lexafric"
+                  width="800"
+                  height="533"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="eager"
+                  loading="lazy"
+                  format="webp"
+                  quality="85"
                   style="display: block;"
                 />
               </div>
@@ -93,11 +109,15 @@
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                <img
+                <NuxtImg
                   :src="images.img5"
                   alt="Expert Lexafric"
+                  width="800"
+                  height="533"
                   class="w-full h-full object-cover rounded-xl shadow-2xl"
-                  loading="eager"
+                  loading="lazy"
+                  format="webp"
+                  quality="85"
                   style="display: block;"
                 />
               </div>
@@ -192,46 +212,66 @@
             <!-- Images en grilles -->
             <div class="aos-init space-y-6" data-aos="fade-up">
               <div class="rounded-xl overflow-hidden shadow-xl">
-                <img
+                <NuxtImg
                   :src="images.img1"
                   alt="Équipe Lexafric"
+                  width="800"
+                  height="533"
                   class="w-full h-auto aspect-video object-cover"
                   loading="lazy"
+                  format="webp"
+                  quality="85"
                 />
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div class="rounded-xl overflow-hidden shadow-lg">
-                  <img
+                  <NuxtImg
                     :src="images.img2"
                     alt="Bureau Lexafric"
+                    width="800"
+                    height="533"
                     class="w-full h-56 object-cover"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
-                  <img
+                  <NuxtImg
                     :src="images.img3"
                     alt="Banderoles Lexafric"
+                    width="800"
+                    height="533"
                     class="w-full h-56 object-cover"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                 </div>
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div class="rounded-xl overflow-hidden shadow-lg">
-                  <img
+                  <NuxtImg
                     :src="images.img4"
                     alt="Professionnel Lexafric"
+                    width="800"
+                    height="533"
                     class="w-full h-64 object-cover"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
-                  <img
+                  <NuxtImg
                     :src="images.img5"
                     alt="Expert Lexafric"
+                    width="800"
+                    height="533"
                     class="w-full h-64 object-cover"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                 </div>
               </div>
@@ -338,12 +378,16 @@
                   </div>
 
                   <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-blue-300 dark:border-blue-600 group-hover:border-blue-500 dark:group-hover:border-blue-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
-                    <img
+                    <NuxtImg
                       src="/images/Salle_Reunion/4.webp"
                       alt="Analyse - Méthodologie Lexafric"
+                      width="1000"
+                      height="666"
                       class="absolute inset-0 w-full h-full object-cover"
                       style="z-index: 0;"
                       loading="lazy"
+                      format="webp"
+                      quality="85"
                     />
                     <!-- Overlay gradient léger pour voir l'image -->
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
@@ -370,12 +414,16 @@
                   </div>
 
                   <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-emerald-300 dark:border-emerald-600 group-hover:border-emerald-500 dark:group-hover:border-emerald-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
-                    <img
+                    <NuxtImg
                       src="/images/team/25.webp"
                       alt="Conseil - Méthodologie Lexafric"
+                      width="1000"
+                      height="666"
                       class="absolute inset-0 w-full h-full object-cover"
                       style="z-index: 0;"
                       loading="lazy"
+                      format="webp"
+                      quality="85"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
@@ -401,12 +449,16 @@
                   </div>
 
                   <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-purple-300 dark:border-purple-600 group-hover:border-purple-500 dark:group-hover:border-purple-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
-                    <img
+                    <NuxtImg
                       src="/images/team/IMG_6393.webp"
                       alt="Mise en œuvre - Méthodologie Lexafric"
+                      width="666"
+                      height="1000"
                       class="absolute inset-0 w-full h-full object-cover"
                       style="z-index: 0;"
                       loading="lazy"
+                      format="webp"
+                      quality="85"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
@@ -432,12 +484,16 @@
                   </div>
 
                   <div class="relative overflow-hidden rounded-xl shadow-md group-hover:shadow-2xl transition-all duration-500 border-2 border-amber-300 dark:border-amber-600 group-hover:border-amber-500 dark:group-hover:border-amber-400 group-hover:-translate-y-2 group-hover:scale-105 min-h-[200px]">
-                    <img
+                    <NuxtImg
                       src="/images/team/27.webp"
                       alt="Suivi - Méthodologie Lexafric"
+                      width="1000"
+                      height="666"
                       class="absolute inset-0 w-full h-full object-cover"
                       style="z-index: 0;"
                       loading="lazy"
+                      format="webp"
+                      quality="85"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
@@ -469,12 +525,16 @@
               </div>
               <div class="flex-1 pb-8">
                 <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-blue-300 dark:border-blue-600 min-h-[160px]">
-                  <img
+                  <NuxtImg
                     src="/images/Salle_Reunion/4.webp"
                     alt="Analyse - Méthodologie Lexafric"
+                    width="800"
+                    height="533"
                     class="absolute inset-0 w-full h-full object-cover"
                     style="z-index: 0;"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
@@ -501,12 +561,16 @@
               </div>
               <div class="flex-1 pb-8">
                 <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-emerald-300 dark:border-emerald-600 min-h-[160px]">
-                  <img
+                  <NuxtImg
                     src="/images/team/25.webp"
                     alt="Conseil - Méthodologie Lexafric"
+                    width="800"
+                    height="533"
                     class="absolute inset-0 w-full h-full object-cover"
                     style="z-index: 0;"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
@@ -533,12 +597,16 @@
               </div>
               <div class="flex-1 pb-8">
                 <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-purple-300 dark:border-purple-600 min-h-[160px]">
-                  <img
+                  <NuxtImg
                     src="/images/team/IMG_6393.webp"
                     alt="Mise en œuvre - Méthodologie Lexafric"
+                    width="533"
+                    height="800"
                     class="absolute inset-0 w-full h-full object-cover"
                     style="z-index: 0;"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
@@ -564,12 +632,16 @@
               </div>
               <div class="flex-1">
                 <div class="relative overflow-hidden rounded-xl shadow-md border-2 border-amber-300 dark:border-amber-600 min-h-[160px]">
-                  <img
+                  <NuxtImg
                     src="/images/team/27.webp"
                     alt="Suivi - Méthodologie Lexafric"
+                    width="800"
+                    height="533"
                     class="absolute inset-0 w-full h-full object-cover"
                     style="z-index: 0;"
                     loading="lazy"
+                    format="webp"
+                    quality="85"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">

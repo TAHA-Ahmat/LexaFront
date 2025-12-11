@@ -27,8 +27,8 @@
             <NuxtImg
               src="/images/Exterieur/juridique.webp"
               alt="Assistance juridique Lexafric"
-              width="5760"
-              height="3840"
+              width="1200"
+              height="800"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
@@ -76,8 +76,8 @@
             <NuxtImg
               src="/images/team/27.webp"
               alt="Assistance fiscale Lexafric"
-              width="5760"
-              height="3840"
+              width="1200"
+              height="800"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
@@ -123,8 +123,8 @@
             <NuxtImg
               src="/images/Exterieur/sociale.webp"
               alt="Assistance sociale Lexafric"
-              width="5760"
-              height="3840"
+              width="1200"
+              height="800"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
@@ -170,8 +170,8 @@
             <NuxtImg
               src="/images/team/28.webp"
               alt="Assistance recrutement Lexafric"
-              width="1810"
-              height="1706"
+              width="1200"
+              height="800"
               class="absolute inset-0 w-full h-full object-cover"
               style="z-index: 0; display: block;"
               loading="lazy"
