@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white border-b border-blue-700/50">
+  <!-- Masquée sur mobile (41px de header sticky récupérés) : le sélecteur de
+       langue est disponible dans le tiroir du menu -->
+  <div class="hidden sm:block w-full bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white border-b border-blue-700/50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-between">
       <!-- Informations de contact à gauche -->
       <div class="flex items-center gap-4 text-xs text-blue-100">
@@ -20,7 +22,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
         </svg>
         <NuxtLink
-          v-for="(l, index) in availableLocales"
+          v-for="l in availableLocales"
           :key="l.code"
           :to="switchLocalePath(l.code)"
           class="text-xs uppercase tracking-wider hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50 rounded px-2.5 py-2.5 -my-1 inline-flex items-center transition-all"
@@ -28,7 +30,6 @@
           :aria-current="locale === l.code ? 'true' : 'false'"
         >
           {{ l.code }}
-          <span v-if="index < availableLocales.length - 1" class="mx-1 text-blue-400">|</span>
         </NuxtLink>
       </div>
     </div>

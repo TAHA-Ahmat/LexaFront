@@ -305,8 +305,12 @@
   filter: blur(8px);
 }
 
-/* AOS - Éviter le flash avant init */
-[data-aos]:not(.aos-animate) {
+/* AOS - Éviter le flash avant init.
+   Ne masque que si AOS a réellement démarré : AOS pose data-aos-easing sur <body>
+   uniquement quand il n'est pas désactivé. Sur mobile (disable:'mobile') le body
+   n'a jamais cet attribut => le contenu reste visible (fix : images/sections
+   invisibles après navigation SPA / changement de langue). */
+body[data-aos-easing] [data-aos]:not(.aos-animate) {
   opacity: 0;
   pointer-events: none;
 }

@@ -62,7 +62,7 @@
 
       <!-- Mobile hamburger -->
       <button
-        class="hamburger-btn lg:hidden ml-auto inline-flex items-center justify-center h-10 w-10 landscape:h-9 landscape:w-9 rounded-lg
+        class="hamburger-btn lg:hidden ml-auto inline-flex items-center justify-center h-11 w-11 landscape:h-10 landscape:w-10 rounded-lg
                text-gray-700 hover:text-blue-600 hover:bg-blue-50 dark:text-gray-200 dark:hover:text-white dark:hover:bg-gray-800
                focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-out
                hover:scale-110 active:scale-95 hover:rotate-12"
@@ -79,6 +79,10 @@
       </button>
     </div>
 
+    <!-- Drawer téléporté dans <body> : le backdrop-blur du header crée un
+         containing block qui piégeait l'overlay et le tiroir position:fixed
+         (overlay limité à la boîte du header, tiroir décalé). -->
+    <Teleport to="body">
     <!-- Mobile drawer overlay with blur - Bloque le scroll de la page -->
     <transition name="fade">
       <div
@@ -156,6 +160,20 @@
           </ul>
         </nav>
 
+        <!-- Sélecteur de langue (la TopLangBar est masquée sur mobile) -->
+        <div class="flex items-center justify-center gap-2 px-3 py-2 border-t border-gray-200 dark:border-gray-800">
+          <NuxtLink
+            v-for="l in availableLocales"
+            :key="l.code"
+            :to="switchLocalePath(l.code)"
+            class="px-4 py-2 rounded-lg text-sm font-semibold uppercase tracking-wider transition-colors"
+            :class="locale === l.code ? 'bg-blue-600 text-white' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'"
+            @click="closeMobile"
+          >
+            {{ l.code }}
+          </NuxtLink>
+        </div>
+
         <!-- Footer fixé en bas - Compact et toujours visible avec marge de sécurité -->
         <div class="border-t border-gray-200 dark:border-gray-800 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-900 dark:to-blue-950/30 flex-shrink-0 px-3 pt-2 pb-5">
           <!-- Bouton téléphone compact -->
@@ -176,13 +194,16 @@
         </div>
       </aside>
     </transition>
+    </Teleport>
   </header>
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale, locales } = useI18n()
 const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
 const route = useRoute()
+const availableLocales = computed(() => locales.value as Array<{ code: string }>)
 
 const items = [
   { to: '/',          label: 'nav.home' },
@@ -345,10 +366,10 @@ onMounted(() => {
   transform: translateX(100%) translateY(100%) rotate(45deg);
 }
 
-/* Pulsation subtile au repos pour attirer l'attention */
+/* Animation d'entrée seule : la pulsation infinie de box-shadow forçait un
+   repaint par frame en continu (coût batterie mobile) */
 .drawer-logo-container {
-  animation: drawer-logo-pop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s both,
-             subtle-pulse 3s ease-in-out 1s infinite;
+  animation: drawer-logo-pop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s both;
 }
 
 @keyframes subtle-pulse {
@@ -401,8 +422,9 @@ onMounted(() => {
   transform: scale(1);
 }
 
+/* Pulsation infinie retirée (animation en boucle H24 sans valeur) */
 .hamburger-icon {
-  animation: hamburger-pulse 2s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes hamburger-pulse {

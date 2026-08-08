@@ -441,12 +441,14 @@ onMounted(() => {
     }
   }, 3000)
 
-  // Rotation des placeholders toutes les 4 secondes
-  setInterval(() => {
-    if (userInput.value.length === 0) {
+  // Rotation des placeholders toutes les 4 secondes (nettoyé au démontage,
+  // et seulement quand la fenêtre de chat est ouverte)
+  const placeholderInterval = setInterval(() => {
+    if (isOpen.value && userInput.value.length === 0) {
       currentPlaceholderIndex.value = (currentPlaceholderIndex.value + 1) % placeholders.length
     }
   }, 4000)
+  onBeforeUnmount(() => clearInterval(placeholderInterval))
 
   // Détecter l'ouverture du drawer mobile (quand body a overflow: hidden)
   const checkDrawerState = () => {
@@ -762,8 +764,9 @@ const sendMessage = async () => {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 90px;
-  height: 90px;
+  /* 90px occupait 23% de la largeur d'un iPhone et masquait CTA/footer */
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   border: none;
   border-radius: 50%;
@@ -787,8 +790,8 @@ const sendMessage = async () => {
 }
 
 .chat-icon-img {
-  width: 80px;
-  height: 80px;
+  width: 52px;
+  height: 52px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -810,8 +813,8 @@ const sendMessage = async () => {
   font-size: 12px;
   font-weight: 700;
   box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
-  animation: badgePop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-             badgePulse 2s ease-in-out 1s infinite;
+  /* badgePulse infini retiré : animation de box-shadow = repaint par frame */
+  animation: badgePop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   z-index: 10;
 }
 
@@ -845,9 +848,10 @@ const sendMessage = async () => {
   }
 }
 
-/* Bounce + Rotation de l'avatar */
+/* Bounce + Rotation de l'avatar : 3 itérations puis repos (au lieu d'une
+   boucle infinie permanente) */
 .chatbot-button.has-notification .chat-icon-img {
-  animation: bounceRotate 2s ease-in-out infinite;
+  animation: bounceRotate 2s ease-in-out 3;
 }
 
 @keyframes bounceRotate {
@@ -920,8 +924,8 @@ const sendMessage = async () => {
 }
 
 .header-avatar {
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.3);
@@ -1155,9 +1159,10 @@ const sendMessage = async () => {
   justify-content: flex-start;
 }
 
+/* 80px par message laissait ~250px de largeur de bulle sur iPhone */
 .message-avatar {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border-radius: 50%;
   flex-shrink: 0;

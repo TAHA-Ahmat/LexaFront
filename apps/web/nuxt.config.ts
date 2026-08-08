@@ -73,7 +73,10 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg,ico,webp,avif}'],
+      // Images exclues du precache : 7,6 Mo étaient téléchargés en tâche de
+      // fond dès la 1re visite (coût 4G). Elles restent cachées à la demande
+      // par runtimeCaching.
+      globPatterns: ['**/*.{js,css,html,ico,svg}'],
       maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB (pour hero-background.png)
       runtimeCaching: [
         {
@@ -169,7 +172,10 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: false,
-    lazy: true,
+    // lazy désactivé : le chargement différé des locales échouait après un
+    // redéploiement (service worker iOS servant un precache périmé) => textes
+    // figés dans l'ancienne langue au switch. Les 3 JSON sont bundlés.
+    lazy: false,
     langDir: 'locales',
     // Configuration i18n v9 - Désactiver optimizeTranslationDirective
     bundle: {

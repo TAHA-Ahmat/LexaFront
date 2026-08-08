@@ -191,6 +191,14 @@ onMounted(() => {
   pointer-events: none;
 }
 
+/* Mobile : 15 animations infinies simultanées pour un effet quasi invisible
+   (opacité 0.3) = drain batterie. Les étoiles restent sur desktop. */
+@media (max-width: 767px) {
+  .stars-container {
+    display: none;
+  }
+}
+
 @keyframes star {
   0%, 100% {
     transform: translateY(0) scale(1);

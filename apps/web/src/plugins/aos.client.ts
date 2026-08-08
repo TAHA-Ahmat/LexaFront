@@ -35,5 +35,12 @@ export default defineNuxtPlugin((nuxtApp) => {
         AOS.refresh()
       })
     })
+
+    // Après chaque navigation SPA (dont changement de langue), les nouveaux
+    // éléments [data-aos] ne sont jamais traités par AOS sinon => opacity 0
+    // permanent via le CSS anti-flash. refreshHard() re-scanne le DOM.
+    nuxtApp.hook('page:finish', () => {
+      nextTick(() => AOS.refreshHard())
+    })
   }
 })

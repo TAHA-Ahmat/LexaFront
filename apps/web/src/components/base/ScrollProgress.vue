@@ -130,6 +130,9 @@ onUnmounted(() => {
   width: 0;
   transition: opacity 0.3s ease;
   will-change: width, height;
+  /* Sans ceci, le shimmer de 100px glissait hors de la barre (visible en
+     haut à gauche de l'écran même à largeur 0) */
+  overflow: hidden;
 }
 
 .scroll-progress-wrapper.left .scroll-progress-bar,

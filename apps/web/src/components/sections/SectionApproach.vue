@@ -676,8 +676,10 @@
           </div>
         </div>
 
-        <!-- Valeurs : Grille 2x2 avec Hover Effects -->
-        <div>
+        <!-- Valeurs : Grille 2x2 avec Hover Effects.
+             Masquée sur mobile : les 4 valeurs sont déjà affichées dans la
+             pile mobile plus haut (doublon visuel avéré). -->
+        <div class="hidden lg:block">
           <h3 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
             {{ $t('pages.home.approach.values.title') }}
           </h3>
@@ -1146,24 +1148,27 @@ const handleScroll = () => {
     }
 }
 
+/* Halos statiques : les 4 glowPulse infinis animaient des box-shadow
+   (non compositables) => repaint complet par frame sur mobile. L'alpha 4
+   (invalide, clampé à 1) rendait en plus les halos aveuglants. */
 .method-step-glow-blue {
-  animation: glowPulse 3s ease-in-out infinite;
-  color: rgba(59, 130, 246, 4);
+  box-shadow: 0 0 30px currentColor;
+  color: rgba(59, 130, 246, 0.4);
 }
 
 .method-step-glow-emerald {
-  animation: glowPulse 3s ease-in-out infinite 0.3s;
-  color: rgba(16, 185, 129, 4);
+  box-shadow: 0 0 30px currentColor;
+  color: rgba(16, 185, 129, 0.4);
 }
 
 .method-step-glow-purple {
-  animation: glowPulse 3s ease-in-out infinite 0.6s;
-  color: rgba(147, 51, 234, 4);
+  box-shadow: 0 0 30px currentColor;
+  color: rgba(147, 51, 234, 0.4);
 }
 
 .method-step-glow-amber {
-  animation: glowPulse 3s ease-in-out infinite 0.9s;
-  color: rgba(245, 158, 11, 4);
+  box-shadow: 0 0 30px currentColor;
+  color: rgba(245, 158, 11, 0.4);
 }
 
 </style>

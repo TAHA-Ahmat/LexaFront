@@ -1054,7 +1054,8 @@ useSeoMeta({
    ======================================== */
 .whatsapp-fab {
   position: fixed;
-  bottom: 2rem;
+  /* Au-dessus du bouton chat (60px + marges) pour ne jamais être recouvert */
+  bottom: 7rem;
   right: 2rem;
   z-index: 50;
   animation: fab-entrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s both;
@@ -1092,7 +1093,7 @@ useSeoMeta({
 
 @media (max-width: 767px) {
   .whatsapp-fab {
-    bottom: 1rem;
+    bottom: 6.5rem;
     right: 1rem;
   }
 
@@ -1156,5 +1157,14 @@ useSeoMeta({
   .cards-grid {
     max-width: 700px;
   }
+}
+
+/* Les cartes étant retournées d'office, les faces avant sont invisibles
+   (backface-visibility) mais leurs ~11 animations infinies (float, pulse-ring,
+   bounce, aiguilles d'horloge...) tournaient quand même => repaint permanent.
+   On les coupe tant que la carte est retournée. */
+.satellite-card.flipped .card-front,
+.satellite-card.flipped .card-front * {
+  animation: none !important;
 }
 </style>
