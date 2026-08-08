@@ -19,6 +19,19 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt'
   ],
 
+  // Pages retirées : /articles (placeholder) et /offres (orpheline, doublon de /services)
+  routeRules: {
+    '/articles/**': { redirect: { to: '/', statusCode: 301 } },
+    '/en/articles/**': { redirect: { to: '/en', statusCode: 301 } },
+    '/ar/articles/**': { redirect: { to: '/ar', statusCode: 301 } },
+    '/articles': { redirect: { to: '/', statusCode: 301 } },
+    '/en/articles': { redirect: { to: '/en', statusCode: 301 } },
+    '/ar/articles': { redirect: { to: '/ar', statusCode: 301 } },
+    '/offres': { redirect: { to: '/services', statusCode: 301 } },
+    '/en/offres': { redirect: { to: '/en/services', statusCode: 301 } },
+    '/ar/offres': { redirect: { to: '/ar/services', statusCode: 301 } }
+  },
+
   // Configuration PWA
   pwa: {
     registerType: 'autoUpdate',

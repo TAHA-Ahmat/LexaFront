@@ -71,15 +71,6 @@
   </url>
 
   <!-- Articles -->
-  <url>
-    <loc>https://lexafric.com/articles</loc>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://lexafric.com/articles" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://lexafric.com/en/articles" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://lexafric.com/ar/articles" />
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
   <!-- Legal -->
   <url>
     <loc>https://lexafric.com/mentions-legales</loc>

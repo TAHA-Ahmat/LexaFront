@@ -34,6 +34,7 @@
               loading="lazy"
               format="webp"
               quality="85"
+            sizes="(min-width:1024px) 400px, (min-width:768px) 50vw, 100vw"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
@@ -83,6 +84,7 @@
               loading="lazy"
               format="webp"
               quality="85"
+            sizes="(min-width:1024px) 400px, (min-width:768px) 50vw, 100vw"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
@@ -130,6 +132,7 @@
               loading="lazy"
               format="webp"
               quality="85"
+            sizes="(min-width:1024px) 400px, (min-width:768px) 50vw, 100vw"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>
@@ -177,6 +180,7 @@
               loading="lazy"
               format="webp"
               quality="85"
+            sizes="(min-width:1024px) 400px, (min-width:768px) 50vw, 100vw"
             />
             <!-- Overlay sombre pour lisibilité -->
             <div class="card-image-overlay absolute inset-0" :style="{ zIndex: 1 }"></div>

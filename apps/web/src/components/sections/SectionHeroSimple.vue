@@ -111,6 +111,11 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 
+// Précharge l'image LCP (fond hero servi en CSS, hors pipeline NuxtImg)
+useHead({
+  link: [{ rel: 'preload', as: 'image', href: '/images/Exterieur/hero-background.webp', fetchpriority: 'high' }]
+})
+
 // Image de fond hero (depuis public/ pour éviter erreurs hydration SSR)
 const heroBackgroundImage = '/images/Exterieur/hero-background.webp'
 

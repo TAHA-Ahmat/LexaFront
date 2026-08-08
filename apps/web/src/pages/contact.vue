@@ -11,11 +11,6 @@
         <div class="holographic-bg"></div>
       </div>
 
-      <!-- Orbital particles -->
-      <div class="particles-container">
-        <div v-for="i in 20" :key="i" class="particle" :style="getParticleStyle(i)"></div>
-      </div>
-
       <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <!-- Main Business Card -->
         <div
@@ -300,13 +295,13 @@ const localePath = useLocalePath()
 const cardSection = ref<HTMLElement | null>(null)
 const ctaButton = ref<HTMLButtonElement | null>(null)
 
-// State
-const cardsRevealed = ref(false)
+// State — coordonnées visibles immédiatement (pas de clic requis pour joindre le cabinet)
+const cardsRevealed = ref(true)
 const flippedCards = ref({
-  phone: false,
-  email: false,
-  address: false,
-  hours: false
+  phone: true,
+  email: true,
+  address: true,
+  hours: true
 })
 const ripplePhone = ref(false)
 const mouseX = ref(0)
@@ -366,19 +361,6 @@ const handlePhoneClick = () => {
   }, 600)
 }
 
-const getParticleStyle = (index: number) => {
-  const angle = (index / 20) * 360
-  const distance = 300 + Math.random() * 200
-  const duration = 10 + Math.random() * 20
-  const delay = Math.random() * 5
-
-  return {
-    '--angle': `${angle}deg`,
-    '--distance': `${distance}px`,
-    animationDuration: `${duration}s`,
-    animationDelay: `${delay}s`
-  }
-}
 
 // No additional setup needed for business card
 
