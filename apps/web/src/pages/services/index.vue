@@ -34,7 +34,7 @@
               </div>
 
               <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:gap-3 transition-all">
-                <span class="text-sm font-medium">Explorer nos solutions juridiques</span>
+                <span class="text-sm font-medium">{{ $t('pages.services.bento.explore') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -65,7 +65,7 @@
               </div>
 
               <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 group-hover:gap-3 transition-all">
-                <span class="text-sm font-medium">Optimiser votre fiscalité</span>
+                <span class="text-sm font-medium">{{ $t('pages.services.bento.optimize') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -96,7 +96,7 @@
               </div>
 
               <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 group-hover:gap-3 transition-all">
-                <span class="text-sm font-medium">Protéger vos équipes</span>
+                <span class="text-sm font-medium">{{ $t('pages.services.bento.protect') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -127,7 +127,7 @@
               </div>
 
               <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 group-hover:gap-3 transition-all">
-                <span class="text-sm font-medium">Trouver vos talents</span>
+                <span class="text-sm font-medium">{{ $t('pages.services.bento.recruit') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -160,7 +160,7 @@
               </div>
 
               <div class="flex items-center gap-2 text-gray-600 dark:text-gray-400 group-hover:text-rose-600 dark:group-hover:text-rose-400 group-hover:gap-3 transition-all">
-                <span class="text-sm font-medium">Former vos collaborateurs</span>
+                <span class="text-sm font-medium">{{ $t('pages.services.bento.train') }}</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

@@ -190,7 +190,14 @@
         "button": "Contactez-nous",
         "contactNow": "Contactez-nous dès aujourd'hui"
       },
-      "learnMore": "EN SAVOIR PLUS"
+      "learnMore": "EN SAVOIR PLUS",
+      "bento": {
+        "explore": "Explorer nos solutions juridiques",
+        "optimize": "Optimiser votre fiscalité",
+        "protect": "Protéger vos équipes",
+        "recruit": "Trouver vos talents",
+        "train": "Former vos collaborateurs"
+      }
     },
     "solutions": {
       "title": "Nos Solutions",
@@ -634,5 +641,11 @@
         "description": "Cabinet spécialisé en conseil juridique et fiscal fondé sur un réseau d'anciens collaborateurs de grands cabinets internationaux orientés vers les marchés africains. Plus de 10 ans d'expérience."
       }
     }
+  },
+  "footer": {
+    "tagline": "Votre partenaire juridique et fiscal de confiance en Afrique centrale.",
+    "rights": "Tous droits réservés.",
+    "developedBy": "Développé par",
+    "address": "N'Djamena, Tchad"
   }
 }
