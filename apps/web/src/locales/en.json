@@ -190,6 +190,13 @@
         "subtitle": "Our team of experts is at your service",
         "button": "Contact us",
         "contactNow": "Contact us today"
+      },
+      "bento": {
+        "explore": "Explore our legal solutions",
+        "optimize": "Optimize your taxation",
+        "protect": "Protect your teams",
+        "recruit": "Find your talent",
+        "train": "Train your staff"
       }
     },
     "solutions": {
@@ -607,5 +614,11 @@
         "description": "Specialized firm in legal and tax consulting founded on a network of former collaborators from major international firms focused on African markets. Over 10 years of experience."
       }
     }
+  },
+  "footer": {
+    "tagline": "Your trusted legal and tax partner in Central Africa.",
+    "rights": "All rights reserved.",
+    "developedBy": "Developed by",
+    "address": "N'Djamena, Chad"
   }
 }

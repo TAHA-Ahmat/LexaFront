@@ -15,37 +15,37 @@
         <div class="grid md:grid-cols-3 gap-8 md:gap-12 mb-12">
           <!-- Colonne 1: À propos -->
           <div>
-            <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-4">À Propos</h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-4">{{ $t('common.about') }}</h3>
             <p class="text-gray-400 text-sm leading-relaxed mb-4">
               {{ $t('pages.home.seo.description') }}
             </p>
             <p class="text-gray-500 text-xs">
-              Votre partenaire juridique et fiscal de confiance en Afrique centrale.
+              {{ $t('footer.tagline') }}
             </p>
           </div>
 
           <!-- Colonne 2: Nos Services -->
           <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Nos Services</h4>
+            <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">{{ $t('common.ourServices') }}</h4>
             <ul class="space-y-3">
               <li>
                 <NuxtLink :to="localePath('/services/assistance-juridique')" class="text-sm text-gray-400 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
-                  Assistance Juridique
+                  {{ $t('pages.services.legal.title') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink :to="localePath('/services/assistance-fiscale')" class="text-sm text-gray-400 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
-                  Assistance Fiscale
+                  {{ $t('pages.services.fiscal.title') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink :to="localePath('/services/assistance-sociale')" class="text-sm text-gray-400 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
-                  Assistance Sociale
+                  {{ $t('pages.services.social.title') }}
                 </NuxtLink>
               </li>
               <li>
                 <NuxtLink :to="localePath('/services/assistance-recrutement')" class="text-sm text-gray-400 hover:text-white transition-colors hover:translate-x-1 inline-block duration-300">
-                  Recrutement
+                  {{ $t('pages.services.recruitment.title') }}
                 </NuxtLink>
               </li>
             </ul>
@@ -53,7 +53,7 @@
 
           <!-- Colonne 3: Contact Direct -->
           <div>
-            <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Nous Contacter</h4>
+            <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">{{ $t('common.contactUs') }}</h4>
             <div class="space-y-4">
               <!-- Téléphone -->
               <a href="tel:+23522519166" class="flex items-start gap-3 text-sm text-gray-400 hover:text-white transition-colors group">
@@ -77,7 +77,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
-                <span>N'Djamena, Tchad</span>
+                <span>{{ $t('footer.address') }}</span>
               </div>
             </div>
           </div>
@@ -88,14 +88,14 @@
           <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <!-- Gauche: Copyright + Liens légaux -->
             <div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-sm text-gray-400">
-              <p>&copy; {{ new Date().getFullYear() }} Lexafric. Tous droits réservés.</p>
+              <p>&copy; {{ new Date().getFullYear() }} Lexafric. {{ $t('footer.rights') }}</p>
               <div class="flex items-center gap-3">
                 <NuxtLink :to="localePath('/mentions-legales')" class="hover:text-white transition-colors">
-                  Mentions légales
+                  {{ $t('common.legalNotice') }}
                 </NuxtLink>
                 <span class="text-gray-700">•</span>
                 <NuxtLink :to="localePath('/politique-confidentialite')" class="hover:text-white transition-colors">
-                  Politique de confidentialité
+                  {{ $t('common.privacyPolicy') }}
                 </NuxtLink>
               </div>
             </div>
@@ -106,7 +106,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
               </svg>
               <div class="text-sm">
-                <span class="text-gray-400">Développé par</span>
+                <span class="text-gray-400">{{ $t('footer.developedBy') }}</span>
                 <span class="ml-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   
                 

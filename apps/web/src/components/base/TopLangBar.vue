@@ -23,7 +23,7 @@
           v-for="(l, index) in availableLocales"
           :key="l.code"
           :to="switchLocalePath(l.code)"
-          class="text-xs uppercase tracking-wider hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50 rounded px-2 py-1 transition-all"
+          class="text-xs uppercase tracking-wider hover:text-white focus:outline-none focus:ring-2 focus:ring-white/50 rounded px-2.5 py-2.5 -my-1 inline-flex items-center transition-all"
           :class="locale === l.code ? 'text-white font-bold bg-white/10' : 'text-blue-200'"
           :aria-current="locale === l.code ? 'true' : 'false'"
         >
