@@ -28,7 +28,7 @@
           <div class="header-text">
             <h3>{{ $t('chatbot.title') }}</h3>
             <p class="ai-badge">
-              <span class="ai-chip">💬 Assistant d'orientation</span>
+              <span class="ai-chip">💬 {{ $t('chatbot.role') }}</span>
             </p>
           </div>
         </div>
