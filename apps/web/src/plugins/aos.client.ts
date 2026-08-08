@@ -17,7 +17,11 @@ export default defineNuxtPlugin((nuxtApp) => {
           delay: 0,                // Pas de délai par défaut
           mirror: false,           // Pas d'animation au scroll retour
           anchorPlacement: 'top-bottom',
-          disable: 'mobile',       // Désactivé sur mobile pour performances
+          // AOS actif partout : la branche disable:'mobile' laissait les
+          // éléments [data-aos] créés par les navigations SPA masqués à vie
+          // par la feuille de style d'AOS (refreshHard est un no-op quand AOS
+          // n'est pas initialisé). Un seul chemin de code = déterministe.
+          // once:true + duration 400 gardent le coût mobile négligeable.
 
           // Support prefers-reduced-motion (accessibilité)
           disableMutationObserver: false,

@@ -76,7 +76,10 @@ export default defineNuxtConfig({
       // Images exclues du precache : 7,6 Mo étaient téléchargés en tâche de
       // fond dès la 1re visite (coût 4G). Elles restent cachées à la demande
       // par runtimeCaching.
-      globPatterns: ['**/*.{js,css,html,ico,svg}'],
+      // html retiré aussi : précacher les pages d'une app SSR sert des
+      // coquilles périmées après chaque déploiement (page blanche jusqu'au
+      // refresh sur iOS, le service worker y persiste longtemps)
+      globPatterns: ['**/*.{js,css,ico,svg}'],
       maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3 MB (pour hero-background.png)
       runtimeCaching: [
         {
