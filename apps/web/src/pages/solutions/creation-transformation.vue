@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Création & Transformation - Lexafric',
-  description: 'Accompagnement dans la création et la transformation de votre structure. Création de sociétés et restructuration d\'entreprise.',
-  ogTitle: 'Création & Transformation - Lexafric',
-  ogDescription: 'Accompagnement dans la création et la transformation de votre structure'
+  title: () => `${t('pages.solutions.creation.title')} - Lexafric`,
+  description: () => t('pages.solutions.creation.description'),
+  ogTitle: () => `${t('pages.solutions.creation.title')} - Lexafric`,
+  ogDescription: () => t('pages.solutions.creation.description')
 })
 </script>

@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Assistance Sociale - Lexafric',
-  description: 'Gestion administrative, contrats de travail et accompagnement RH complet',
-  ogTitle: 'Assistance Sociale - Lexafric',
-  ogDescription: 'Gestion administrative, contrats de travail et accompagnement RH complet'
+  title: () => `${t('pages.services.social.title')} - Lexafric`,
+  description: () => t('pages.services.social.description'),
+  ogTitle: () => `${t('pages.services.social.title')} - Lexafric`,
+  ogDescription: () => t('pages.services.social.description')
 })
 </script>

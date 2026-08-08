@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Secrétariat Juridique - Lexafric',
-  description: 'Gestion complète de votre secrétariat juridique et corporate. Tenue des registres, préparation des assemblées et formalités légales.',
-  ogTitle: 'Secrétariat Juridique - Lexafric',
-  ogDescription: 'Gestion complète de votre secrétariat juridique et corporate'
+  title: () => `${t('pages.solutions.legal.title')} - Lexafric`,
+  description: () => t('pages.solutions.legal.description'),
+  ogTitle: () => `${t('pages.solutions.legal.title')} - Lexafric`,
+  ogDescription: () => t('pages.solutions.legal.description')
 })
 </script>

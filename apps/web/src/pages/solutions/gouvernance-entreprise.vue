@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Gouvernance d\'Entreprise - Lexafric',
-  description: 'Mise en place et optimisation de votre gouvernance d\'entreprise. Conseil, formation et outils de gouvernance.',
-  ogTitle: 'Gouvernance d\'Entreprise - Lexafric',
-  ogDescription: 'Mise en place et optimisation de votre gouvernance d\'entreprise'
+  title: () => `${t('pages.solutions.governance.title')} - Lexafric`,
+  description: () => t('pages.solutions.governance.description'),
+  ogTitle: () => `${t('pages.solutions.governance.title')} - Lexafric`,
+  ogDescription: () => t('pages.solutions.governance.description')
 })
 </script>

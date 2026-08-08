@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Assistance Fiscale - Lexafric',
-  description: 'Contrôle des déclarations, optimisation fiscale et accompagnement lors des contrôles',
-  ogTitle: 'Assistance Fiscale - Lexafric',
-  ogDescription: 'Contrôle des déclarations, optimisation fiscale et accompagnement lors des contrôles'
+  title: () => `${t('pages.services.fiscal.title')} - Lexafric`,
+  description: () => t('pages.services.fiscal.description'),
+  ogTitle: () => `${t('pages.services.fiscal.title')} - Lexafric`,
+  ogDescription: () => t('pages.services.fiscal.description')
 })
 </script>

@@ -18,8 +18,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 useSeoMeta({
-  title: 'Mentions légales - Lexafric',
-  robots: 'noindex, nofollow'
+  title: () => `${t('pages.legal.title')} - Lexafric`,
+  description: () => t('pages.legal.title'),
+  ogTitle: () => `${t('pages.legal.title')} - Lexafric`,
+  ogDescription: () => t('pages.legal.title')
 })
 </script>

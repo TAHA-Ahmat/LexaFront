@@ -18,8 +18,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 useSeoMeta({
-  title: 'Politique de confidentialité - Lexafric',
-  robots: 'noindex, nofollow'
+  title: () => `${t('pages.privacy.title')} - Lexafric`,
+  description: () => t('pages.privacy.title'),
+  ogTitle: () => `${t('pages.privacy.title')} - Lexafric`,
+  ogDescription: () => t('pages.privacy.title')
 })
 </script>
