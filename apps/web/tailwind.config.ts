@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         sans: [
           'Inter',
+          'Noto Sans Arabic',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
@@ -55,6 +56,9 @@ export default {
         gray: {
           50: '#fafafa',
           100: '#f4f4f5',
+          150: '#ececee',
+          175: '#e8e8ea',
+          190: '#e6e6e8',
           200: '#e4e4e7',
           300: '#d4d4d8',
           400: '#a1a1aa',

@@ -192,9 +192,6 @@ export default defineNuxtConfig({
 
   // Runtime config
   runtimeConfig: {
-    // Private keys (accessible uniquement côté serveur)
-    openaiApiKey: process.env.OPENAI_API_KEY,
-
     public: {
       siteUrl: process.env.SITE_URL || 'http://localhost:3000',
       defaultLocale: 'fr',

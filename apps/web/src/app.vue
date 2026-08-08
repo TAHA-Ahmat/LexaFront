@@ -12,13 +12,22 @@
 
 <script setup lang="ts">
 const { locale, locales } = useI18n()
-const currentDir = computed(() => {
-  const l = locales.value.find(l => l.code === locale.value)
-  return (l as any)?.dir === 'rtl' ? 'rtl' : 'ltr'
-})
+const currentLocale = computed(() => locales.value.find(l => l.code === locale.value))
+const currentDir = computed(() => (currentLocale.value as any)?.dir === 'rtl' ? 'rtl' : 'ltr')
 
-// Charger la police Google Fonts de manière optimisée
+// Police arabe chargée uniquement en locale ar (poids nul pour FR/EN)
+const fontHref = computed(() =>
+  locale.value === 'ar'
+    ? 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap'
+    : 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap'
+)
+
+// lang/dir sur <html> selon la locale + police Google Fonts non-bloquante
 useHead({
+  htmlAttrs: {
+    lang: () => (currentLocale.value as any)?.language || locale.value,
+    dir: () => currentDir.value
+  },
   link: [
     {
       rel: 'preconnect',
@@ -31,7 +40,7 @@ useHead({
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
+      href: fontHref,
       // Chargement non-bloquant
       media: 'print',
       onload: "this.media='all'"

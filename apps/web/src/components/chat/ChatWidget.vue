@@ -302,7 +302,7 @@ import { ref, computed, watch, nextTick } from 'vue'
 import { useQuestionAutocomplete } from '~/composables/useQuestionAutocomplete'
 
 // Avatar du bot (dans public pour le déploiement)
-const botAvatar = '/images/image_lexafric_Bot.png'
+const botAvatar = '/images/image_lexafric_Bot.webp'
 
 // Types
 interface Message {
@@ -438,7 +438,6 @@ onMounted(() => {
   setTimeout(() => {
     if (!isOpen.value) {
       showNotificationBadge.value = true
-      console.log('✅ Badge notification activé!')
     }
   }, 3000)
 
@@ -549,52 +548,27 @@ const selectAutocompleteSuggestion = async (item: any) => {
   await scrollToBottom()
   isLoading.value = true
 
-  try {
-    // ✅ Appel GPT avec cette Q&A comme contexte (même logique que clarification)
-    console.log(`⚡ Appel GPT pour autocomplete: "${item.question}"`)
+  // Réponse 100% locale : la Q&A sélectionnée contient déjà la réponse rédigée.
+  // Court délai pour laisser l'indicateur de saisie donner un rendu naturel.
+  await new Promise(resolve => setTimeout(resolve, 400))
 
-    const response = await $fetch('/api/chatbot', {
-      method: 'POST',
-      body: {
-        question: item.question,
-        contextData: [item] // Cette Q&A précise en contexte
-      }
-    })
+  messages.value.push({
+    role: 'assistant',
+    content: item.answer,
+    source: 'faq_direct',
+    confidence: 0.95
+  })
 
-    messages.value.push({
-      role: 'assistant',
-      content: response.answer,
-      source: response.source || 'rag_instant',
-      confidence: response.confidence || 0.95
-    })
+  currentTheme.value = item.theme
 
-    // Détecter le thème
-    currentTheme.value = item.theme
-    console.log(`✅ Réponse GPT depuis autocomplete - Thème: ${item.theme}`)
+  // Animation de succès
+  showSuccessState.value = true
+  setTimeout(() => {
+    showSuccessState.value = false
+  }, 1500)
 
-    // Animation de succès
-    showSuccessState.value = true
-    setTimeout(() => {
-      showSuccessState.value = false
-    }, 1500)
-
-  } catch (error: any) {
-    console.error('❌ Erreur lors de l\'appel GPT:', error)
-
-    // Fallback : Afficher réponse JSON directe
-    messages.value.push({
-      role: 'assistant',
-      content: item.answer,
-      source: 'faq_fallback',
-      confidence: 0.9
-    })
-
-    currentTheme.value = item.theme
-    console.log(`⚠️ Fallback sur réponse JSON directe`)
-  } finally {
-    isLoading.value = false
-    await scrollToBottom()
-  }
+  isLoading.value = false
+  await scrollToBottom()
 }
 
 // Navigation keyboard dans l'autocomplete
@@ -689,52 +663,26 @@ const selectClarification = async (option: any) => {
   await scrollToBottom()
   isLoading.value = true
 
-  try {
-    // ✅ Appel GPT avec cette Q&A comme contexte
-    console.log(`🤖 Appel GPT pour clarification: "${option.question}"`)
+  // Réponse 100% locale : l'option de clarification contient déjà la réponse rédigée.
+  await new Promise(resolve => setTimeout(resolve, 400))
 
-    const response = await $fetch('/api/chatbot', {
-      method: 'POST',
-      body: {
-        question: option.question,
-        contextData: [option] // Cette Q&A précise en contexte
-      }
-    })
+  messages.value.push({
+    role: 'assistant',
+    content: option.answer,
+    source: 'faq_direct',
+    confidence: 0.9
+  })
 
-    messages.value.push({
-      role: 'assistant',
-      content: response.answer,
-      source: response.source || 'rag_gpt',
-      confidence: response.confidence || 0.9
-    })
+  currentTheme.value = option.theme
 
-    // Détecter le thème
-    currentTheme.value = option.theme
-    console.log(`✅ Réponse GPT après clarification - Thème: ${option.theme}`)
+  // Animation de succès
+  showSuccessState.value = true
+  setTimeout(() => {
+    showSuccessState.value = false
+  }, 1500)
 
-    // Animation de succès
-    showSuccessState.value = true
-    setTimeout(() => {
-      showSuccessState.value = false
-    }, 1500)
-
-  } catch (error: any) {
-    console.error('❌ Erreur lors de l\'appel GPT:', error)
-
-    // Fallback : Afficher réponse JSON directe
-    messages.value.push({
-      role: 'assistant',
-      content: option.answer,
-      source: 'faq_fallback',
-      confidence: 0.8
-    })
-
-    currentTheme.value = option.theme
-    console.log(`⚠️ Fallback sur réponse JSON directe`)
-  } finally {
-    isLoading.value = false
-    await scrollToBottom()
-  }
+  isLoading.value = false
+  await scrollToBottom()
 }
 
 const sendMessage = async () => {
@@ -762,7 +710,6 @@ const sendMessage = async () => {
   try {
     // 🎯 Analyser la question avec les 3 niveaux
     const analysis = analyzeQuestionClarity(messageText)
-    console.log(`📊 Analyse: Niveau=${analysis.level}, Score=${analysis.bestScore.toFixed(2)}`)
 
     if (analysis.level === 'clear' || analysis.level === 'ambiguous') {
       // 🟢🟡 NIVEAU 1+2 : Question avec match (≥0.3) - Écran de clarification
@@ -771,15 +718,11 @@ const sendMessage = async () => {
         options: analysis.bestMatches.slice(0, 4) // Top 4 suggestions max
       })
 
-      console.log(`🤔 Suggestions proposées: ${analysis.bestMatches.length} option(s)`)
-
     } else {
       // 🔴 NIVEAU 3 : Question pas claire (< 0.3) - Message de contact pro
       messages.value.push({
         role: 'contact'
       })
-
-      console.log(`📧 Message de contact affiché (score trop faible)`)
     }
 
     await scrollToBottom()
