@@ -28,7 +28,7 @@
           <div class="header-text">
             <h3>{{ $t('chatbot.title') }}</h3>
             <p class="ai-badge">
-              <span class="ai-chip">🤖 Intelligence Artificielle</span>
+              <span class="ai-chip">💬 Assistant d'orientation</span>
             </p>
           </div>
         </div>
@@ -61,10 +61,10 @@
             <div class="welcome-bubble">
               <p class="welcome-greeting">👋 Bonjour !</p>
               <p class="welcome-intro">
-                Je suis <strong>Lexa</strong>, votre assistant IA juridique.
+                Je suis <strong>Lexa</strong>, votre assistant d'orientation juridique et fiscale.
               </p>
               <p class="welcome-capabilities">
-                🤖 Je peux vous aider avec :
+                💬 Je peux vous orienter sur :
               </p>
               <ul class="welcome-list">
                 <li>• Fiscalité</li>

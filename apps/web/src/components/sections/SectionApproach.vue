@@ -38,6 +38,7 @@
                   loading="lazy"
                   format="webp"
                   quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   style="display: block;"
                 />
               </div>
@@ -58,6 +59,7 @@
                   loading="lazy"
                   format="webp"
                   quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   style="display: block;"
                 />
               </div>
@@ -78,6 +80,7 @@
                   loading="lazy"
                   format="webp"
                   quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   style="display: block;"
                 />
               </div>
@@ -98,6 +101,7 @@
                   loading="lazy"
                   format="webp"
                   quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   style="display: block;"
                 />
               </div>
@@ -118,6 +122,7 @@
                   loading="lazy"
                   format="webp"
                   quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   style="display: block;"
                 />
               </div>
@@ -221,6 +226,7 @@
                   loading="lazy"
                   format="webp"
                   quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                 />
               </div>
               <div class="grid grid-cols-2 gap-4">
@@ -234,6 +240,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
@@ -246,6 +253,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                 </div>
               </div>
@@ -260,6 +268,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-lg">
@@ -272,6 +281,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                 </div>
               </div>
@@ -388,6 +398,7 @@
                       loading="lazy"
                       format="webp"
                       quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                     />
                     <!-- Overlay gradient léger pour voir l'image -->
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
@@ -424,6 +435,7 @@
                       loading="lazy"
                       format="webp"
                       quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
@@ -459,6 +471,7 @@
                       loading="lazy"
                       format="webp"
                       quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
@@ -494,6 +507,7 @@
                       loading="lazy"
                       format="webp"
                       quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                     />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-black/60 to-transparent" style="z-index: 1;"></div>
 
@@ -535,6 +549,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-blue-900/75 via-blue-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
@@ -571,6 +586,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/75 via-emerald-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
@@ -607,6 +623,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-purple-900/75 via-purple-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
@@ -642,6 +659,7 @@
                     loading="lazy"
                     format="webp"
                     quality="85"
+            sizes="(min-width:1024px) 400px, 100vw"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-amber-900/75 via-amber-800/60 to-transparent" style="z-index: 1;"></div>
                   <div class="relative z-10 p-5">
