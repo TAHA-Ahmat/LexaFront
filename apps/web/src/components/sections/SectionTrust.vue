@@ -53,7 +53,7 @@
             <div class="carousel-track">
               <!-- Premier groupe de logos -->
               <div v-for="logo in partnersRow1" :key="`row1-1-${logo}`" class="carousel-item">
-                <img
+                <img width="120" height="40"
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
@@ -63,7 +63,7 @@
 
               <!-- Duplication pour effet infini -->
               <div v-for="logo in partnersRow1" :key="`row1-2-${logo}`" class="carousel-item">
-                <img
+                <img width="120" height="40"
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
@@ -78,7 +78,7 @@
             <div class="carousel-track-reverse">
               <!-- Premier groupe de logos -->
               <div v-for="logo in partnersRow2" :key="`row2-1-${logo}`" class="carousel-item">
-                <img
+                <img width="120" height="40"
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
@@ -88,7 +88,7 @@
 
               <!-- Duplication pour effet infini -->
               <div v-for="logo in partnersRow2" :key="`row2-2-${logo}`" class="carousel-item">
-                <img
+                <img width="120" height="40"
                   :src="`/images/partenaires/${logo}`"
                   :alt="`Partner logo`"
                   class="h-10 sm:h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
