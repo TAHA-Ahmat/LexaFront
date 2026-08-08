@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Formations - Lexafric',
-  description: 'Programmes de formation sur mesure pour développer les compétences de vos équipes',
-  ogTitle: 'Formations - Lexafric',
-  ogDescription: 'Programmes de formation sur mesure pour développer les compétences de vos équipes'
+  title: () => `${t('pages.services.training.title')} - Lexafric`,
+  description: () => t('pages.services.training.description'),
+  ogTitle: () => `${t('pages.services.training.title')} - Lexafric`,
+  ogDescription: () => t('pages.services.training.description')
 })
 </script>

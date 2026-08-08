@@ -210,12 +210,13 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'À propos - Lexafric',
-  description: 'Cabinet de Conseil Juridique et Fiscal regroupant des professionnels avec plus de 30 ans d\'expérience. Découvrez notre mission, nos valeurs et notre équipe.',
-  ogTitle: 'À propos - Lexafric',
-  ogDescription: 'Cabinet de Conseil Juridique et Fiscal regroupant des professionnels avec plus de 30 ans d\'expérience'
+  title: () => `${t('pages.about.title')} - Lexafric`,
+  description: () => t('pages.about.subtitle'),
+  ogTitle: () => `${t('pages.about.title')} - Lexafric`,
+  ogDescription: () => t('pages.about.subtitle')
 })
 </script>

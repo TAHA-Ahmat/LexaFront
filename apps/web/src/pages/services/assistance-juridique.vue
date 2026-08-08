@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Assistance Juridique - Lexafric',
-  description: 'Audit contractuel, conseil juridique et accompagnement personnalisé pour sécuriser vos relations d\'affaires',
-  ogTitle: 'Assistance Juridique - Lexafric',
-  ogDescription: 'Audit contractuel, conseil juridique et accompagnement personnalisé pour sécuriser vos relations d\'affaires'
+  title: () => `${t('pages.services.legal.title')} - Lexafric`,
+  description: () => t('pages.services.legal.description'),
+  ogTitle: () => `${t('pages.services.legal.title')} - Lexafric`,
+  ogDescription: () => t('pages.services.legal.description')
 })
 </script>

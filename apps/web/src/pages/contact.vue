@@ -291,6 +291,7 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // Refs
 const cardSection = ref<HTMLElement | null>(null)
@@ -367,10 +368,10 @@ const handlePhoneClick = () => {
 
 // SEO (préservé)
 useSeoMeta({
-  title: 'Contact - Lexafric',
-  description: 'Contactez LEXAFRIC pour toutes vos questions juridiques et fiscales. Notre équipe est à votre écoute pour vous accompagner.',
-  ogTitle: 'Contact - Lexafric',
-  ogDescription: 'Contactez LEXAFRIC pour toutes vos questions juridiques et fiscales'
+  title: () => `${t('pages.contact.title')} - Lexafric`,
+  description: () => t('pages.contact.description'),
+  ogTitle: () => `${t('pages.contact.title')} - Lexafric`,
+  ogDescription: () => t('pages.contact.description')
 })
 </script>
 

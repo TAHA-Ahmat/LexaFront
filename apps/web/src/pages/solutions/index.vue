@@ -129,12 +129,13 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Nos Solutions - Lexafric',
-  description: 'Découvrez nos solutions en secrétariat juridique, gouvernance d\'entreprise et création & transformation',
-  ogTitle: 'Nos Solutions - Lexafric',
-  ogDescription: 'Découvrez nos solutions en secrétariat juridique, gouvernance d\'entreprise et création & transformation'
+  title: () => `${t('nav.solutions')} - Lexafric`,
+  description: () => t('pages.home.seo.description'),
+  ogTitle: () => `${t('nav.solutions')} - Lexafric`,
+  ogDescription: () => t('pages.home.seo.description')
 })
 </script>

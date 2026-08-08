@@ -175,12 +175,13 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO - Conservé pour éviter régression
 useSeoMeta({
-  title: 'Nos Services - Lexafric',
-  description: 'Découvrez nos services en assistance juridique, fiscale, sociale, recrutement et formations',
-  ogTitle: 'Nos Services - Lexafric',
-  ogDescription: 'Découvrez nos services en assistance juridique, fiscale, sociale, recrutement et formations'
+  title: () => `${t('nav.services')} - Lexafric`,
+  description: () => t('pages.home.seo.description'),
+  ogTitle: () => `${t('nav.services')} - Lexafric`,
+  ogDescription: () => t('pages.home.seo.description')
 })
 </script>

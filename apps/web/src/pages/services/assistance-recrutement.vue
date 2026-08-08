@@ -212,12 +212,13 @@
 <script setup lang="ts">
 // i18n
 const localePath = useLocalePath()
+const { t } = useI18n()
 
 // SEO
 useSeoMeta({
-  title: 'Assistance Recrutement - Lexafric',
-  description: 'Accompagnement complet dans vos processus de recrutement et de sélection des talents',
-  ogTitle: 'Assistance Recrutement - Lexafric',
-  ogDescription: 'Accompagnement complet dans vos processus de recrutement et de sélection des talents'
+  title: () => `${t('pages.services.recruitment.title')} - Lexafric`,
+  description: () => t('pages.services.recruitment.description'),
+  ogTitle: () => `${t('pages.services.recruitment.title')} - Lexafric`,
+  ogDescription: () => t('pages.services.recruitment.description')
 })
 </script>
