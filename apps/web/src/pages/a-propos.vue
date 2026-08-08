@@ -148,9 +148,11 @@
               </p>
             </div>
 
+            <!-- Chiffres vérifiables uniquement : « 100% satisfaction » et
+                 « 24/7 » (contredit par les horaires Lun-Ven) supprimés -->
             <div class="text-center">
               <div class="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-                100%
+                8
               </div>
               <p class="text-gray-600 dark:text-gray-400">
                 {{ $t('pages.about.stats.satisfaction') }}
@@ -159,7 +161,7 @@
 
             <div class="text-center">
               <div class="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-                24/7
+                24h
               </div>
               <p class="text-gray-600 dark:text-gray-400">
                 {{ $t('pages.about.stats.support') }}
@@ -168,7 +170,7 @@
 
             <div class="text-center">
               <div class="text-5xl font-bold text-gray-900 dark:text-white mb-2">
-                10+
+                3
               </div>
               <p class="text-gray-600 dark:text-gray-400">
                 {{ $t('pages.about.stats.services') }}

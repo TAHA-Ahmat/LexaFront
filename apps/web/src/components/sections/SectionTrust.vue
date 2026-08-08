@@ -17,7 +17,7 @@
         <div class="grid grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-20 max-w-3xl mx-auto">
           <div class="aos-init text-center" data-aos="fade-up" data-aos-delay="100">
             <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">
-              10+
+              30+
             </div>
             <div class="text-gray-600 dark:text-gray-400 text-sm md:text-base">
               {{ $t('pages.home.trust.stats.years') }}
