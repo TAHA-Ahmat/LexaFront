@@ -221,7 +221,6 @@ const partnersRow2 = [
   .carousel-item {
     min-width: 180px;
   }
-  min-width: 180px;
 }
 
 /* Animations */
