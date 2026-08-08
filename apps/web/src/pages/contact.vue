@@ -72,14 +72,6 @@
 
         <!-- Satellite Cards (revealed state) -->
         <div v-else class="satellite-cards-container">
-          <!-- Back button -->
-          <button @click="hideCards" class="back-button glassmorphism">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-            </svg>
-            <span>{{ $t('pages.contact.back') || 'Retour' }}</span>
-          </button>
-
           <!-- Cards Grid -->
           <div class="cards-grid">
             <!-- Phone Card -->
@@ -312,7 +304,7 @@ const magneticHover = ref(false)
 
 // Computed
 const addressMapUrl = computed(() => {
-  const address = 'Lexafric N\'Djamena Tchad'
+  const address = 'BP 2700 Rue de 40 N\'Djamena Tchad'
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
 })
 
