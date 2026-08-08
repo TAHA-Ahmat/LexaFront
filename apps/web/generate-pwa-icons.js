@@ -18,7 +18,7 @@ import { existsSync } from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const inputSvg = join(__dirname, 'public', 'logo.svg');
+const inputSvg = join(__dirname, 'public', 'logo-lexafric.svg');
 const outputDir = join(__dirname, 'public');
 
 // Vérifier que le logo existe

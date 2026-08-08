@@ -83,7 +83,7 @@
     <transition name="fade">
       <div
         v-if="mobileOpen"
-        class="md:hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm overscroll-none"
+        class="lg:hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm overscroll-none"
         @click="closeMobile"
         @touchmove.prevent
       />
@@ -191,27 +191,47 @@ const items = [
   { to: '/a-propos',  label: 'nav.about' }
 ]
 
-const isActive = (to: string) => route.path === to
+// Compare avec le chemin localisé (/en/..., /ar/...) et marque aussi les sous-pages
+const isActive = (to: string) => {
+  const target = localePath(to)
+  if (to === '/') return route.path === target
+  return route.path === target || route.path.startsWith(target + '/')
+}
 
 const mobileOpen = ref(false)
+// Mémorise la position de scroll pour éviter le saut en haut de page à la fermeture du drawer
+let savedScrollY = 0
+
+const lockBodyScroll = () => {
+  savedScrollY = window.scrollY
+  document.body.style.overflow = 'hidden'
+  document.body.style.position = 'fixed'
+  document.body.style.top = `-${savedScrollY}px`
+  document.body.style.width = '100%'
+}
+
+const unlockBodyScroll = () => {
+  document.body.style.overflow = ''
+  document.body.style.position = ''
+  document.body.style.top = ''
+  document.body.style.width = ''
+  window.scrollTo(0, savedScrollY)
+}
+
 const toggleMobile = () => {
   mobileOpen.value = !mobileOpen.value
   if (mobileOpen.value) {
-    document.body.style.overflow = 'hidden'
-    document.body.style.position = 'fixed'
-    document.body.style.width = '100%'
+    lockBodyScroll()
   } else {
-    document.body.style.overflow = ''
-    document.body.style.position = ''
-    document.body.style.width = ''
+    unlockBodyScroll()
   }
 }
 
 const closeMobile = () => {
-  mobileOpen.value = false
-  document.body.style.overflow = ''
-  document.body.style.position = ''
-  document.body.style.width = ''
+  if (mobileOpen.value) {
+    mobileOpen.value = false
+    unlockBodyScroll()
+  }
 }
 
 const hasShadow = ref(false)
