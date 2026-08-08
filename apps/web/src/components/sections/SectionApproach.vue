@@ -6,7 +6,7 @@
         <!-- Header Principal -->
         <div class="aos-init text-center mb-16 md:mb-24" data-aos="fade-up">
           <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/50 dark:to-purple-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold mb-6">
-            Excellence & Rigueur
+            {{ $t('pages.home.approach.title') }}
           </span>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
             {{ $t('pages.home.approach.title') }}
