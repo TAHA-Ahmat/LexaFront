@@ -59,25 +59,27 @@
           <div class="bot-welcome-message">
             <img :src="botAvatar" alt="Lexafric AI" class="welcome-avatar" />
             <div class="welcome-bubble">
-              <p class="welcome-greeting">👋 Bonjour !</p>
+              <p class="welcome-greeting">{{ $t('chatbot.greeting') }}</p>
               <p class="welcome-intro">
-                Je suis <strong>Lexa</strong>, votre assistant d'orientation juridique et fiscale.
+                {{ $t('chatbot.intro') }}
               </p>
               <p class="welcome-capabilities">
-                💬 Je peux vous orienter sur :
+                {{ $t('chatbot.capabilities') }}
               </p>
               <ul class="welcome-list">
-                <li>• Fiscalité</li>
-                <li>• Droit des affaires</li>
-                <li>• Procédures administratives</li>
+                <li v-for="(topic, i) in $tm('chatbot.topics')" :key="i">• {{ $rt(topic) }}</li>
               </ul>
-              <p class="welcome-prompt">Posez-moi votre question !</p>
+              <p class="welcome-prompt">{{ $t('chatbot.prompt') }}</p>
+              <!-- Honnêteté : la base de réponses est rédigée en français -->
+              <p v-if="locale !== 'fr'" class="welcome-prompt" style="opacity: 0.75">
+                {{ $t('chatbot.answersInFrench') }}
+              </p>
             </div>
           </div>
 
           <!-- Suggestions rapides -->
           <div class="quick-suggestions">
-            <p class="suggestions-label">Questions fréquentes :</p>
+            <p class="suggestions-label">{{ $t('chatbot.faqLabel') }}</p>
             <button
               v-for="(suggestion, index) in quickSuggestions"
               :key="index"
@@ -160,7 +162,7 @@
             </a>
             <div class="contact-badge">
               <span class="badge-icon">✓</span>
-              <span class="badge-text">Confidentialité garantie</span>
+              <span class="badge-text">{{ $t('chatbot.privacy') }}</span>
             </div>
           </div>
         </div>

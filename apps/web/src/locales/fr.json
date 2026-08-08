@@ -36,7 +36,19 @@
     "reset": "Réinitialiser la conversation",
     "placeholder": "Posez votre question...",
     "send": "Envoyer",
-    "hint": "Appuyez sur Entrée pour envoyer, Shift + Entrée pour une nouvelle ligne"
+    "hint": "Appuyez sur Entrée pour envoyer, Shift + Entrée pour une nouvelle ligne",
+    "greeting": "👋 Bonjour !",
+    "intro": "Je suis Lexa, votre assistante d'orientation juridique et fiscale.",
+    "capabilities": "💬 Je peux vous orienter sur :",
+    "topics": [
+      "Fiscalité",
+      "Droit des affaires",
+      "Procédures administratives"
+    ],
+    "prompt": "Posez-moi votre question !",
+    "faqLabel": "Questions fréquentes :",
+    "privacy": "Confidentialité garantie",
+    "answersInFrench": ""
   },
   "nav": {
     "changeLanguage": "Changer de langue",
@@ -361,11 +373,6 @@
           "name": "Mr Beti",
           "role": "Fondateur & Gérant",
           "description": "Expert en conseil juridique avec plus de 15 ans d'expérience dans les grands cabinets internationaux."
-        },
-        "member2": {
-          "name": "Mme Saha",
-          "role": "Co-gérante",
-          "description": "Spécialiste en fiscalité et droit des affaires, forte d'une expérience internationale reconnue."
         }
       },
       "stats": {

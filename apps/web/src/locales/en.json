@@ -36,7 +36,19 @@
     "reset": "Reset conversation",
     "placeholder": "Ask your question...",
     "send": "Send",
-    "hint": "Press Enter to send, Shift + Enter for new line"
+    "hint": "Press Enter to send, Shift + Enter for new line",
+    "greeting": "👋 Hello!",
+    "intro": "I am Lexa, your legal and tax orientation assistant.",
+    "capabilities": "💬 I can guide you on:",
+    "topics": [
+      "Taxation",
+      "Business law",
+      "Administrative procedures"
+    ],
+    "prompt": "Ask me your question!",
+    "faqLabel": "Frequently asked questions:",
+    "privacy": "Confidentiality guaranteed",
+    "answersInFrench": "ℹ️ Answers are provided in French."
   },
   "nav": {
     "changeLanguage": "Change language",
@@ -361,11 +373,6 @@
           "name": "Mr Beti",
           "role": "Founder & Managing Partner",
           "description": "Legal consulting expert with over 15 years of experience in major international firms."
-        },
-        "member2": {
-          "name": "Mrs Saha",
-          "role": "Co-manager",
-          "description": "Specialist in taxation and business law, with recognized international experience."
         }
       },
       "stats": {
