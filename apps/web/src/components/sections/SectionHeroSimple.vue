@@ -57,6 +57,15 @@
           {{ $t('pages.home.hero.title') }}
         </h1>
 
+        <!-- Sous-titre différenciant (anciens de grands cabinets internationaux) -->
+        <p
+          class="text-base md:text-lg text-gray-300 max-w-xl leading-relaxed aos-init"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          {{ $t('pages.home.hero.subtitle') }}
+        </p>
+
         <!-- CTA Buttons -->
         <div
           class="flex flex-col sm:flex-row items-start gap-3 pt-2 aos-init"
@@ -84,7 +93,7 @@
         <!-- Stats rapides -->
         <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-8 max-w-md">
           <div class="aos-init" data-aos="fade-right" data-aos-delay="400">
-            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">10+</div>
+            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">30+</div>
             <div class="text-xs md:text-sm text-gray-400 mt-0.5">{{ $t('pages.home.hero.stats.years') }}</div>
           </div>
           <div class="aos-init" data-aos="fade-right" data-aos-delay="500">
