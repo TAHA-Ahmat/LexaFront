@@ -48,7 +48,8 @@
     "prompt": "Ask me your question!",
     "faqLabel": "Frequently asked questions:",
     "privacy": "Confidentiality guaranteed",
-    "answersInFrench": "ℹ️ Answers are provided in French."
+    "answersInFrench": "ℹ️ Answers are provided in French.",
+    "role": "Orientation assistant"
   },
   "nav": {
     "changeLanguage": "Change language",

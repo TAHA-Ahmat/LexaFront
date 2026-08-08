@@ -48,7 +48,8 @@
     "prompt": "Posez-moi votre question !",
     "faqLabel": "Questions fréquentes :",
     "privacy": "Confidentialité garantie",
-    "answersInFrench": ""
+    "answersInFrench": "",
+    "role": "Assistant d'orientation"
   },
   "nav": {
     "changeLanguage": "Changer de langue",
