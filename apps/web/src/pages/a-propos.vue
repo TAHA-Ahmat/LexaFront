@@ -93,8 +93,8 @@
             </p>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
-            <!-- Member 1 -->
+          <div class="max-w-md mx-auto">
+            <!-- Fondateur -->
             <div class="text-center space-y-4">
               <div class="relative w-40 h-40 mx-auto rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-800 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
                 <span class="text-5xl font-bold text-white">MB</span>
@@ -112,23 +112,6 @@
               </div>
             </div>
 
-            <!-- Member 2 -->
-            <div class="text-center space-y-4">
-              <div class="relative w-40 h-40 mx-auto rounded-full overflow-hidden border-2 border-gray-200 dark:border-gray-800 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
-                <span class="text-5xl font-bold text-white">MS</span>
-              </div>
-              <div>
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                  {{ $t('pages.about.team.member2.name') }}
-                </h3>
-                <p class="text-gray-600 dark:text-gray-400 font-medium mt-1">
-                  {{ $t('pages.about.team.member2.role') }}
-                </p>
-                <p class="text-gray-600 dark:text-gray-400 mt-3">
-                  {{ $t('pages.about.team.member2.description') }}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

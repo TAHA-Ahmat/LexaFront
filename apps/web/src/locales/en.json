@@ -359,7 +359,7 @@
         "subtitle": "Experienced professionals at the service of your success",
         "member1": {
           "name": "Mr Beti",
-          "role": "Co-manager",
+          "role": "Founder & Managing Partner",
           "description": "Legal consulting expert with over 15 years of experience in major international firms."
         },
         "member2": {
@@ -399,7 +399,7 @@
         "email": "Email",
         "phone": "Phone",
         "address": "Address",
-        "addressValue": "N'Djamena, Chad",
+        "addressValue": "BP 2700, Rue de 40, N'Djamena, Chad",
         "hours": "Business Hours",
         "weekdays": "Mon - Fri: 8:00 AM - 6:00 PM",
         "weekend": "Sat - Sun: Closed",
@@ -611,7 +611,7 @@
       },
       "seo": {
         "title": "LEXAFRIC - Legal and Tax Consulting Firm in Africa",
-        "description": "Specialized firm in legal and tax consulting founded on a network of former collaborators from major international firms focused on African markets. Over 10 years of experience."
+        "description": "Legal and tax advisory firm in N'Djamena. We support companies operating in Chad and the CEMAC region (OHADA law): tax, business law, social compliance, recruitment and training."
       }
     }
   },
@@ -619,6 +619,6 @@
     "tagline": "Your trusted legal and tax partner in Central Africa.",
     "rights": "All rights reserved.",
     "developedBy": "Developed by",
-    "address": "N'Djamena, Chad"
+    "address": "BP 2700, Rue de 40, N'Djamena, Chad"
   }
 }

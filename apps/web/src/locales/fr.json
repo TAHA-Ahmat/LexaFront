@@ -359,7 +359,7 @@
         "subtitle": "Des professionnels expérimentés au service de votre réussite",
         "member1": {
           "name": "Mr Beti",
-          "role": "Co-gérant",
+          "role": "Fondateur & Gérant",
           "description": "Expert en conseil juridique avec plus de 15 ans d'expérience dans les grands cabinets internationaux."
         },
         "member2": {
@@ -399,7 +399,7 @@
         "email": "Email",
         "phone": "Téléphone",
         "address": "Adresse",
-        "addressValue": "N'Djamena, Tchad",
+        "addressValue": "BP 2700, Rue de 40, N'Djamena",
         "hours": "Horaires d'ouverture",
         "weekdays": "Lun - Ven: 8h00 - 18h00",
         "weekend": "Sam - Dim: Fermé",
@@ -638,7 +638,7 @@
       },
       "seo": {
         "title": "LEXAFRIC - Cabinet de Conseil Juridique et Fiscal en Afrique",
-        "description": "Cabinet spécialisé en conseil juridique et fiscal fondé sur un réseau d'anciens collaborateurs de grands cabinets internationaux orientés vers les marchés africains. Plus de 10 ans d'expérience."
+        "description": "Cabinet de conseil juridique et fiscal à N'Djamena. Nous accompagnons les entreprises au Tchad et en zone CEMAC (droit OHADA) : fiscalité, droit des affaires, social, recrutement et formations."
       }
     }
   },
@@ -646,6 +646,6 @@
     "tagline": "Votre partenaire juridique et fiscal de confiance en Afrique centrale.",
     "rights": "Tous droits réservés.",
     "developedBy": "Développé par",
-    "address": "N'Djamena, Tchad"
+    "address": "BP 2700, Rue de 40, N'Djamena"
   }
 }
