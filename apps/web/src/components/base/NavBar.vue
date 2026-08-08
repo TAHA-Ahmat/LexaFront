@@ -7,7 +7,7 @@
         : 'bg-white/70 dark:bg-black/70 backdrop-blur-xl'
     ]"
   >
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-[70px] sm:h-[120px] landscape:h-[80px] flex items-center gap-3">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 sm:h-[120px] landscape:h-[80px] flex items-center gap-3">
       <!-- Left: Logo -->
       <div class="flex-shrink-0 pl-1 sm:pl-0">
         <NuxtLink :to="localePath('/')" class="flex items-center group relative">
@@ -18,7 +18,7 @@
               alt="Lexafric"
               width="130"
               height="130"
-              class="navbar-logo navbar-logo-scaled h-[70px] sm:h-[130px] landscape:h-[75px] w-auto transition-all duration-600 ease-out"
+              class="navbar-logo navbar-logo-scaled h-10 sm:h-[130px] landscape:h-[75px] w-auto transition-all duration-600 ease-out"
               loading="eager"
               fetchpriority="high"
             />
@@ -285,26 +285,18 @@ onMounted(() => {
   transform: scale(1.70);
 }
 
+/* Mobile épuré : barre de 56px, logo 40px net, sans zoom ni filtres
+   (le scale 1.2-1.3 faisait déborder le logo de la barre, et les filtres
+   forçaient une rasterisation à chaque repaint du header sticky) */
 @media (max-width: 768px) {
   .navbar-logo {
-    height: 65px;
-    filter: brightness(1.25) contrast(1.15) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+    height: 40px;
+    filter: none;
+    animation: none;
   }
-  .navbar-logo-scaled {
-    transform: scale(1.30);
-  }
+  .navbar-logo-scaled,
   .group:hover .navbar-logo-scaled {
-    transform: scale(1.35);
-  }
-}
-
-/* Ajustement mobile très petit écran pour éviter débordement excessif */
-@media (max-width: 640px) {
-  .navbar-logo-scaled {
-    transform: scale(1.20);
-  }
-  .group:hover .navbar-logo-scaled {
-    transform: scale(1.25);
+    transform: none;
   }
 }
 
